@@ -4,7 +4,7 @@ Environment: Windows amd64, Go 1.26.10. No user wallet, mnemonic or private key 
 
 | Check | Result | Boundary |
 |---|---|---|
-| `go test ./...` in both modules | Passed | EVM/CLI: 683 passing test/example/subtest events, 80 top-level entries. Cosmos: 179 events, 31 top-level entries. These are test runner counts, not transaction types. |
+| `go test ./...` in both modules | Passed | EVM/CLI: 684 passing test/example/subtest events, 81 top-level entries. Cosmos: 179 events, 31 top-level entries. These are test runner counts, not transaction types. |
 | `go vet ./...` | Passed | Static Go checks. |
 | `go build ./...` | Passed | SDK and read-only inspection command compile. |
 | `go mod verify` | All modules verified | Final dependency graph uses btcd's split v2 modules, not the locally modified cached v0.24.2 tree encountered during development. |
@@ -55,3 +55,5 @@ Read-only verification of the optional project multisend runtime returned the ex
 The final audit and fixes independent of unavailable ABI are summarized in [FINAL_AUDIT.md](FINAL_AUDIT.md). The preview uses public module paths for the root and independent Cosmos module, with both license notices packaged separately.
 
 For preview.2, `tools/check.ps1 -Race -Vulnerabilities` also passed with the complete executable documentation and installer suites. Envelope examples, all 260 ABI write builders and all 43 Cosmos messages were executed locally without signing/submission. The installer major-path guard additionally passed targeted test/vet/race checks. See [DOCUMENTATION_COVERAGE.md](DOCUMENTATION_COVERAGE.md) and [INSTALL.md](INSTALL.md). The public source snapshot may retain the prior latest.json until its new release and archives are published; the channel advances on main afterward.
+
+Preview.3 adds no-cache headers and a unique random query key to the moving channel request. Post-publication verification reproduced a cached preview.1 response in the preview.2 installer; the corrected implementation selected the published preview.2 and upgraded both modules in a consumer. The fix passed test/vet/race and preserves trusted URL/schema guards. The subsequent preview.3 channel is verified after publication.

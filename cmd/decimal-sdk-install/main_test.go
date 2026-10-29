@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"context"
+	"encoding/hex"
 	"encoding/json"
 	"errors"
 	"io"
@@ -165,5 +166,46 @@ func TestManifestRejectsUnsupportedModuleMajor(t *testing.T) {
 		if err := m.validate(); err == nil || !strings.Contains(err.Error(), "unsupported module major") {
 			t.Fatalf("major %s: %v", v, err)
 		}
+	}
+}
+
+func TestManifestFetchBypassesMovingChannelCache(t *testing.T) {
+	expected := validManifest()
+	body := encodedManifest(t)
+	requests := make(chan *http.Request, 2)
+	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		requests <- r.Clone(context.Background())
+		if r.URL.Query().Get("_sdk_update") == "" || r.Header.Get("Cache-Control") != "no-cache" || r.Header.Get("Pragma") != "no-cache" {
+			http.Error(w, "stale cache path", http.StatusPreconditionFailed)
+			return
+		}
+		io.WriteString(w, body)
+	}))
+	defer server.Close()
+	var previous string
+	for range 2 {
+		actual, err := fetchManifest(context.Background(), server.Client(), server.URL+"/channel/latest.json?existing=kept")
+		if err != nil {
+			t.Fatal(err)
+		}
+		if !reflect.DeepEqual(actual, expected) {
+			t.Fatalf("manifest changed: %+v", actual)
+		}
+		request := <-requests
+		if request.URL.Path != "/channel/latest.json" || request.Host != strings.TrimPrefix(server.URL, "http://") || request.URL.Query().Get("existing") != "kept" {
+			t.Fatalf("trusted request target changed: %s", request.URL)
+		}
+		query := request.URL.Query()
+		if len(query) != 2 || len(query["_sdk_update"]) != 1 {
+			t.Fatalf("unexpected query: %v", query)
+		}
+		nonce := query.Get("_sdk_update")
+		if decoded, err := hex.DecodeString(nonce); err != nil || len(decoded) != 16 {
+			t.Fatalf("invalid freshness nonce: %q", nonce)
+		}
+		if nonce == previous {
+			t.Fatal("freshness nonce reused")
+		}
+		previous = nonce
 	}
 }

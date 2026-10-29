@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.1.0-preview.3 - 2026-10-29
+
+- Installer requests the moving channel with no-cache headers and a fresh 128-bit random query key, avoiding stale CDN responses.
+- A post-publication check of preview.2 reproduced selection of preview.1 through a cached response; the corrected CLI selects the current published channel.
+- Regression coverage preserves the trusted manifest host/path and existing query, and checks unique cache keys. Timestamp-only keys were rejected after a Windows test reproduced a clock-resolution collision.
+- Complete transaction documentation and examples from preview.2 are retained. Published tags and assets are preserved.
+
 ## v0.1.0-preview.2 - 2026-10-29
 
 - Executable offline examples and bilingual documentation for every one of the 260 ABI write builders across 20 profiles.

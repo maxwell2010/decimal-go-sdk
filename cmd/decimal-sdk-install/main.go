@@ -4,6 +4,8 @@ package main
 import (
 	"bytes"
 	"context"
+	"crypto/rand"
+	"encoding/hex"
 	"encoding/json"
 	"errors"
 	"flag"
@@ -78,6 +80,17 @@ func fetchManifest(ctx context.Context, client *http.Client, url string) (manife
 	if err != nil {
 		return m, err
 	}
+	// The moving channel may otherwise be served from an intermediary's stale cache.
+	// Keep the trusted URL host/path and vary only this cache-busting query value.
+	query := req.URL.Query()
+	var freshness [16]byte
+	if _, err := rand.Read(freshness[:]); err != nil {
+		return m, fmt.Errorf("cannot create manifest freshness nonce: %w", err)
+	}
+	query.Set("_sdk_update", hex.EncodeToString(freshness[:]))
+	req.URL.RawQuery = query.Encode()
+	req.Header.Set("Cache-Control", "no-cache")
+	req.Header.Set("Pragma", "no-cache")
 	// Copy the client to preserve test transports while always refusing redirects.
 	guarded := *client
 	guarded.CheckRedirect = func(*http.Request, []*http.Request) error { return http.ErrUseLastResponse }
