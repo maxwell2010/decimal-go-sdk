@@ -1,13 +1,13 @@
 {
-  "checked_utc": "2026-10-29T08:18:12.046281+00:00",
+  "checked_utc": "2026-10-29T09:14:12.009371+00:00",
   "go_version": "go version go1.26.10 windows/amd64",
-  "EVM_source_fingerprint_sha256": "8ebfad0330cb51e15b322e146de35ed6795eb401c1d6ff4bdb9b65cd9bc95409",
+  "EVM_source_fingerprint_sha256": "5a43be037901160f3d2820daae67ae34a712f13066b01b471d710c1fb4424083",
   "modules": {
     ".": {
       "command": "go test -json ./...",
       "exit_code": 0,
-      "passing_test_events": 724,
-      "top_level_entries": 101,
+      "passing_test_events": 757,
+      "top_level_entries": 107,
       "required_suites": {
         "TestAllGeneratedABIWrappers": "pass",
         "TestEmbeddedABIProvenance": "pass",

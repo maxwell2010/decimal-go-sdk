@@ -16,3 +16,10 @@ Scope: EVM core/transport, ABI/contracts/Safe/proxy simulation, Cosmos codecs/tr
 All 20 ABI profiles regenerate without changes to the checked-in wrappers. Interface coverage remains 524 methods; all 43 Cosmos schemas retain their source-backed validation and current-ante admission classification.
 
 Detailed final commands, counts and limitations are in VALIDATION.md. Unavailable/misannotated official ABI is documented in ADDITIONAL_ABI_EVIDENCE.md; it was not guessed or replaced by unrelated interfaces. The audit does not establish live execution parity, stateful authorization, bridge settlement or stable production readiness.
+
+
+## Preview.6 follow-up
+
+A second agent audit found cancellation arriving together with successful backend responses could be lost. Checks history/receipt readers and the central chain guard now return context cancellation; a canceled chain lookup cannot start the next read. WaitReceipt now rejects missing/invalid mined coordinates, unknown receipt status, negative reported gas prices and a zero requested transaction hash. It checks cancellation before each receipt poll and after its backend response. Existing successful/reverted fee behavior remains covered. These are local response-validation guarantees, not current canonical membership or confirmation-depth proofs.
+
+Checks inspector tests also distinguish explicit genesis height zero from a missing or null block-number field. The pinned-source [node RPC identity review](NODE_RPC_IDENTITY.md) records why Ethereum Header.Hash and requireCanonical must not be used to claim stronger Decimal state identity guarantees. No real wallet or transaction submission is part of this audit.

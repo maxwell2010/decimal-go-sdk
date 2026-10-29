@@ -4,7 +4,7 @@ Environment: Windows amd64, Go 1.26.10. No user wallet, mnemonic or private key 
 
 | Check | Result | Boundary |
 |---|---|---|
-| `go test ./...` in both modules | Passed | EVM/CLI: 724 passing test/example/subtest events, 101 top-level entries. Cosmos: 179 events, 31 top-level entries. These are test runner counts, not transaction types. |
+| `go test ./...` in both modules | Passed | EVM/CLI: 757 passing test/example/subtest events, 107 top-level entries. Cosmos: 179 events, 31 top-level entries. These are test runner counts, not transaction types. |
 | `go vet ./...` | Passed | Static Go checks. |
 | `go build ./...` | Passed | SDK and read-only inspection command compile. |
 | `go mod verify` | All modules verified | Final dependency graph uses btcd's split v2 modules, not the locally modified cached v0.24.2 tree encountered during development. |
@@ -16,7 +16,7 @@ The scan found and resolved a reachable Gorilla WebSocket masking-key advisory b
 
 The prior final-audit combined command was `pwsh -NoProfile -File tools/check.ps1 -Race -Vulnerabilities -Fuzz`, exit code 0. Portable compiler release: [LLVM-MinGW 20261020](https://github.com/mstorsjo/llvm-mingw/releases/tag/20261020); archive SHA-256 `fd5462b7f5d93b2ff981fcd3f9c7e427e47f3203c64ea91c27bcc444eebd74cd` was verified before extraction. Its files are ignored under `.tools/`. Concurrent nonce/cancellation/external-signer cases also passed 100 stress iterations and 20 race-enabled iterations.
 
-All 300 pinned and 224 versioned deployment ABI wrappers are exercised against ABI wire encoding/decoding, with provenance checks for every artifact. Final statement coverage is 81.9% for the EVM package and 76.2% for Cosmos; this does not prove contract business rules. Bounded fuzz campaigns passed: amounts 667144 executions, signatures 1176475, protobuf decoding 549891, and stateless validation with valid-signer deep paths 483950. No crash was found in those runs. Thirty Python generation/release/channel/documentation tests also pass, including real generated Go compilation, pinned Git blob identity checks and reproducible archive verification.
+All 300 pinned and 224 versioned deployment ABI wrappers are exercised against ABI wire encoding/decoding, with provenance checks for every artifact. Final statement coverage is 82.0% for the EVM package and 76.2% for Cosmos; this does not prove contract business rules. Bounded fuzz campaigns passed: amounts 667144 executions, signatures 1176475, protobuf decoding 549891, and stateless validation with valid-signer deep paths 483950. No crash was found in those runs. Thirty Python generation/release/channel/documentation tests also pass, including real generated Go compilation, pinned Git blob identity checks and reproducible archive verification.
 
 Cosmos covers all 43 pinned message descriptors, source-backed GetSigners and ValidateBasic, address conversions, direct signing callbacks, REST/gRPC query and simulation, explicit submission interfaces, bounded fee convergence and historical RLP checks. In-process gRPC wire tests check read/write separation, transport errors and cancellation; they do not connect to a real node. A separately executed Cosmos SDK v0.46.16/Ethermint v0.22.13 reference produced `cosmos/schema/reference-tx.json`; body/auth bytes, SignDoc, signature, public key and full TxRaw match exactly. Its payload is a serialization fixture, not a submitted business transaction.
 
@@ -66,3 +66,8 @@ Preview.5 adds strict Checks event/history and existing-receipt readers, plus `C
 The dated [compatibility matrix](COMPATIBILITY.md) contains 524 ABI method records per network, 93 operation records and explicit evidence boundaries. Read-only snapshots found code at 14 testnet and 11 mainnet configured addresses. Six historical testnet Checks creations and one matching existing receipt were observed. Two testnet token self-transfers of one raw unit and one mainnet native self-transfer of one wei succeeded through `eth_call` only. No transaction was sent.
 
 The configured mainnet Checks address has the same runtime as the observed testnet Checks implementation, with zero implementation/beacon slots and zero owner response. Initialization and suitability as a user-facing Checks deployment are not established. Defaults were not changed. Mainnet history returned zero events only within its sampled 2000-block window. Missing official ABI and stateful acceptance remain explicit gaps.
+
+
+Preview.6 repeats the complete combined check after cancellation/receipt validation fixes. In-process regression tests cover successful backend responses arriving after cancellation, missing/zero/negative/overflow mined heights, missing block hash, unknown receipt status, negative gas price and a zero requested transaction hash. Checks CLI tests reject omitted/null genesis number while accepting explicit zero. No public write was part of these tests.
+
+The official-source [RPC identity review](NODE_RPC_IDENTITY.md) records Tendermint hash formatting, hash-to-height selector resolution and the pinned parser limits for requireCanonical, finalized and state overrides. Source behavior is not a statement of which binary each public RPC currently runs. The preview.5 dated live evidence is retained; no extra live acceptance is claimed by these fixes.

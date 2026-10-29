@@ -78,10 +78,19 @@ func (c *Client) Close() {
 }
 func (c *Client) ChainID() *big.Int { return copyInt(c.cfg.ChainID) }
 func (c *Client) checkChain(ctx context.Context) error {
+	if ctx == nil {
+		return errors.New("context required")
+	}
+	if c == nil || c.rpc == nil || c.cfg.ChainID == nil {
+		return errors.New("configured RPC client required")
+	}
 	if e := ctx.Err(); e != nil {
 		return e
 	}
 	id, e := c.rpc.ChainID(ctx)
+	if canceled := ctx.Err(); canceled != nil {
+		return canceled
+	}
 	if e != nil {
 		if ctx.Err() != nil {
 			return ctx.Err()
@@ -494,6 +503,9 @@ type RevertedError struct{ Hash common.Hash }
 
 func (e *RevertedError) Error() string { return "transaction reverted: " + e.Hash.Hex() }
 func (c *Client) WaitReceipt(ctx context.Context, hash common.Hash, poll time.Duration) (*Mined, error) {
+	if hash == (common.Hash{}) {
+		return nil, errors.New("transaction hash required")
+	}
 	if poll <= 0 {
 		poll = time.Second
 	}
@@ -503,10 +515,22 @@ func (c *Client) WaitReceipt(ctx context.Context, hash common.Hash, poll time.Du
 	timer := time.NewTicker(poll)
 	defer timer.Stop()
 	for {
+		if e := ctx.Err(); e != nil {
+			return nil, e
+		}
 		r, e := c.rpc.TransactionReceipt(ctx, hash)
+		if canceled := ctx.Err(); canceled != nil {
+			return nil, canceled
+		}
 		if e == nil && r != nil {
 			if r.TxHash != hash {
 				return nil, errors.New("receipt transaction hash mismatch")
+			}
+			if r.BlockNumber == nil || !r.BlockNumber.IsUint64() || r.BlockNumber.Sign() <= 0 || r.BlockHash == (common.Hash{}) {
+				return nil, errors.New("receipt requires mined block identity")
+			}
+			if r.Status > types.ReceiptStatusSuccessful || (r.EffectiveGasPrice != nil && r.EffectiveGasPrice.Sign() < 0) {
+				return nil, errors.New("invalid receipt status or gas price")
 			}
 			var fee *big.Int
 			if r.EffectiveGasPrice != nil {

@@ -260,23 +260,23 @@ func TestUnknownOutcomeIsNeverRetried(t *testing.T) {
 }
 func TestReceiptsAndActualFee(t *testing.T) {
 	f := newFake()
-	f.receipt = &types.Receipt{Status: 0, GasUsed: 21000, EffectiveGasPrice: big.NewInt(7)}
+	f.receipt = &types.Receipt{TxHash: common.HexToHash("0x02"), Status: 0, BlockNumber: big.NewInt(1), BlockHash: common.HexToHash("0x01"), GasUsed: 21000, EffectiveGasPrice: big.NewInt(7)}
 	c := testClient(t, f)
-	r, e := c.WaitReceipt(context.Background(), common.Hash{}, time.Millisecond)
+	r, e := c.WaitReceipt(context.Background(), common.HexToHash("0x02"), time.Millisecond)
 	var reverted *RevertedError
 	if !errors.As(e, &reverted) || r.ActualFee.Int64() != 147000 {
 		t.Fatal("reverted receipt counted successful")
 	}
 	f.receipt.Status = 1
 	f.receipt.EffectiveGasPrice = nil
-	r, e = c.WaitReceipt(context.Background(), common.Hash{}, time.Millisecond)
+	r, e = c.WaitReceipt(context.Background(), common.HexToHash("0x02"), time.Millisecond)
 	if e != nil || r.ActualFee != nil {
 		t.Fatal("missing actual fee fabricated")
 	}
 	f.receipt = nil
 	ctx, cancel := context.WithTimeout(context.Background(), time.Millisecond*10)
 	defer cancel()
-	if _, e = c.WaitReceipt(ctx, common.Hash{}, time.Millisecond); !errors.Is(e, context.DeadlineExceeded) {
+	if _, e = c.WaitReceipt(ctx, common.HexToHash("0x02"), time.Millisecond); !errors.Is(e, context.DeadlineExceeded) {
 		t.Fatal("receipt ignores cancellation")
 	}
 }

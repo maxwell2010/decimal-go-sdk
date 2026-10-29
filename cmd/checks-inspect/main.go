@@ -99,7 +99,7 @@ func main() {
 
 type observedHeader struct {
 	Hash   common.Hash
-	Number hexutil.Uint64
+	Number *hexutil.Uint64
 }
 
 func rawHeader(ctx context.Context, r *rpc.Client, height uint64) (*observedHeader, error) {
@@ -108,7 +108,7 @@ func rawHeader(ctx context.Context, r *rpc.Client, height uint64) (*observedHead
 	if e != nil {
 		return nil, e
 	}
-	if h == nil || uint64(h.Number) != height || h.Hash == (common.Hash{}) {
+	if h == nil || h.Number == nil || uint64(*h.Number) != height || h.Hash == (common.Hash{}) {
 		return nil, fmt.Errorf("invalid raw block identity")
 	}
 	return h, nil

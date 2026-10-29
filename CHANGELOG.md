@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.1.0-preview.6 - 2026-10-29
+
+- Checks history/receipt readers and the chain guard preserve cancellation even when a backend returns successful data after canceling the request.
+- Receipt waiting requires mined block coordinates, known status, nonnegative reported gas price and a nonzero requested transaction hash.
+- Checks inspection rejects missing/null block numbers at genesis, preserving the distinction between height zero and an omitted field.
+- Pinned official node/Ethermint source review documents native block identity and incomplete requireCanonical semantics. No stronger block-hash state binding is inferred.
+- Regression tests and public install/update verification cover both modules. No network transaction was sent and no unavailable ABI was invented.
+
 ## v0.1.0-preview.5 - 2026-10-29
 
 - Read-only deployment/getter snapshots on official testnet and mainnet at explicit block numbers and raw RPC hashes.

@@ -169,8 +169,23 @@ func (c *Client) ChecksCreationHistory(ctx context.Context, address common.Addre
 	if e != nil {
 		return nil, e
 	}
-	logs, e := c.Logs(ctx, ethereum.FilterQuery{FromBlock: new(big.Int).SetUint64(from), ToBlock: new(big.Int).SetUint64(to), Addresses: []common.Address{address}, Topics: [][]common.Hash{{a.Events["CreatedCheck"].ID}}})
+	if e = c.checkChain(ctx); e != nil {
+		return nil, e
+	}
+	if e = ctx.Err(); e != nil {
+		return nil, e
+	}
+	r, ok := c.rpc.(interface {
+		FilterLogs(context.Context, ethereum.FilterQuery) ([]types.Log, error)
+	})
+	if !ok {
+		return nil, errors.New("backend does not support log filtering")
+	}
+	logs, e := r.FilterLogs(ctx, ethereum.FilterQuery{FromBlock: new(big.Int).SetUint64(from), ToBlock: new(big.Int).SetUint64(to), Addresses: []common.Address{address}, Topics: [][]common.Hash{{a.Events["CreatedCheck"].ID}}})
 	if e != nil {
+		return nil, rpcFailure(ctx, "log query failed")
+	}
+	if e = ctx.Err(); e != nil {
 		return nil, e
 	}
 	if len(logs) > 10000 {
@@ -181,7 +196,11 @@ func (c *Client) ChecksCreationHistory(ctx context.Context, address common.Addre
 			return nil, errors.New("Checks event outside requested block range")
 		}
 	}
-	return checksCreationRows(address, logs)
+	rows, e := checksCreationRows(address, logs)
+	if cancelled := ctx.Err(); cancelled != nil {
+		return nil, cancelled
+	}
+	return rows, e
 }
 
 // ChecksCreationReceipt reads one existing receipt and validates the requested
@@ -193,12 +212,22 @@ func (c *Client) ChecksCreationReceipt(ctx context.Context, address common.Addre
 	if e := c.checkChain(ctx); e != nil {
 		return nil, e
 	}
+	if e := ctx.Err(); e != nil {
+		return nil, e
+	}
 	r, e := c.rpc.TransactionReceipt(ctx, tx)
 	if e != nil {
 		return nil, rpcFailure(ctx, "Checks receipt unavailable")
 	}
+	if e = ctx.Err(); e != nil {
+		return nil, e
+	}
 	if r == nil || r.TxHash != tx {
 		return nil, errors.New("Checks receipt transaction hash mismatch")
 	}
-	return ChecksCreationsFromReceipt(address, r)
+	rows, e := ChecksCreationsFromReceipt(address, r)
+	if cancelled := ctx.Err(); cancelled != nil {
+		return nil, cancelled
+	}
+	return rows, e
 }
