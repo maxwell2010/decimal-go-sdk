@@ -36,7 +36,7 @@ The tool reads a clean committed Git HEAD and emits versioned ZIP/TAR.GZ plus SH
 
 ## Publish
 
-Create immutable tags `v0.1.0-preview.9` and `cosmos/v0.1.0-preview.9` at the same reviewed commit; the nested module needs its own tag. Create a GitHub prerelease on the root tag, attaching only the two reviewed archives and SHA256SUMS. Use a new version for every correction; do not overwrite published tags/assets. GitHub's prerelease flag does not change Go version ordering, so the version also carries a SemVer preview suffix.
+Create immutable tags `v0.1.0-preview.10` and `cosmos/v0.1.0-preview.10` at the same reviewed commit; the nested module needs its own tag. Create a GitHub prerelease on the root tag, attaching only the two reviewed archives and SHA256SUMS. Use a new version for every correction; do not overwrite published tags/assets. GitHub's prerelease flag does not change Go version ordering, so the version also carries a SemVer preview suffix.
 
 After publication, verify unauthenticated repository/asset downloads, compare SHA256SUMS and test `go get` for each module in fresh consumer modules without local replace directives. Check the public GitHub Actions results for the published commit. The root release is a library source release, not a Python wheel or a claim of funded-wallet acceptance. No network transaction campaign is part of publication.
 

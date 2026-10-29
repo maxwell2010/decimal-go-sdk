@@ -27,3 +27,5 @@ An impossible threshold reverts with unchanged owners, threshold, nonce and logs
 The [token runtime manifest](../testdata/evm/token-runtime-manifest.json) records official fixed-block reserve and reserveless implementation code. The reserveless fixture is initialized through its real public ABI in empty local state. SDK CheckedPermit validates its actual domain and nonce, permit emits Approval and updates allowance/nonce, replay fails, and transferFrom spends the approved allowance. Reinitialization is rejected.
 
 This closes the earlier upstream-only permit execution limit for the sampled reserveless Decimal code. It still does not certify public proxy state or all token routes. Reserve-token code was captured and hash-checked but is NOT executed by this suite; no reserve economics or acceptance result is inferred.
+
+The separate [reserve economy suite](RESERVE_ECONOMY.md) now executes the pinned reserve runtime, including selected nonlinear exchanges, accounting, refunds, burn, bounds and dust behavior. The earlier captured-only statement applies to the permit suite above, not this additional execution evidence.

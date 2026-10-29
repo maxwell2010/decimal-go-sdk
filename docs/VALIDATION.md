@@ -4,7 +4,7 @@ Environment: Windows amd64, Go 1.26.10. No user wallet, mnemonic or private key 
 
 | Check | Result | Boundary |
 |---|---|---|
-| `go test ./...` in both modules | Passed | EVM/CLI: 868 passing test/example/subtest events, 141 top-level entries. Cosmos: 179 events, 31 top-level entries. These are test runner counts, not transaction types. |
+| `go test ./...` in both modules | Passed | EVM/CLI: 947 passing test/example/subtest events, 155 top-level entries. Cosmos: 179 events, 31 top-level entries. These are test runner counts, not transaction types. |
 | `go vet ./...` | Passed | Static Go checks. |
 | `go build ./...` | Passed | SDK and read-only inspection command compile. |
 | `go mod verify` | All modules verified | Final dependency graph uses btcd's split v2 modules, not the locally modified cached v0.24.2 tree encountered during development. |
@@ -101,3 +101,12 @@ Contract read regressions reproduce lost cancellation, mutation of caller-owned 
 Both simulation entry points received the same cancellation and ownership corrections. Independent regressions verify pre-backend value/calldata/block snapshots, returned-buffer ownership, nil/latest and negative unbound tags, and preserved custom errors. The regressions fail against preview.8 through a source overlay and pass with the corrected code. Existing proxy/simulation guards remain exercised.
 
 The preview.9 combined command `pwsh -NoProfile -File tools/check.ps1 -Race -Vulnerabilities` completed with exit code 0 after all read/simulation and route changes. Thirty Python tests passed. The dated scan reports zero reachable findings and zero affected imported packages, with the existing one unused module advisory.
+
+
+Preview.10 closes the selected [local reserve economy checks](RESERVE_ECONOMY.md), using the exact already-pinned implementation code without copied live storage or formula mocks. Seven buy/sell/burn routes, cap/slippage/minimum/insufficient-budget rollback, native/token/supply/backing changes and intermediate event timing are asserted. Exact-input/output nonlinear paths use selected CRR 10/50/100; quote/execution agreement is not formal proof of the nonlinear approximation.
+
+Independent rational checks cover 384 CRR100 comparisons and four exact CRR50 perfect-square vectors. Current-price rational cases and stateful/stateless quote equivalence run before/after real burn. Before-getter tests use explicit local native credit, not guesses about public receive behavior. Eighteen standalone initializer/admin cases preserve actual accepted/rejected bounds; factory admission policy is not inferred.
+
+Positive-budget dust cases preserve sampled contract behavior: zero inverse quote can yield a net-zero-native mint or a one-wei payout without token burn. In-process calls charge no transaction gas; a separate signed Ethereum-chain reserve lifecycle independently checks actual gas fees, refund, payout and balances through SDK Send/WaitReceipt. ReserveUpdated can precede refund/payout and is not mislabeled as settled reserve. The official native big.Float source is not used as an exact Solidity rounding oracle. No public-network transaction was submitted; full uint256/CRR/formal-math coverage and public proxy/settlement remain outside these bounded checks.
+
+The preview.10 combined command `pwsh -NoProfile -File tools/check.ps1 -Race -Vulnerabilities` completed with exit code 0 after all reserve suites froze. Thirty Python tests passed; both modules passed tests/vet/build/module verification/race. Dated scan: zero reachable findings and zero affected imported packages, with the existing unused module advisory. No SDK formula or contract bytecode was patched to hide observed results.

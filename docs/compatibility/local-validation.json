@@ -1,13 +1,13 @@
 {
-  "checked_utc": "2026-10-29T10:54:22.085433+00:00",
+  "checked_utc": "2026-10-29T11:25:24.115046+00:00",
   "go_version": "go version go1.26.10 windows/amd64",
-  "EVM_source_fingerprint_sha256": "eafa385aa9ea0e5ad635aba052e2422c0d62534f2ed3ea074583b70f3d36fcd6",
+  "EVM_source_fingerprint_sha256": "9bdb96f3c9aee3bb837d4d6c5a11751b355ef9c902d9e52ce35a1b21513ea0ae",
   "modules": {
     ".": {
       "command": "go test -json ./...",
       "exit_code": 0,
-      "passing_test_events": 868,
-      "top_level_entries": 141,
+      "passing_test_events": 947,
+      "top_level_entries": 155,
       "required_suites": {
         "TestAllGeneratedABIWrappers": "pass",
         "TestEmbeddedABIProvenance": "pass",
@@ -33,7 +33,21 @@
         "TestContractReadPreservesCancellationOnBackendResponse": "pass",
         "TestContractReadDynamicBytesDoNotAliasBackendBuffer": "pass",
         "TestSimulationReadCancellationAndOwnership": "pass",
-        "TestSimulationReadKeepsCustomError": "pass"
+        "TestSimulationReadKeepsCustomError": "pass",
+        "TestLocalEVMReserveEconomyLinearLifecycle": "pass",
+        "TestLocalEVMReserveEconomyRollbackAndLimits": "pass",
+        "TestLocalEVMReserveDustExactOutputRejectsZeroInput": "pass",
+        "TestLocalEVMReserveDustPositiveBudgetFollowsFloorQuote": "pass",
+        "TestLocalReserveOracleCRR100IntegerRounding": "pass",
+        "TestLocalReserveOracleCRR50PerfectSquareVectors": "pass",
+        "TestLocalEVMReserveNonlinearQuoteExecutionConcordance": "pass",
+        "TestLocalEVMReserveExactOutputNonlinearConcordance": "pass",
+        "TestLocalEVMReserveInitializationBoundaries": "pass",
+        "TestLocalEVMReserveAdministrationBoundaries": "pass",
+        "TestLocalEVMReserveCurrentPriceRationalVectors": "pass",
+        "TestLocalEVMReserveQuoteOverloadsMatchState": "pass",
+        "TestLocalEVMReserveBeforeQuotesCreditedBalanceContext": "pass",
+        "TestLocalReserveSignedChainEconomyAndActualFees": "pass"
       }
     },
     "cosmos": {

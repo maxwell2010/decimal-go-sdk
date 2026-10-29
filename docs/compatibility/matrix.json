@@ -17,7 +17,7 @@
     "docs/compatibility/checks-testnet.json": "4d6533dd26dc82def6b7d93b4703d5d1151590d25679c78f9099324cac7fe7b1",
     "docs/compatibility/checks-mainnet.json": "a098fc6fdd5195077363fdfd06f8b5b24bbbd077dd4cdb20c36383b62e12ba4d",
     "docs/compatibility/checks-testnet-receipts.json": "89d0698f46ea2ec8c36bc08684492b097c775dcc9de8bab3162a512aa20888ce",
-    "docs/compatibility/local-validation.json": "115caaa3bf09207aa271cccea5064057e7fdc05e8f928de9774f79da1fe0f4a8"
+    "docs/compatibility/local-validation.json": "8c68967b8f1583793b170ffa3307cf83ccb2c64a3a637338d40fcc52f668181e"
   },
   "summary": {
     "ABI_methods": 524,
@@ -35,15 +35,15 @@
     "mainnet_checks_matches_testnet_implementation_with_zero_getters": true
   },
   "local_validation": {
-    "checked_utc": "2026-10-29T10:54:22.085433+00:00",
+    "checked_utc": "2026-10-29T11:25:24.115046+00:00",
     "go_version": "go version go1.26.10 windows/amd64",
-    "EVM_source_fingerprint_sha256": "eafa385aa9ea0e5ad635aba052e2422c0d62534f2ed3ea074583b70f3d36fcd6",
+    "EVM_source_fingerprint_sha256": "9bdb96f3c9aee3bb837d4d6c5a11751b355ef9c902d9e52ce35a1b21513ea0ae",
     "modules": {
       ".": {
         "command": "go test -json ./...",
         "exit_code": 0,
-        "passing_test_events": 868,
-        "top_level_entries": 141,
+        "passing_test_events": 947,
+        "top_level_entries": 155,
         "required_suites": {
           "TestAllGeneratedABIWrappers": "pass",
           "TestEmbeddedABIProvenance": "pass",
@@ -69,7 +69,21 @@
           "TestContractReadPreservesCancellationOnBackendResponse": "pass",
           "TestContractReadDynamicBytesDoNotAliasBackendBuffer": "pass",
           "TestSimulationReadCancellationAndOwnership": "pass",
-          "TestSimulationReadKeepsCustomError": "pass"
+          "TestSimulationReadKeepsCustomError": "pass",
+          "TestLocalEVMReserveEconomyLinearLifecycle": "pass",
+          "TestLocalEVMReserveEconomyRollbackAndLimits": "pass",
+          "TestLocalEVMReserveDustExactOutputRejectsZeroInput": "pass",
+          "TestLocalEVMReserveDustPositiveBudgetFollowsFloorQuote": "pass",
+          "TestLocalReserveOracleCRR100IntegerRounding": "pass",
+          "TestLocalReserveOracleCRR50PerfectSquareVectors": "pass",
+          "TestLocalEVMReserveNonlinearQuoteExecutionConcordance": "pass",
+          "TestLocalEVMReserveExactOutputNonlinearConcordance": "pass",
+          "TestLocalEVMReserveInitializationBoundaries": "pass",
+          "TestLocalEVMReserveAdministrationBoundaries": "pass",
+          "TestLocalEVMReserveCurrentPriceRationalVectors": "pass",
+          "TestLocalEVMReserveQuoteOverloadsMatchState": "pass",
+          "TestLocalEVMReserveBeforeQuotesCreditedBalanceContext": "pass",
+          "TestLocalReserveSignedChainEconomyAndActualFees": "pass"
         }
       },
       "cosmos": {

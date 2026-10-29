@@ -20,7 +20,14 @@ REQUIRED = ['TestAllGeneratedABIWrappers', 'TestEmbeddedABIProvenance', 'TestVer
             'TestLocalEVMCurrentChecksTokenBatchRedemptionAtomicity', 'TestLocalEVMCurrentChecksTokenByStandardPermit',
             'TestLocalEVMCurrentChecksExpiryRejectsRecipientProof', 'TestContractReadPreservesCancellationOnBackendResponse',
             'TestContractReadDynamicBytesDoNotAliasBackendBuffer',
-            'TestSimulationReadCancellationAndOwnership', 'TestSimulationReadKeepsCustomError']
+            'TestSimulationReadCancellationAndOwnership', 'TestSimulationReadKeepsCustomError',
+            'TestLocalEVMReserveEconomyLinearLifecycle', 'TestLocalEVMReserveEconomyRollbackAndLimits',
+            'TestLocalEVMReserveDustExactOutputRejectsZeroInput', 'TestLocalEVMReserveDustPositiveBudgetFollowsFloorQuote',
+            'TestLocalReserveOracleCRR100IntegerRounding', 'TestLocalReserveOracleCRR50PerfectSquareVectors',
+            'TestLocalEVMReserveNonlinearQuoteExecutionConcordance', 'TestLocalEVMReserveExactOutputNonlinearConcordance',
+            'TestLocalEVMReserveInitializationBoundaries', 'TestLocalEVMReserveAdministrationBoundaries',
+            'TestLocalEVMReserveCurrentPriceRationalVectors', 'TestLocalEVMReserveQuoteOverloadsMatchState',
+            'TestLocalEVMReserveBeforeQuotesCreditedBalanceContext', 'TestLocalReserveSignedChainEconomyAndActualFees']
 
 
 def source_fingerprint(root=ROOT):

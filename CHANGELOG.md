@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.1.0-preview.10 - 2026-10-29
+
+- Actual pinned reserve runtime initialization, buy/sell aliases, exact-output refunds, burn, balance/supply/reserve/event accounting and rollback on selected limits.
+- Independent integer-rational CRR100 oracle (384 comparisons) plus four exact CRR50 perfect-square cases; selected CRR10/50/100 nonlinear quote/execution concordance, current price and Before views. No full nonlinear precision proof claimed.
+- Standalone initialization/admin boundary observations preserve actual accepted and rejected configurations without guessing factory validation.
+- Explicit intermediate ReserveUpdated semantics and positive-budget floor-to-zero dust behavior are recorded as contract behavior, not SDK formula fixes.
+- Signed/mined reserve initialize/buy/sell/burn on an isolated Ethereum chain verify net refund/payout and actual gas fees. No public transaction or Decimal consensus/proxy state acceptance.
+
 ## v0.1.0-preview.9 - 2026-10-29
 
 - Contract reads and simulations preserve cancellation, snapshot caller-owned target/block/value/calldata parameters and own response buffers, while preserving custom errors and proxy guards. Regression tests reproduce failures against preview.8.

@@ -2,17 +2,17 @@
 
 [Установка и обновление одной командой](INSTALL.ru.md) | [Все ABI write-примеры](TRANSACTIONS.ru.md) | [Типы 0/1/2](TRANSACTION_ENVELOPES.ru.md) | [Cosmos-сообщения](../cosmos/TRANSACTIONS.ru.md)
 
-Требуется Go 1.26.10 или новее. Версия для предварительного использования: `v0.1.0-preview.9`.
+Требуется Go 1.26.10 или новее. Версия для предварительного использования: `v0.1.0-preview.10`.
 
 ## Установка
 
-Выполните в новом каталоге. У вложенного Cosmos-модуля отдельный тег `cosmos/v0.1.0-preview.9`; команда Go выбирает его по пути модуля и обычному номеру версии ниже.
+Выполните в новом каталоге. У вложенного Cosmos-модуля отдельный тег `cosmos/v0.1.0-preview.10`; команда Go выбирает его по пути модуля и обычному номеру версии ниже.
 
 ```sh
 go mod init example.com/decimal-demo
-go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.9
+go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.10
 # Необязательный самостоятельный Cosmos-модуль:
-go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.9
+go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.10
 ```
 ## Сборка вызовов без сети
 
