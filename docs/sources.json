@@ -1,0 +1,108 @@
+{
+  "pins": {
+    "go-smart-node": "9e6c6d718d662083c4a524376a66d2c50bd4bc77",
+    "dsc-js-sdk": "6790d35e2decb0cbb06a9149a9c476c834f99223",
+    "dsc-go-sdk": "3ef4a089b6020889e60783c2026df5725fb960e2"
+  },
+  "abis": [
+    {
+      "profile": "ContractCenter",
+      "repository": "go-smart-node",
+      "commit": "9e6c6d718d662083c4a524376a66d2c50bd4bc77",
+      "path": "contracts/center/DecimalContractCenter.json",
+      "source_sha256": "21271509ee2d4be6b328e0301562eabcf3cb55f7e8cdc700b06a0cf19dc8a394",
+      "abi_sha256": "21271509ee2d4be6b328e0301562eabcf3cb55f7e8cdc700b06a0cf19dc8a394",
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/contracts/center/DecimalContractCenter.json"
+    },
+    {
+      "profile": "Delegation",
+      "repository": "go-smart-node",
+      "commit": "9e6c6d718d662083c4a524376a66d2c50bd4bc77",
+      "path": "contracts/delegation/DecimalDelegation.json",
+      "source_sha256": "f4de3095b0bb70a689f742c2c3c5beb1da630114fd69195a2b6b31e0094aed59",
+      "abi_sha256": "11eb316b527827dd2dd61cb3052058087e877ed727e08a842dcbe492bcd16edd",
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/contracts/delegation/DecimalDelegation.json"
+    },
+    {
+      "profile": "DelegationNFT",
+      "repository": "go-smart-node",
+      "commit": "9e6c6d718d662083c4a524376a66d2c50bd4bc77",
+      "path": "contracts/delegationNft/DecimalDelegationNFT.json",
+      "source_sha256": "2352a9b8a199cba73f8daaaadca158ee12517fc2aeb385eee697739f64d4ecb4",
+      "abi_sha256": "2352a9b8a199cba73f8daaaadca158ee12517fc2aeb385eee697739f64d4ecb4",
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/contracts/delegationNft/DecimalDelegationNFT.json"
+    },
+    {
+      "profile": "ERC1155",
+      "repository": "go-smart-node",
+      "commit": "9e6c6d718d662083c4a524376a66d2c50bd4bc77",
+      "path": "contracts/nft1155/DecimalERC1155.json",
+      "source_sha256": "73e19121cd488b97e3afde1cb38aa302ad45d195dc76c398e02af02430cef901",
+      "abi_sha256": "73e19121cd488b97e3afde1cb38aa302ad45d195dc76c398e02af02430cef901",
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/contracts/nft1155/DecimalERC1155.json"
+    },
+    {
+      "profile": "ERC721",
+      "repository": "go-smart-node",
+      "commit": "9e6c6d718d662083c4a524376a66d2c50bd4bc77",
+      "path": "contracts/nft721/DecimalERC721.json",
+      "source_sha256": "bb033802766145cc6c8fbf4bdc04eebd476b5e2968c9cbb1a11cc916c9d6980e",
+      "abi_sha256": "bb033802766145cc6c8fbf4bdc04eebd476b5e2968c9cbb1a11cc916c9d6980e",
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/contracts/nft721/DecimalERC721.json"
+    },
+    {
+      "profile": "NFTCenter",
+      "repository": "go-smart-node",
+      "commit": "9e6c6d718d662083c4a524376a66d2c50bd4bc77",
+      "path": "contracts/nftCenter/DecimalNFTCenter.json",
+      "source_sha256": "8f56f8d463b3fce55f8b5811688deb65225471f9885b79f07f45247ff6b3bf33",
+      "abi_sha256": "8f56f8d463b3fce55f8b5811688deb65225471f9885b79f07f45247ff6b3bf33",
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/contracts/nftCenter/DecimalNFTCenter.json"
+    },
+    {
+      "profile": "Token",
+      "repository": "go-smart-node",
+      "commit": "9e6c6d718d662083c4a524376a66d2c50bd4bc77",
+      "path": "contracts/token/DecimalToken.json",
+      "source_sha256": "678c18ae3f21a4729902213037896bded2fdb0accfee17c50fa6732f6a4f781b",
+      "abi_sha256": "678c18ae3f21a4729902213037896bded2fdb0accfee17c50fa6732f6a4f781b",
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/contracts/token/DecimalToken.json"
+    },
+    {
+      "profile": "TokenCenter",
+      "repository": "go-smart-node",
+      "commit": "9e6c6d718d662083c4a524376a66d2c50bd4bc77",
+      "path": "contracts/tokenCenter/DecimalTokenCenter.json",
+      "source_sha256": "020dd4fab9bc48955e75a4dc9204dc3448280d6452954332de5bc0566f7ced66",
+      "abi_sha256": "020dd4fab9bc48955e75a4dc9204dc3448280d6452954332de5bc0566f7ced66",
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/contracts/tokenCenter/DecimalTokenCenter.json"
+    },
+    {
+      "profile": "MasterValidator",
+      "repository": "go-smart-node",
+      "commit": "9e6c6d718d662083c4a524376a66d2c50bd4bc77",
+      "path": "contracts/validator/DecimalMasterValidator.json",
+      "source_sha256": "b3c46c37dcd4783b18a0e6f9159d4395496c849a2d2c74dae2b0fbd68c3a386d",
+      "abi_sha256": "b3c46c37dcd4783b18a0e6f9159d4395496c849a2d2c74dae2b0fbd68c3a386d",
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/contracts/validator/DecimalMasterValidator.json"
+    },
+    {
+      "profile": "Checks",
+      "repository": "dsc-js-sdk",
+      "commit": "6790d35e2decb0cbb06a9149a9c476c834f99223",
+      "path": "src/decimalevm/abi/Checks.json",
+      "source_sha256": "1991da198020f853db3ce1533c0745acf374e82ec46228d2628ec3f9aed173f1",
+      "abi_sha256": "85a7296ec7ab502b7f67dd9dc94055f45bd58844cf251a076f9b3319fab0f909",
+      "url": "https://bitbucket.org/decimalteam/dsc-js-sdk/src/6790d35e2decb0cbb06a9149a9c476c834f99223/src/decimalevm/abi/Checks.json"
+    },
+    {
+      "profile": "Multicall",
+      "repository": "dsc-js-sdk",
+      "commit": "6790d35e2decb0cbb06a9149a9c476c834f99223",
+      "path": "src/decimalevm/abi/Multicall.json",
+      "source_sha256": "099d0355185881f4ac59d8e81689e50cac8c2a318c24d2a31cd84f3bdb46b3e9",
+      "abi_sha256": "f9a7325f0ac564bca1a2cf4110f0598e3cb3b23f1215688f0209e67a8ae695a9",
+      "url": "https://bitbucket.org/decimalteam/dsc-js-sdk/src/6790d35e2decb0cbb06a9149a9c476c834f99223/src/decimalevm/abi/Multicall.json"
+    }
+  ]
+}

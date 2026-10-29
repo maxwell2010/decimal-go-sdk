@@ -1,0 +1,41 @@
+{
+  "evidence": "deployments/testnet-2026-10-29-additional/metadata.json",
+  "profiles": [
+    {
+      "profile": "TestnetSafe20261029",
+      "chain_id": "202020",
+      "observed_block": 22474733,
+      "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee",
+      "address_source": "https://bitbucket.org/decimalteam/dsc-js-sdk/src/6790d35e2decb0cbb06a9149a9c476c834f99223/src/endpoints.ts",
+      "runtime_code_hash": "0xf551f56a1c8069a151b5a7e210afecc4febe2c3e2725960ae138adc10eb3e1cc",
+      "api_url": "https://testnet-api.decimalchain.com/api/v1/contracts/compact/0xe0f30fccae2f9f9c7efee9af044c436841d466ee",
+      "source_abi_sha256": "d16f9bbc7976ce03ac30b4a80044877623a14381cb17915fe6fd3b32f8a0739a",
+      "normalized_abi_sha256": "08323cd2a7314907027ca6fa10716a2e45d994b3fa22d5892332eba556156dd3",
+      "status": "explicit versioned interface; no write/role acceptance; never substitute defaults"
+    },
+    {
+      "profile": "TestnetSafeFactory20261029",
+      "chain_id": "202020",
+      "observed_block": 22474733,
+      "target_proxy": "0x4cC406B1713d3dF67e739D6f5918B6C98F614a38",
+      "address_source": "https://bitbucket.org/decimalteam/dsc-js-sdk/src/6790d35e2decb0cbb06a9149a9c476c834f99223/src/endpoints.ts",
+      "runtime_code_hash": "0xe813a7ddfe19f5bb04cc791f075d74945277b1f7e0c5340c038049b4d9cf6a4c",
+      "api_url": "https://testnet-api.decimalchain.com/api/v1/contracts/compact/0x4cc406b1713d3df67e739d6f5918b6c98f614a38",
+      "source_abi_sha256": "96a106fb0615c1236632905a41bd4537a8ccbd77af2dddca882c12b0e2ec180b",
+      "normalized_abi_sha256": "821156fd6767b4e7be70dd423eba3ceff122b2cb4082380c925be416d604b42e",
+      "status": "explicit versioned interface; no write/role acceptance; never substitute defaults"
+    },
+    {
+      "profile": "TestnetSafeMultiSend20261029",
+      "chain_id": "202020",
+      "observed_block": 22474733,
+      "target_proxy": "0xC0611a00CE349B9bCff3866351A2a5Aa9659c464",
+      "address_source": "https://bitbucket.org/decimalteam/dsc-js-sdk/src/6790d35e2decb0cbb06a9149a9c476c834f99223/src/endpoints.ts",
+      "runtime_code_hash": "0x362f096e3f60bdf21f9ea34a277e6504c16fe7027394c15e7c1971325a9a3531",
+      "api_url": "https://testnet-api.decimalchain.com/api/v1/contracts/compact/0xc0611a00ce349b9bcff3866351a2a5aa9659c464",
+      "source_abi_sha256": "c84f8d0f9550a2f87ed8b80bc9d211c8ec2fc9a32a146a905b75b8a54c3d1782",
+      "normalized_abi_sha256": "e01d635c429b432137fb1a64e356e6b31f40e9c0e9ee93193b68ff263176ef62",
+      "status": "explicit versioned interface; no write/role acceptance; never substitute defaults"
+    }
+  ]
+}

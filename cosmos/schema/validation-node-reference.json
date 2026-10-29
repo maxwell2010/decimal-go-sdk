@@ -1,0 +1,905 @@
+[
+  {
+    "type_url": "/cosmos.upgrade.v1beta1.MsgCancelUpgrade",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/cosmos.upgrade.v1beta1.MsgCancelUpgrade",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/cosmos.upgrade.v1beta1.MsgCancelUpgrade",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c6964",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/cosmos.upgrade.v1beta1.MsgSoftwareUpgrade",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b12140a07666978747572651801220766697874757265",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/cosmos.upgrade.v1beta1.MsgSoftwareUpgrade",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/cosmos.upgrade.v1beta1.MsgSoftwareUpgrade",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c696412140a07666978747572651801220766697874757265",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgBurnCoin",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b12080a03616263120131",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgBurnCoin",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgBurnCoin",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c696412080a03616263120131",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgBuyCoin",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b12080a036162631201311a080a0378797a120131",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgBuyCoin",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgBuyCoin",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c696412080a036162631201311a080a0378797a120131",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgCreateCoin",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b12036162631a076669787475726520322a13313030303030303030303030303030303030303213313030303030303030303030303030303030303a153130303030303030303030303030303030303030304207666978747572654a1331303030303030303030303030303030303030",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgCreateCoin",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgCreateCoin",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c696412036162631a076669787475726520322a13313030303030303030303030303030303030303213313030303030303030303030303030303030303a153130303030303030303030303030303030303030304207666978747572654a1331303030303030303030303030303030303030",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgMultiSendCoin",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b12350a29643031716770717971737a716770717971737a716770717971737a716770717971737a706667756c7112080a03616263120131",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgMultiSendCoin",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgMultiSendCoin",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c696412350a29643031716770717971737a716770717971737a716770717971737a716770717971737a706667756c7112080a03616263120131",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgRedeemCheck",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1207666978747572651a0766697874757265",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgRedeemCheck",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgRedeemCheck",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c69641207666978747572651a0766697874757265",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgSellAllCoin",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b12036162631a080a0378797a120131",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgSellAllCoin",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgSellAllCoin",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c696412036162631a080a0378797a120131",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgSellCoin",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b12080a036162631201311a080a0378797a120131",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgSellCoin",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgSellCoin",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c696412080a036162631201311a080a0378797a120131",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgSendCoin",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1229643031716770717971737a716770717971737a716770717971737a716770717971737a706667756c711a080a03616263120131",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgSendCoin",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgSendCoin",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c69641229643031716770717971737a716770717971737a716770717971737a716770717971737a706667756c711a080a03616263120131",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgUpdateCoin",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b12036162631a153130303030303030303030303030303030303030302207666978747572652a1331303030303030303030303030303030303030",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgUpdateCoin",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.coin.v1.MsgUpdateCoin",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c696412036162631a153130303030303030303030303030303030303030302207666978747572652a1331303030303030303030303030303030303030",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.fee.v1.MsgUpdateCoinPrices",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b12110a0361626312036162631a013122020801",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.fee.v1.MsgUpdateCoinPrices",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.fee.v1.MsgUpdateCoinPrices",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c696412110a0361626312036162631a013122020801",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.legacy.v1.MsgReturnLegacy",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1221000000000000000000000000000000000000000000000000000000000000000000",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.legacy.v1.MsgReturnLegacy",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.legacy.v1.MsgReturnLegacy",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c69641221000000000000000000000000000000000000000000000000000000000000000000",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.multisig.v1.MsgCreateTransaction",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1229643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1a0c0a0766697874757265120100",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.multisig.v1.MsgCreateTransaction",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.multisig.v1.MsgCreateTransaction",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c69641229643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1a0c0a0766697874757265120100",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.multisig.v1.MsgCreateWallet",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1229643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1229643031716770717971737a716770717971737a716770717971737a716770717971737a706667756c711a0201022001",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.multisig.v1.MsgCreateWallet",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.multisig.v1.MsgCreateWallet",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c69641229643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1229643031716770717971737a716770717971737a716770717971737a716770717971737a706667756c711a0201022001",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.multisig.v1.MsgSignTransaction",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b120f64306d737478317179786435683670",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.multisig.v1.MsgSignTransaction",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.multisig.v1.MsgSignTransaction",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c6964120f64306d737478317179786435683670",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.nft.v1.MsgBurnToken",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1207666978747572651a020102",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.nft.v1.MsgBurnToken",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.nft.v1.MsgBurnToken",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c69641207666978747572651a020102",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.nft.v1.MsgMintToken",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b12036162631a07666978747572652207666978747572653229643031716770717971737a716770717971737a716770717971737a716770717971737a706667756c71380142080a03616263120131",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.nft.v1.MsgMintToken",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.nft.v1.MsgMintToken",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c696412036162631a07666978747572652207666978747572653229643031716770717971737a716770717971737a716770717971737a716770717971737a706667756c71380142080a03616263120131",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.nft.v1.MsgSendToken",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1207666978747572651a0201022229643031716770717971737a716770717971737a716770717971737a716770717971737a706667756c71",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.nft.v1.MsgSendToken",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.nft.v1.MsgSendToken",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c69641207666978747572651a0201022229643031716770717971737a716770717971737a716770717971737a716770717971737a706667756c71",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.nft.v1.MsgUpdateReserve",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b120766697874757265220201022a080a03616263120131",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.nft.v1.MsgUpdateReserve",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.nft.v1.MsgUpdateReserve",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c6964120766697874757265220201022a080a03616263120131",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.nft.v1.MsgUpdateToken",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1207666978747572651a0766697874757265",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.nft.v1.MsgUpdateToken",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.nft.v1.MsgUpdateToken",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c69641207666978747572651a0766697874757265",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.swap.v1.MsgActivateChain",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b10011a0766697874757265",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.swap.v1.MsgActivateChain",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.swap.v1.MsgActivateChain",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c696410011a0766697874757265",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.swap.v1.MsgDeactivateChain",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1001",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.swap.v1.MsgDeactivateChain",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.swap.v1.MsgDeactivateChain",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c69641001",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.swap.v1.MsgInitializeSwap",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1229643031716770717971737a716770717971737a716770717971737a716770717971737a706667756c711a01312207666978747572652a013130013802",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.swap.v1.MsgInitializeSwap",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.swap.v1.MsgInitializeSwap",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c69641229643031716770717971737a716770717971737a716770717971737a716770717971737a706667756c711a01312207666978747572652a013130013802",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.swap.v1.MsgRedeemSwap",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1207666978747572651a29643031716770717971737a716770717971737a716770717971737a716770717971737a706667756c712201312a07666978747572653201313801400248015240303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030305a4030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.swap.v1.MsgRedeemSwap",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.swap.v1.MsgRedeemSwap",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c69641207666978747572651a29643031716770717971737a716770717971737a716770717971737a716770717971737a706667756c712201312a07666978747572653201313801400248015240303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030305a4030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgCancelRedelegation",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1230643076616c6f70657231717971737a716770717971737a716770717971737a716770717971737a716770736561656e781a30643076616c6f70657231716770717971737a716770717971737a716770717971737a716770717971737a70616d75637320012a080a03616263120131",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgCancelRedelegation",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgCancelRedelegation",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c69641230643076616c6f70657231717971737a716770717971737a716770717971737a716770717971737a716770736561656e781a30643076616c6f70657231716770717971737a716770717971737a716770717971737a716770717971737a70616d75637320012a080a03616263120131",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgCancelRedelegationNFT",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1230643076616c6f70657231717971737a716770717971737a716770717971737a716770717971737a716770736561656e781a30643076616c6f70657231716770717971737a716770717971737a716770717971737a716770717971737a70616d75637320012a076669787475726532020102",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgCancelRedelegationNFT",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgCancelRedelegationNFT",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c69641230643076616c6f70657231717971737a716770717971737a716770717971737a716770717971737a716770736561656e781a30643076616c6f70657231716770717971737a716770717971737a716770717971737a716770717971737a70616d75637320012a076669787475726532020102",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgCancelUndelegation",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1230643076616c6f70657231717971737a716770717971737a716770717971737a716770717971737a716770736561656e78180122080a03616263120131",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgCancelUndelegation",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgCancelUndelegation",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c69641230643076616c6f70657231717971737a716770717971737a716770717971737a716770717971737a716770736561656e78180122080a03616263120131",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgCancelUndelegationNFT",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1230643076616c6f70657231717971737a716770717971737a716770717971737a716770717971737a716770736561656e7818012207666978747572652a020102",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgCancelUndelegationNFT",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgCancelUndelegationNFT",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c69641230643076616c6f70657231717971737a716770717971737a716770717971737a716770717971737a716770736561656e7818012207666978747572652a020102",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgCreateValidator",
+    "case": "valid",
+    "protobuf_hex": "0a30643076616c6f70657231717971737a716770717971737a716770717971737a716770717971737a716770736561656e781229643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1a0c0a0766697874757265120100222d0a07666978747572651207666978747572651a07666978747572652207666978747572652a07666978747572652a013132080a03616263120131",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgCreateValidator",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgCreateValidator",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c69641229643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1a0c0a0766697874757265120100222d0a07666978747572651207666978747572651a07666978747572652207666978747572652a07666978747572652a013132080a03616263120131",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgDelegate",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1230643076616c6f70657231717971737a716770717971737a716770717971737a716770717971737a716770736561656e781a080a03616263120131",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgDelegate",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgDelegate",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c69641230643076616c6f70657231717971737a716770717971737a716770717971737a716770717971737a716770736561656e781a080a03616263120131",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgDelegateNFT",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1230643076616c6f70657231717971737a716770717971737a716770717971737a716770717971737a716770736561656e781a076669787475726522020102",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgDelegateNFT",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgDelegateNFT",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c69641230643076616c6f70657231717971737a716770717971737a716770717971737a716770717971737a716770736561656e781a076669787475726522020102",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgEditValidator",
+    "case": "valid",
+    "protobuf_hex": "0a30643076616c6f70657231717971737a716770717971737a716770717971737a716770717971737a716770736561656e781229643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1a2d0a07666978747572651207666978747572651a07666978747572652207666978747572652a0766697874757265",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgEditValidator",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgEditValidator",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c69641229643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1a2d0a07666978747572651207666978747572651a07666978747572652207666978747572652a0766697874757265",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgFreezeChain",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b120766697874757265",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgFreezeChain",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgFreezeChain",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c6964120766697874757265",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgHaltChain",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b10011a0766697874757265",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgHaltChain",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgHaltChain",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c696410011a0766697874757265",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgRedelegate",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1230643076616c6f70657231717971737a716770717971737a716770717971737a716770717971737a716770736561656e781a30643076616c6f70657231716770717971737a716770717971737a716770717971737a716770717971737a70616d75637322080a03616263120131",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgRedelegate",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgRedelegate",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c69641230643076616c6f70657231717971737a716770717971737a716770717971737a716770717971737a716770736561656e781a30643076616c6f70657231716770717971737a716770717971737a716770717971737a716770717971737a70616d75637322080a03616263120131",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgRedelegateNFT",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1230643076616c6f70657231717971737a716770717971737a716770717971737a716770717971737a716770736561656e781a30643076616c6f70657231716770717971737a716770717971737a716770717971737a716770717971737a70616d7563732207666978747572652a020102",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgRedelegateNFT",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgRedelegateNFT",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c69641230643076616c6f70657231717971737a716770717971737a716770717971737a716770717971737a716770736561656e781a30643076616c6f70657231716770717971737a716770717971737a716770717971737a716770717971737a70616d7563732207666978747572652a020102",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgResumeChain",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgResumeChain",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgResumeChain",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c6964",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgSetOffline",
+    "case": "valid",
+    "protobuf_hex": "0a30643076616c6f70657231717971737a716770717971737a716770717971737a716770717971737a716770736561656e78",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgSetOffline",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgSetOffline",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c6964",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgSetOnline",
+    "case": "valid",
+    "protobuf_hex": "0a30643076616c6f70657231717971737a716770717971737a716770717971737a716770717971737a716770736561656e78",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgSetOnline",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgSetOnline",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c6964",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgUndelegate",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1230643076616c6f70657231717971737a716770717971737a716770717971737a716770717971737a716770736561656e781a080a03616263120131",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgUndelegate",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgUndelegate",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c69641230643076616c6f70657231717971737a716770717971737a716770717971737a716770717971737a716770736561656e781a080a03616263120131",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgUndelegateNFT",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b1230643076616c6f70657231717971737a716770717971737a716770717971737a716770717971737a716770736561656e781a076669787475726522020102",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgUndelegateNFT",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgUndelegateNFT",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c69641230643076616c6f70657231717971737a716770717971737a716770717971737a716770717971737a716770736561656e781a076669787475726522020102",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgUnfreezeChain",
+    "case": "valid",
+    "protobuf_hex": "0a29643031717971737a716770717971737a716770717971737a716770717971737a71677073647765356b",
+    "port_valid": true,
+    "valid": true
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgUnfreezeChain",
+    "case": "empty",
+    "protobuf_hex": "",
+    "port_valid": false,
+    "valid": false
+  },
+  {
+    "type_url": "/decimal.validator.v1.MsgUnfreezeChain",
+    "case": "bad-signer",
+    "protobuf_hex": "0a07696e76616c6964",
+    "port_valid": false,
+    "valid": false
+  }
+]

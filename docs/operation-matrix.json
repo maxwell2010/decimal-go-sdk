@@ -1,0 +1,2274 @@
+[
+  {
+    "operation": "multiCall",
+    "line": 363,
+    "go_counterpart": null,
+    "methods": [
+      "aggregate"
+    ],
+    "profiles": [
+      "Multicall"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Multicall.BuildAggregate"
+    ],
+    "call_source": [
+      {
+        "method": "multicall",
+        "line": 168
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "multiSendToken",
+    "line": 405,
+    "go_counterpart": null,
+    "methods": [
+      "aggregate"
+    ],
+    "profiles": [
+      "Multicall"
+    ],
+    "status": "DEL-only-token-route-disabled",
+    "builders": [],
+    "call_source": [],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "sendDEL",
+    "line": 460,
+    "go_counterpart": {
+      "name": "SendDEL",
+      "path": "decimalevm/methods/del.go",
+      "line": 27
+    },
+    "methods": [],
+    "profiles": [],
+    "status": "native",
+    "builders": [],
+    "call_source": [],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "burnDEL",
+    "line": 473,
+    "go_counterpart": {
+      "name": "BurnDEL",
+      "path": "decimalevm/methods/del.go",
+      "line": 115
+    },
+    "methods": [],
+    "profiles": [],
+    "status": "native",
+    "builders": [],
+    "call_source": [],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "createToken",
+    "line": 477,
+    "go_counterpart": {
+      "name": "CreateToken",
+      "path": "decimalevm/methods/tokens.go",
+      "line": 31
+    },
+    "methods": [
+      "createToken"
+    ],
+    "profiles": [
+      "TokenCenter"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "TokenCenter.BuildCreateToken"
+    ],
+    "call_source": [
+      {
+        "method": "createToken",
+        "line": 178
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "createTokenReserveless",
+    "line": 482,
+    "go_counterpart": null,
+    "methods": [
+      "createTokenReserveless"
+    ],
+    "profiles": [
+      "TokenCenter"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "TokenCenter.BuildCreateTokenReserveless"
+    ],
+    "call_source": [
+      {
+        "method": "createTokenReserveless",
+        "line": 190
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "convertToken",
+    "line": 506,
+    "go_counterpart": {
+      "name": "ConvertToken",
+      "path": "decimalevm/methods/tokens.go",
+      "line": 992
+    },
+    "methods": [
+      "convert"
+    ],
+    "profiles": [
+      "TokenCenter"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "TokenCenter.BuildConvert",
+      "TokenCenter.BuildConvert1"
+    ],
+    "call_source": [
+      {
+        "method": "convertToken",
+        "line": 242
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "approveToken",
+    "line": 511,
+    "go_counterpart": {
+      "name": "ApproveToken",
+      "path": "decimalevm/methods/tokens.go",
+      "line": 157
+    },
+    "methods": [
+      "approve"
+    ],
+    "profiles": [
+      "Token"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Token.BuildApprove"
+    ],
+    "call_source": [
+      {
+        "method": "approveToken",
+        "line": 275
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "transferToken",
+    "line": 517,
+    "go_counterpart": {
+      "name": "TransferToken",
+      "path": "decimalevm/methods/tokens.go",
+      "line": 255
+    },
+    "methods": [
+      "transfer"
+    ],
+    "profiles": [
+      "Token"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Token.BuildTransfer"
+    ],
+    "call_source": [
+      {
+        "method": "transferToken",
+        "line": 282
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "transferFromToken",
+    "line": 523,
+    "go_counterpart": {
+      "name": "TransferFromToken",
+      "path": "decimalevm/methods/tokens.go",
+      "line": 354
+    },
+    "methods": [
+      "transferFrom"
+    ],
+    "profiles": [
+      "Token"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Token.BuildTransferFrom"
+    ],
+    "call_source": [
+      {
+        "method": "transferFromToken",
+        "line": 289
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "burnToken",
+    "line": 529,
+    "go_counterpart": {
+      "name": "BurnToken",
+      "path": "decimalevm/methods/tokens.go",
+      "line": 452
+    },
+    "methods": [
+      "burn"
+    ],
+    "profiles": [
+      "Token"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Token.BuildBurn"
+    ],
+    "call_source": [
+      {
+        "method": "burnToken",
+        "line": 296
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "mintTokenReserveless",
+    "line": 535,
+    "go_counterpart": null,
+    "methods": [
+      "mint"
+    ],
+    "profiles": [
+      "deployment"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "mintTokenReserveless",
+        "line": 259
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "convertToDEL",
+    "line": 541,
+    "go_counterpart": null,
+    "methods": [
+      "convertToDEL"
+    ],
+    "profiles": [
+      "deployment"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "convertToDEL",
+        "line": 267
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "buyTokenForExactDEL",
+    "line": 547,
+    "go_counterpart": {
+      "name": "BuyTokenForExactDEL",
+      "path": "decimalevm/methods/tokens.go",
+      "line": 549
+    },
+    "methods": [
+      "buyTokenForExactDEL"
+    ],
+    "profiles": [
+      "Token"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Token.BuildBuyTokenForExactDEL"
+    ],
+    "call_source": [
+      {
+        "method": "buyTokenForExactDEL",
+        "line": 303
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "buyExactTokenForDEL",
+    "line": 553,
+    "go_counterpart": {
+      "name": "BuyExactTokenForDEL",
+      "path": "decimalevm/methods/tokens.go",
+      "line": 658
+    },
+    "methods": [
+      "buyExactTokenForDEL"
+    ],
+    "profiles": [
+      "Token"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Token.BuildBuyExactTokenForDEL"
+    ],
+    "call_source": [
+      {
+        "method": "buyExactTokenForDEL",
+        "line": 310
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "sellTokensForExactDEL",
+    "line": 559,
+    "go_counterpart": {
+      "name": "SellTokensForExactDEL",
+      "path": "decimalevm/methods/tokens.go",
+      "line": 769
+    },
+    "methods": [
+      "sellTokensForExactDEL"
+    ],
+    "profiles": [
+      "Token"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Token.BuildSellTokensForExactDEL"
+    ],
+    "call_source": [
+      {
+        "method": "sellTokensForExactDEL",
+        "line": 317
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "sellExactTokensForDEL",
+    "line": 565,
+    "go_counterpart": {
+      "name": "SellExactTokensForDEL",
+      "path": "decimalevm/methods/tokens.go",
+      "line": 880
+    },
+    "methods": [
+      "sellExactTokensForDEL"
+    ],
+    "profiles": [
+      "Token"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Token.BuildSellExactTokensForDEL"
+    ],
+    "call_source": [
+      {
+        "method": "sellExactTokensForDEL",
+        "line": 324
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "updateTokenIdentity",
+    "line": 571,
+    "go_counterpart": null,
+    "methods": [
+      "updateTokenIdentity"
+    ],
+    "profiles": [
+      "Token"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "updateTokenIdentity",
+        "line": 331
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "updateTokenMaxTotalSupply",
+    "line": 577,
+    "go_counterpart": null,
+    "methods": [
+      "updateMaxTotalSupply"
+    ],
+    "profiles": [
+      "Token"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "updateTokenMaxTotalSupply",
+        "line": 338
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "updateTokenMinTotalSupply",
+    "line": 583,
+    "go_counterpart": null,
+    "methods": [
+      "updateMinTotalSupply"
+    ],
+    "profiles": [
+      "Token"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "updateTokenMinTotalSupply",
+        "line": 345
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "permitToken",
+    "line": 589,
+    "go_counterpart": {
+      "name": "PermitToken",
+      "path": "decimalevm/methods/tokens.go",
+      "line": 1185
+    },
+    "methods": [
+      "permit"
+    ],
+    "profiles": [
+      "Token"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Token.BuildPermit"
+    ],
+    "call_source": [
+      {
+        "method": "permitToken",
+        "line": 352
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "createCollectionDRC721",
+    "line": 595,
+    "go_counterpart": {
+      "name": "CreateNftCollection",
+      "path": "decimalevm/methods/nft.go",
+      "line": 22
+    },
+    "methods": [
+      "createDRC721"
+    ],
+    "profiles": [
+      "NFTCenter"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "createCollection",
+        "line": 622
+      }
+    ],
+    "deployed_validation": "not-run",
+    "deployment_abi_evidence": [
+      {
+        "chain_id": "202020",
+        "block": 22474456,
+        "proxy": "0x11aE5297d0B5886914661938FcB8AEdc08622194",
+        "implementation": "0xa12ffD3f622E5399274E4Ad13032A5cacce02916",
+        "implementation_code_hash": "0x1ac3490d562780d0c91b6e0cc1fc88cd9da4e9360b328fd990999f2948a0a64d",
+        "abi_sha256": "c70cd44c7138a91f47a38ab097061c3947bb08d7600092ed1643338d5322d5a0",
+        "api_url": "https://testnet-api.decimalchain.com/api/v1/contracts/compact/0xa12ffd3f622e5399274e4ad13032a5cacce02916",
+        "signatures": [
+          "createDRC721((address,string,string,string,bool,bool))"
+        ],
+        "validation": "public-API-artifact-and-pinned-storage-only; no transaction executed"
+      }
+    ]
+  },
+  {
+    "operation": "createCollectionDRC1155",
+    "line": 600,
+    "go_counterpart": {
+      "name": "CreateNftCollection",
+      "path": "decimalevm/methods/nft.go",
+      "line": 22
+    },
+    "methods": [
+      "createDRC1155"
+    ],
+    "profiles": [
+      "NFTCenter"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "createCollection",
+        "line": 622
+      }
+    ],
+    "deployed_validation": "not-run",
+    "deployment_abi_evidence": [
+      {
+        "chain_id": "202020",
+        "block": 22474456,
+        "proxy": "0x11aE5297d0B5886914661938FcB8AEdc08622194",
+        "implementation": "0xa12ffD3f622E5399274E4Ad13032A5cacce02916",
+        "implementation_code_hash": "0x1ac3490d562780d0c91b6e0cc1fc88cd9da4e9360b328fd990999f2948a0a64d",
+        "abi_sha256": "c70cd44c7138a91f47a38ab097061c3947bb08d7600092ed1643338d5322d5a0",
+        "api_url": "https://testnet-api.decimalchain.com/api/v1/contracts/compact/0xa12ffd3f622e5399274e4ad13032a5cacce02916",
+        "signatures": [
+          "createDRC1155((address,string,string,string,bool,bool))"
+        ],
+        "validation": "public-API-artifact-and-pinned-storage-only; no transaction executed"
+      }
+    ]
+  },
+  {
+    "operation": "createCollectionDRC721Reserveless",
+    "line": 605,
+    "go_counterpart": null,
+    "methods": [
+      "createDRC721Reserveless"
+    ],
+    "profiles": [
+      "NFTCenter"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "createCollection",
+        "line": 622
+      }
+    ],
+    "deployed_validation": "not-run",
+    "deployment_abi_evidence": [
+      {
+        "chain_id": "202020",
+        "block": 22474456,
+        "proxy": "0x11aE5297d0B5886914661938FcB8AEdc08622194",
+        "implementation": "0xa12ffD3f622E5399274E4Ad13032A5cacce02916",
+        "implementation_code_hash": "0x1ac3490d562780d0c91b6e0cc1fc88cd9da4e9360b328fd990999f2948a0a64d",
+        "abi_sha256": "c70cd44c7138a91f47a38ab097061c3947bb08d7600092ed1643338d5322d5a0",
+        "api_url": "https://testnet-api.decimalchain.com/api/v1/contracts/compact/0xa12ffd3f622e5399274e4ad13032a5cacce02916",
+        "signatures": [
+          "createDRC721Reserveless((address,string,string,string,bool,bool))"
+        ],
+        "validation": "public-API-artifact-and-pinned-storage-only; no transaction executed"
+      }
+    ]
+  },
+  {
+    "operation": "createCollectionDRC1155Reserveless",
+    "line": 610,
+    "go_counterpart": null,
+    "methods": [
+      "createDRC1155Reserveless"
+    ],
+    "profiles": [
+      "NFTCenter"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "createCollection",
+        "line": 622
+      }
+    ],
+    "deployed_validation": "not-run",
+    "deployment_abi_evidence": [
+      {
+        "chain_id": "202020",
+        "block": 22474456,
+        "proxy": "0x11aE5297d0B5886914661938FcB8AEdc08622194",
+        "implementation": "0xa12ffD3f622E5399274E4Ad13032A5cacce02916",
+        "implementation_code_hash": "0x1ac3490d562780d0c91b6e0cc1fc88cd9da4e9360b328fd990999f2948a0a64d",
+        "abi_sha256": "c70cd44c7138a91f47a38ab097061c3947bb08d7600092ed1643338d5322d5a0",
+        "api_url": "https://testnet-api.decimalchain.com/api/v1/contracts/compact/0xa12ffd3f622e5399274e4ad13032a5cacce02916",
+        "signatures": [
+          "createDRC1155Reserveless((address,string,string,string,bool,bool))"
+        ],
+        "validation": "public-API-artifact-and-pinned-storage-only; no transaction executed"
+      }
+    ]
+  },
+  {
+    "operation": "approveNFT721",
+    "line": 615,
+    "go_counterpart": null,
+    "methods": [
+      "approve"
+    ],
+    "profiles": [
+      "ERC1155",
+      "ERC721"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "ERC721.BuildApprove"
+    ],
+    "call_source": [
+      {
+        "method": "approveNFT721",
+        "line": 835
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "approveForAllNFT",
+    "line": 623,
+    "go_counterpart": {
+      "name": "SetApprovalForAllNFT",
+      "path": "decimalevm/methods/nft.go",
+      "line": 111
+    },
+    "methods": [
+      "setApprovalForAll"
+    ],
+    "profiles": [
+      "ERC1155",
+      "ERC721"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "ERC1155.BuildSetApprovalForAll",
+      "ERC721.BuildSetApprovalForAll"
+    ],
+    "call_source": [
+      {
+        "method": "setApprovalForAllNFT",
+        "line": 651
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "mintReserveless",
+    "line": 647,
+    "go_counterpart": {
+      "name": "MintReserveless",
+      "path": "decimalevm/methods/nft.go",
+      "line": 624
+    },
+    "methods": [
+      "mint"
+    ],
+    "profiles": [
+      "ERC1155",
+      "ERC721"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "ERC1155.BuildMint",
+      "ERC721.BuildMint"
+    ],
+    "call_source": [
+      {
+        "method": "mintReserveless",
+        "line": 746
+      },
+      {
+        "method": "mintReserveless",
+        "line": 746
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "mintNFTWithDELReserve",
+    "line": 661,
+    "go_counterpart": {
+      "name": "MintNFTWithDELReserve",
+      "path": "decimalevm/methods/nft.go",
+      "line": 527
+    },
+    "methods": [
+      "mintByDEL"
+    ],
+    "profiles": [
+      "ERC1155",
+      "ERC721"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "mintNFTWithDELReserve",
+        "line": 725
+      },
+      {
+        "method": "mintNFTWithDELReserve",
+        "line": 725
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "mintNFTWithTokenReserve",
+    "line": 678,
+    "go_counterpart": null,
+    "methods": [
+      "mint",
+      "mintByPermit"
+    ],
+    "profiles": [
+      "ERC1155",
+      "ERC721"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "ERC1155.BuildMint",
+      "ERC1155.BuildMintByPermit",
+      "ERC721.BuildMint",
+      "ERC721.BuildMintByPermit"
+    ],
+    "call_source": [
+      {
+        "method": "mintNFTWithTokenReserve",
+        "line": 768
+      },
+      {
+        "method": "mintNFTWithTokenReserve",
+        "line": 768
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "addDELReserveNFT",
+    "line": 695,
+    "go_counterpart": {
+      "name": "AddDELReserveNFT",
+      "path": "decimalevm/methods/nft.go",
+      "line": 724
+    },
+    "methods": [
+      "addReserveByDEL"
+    ],
+    "profiles": [
+      "ERC1155",
+      "ERC721"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "addDELReserveNFT",
+        "line": 812
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "addTokenReserveNFT",
+    "line": 711,
+    "go_counterpart": {
+      "name": "AddTokenReserveNFT",
+      "path": "decimalevm/methods/nft.go",
+      "line": 786
+    },
+    "methods": [
+      "addReserve",
+      "addReserveByPermit"
+    ],
+    "profiles": [
+      "ERC1155",
+      "ERC721"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "ERC1155.BuildAddReserve",
+      "ERC1155.BuildAddReserveByPermit",
+      "ERC721.BuildAddReserve",
+      "ERC721.BuildAddReserveByPermit"
+    ],
+    "call_source": [
+      {
+        "method": "addTokenReserveNFT",
+        "line": 819
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "transferNFT",
+    "line": 727,
+    "go_counterpart": {
+      "name": "TransferNFT",
+      "path": "decimalevm/methods/nft.go",
+      "line": 247
+    },
+    "methods": [
+      "safeTransferFrom"
+    ],
+    "profiles": [
+      "ERC1155",
+      "ERC721"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "ERC1155.BuildSafeTransferFrom",
+      "ERC721.BuildSafeTransferFrom",
+      "ERC721.BuildSafeTransferFrom1"
+    ],
+    "call_source": [
+      {
+        "method": "transferNFT",
+        "line": 658
+      },
+      {
+        "method": "transferNFT",
+        "line": 658
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "transferBatchNFT1155",
+    "line": 743,
+    "go_counterpart": {
+      "name": "TransferBatchNFT1155",
+      "path": "decimalevm/methods/nft.go",
+      "line": 874
+    },
+    "methods": [
+      "safeBatchTransferFrom"
+    ],
+    "profiles": [
+      "ERC1155",
+      "ERC721"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "ERC1155.BuildSafeBatchTransferFrom"
+    ],
+    "call_source": [
+      {
+        "method": "transferBatchNFT1155",
+        "line": 843
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "disableMintNFT",
+    "line": 751,
+    "go_counterpart": {
+      "name": "DisableMintNFT",
+      "path": "decimalevm/methods/nft.go",
+      "line": 327
+    },
+    "methods": [
+      "disableMint"
+    ],
+    "profiles": [
+      "ERC1155",
+      "ERC721"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "ERC1155.BuildDisableMint",
+      "ERC721.BuildDisableMint"
+    ],
+    "call_source": [
+      {
+        "method": "disableMintNFT",
+        "line": 672
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "burnNFT",
+    "line": 758,
+    "go_counterpart": {
+      "name": "BurnNFT",
+      "path": "decimalevm/methods/nft.go",
+      "line": 389
+    },
+    "methods": [
+      "burn"
+    ],
+    "profiles": [
+      "ERC1155",
+      "ERC721"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "ERC1155.BuildBurn",
+      "ERC721.BuildBurn"
+    ],
+    "call_source": [
+      {
+        "method": "burnNFT",
+        "line": 679
+      },
+      {
+        "method": "burnNFT",
+        "line": 679
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "setTokenURINFT",
+    "line": 781,
+    "go_counterpart": {
+      "name": "SetTokenURINFT",
+      "path": "decimalevm/methods/nft.go",
+      "line": 465
+    },
+    "methods": [
+      "setTokenURI"
+    ],
+    "profiles": [
+      "ERC1155",
+      "ERC721"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "setTokenURINFT",
+        "line": 696
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "delegateDEL",
+    "line": 788,
+    "go_counterpart": {
+      "name": "DelegateDel",
+      "path": "decimalevm/methods/delegation.go",
+      "line": 15
+    },
+    "methods": [
+      "delegateDEL"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Delegation.BuildDelegateDEL"
+    ],
+    "call_source": [
+      {
+        "method": "delegateDEL",
+        "line": 361
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "delegateDELHold",
+    "line": 793,
+    "go_counterpart": {
+      "name": "DelegateDELHold",
+      "path": "decimalevm/methods/delegation.go",
+      "line": 79
+    },
+    "methods": [
+      "delegateHoldDEL"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Delegation.BuildDelegateHoldDEL"
+    ],
+    "call_source": [
+      {
+        "method": "delegateDELHold",
+        "line": 368
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "delegateToken",
+    "line": 798,
+    "go_counterpart": {
+      "name": "DelegateToken",
+      "path": "decimalevm/methods/delegation.go",
+      "line": 144
+    },
+    "methods": [
+      "delegate",
+      "delegateByPermit"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Delegation.BuildDelegate",
+      "Delegation.BuildDelegateByPermit"
+    ],
+    "call_source": [
+      {
+        "method": "delegateToken",
+        "line": 375
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "delegateTokenHold",
+    "line": 803,
+    "go_counterpart": {
+      "name": "DelegateTokenHold",
+      "path": "decimalevm/methods/delegation.go",
+      "line": 236
+    },
+    "methods": [
+      "delegateHold",
+      "delegateHoldByPermit"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Delegation.BuildDelegateHold",
+      "Delegation.BuildDelegateHoldByPermit"
+    ],
+    "call_source": [
+      {
+        "method": "delegateTokenHold",
+        "line": 390
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "transferStakeToken",
+    "line": 808,
+    "go_counterpart": null,
+    "methods": [
+      "transfer"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Delegation.BuildTransfer"
+    ],
+    "call_source": [
+      {
+        "method": "transferStakeToken",
+        "line": 405
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "transferStakeTokenHold",
+    "line": 813,
+    "go_counterpart": null,
+    "methods": [
+      "transferHold"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Delegation.BuildTransferHold"
+    ],
+    "call_source": [
+      {
+        "method": "transferStakeTokenHold",
+        "line": 412
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "withdrawStakeToken",
+    "line": 818,
+    "go_counterpart": {
+      "name": "WithdrawStakeToken",
+      "path": "decimalevm/methods/delegation.go",
+      "line": 330
+    },
+    "methods": [
+      "withdraw"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Delegation.BuildWithdraw"
+    ],
+    "call_source": [
+      {
+        "method": "withdrawStakeToken",
+        "line": 419
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "withdrawStakeTokenHold",
+    "line": 823,
+    "go_counterpart": {
+      "name": "WithdrawStakeTokenHold",
+      "path": "decimalevm/methods/delegation.go",
+      "line": 392
+    },
+    "methods": [
+      "withdrawHold"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Delegation.BuildWithdrawHold"
+    ],
+    "call_source": [
+      {
+        "method": "withdrawStakeTokenHold",
+        "line": 426
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "stakeTokenToHold",
+    "line": 828,
+    "go_counterpart": null,
+    "methods": [
+      "hold"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Delegation.BuildHold"
+    ],
+    "call_source": [
+      {
+        "method": "stakeTokenToHold",
+        "line": 433
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "stakeTokenResetHold",
+    "line": 833,
+    "go_counterpart": null,
+    "methods": [
+      "resetHold"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Delegation.BuildResetHold"
+    ],
+    "call_source": [
+      {
+        "method": "stakeTokenResetHold",
+        "line": 440
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "stakeTokenResetHoldDEL",
+    "line": 838,
+    "go_counterpart": null,
+    "methods": [
+      "resetHoldDEL"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "stakeTokenResetHoldDEL",
+        "line": 447
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "withdrawTokenWithReset",
+    "line": 843,
+    "go_counterpart": null,
+    "methods": [
+      "withdrawWithReset"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Delegation.BuildWithdrawWithReset"
+    ],
+    "call_source": [
+      {
+        "method": "withdrawTokenWithReset",
+        "line": 454
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "transferTokenWithReset",
+    "line": 848,
+    "go_counterpart": null,
+    "methods": [
+      "transferWithReset"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Delegation.BuildTransferWithReset"
+    ],
+    "call_source": [
+      {
+        "method": "transferTokenWithReset",
+        "line": 461
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "holdTokenWithReset",
+    "line": 853,
+    "go_counterpart": null,
+    "methods": [
+      "holdWithReset"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Delegation.BuildHoldWithReset"
+    ],
+    "call_source": [
+      {
+        "method": "holdTokenWithReset",
+        "line": 468
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "applyPenaltyToStakeToken",
+    "line": 859,
+    "go_counterpart": null,
+    "methods": [
+      "applyPenaltyToStake"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "applyPenaltyToStakeToken",
+        "line": 475
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "applyPenaltiesToStakeToken",
+    "line": 864,
+    "go_counterpart": null,
+    "methods": [
+      "applyPenaltiesToStake"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "applyPenaltiesToStakeToken",
+        "line": 492
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "completeStakeToken",
+    "line": 868,
+    "go_counterpart": null,
+    "methods": [
+      "complete"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Delegation.BuildComplete"
+    ],
+    "call_source": [
+      {
+        "method": "completeStakeToken",
+        "line": 510
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "delegateNFT",
+    "line": 874,
+    "go_counterpart": null,
+    "methods": [
+      "delegateNFT"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "delegateNFT",
+        "line": 528
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "delegateNFTHold",
+    "line": 882,
+    "go_counterpart": null,
+    "methods": [
+      "delegateNFTHold"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "delegateNFTHold",
+        "line": 535
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "delegateNFTByPermit",
+    "line": 890,
+    "go_counterpart": null,
+    "methods": [
+      "delegateNFTByPermit"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "delegateNFTByPermit",
+        "line": 542
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "withdrawNFT",
+    "line": 898,
+    "go_counterpart": null,
+    "methods": [
+      "withdrawNFT"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "withdrawNFT",
+        "line": 550
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "withdrawNFTHold",
+    "line": 906,
+    "go_counterpart": null,
+    "methods": [
+      "withdrawNFTHold"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "withdrawNFTHold",
+        "line": 557
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "transferNFTStake",
+    "line": 914,
+    "go_counterpart": null,
+    "methods": [
+      "transferNFT"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "transferNFTStake",
+        "line": 564
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "transferNFTStakeHold",
+    "line": 922,
+    "go_counterpart": null,
+    "methods": [
+      "transferNFTHold"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "transferNFTStakeHold",
+        "line": 571
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "delegateNFT1155",
+    "line": 931,
+    "go_counterpart": null,
+    "methods": [
+      "delegateNFT1155"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "delegateNFT1155",
+        "line": 579
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "delegateNFT1155Hold",
+    "line": 939,
+    "go_counterpart": null,
+    "methods": [
+      "delegateNFT1155Hold"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "delegateNFT1155Hold",
+        "line": 586
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "withdrawNFT1155",
+    "line": 947,
+    "go_counterpart": null,
+    "methods": [
+      "withdrawNFT1155"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "withdrawNFT1155",
+        "line": 593
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "withdrawNFT1155Hold",
+    "line": 955,
+    "go_counterpart": null,
+    "methods": [
+      "withdrawNFT1155Hold"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "withdrawNFT1155Hold",
+        "line": 600
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "transferNFT1155Stake",
+    "line": 963,
+    "go_counterpart": null,
+    "methods": [
+      "transferNFT1155"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "transferNFT1155Stake",
+        "line": 607
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "transferNFT1155StakeHold",
+    "line": 971,
+    "go_counterpart": null,
+    "methods": [
+      "transferNFT1155Hold"
+    ],
+    "profiles": [
+      "Delegation"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "transferNFT1155StakeHold",
+        "line": 614
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "delegateDRC721",
+    "line": 980,
+    "go_counterpart": {
+      "name": "DelegateDRC721",
+      "path": "decimalevm/methods/delegation.go",
+      "line": 455
+    },
+    "methods": [
+      "delegateDRC721",
+      "delegateDRC721ByPermit"
+    ],
+    "profiles": [
+      "DelegationNFT"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "DelegationNFT.BuildDelegateDRC721",
+      "DelegationNFT.BuildDelegateDRC721ByPermit"
+    ],
+    "call_source": [
+      {
+        "method": "delegateDRC721",
+        "line": 854
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "delegateDRC721Hold",
+    "line": 987,
+    "go_counterpart": {
+      "name": "DelegateDRC721Hold",
+      "path": "decimalevm/methods/delegation.go",
+      "line": 558
+    },
+    "methods": [
+      "delegateHoldDRC721",
+      "delegateHoldDRC721ByPermit"
+    ],
+    "profiles": [
+      "DelegationNFT"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "DelegationNFT.BuildDelegateHoldDRC721",
+      "DelegationNFT.BuildDelegateHoldDRC721ByPermit"
+    ],
+    "call_source": [
+      {
+        "method": "delegateDRC721Hold",
+        "line": 869
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "delegateDRC1155",
+    "line": 994,
+    "go_counterpart": {
+      "name": "DelegateDRC1155",
+      "path": "decimalevm/methods/delegation.go",
+      "line": 664
+    },
+    "methods": [
+      "delegateDRC1155",
+      "delegateDRC1155ByPermit"
+    ],
+    "profiles": [
+      "DelegationNFT"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "DelegationNFT.BuildDelegateDRC1155",
+      "DelegationNFT.BuildDelegateDRC1155ByPermit"
+    ],
+    "call_source": [
+      {
+        "method": "delegateDRC1155",
+        "line": 884
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "delegateDRC1155Hold",
+    "line": 1001,
+    "go_counterpart": {
+      "name": "DelegateDRC1155Hold",
+      "path": "decimalevm/methods/delegation.go",
+      "line": 769
+    },
+    "methods": [
+      "delegateHoldDRC1155",
+      "delegateHoldDRC1155ByPermit"
+    ],
+    "profiles": [
+      "DelegationNFT"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "DelegationNFT.BuildDelegateHoldDRC1155",
+      "DelegationNFT.BuildDelegateHoldDRC1155ByPermit"
+    ],
+    "call_source": [
+      {
+        "method": "delegateDRC1155Hold",
+        "line": 899
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "transferStakeNFT",
+    "line": 1008,
+    "go_counterpart": {
+      "name": "TransferStakeNFT",
+      "path": "decimalevm/methods/nft.go",
+      "line": 940
+    },
+    "methods": [
+      "transfer"
+    ],
+    "profiles": [
+      "DelegationNFT"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "DelegationNFT.BuildTransfer"
+    ],
+    "call_source": [
+      {
+        "method": "transferStakeNFT",
+        "line": 914
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "transferStakeNFTHold",
+    "line": 1015,
+    "go_counterpart": {
+      "name": "TransferStakeNFTHold",
+      "path": "decimalevm/methods/nft.go",
+      "line": 1019
+    },
+    "methods": [
+      "transferHold"
+    ],
+    "profiles": [
+      "DelegationNFT"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "DelegationNFT.BuildTransferHold"
+    ],
+    "call_source": [
+      {
+        "method": "transferStakeNFTHold",
+        "line": 921
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "withdrawStakeNFT",
+    "line": 1022,
+    "go_counterpart": {
+      "name": "WithdrawStakeNFT",
+      "path": "decimalevm/methods/delegation.go",
+      "line": 877
+    },
+    "methods": [
+      "withdraw"
+    ],
+    "profiles": [
+      "DelegationNFT"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "DelegationNFT.BuildWithdraw"
+    ],
+    "call_source": [
+      {
+        "method": "withdrawStakeNFT",
+        "line": 928
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "withdrawStakeNFTHold",
+    "line": 1029,
+    "go_counterpart": {
+      "name": "WithdrawStakeNFTHold",
+      "path": "decimalevm/methods/delegation.go",
+      "line": 954
+    },
+    "methods": [
+      "withdrawHold"
+    ],
+    "profiles": [
+      "DelegationNFT"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "DelegationNFT.BuildWithdrawHold"
+    ],
+    "call_source": [
+      {
+        "method": "withdrawStakeNFTHold",
+        "line": 935
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "stakeNFTToHold",
+    "line": 1036,
+    "go_counterpart": {
+      "name": "StakeNFTToHold",
+      "path": "decimalevm/methods/nft.go",
+      "line": 1100
+    },
+    "methods": [
+      "hold"
+    ],
+    "profiles": [
+      "DelegationNFT"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "DelegationNFT.BuildHold"
+    ],
+    "call_source": [
+      {
+        "method": "stakeNFTToHold",
+        "line": 942
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "stakeNFTResetHold",
+    "line": 1043,
+    "go_counterpart": {
+      "name": "StakeNFTResetHold",
+      "path": "decimalevm/methods/nft.go",
+      "line": 1181
+    },
+    "methods": [
+      "resetHold"
+    ],
+    "profiles": [
+      "DelegationNFT"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "stakeNFTResetHold",
+        "line": 949
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "withdrawNFTWithReset",
+    "line": 1050,
+    "go_counterpart": {
+      "name": "WithdrawNFTWithReset",
+      "path": "decimalevm/methods/nft.go",
+      "line": 1260
+    },
+    "methods": [
+      "withdrawWithReset"
+    ],
+    "profiles": [
+      "DelegationNFT"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "withdrawNFTWithReset",
+        "line": 956
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "transferNFTWithReset",
+    "line": 1057,
+    "go_counterpart": {
+      "name": "TransferNFTWithReset",
+      "path": "decimalevm/methods/nft.go",
+      "line": 1339
+    },
+    "methods": [
+      "transferWithReset"
+    ],
+    "profiles": [
+      "DelegationNFT"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "transferNFTWithReset",
+        "line": 963
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "holdNFTWithReset",
+    "line": 1064,
+    "go_counterpart": {
+      "name": "HoldNFTWithReset",
+      "path": "decimalevm/methods/nft.go",
+      "line": 1420
+    },
+    "methods": [
+      "holdWithReset"
+    ],
+    "profiles": [
+      "DelegationNFT"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "holdNFTWithReset",
+        "line": 970
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "completeStakeNFT",
+    "line": 1071,
+    "go_counterpart": {
+      "name": "CompleteStakeNFT",
+      "path": "decimalevm/methods/nft.go",
+      "line": 1501
+    },
+    "methods": [
+      "complete"
+    ],
+    "profiles": [
+      "DelegationNFT"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "DelegationNFT.BuildComplete"
+    ],
+    "call_source": [
+      {
+        "method": "completeStakeNFT",
+        "line": 977
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "addValidatorWithToken",
+    "line": 1076,
+    "go_counterpart": {
+      "name": "AddValidatorWithToken",
+      "path": "decimalevm/methods/validators.go",
+      "line": 17
+    },
+    "methods": [
+      "addCandidate"
+    ],
+    "profiles": [
+      "MasterValidator"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "MasterValidator.BuildAddCandidate"
+    ],
+    "call_source": [
+      {
+        "method": "addValidatorWithToken",
+        "line": 995
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "addValidatorWithETH",
+    "line": 1083,
+    "go_counterpart": {
+      "name": "AddValidatorWithETH",
+      "path": "decimalevm/methods/validators.go",
+      "line": 110
+    },
+    "methods": [
+      "addCandidateDEL"
+    ],
+    "profiles": [
+      "MasterValidator"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "MasterValidator.BuildAddCandidateDEL"
+    ],
+    "call_source": [
+      {
+        "method": "addValidatorWithETH",
+        "line": 1007
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "removeValidator",
+    "line": 1090,
+    "go_counterpart": {
+      "name": "RemoveValidator",
+      "path": "decimalevm/methods/validators.go",
+      "line": 203
+    },
+    "methods": [
+      "removeValidator"
+    ],
+    "profiles": [
+      "MasterValidator"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "MasterValidator.BuildRemoveValidator"
+    ],
+    "call_source": [
+      {
+        "method": "removeValidator",
+        "line": 1018
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "pauseValidator",
+    "line": 1095,
+    "go_counterpart": {
+      "name": "PauseValidator",
+      "path": "decimalevm/methods/validators.go",
+      "line": 288
+    },
+    "methods": [
+      "pauseValidator"
+    ],
+    "profiles": [
+      "MasterValidator"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "MasterValidator.BuildPauseValidator"
+    ],
+    "call_source": [
+      {
+        "method": "pauseValidator",
+        "line": 1025
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "unpauseValidator",
+    "line": 1100,
+    "go_counterpart": {
+      "name": "UnpauseValidator",
+      "path": "decimalevm/methods/validators.go",
+      "line": 373
+    },
+    "methods": [
+      "unpauseValidator"
+    ],
+    "profiles": [
+      "MasterValidator"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "MasterValidator.BuildUnpauseValidator"
+    ],
+    "call_source": [
+      {
+        "method": "unpauseValidator",
+        "line": 1032
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "updateValidatorMeta",
+    "line": 1105,
+    "go_counterpart": {
+      "name": "UpdateValidatorMeta",
+      "path": "decimalevm/methods/validators.go",
+      "line": 458
+    },
+    "methods": [
+      "updateValidatorMeta"
+    ],
+    "profiles": [
+      "MasterValidator"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "MasterValidator.BuildUpdateValidatorMeta"
+    ],
+    "call_source": [
+      {
+        "method": "updateValidatorMeta",
+        "line": 1039
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "bridgeTransferNative",
+    "line": 1812,
+    "go_counterpart": null,
+    "methods": [
+      "wrapAndTransferETH"
+    ],
+    "profiles": [
+      "deployment"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "wrapAndTransferETH",
+        "line": 1047
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "bridgeTransferTokens",
+    "line": 1824,
+    "go_counterpart": null,
+    "methods": [
+      "transferTokens"
+    ],
+    "profiles": [
+      "deployment"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "transferTokens",
+        "line": 1060
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "bridgeCompleteTransfer",
+    "line": 1836,
+    "go_counterpart": null,
+    "methods": [
+      "completeTransfer"
+    ],
+    "profiles": [
+      "deployment"
+    ],
+    "status": "explicit-deployment-ABI-required",
+    "builders": [],
+    "call_source": [
+      {
+        "method": "completeTransfer",
+        "line": 1072
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "createChecksDEL",
+    "line": 1869,
+    "go_counterpart": null,
+    "methods": [
+      "createChecksDEL"
+    ],
+    "profiles": [
+      "Checks"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Checks.BuildCreateChecksDEL"
+    ],
+    "call_source": [
+      {
+        "method": "createChecksDEL",
+        "line": 1082
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "createChecksToken",
+    "line": 1876,
+    "go_counterpart": null,
+    "methods": [
+      "createChecksToken",
+      "createChecksTokenByPermit"
+    ],
+    "profiles": [
+      "Checks"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Checks.BuildCreateChecksToken",
+      "Checks.BuildCreateChecksTokenByPermit"
+    ],
+    "call_source": [
+      {
+        "method": "createChecksToken",
+        "line": 1094
+      }
+    ],
+    "deployed_validation": "not-run"
+  },
+  {
+    "operation": "redeemChecks",
+    "line": 1883,
+    "go_counterpart": null,
+    "methods": [
+      "redeemChecks"
+    ],
+    "profiles": [
+      "Checks"
+    ],
+    "status": "pinned-ABI-builder",
+    "builders": [
+      "Checks.BuildRedeemChecks"
+    ],
+    "call_source": [
+      {
+        "method": "redeemChecks",
+        "line": 1115
+      }
+    ],
+    "deployed_validation": "not-run"
+  }
+]

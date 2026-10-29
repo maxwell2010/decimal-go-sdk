@@ -1,0 +1,35 @@
+{
+  "checked_utc": "2026-10-29T03:58:59Z",
+  "results": [
+    {
+      "query": "{ __type(name:\"Bridge\") { fields { name type { kind name } } } }",
+      "root_keys": [
+        "data"
+      ],
+      "schema_data": {
+        "__type": {
+          "fields": [
+            {
+              "name": "id",
+              "type": {
+                "kind": "NON_NULL",
+                "name": null
+              }
+            },
+            {
+              "name": "implementation",
+              "type": {
+                "kind": "NON_NULL",
+                "name": null
+              }
+            }
+          ]
+        }
+      },
+      "source": "official JS Bridge subgraph discovered Bridge type",
+      "status": 200,
+      "url": "https://testnet-thegraph.decimalchain.com/subgraphs/name/bridge"
+    }
+  ],
+  "scope": "documented endpoints only; read-only; no verification endpoint mutation"
+}

@@ -1,0 +1,279 @@
+{
+  "cosmos_sdk_go_mod_sum": "h1:05U50tAsOzQ8JOAePshJCbJQw5ib1YJR6IXcqyVI1Xg=",
+  "cosmos_sdk_sum": "h1:RVGv1+RulLZeNyfCaPZrZtv0kY7ZZNAI6JGpub0Uh6o=",
+  "cosmos_sdk_version": "v0.46.16",
+  "descriptor_sha256": "5d7d26a6c546eeeab6e1d14bf328e79bcfc0d2aefca1bb8e845067690e83b54d",
+  "inputs": [
+    {
+      "path": "cosmos/auth/v1beta1/auth.proto",
+      "sha256": "6837818ea7896ad25c7700b2c07433f5df75726855ec7f7b0fb02a50751337a9",
+      "source": "node-vendored"
+    },
+    {
+      "path": "cosmos/auth/v1beta1/query.proto",
+      "sha256": "d572d21cb432bdc80eb9445376c6abac7a056f249e5e8898a66e4a6c998203df",
+      "source": "node-vendored"
+    },
+    {
+      "path": "cosmos/bank/v1beta1/bank.proto",
+      "sha256": "2d9364990cc93c78ea21d66000fcf2076732b7308dfaa9363b1ff0473740e4d5",
+      "source": "node-vendored"
+    },
+    {
+      "path": "cosmos/bank/v1beta1/query.proto",
+      "sha256": "f6525039c62985a586174b885b68db11c20e9be1cbf282accd6c5d390f53e580",
+      "source": "node-vendored"
+    },
+    {
+      "path": "cosmos/base/abci/v1beta1/abci.proto",
+      "sha256": "f752df9796eeff8b2092e5d56f4840ecea53dc255dee3dd2b75f36b32b6b64f4",
+      "source": "node-vendored"
+    },
+    {
+      "path": "cosmos/base/query/v1beta1/pagination.proto",
+      "sha256": "e22697ae5424b4949c108794144cb0770640f99bb24112c126fa7bfb060d829f",
+      "source": "node-vendored"
+    },
+    {
+      "path": "cosmos/base/v1beta1/coin.proto",
+      "sha256": "cd146d8eae88308af060cb5e9bb80d45c85ddf7432102969749fa9734e6c892d",
+      "source": "node-vendored"
+    },
+    {
+      "path": "cosmos/crypto/multisig/v1beta1/multisig.proto",
+      "sha256": "3cf2174670722566da5eb4cb7cf69b1860b77083086fd87fd0749fbb91f844e2",
+      "source": "node-vendored"
+    },
+    {
+      "path": "cosmos/msg/v1/msg.proto",
+      "sha256": "3ac01cfc598d15fb95ed000f71b454af6b5d7f483a1de657d485768d49c897e6",
+      "source": "node-vendored"
+    },
+    {
+      "path": "cosmos/tx/signing/v1beta1/signing.proto",
+      "sha256": "f35edfd77a0016f283ef6c352f1eea97cef88e526b032f3c89bd31574ef621b0",
+      "source": "node-vendored"
+    },
+    {
+      "path": "cosmos/tx/v1beta1/service.proto",
+      "sha256": "d167f20afd807b5c842e1f3813d015a4c344f56bc8c4a0d7407741a5d1b3f322",
+      "source": "node-vendored"
+    },
+    {
+      "path": "cosmos/tx/v1beta1/tx.proto",
+      "sha256": "bb5bb46b93fc88a2ded061d7c4d51f7f24fac760ddb1ede3974017bb7f747214",
+      "source": "node-vendored"
+    },
+    {
+      "path": "cosmos/upgrade/v1beta1/tx.proto",
+      "sha256": "530c8cf040e123cd58403c760134173f50e46a5e00b76ae27eb4bc6584be4ded",
+      "source": "cosmos-sdk-v0.46.16"
+    },
+    {
+      "path": "cosmos/upgrade/v1beta1/upgrade.proto",
+      "sha256": "db59f6629e0eb85ae615e232256951efcb088e7234e628b9e10d64fad185e220",
+      "source": "node-vendored"
+    },
+    {
+      "path": "cosmos_proto/cosmos.proto",
+      "sha256": "e1abccf0c6a2ba0614caef649268da3275d65a9ee7e23af258943f5dd61d917c",
+      "source": "node-vendored"
+    },
+    {
+      "path": "decimal/coin/v1/coin.proto",
+      "sha256": "06d247b3259d99fb1ac20fc4810a4543e219247b916682d781c09ae02f5730e0",
+      "source": "node-custom"
+    },
+    {
+      "path": "decimal/coin/v1/params.proto",
+      "sha256": "4f822eaaeb7710cb33e77203c5f7a1ef519c803c679418f089fcfc8fada2f1cc",
+      "source": "node-custom"
+    },
+    {
+      "path": "decimal/coin/v1/query.proto",
+      "sha256": "bc74a29023c3270faf02256ac00a89d35aa337b93edb9aebd839d245cfd4b989",
+      "source": "node-custom"
+    },
+    {
+      "path": "decimal/coin/v1/tx.proto",
+      "sha256": "2ac44f489e04211002ab278433856d9a448208e414e4d19827bf0e43e1236bcd",
+      "source": "node-custom"
+    },
+    {
+      "path": "decimal/fee/v1/fee.proto",
+      "sha256": "ce7621b5087c5795791479bfb852e668f7e67c249105f5da1733eea6b32555b8",
+      "source": "node-custom"
+    },
+    {
+      "path": "decimal/fee/v1/params.proto",
+      "sha256": "1d3d33023537b55b89d91ba9476061e70c23f4aa9606cddd6560e09c7d42617c",
+      "source": "node-custom"
+    },
+    {
+      "path": "decimal/fee/v1/query.proto",
+      "sha256": "f6df8f4d640ae23acf5dd47f0eee598a08e6305f0837842c6bde8333b72692a7",
+      "source": "node-custom"
+    },
+    {
+      "path": "decimal/fee/v1/tx.proto",
+      "sha256": "51487f673a4466fa2fbe360b8ee2d5a2c280f03deba775eacbbb831999369a80",
+      "source": "node-custom"
+    },
+    {
+      "path": "decimal/legacy/v1/legacy.proto",
+      "sha256": "a2f78c19a023b1a6e314512b74099093647ad8872b4f99b4f7803e4e8a0ea29b",
+      "source": "node-custom"
+    },
+    {
+      "path": "decimal/legacy/v1/query.proto",
+      "sha256": "5160a285e2c71ee76f680fcff941c55591d2388dfb40d2a8b2a035e20ba08ec4",
+      "source": "node-custom"
+    },
+    {
+      "path": "decimal/legacy/v1/tx.proto",
+      "sha256": "dc64be9d7636366889b7574275e2591e3b492ff4083664bf35e24b8f6db1da45",
+      "source": "node-custom"
+    },
+    {
+      "path": "decimal/multisig/v1/multisig.proto",
+      "sha256": "59f184a9de0391f8dcf545e313d3c137444f6f60ddc76799ecb370c995f2a0e4",
+      "source": "node-custom"
+    },
+    {
+      "path": "decimal/multisig/v1/query.proto",
+      "sha256": "63938906a68c3facf466c45396898c45334fa863862c52ccf90be7283632cdd9",
+      "source": "node-custom"
+    },
+    {
+      "path": "decimal/multisig/v1/tx.proto",
+      "sha256": "909504612f3d539e9c2080e669de80c8bc40498ba7ce05accc8b1ecbf06b27a8",
+      "source": "node-custom"
+    },
+    {
+      "path": "decimal/nft/v1/nft.proto",
+      "sha256": "9345fe5c27e33d455cf9f426e895aa70f6148a822c22007a09f13d7e9a92c41a",
+      "source": "node-custom"
+    },
+    {
+      "path": "decimal/nft/v1/query.proto",
+      "sha256": "6e760e62e0494c4fdcaf439b2f0dd5178250e199e64d5c9742e6c6b22571d605",
+      "source": "node-custom"
+    },
+    {
+      "path": "decimal/nft/v1/tx.proto",
+      "sha256": "7ece59bafeb6d042adc2d4d541ad9a2bb5361447db7b31a8bc7d90d10e23d616",
+      "source": "node-custom"
+    },
+    {
+      "path": "decimal/swap/v1/query.proto",
+      "sha256": "8df479b91c394e4ffa555850642641ec233f69a802e990a859657eade127d8dc",
+      "source": "node-custom"
+    },
+    {
+      "path": "decimal/swap/v1/swap.proto",
+      "sha256": "a0d84c3a8914b967fc6a0fd92eb5071f126ebac8135671075a853e1a2488766e",
+      "source": "node-custom"
+    },
+    {
+      "path": "decimal/swap/v1/tx.proto",
+      "sha256": "0fa5a6b78e868a022a9915c6764dbbd9844ccf92bd3d6a3663827cc0da872938",
+      "source": "node-custom"
+    },
+    {
+      "path": "decimal/validator/v1/params.proto",
+      "sha256": "ee6e6b812f513088ff3127fe1587524811c4c090eb6749f9b23aa067ccde1d47",
+      "source": "node-custom"
+    },
+    {
+      "path": "decimal/validator/v1/query.proto",
+      "sha256": "e6c15b758c72acf172aa9384983d06157688677484ed3ae498cfa75869c178b1",
+      "source": "node-custom"
+    },
+    {
+      "path": "decimal/validator/v1/tx.proto",
+      "sha256": "2022a6808ecc90d686705a89abc6cecf762c5386b83eda455b36c8eeaf2b952d",
+      "source": "node-custom"
+    },
+    {
+      "path": "decimal/validator/v1/validator.proto",
+      "sha256": "ed1c155a9b8e935c97b82ce6a0015d79ce98e401e6033634cdf9eeb8cb623397",
+      "source": "node-custom"
+    },
+    {
+      "path": "ethermint/crypto/v1/ethsecp256k1/keys.proto",
+      "sha256": "b59c1ba01820701c85cc77e7856fa437e0944df45fad534d75f9c31fd895403d",
+      "source": "node-vendored"
+    },
+    {
+      "path": "gogoproto/gogo.proto",
+      "sha256": "d7eaa460508dd185113670c688c66429d0f923553d6d1cb478adfda8a8dfad96",
+      "source": "node-vendored"
+    },
+    {
+      "path": "google/api/annotations.proto",
+      "sha256": "b153ad1350159ef7d354beaa9084d5e3ffe08636da0d844f5b53173e01e4764d",
+      "source": "node-vendored"
+    },
+    {
+      "path": "google/api/http.proto",
+      "sha256": "c3886077f6e673446ac298498f9ebe743a7094445791ecc6b4e6c649c4496f34",
+      "source": "node-vendored"
+    },
+    {
+      "path": "google/protobuf/any.proto",
+      "sha256": "dc28037288e2d47c5ab0e3712608b2beb165d861db77fec199b0d63e4f5f65dd",
+      "source": "node-vendored"
+    },
+    {
+      "path": "google/protobuf/descriptor.proto",
+      "sha256": "c954aacccf36a8d1bc2e7cd26266e94e42cf483ade6d89ea91d2fde3275834be",
+      "source": "node-vendored"
+    },
+    {
+      "path": "google/protobuf/duration.proto",
+      "sha256": "9173a46f07a2133daf419251c22697ad1a1d228a19dea9975ca91aa645ed1c86",
+      "source": "node-vendored"
+    },
+    {
+      "path": "google/protobuf/timestamp.proto",
+      "sha256": "146d991bcc72d03a4b26312a80d9bf10e787f22182f49f764e48f6458aa15232",
+      "source": "node-vendored"
+    },
+    {
+      "path": "tendermint/abci/types.proto",
+      "sha256": "ab48b38a304e0996fe13505f51e54ca03ee249ef1bcc3bdf7da79d702aa3fede",
+      "source": "node-vendored"
+    },
+    {
+      "path": "tendermint/crypto/keys.proto",
+      "sha256": "eb13cb56bfd420f45c9138f288e5bee14e11ae4fc1a53d318d2725bb6da33b1b",
+      "source": "node-vendored"
+    },
+    {
+      "path": "tendermint/crypto/proof.proto",
+      "sha256": "3df7decc0f769a71414c91809067c9ea231bb687da750ca6bd0f4d3bedaca745",
+      "source": "node-vendored"
+    },
+    {
+      "path": "tendermint/types/params.proto",
+      "sha256": "3e4a9f7637867ebdb5b4c8aae36de3d9e3e8f192f17519156a9cae0f8ec0ebdd",
+      "source": "node-vendored"
+    },
+    {
+      "path": "tendermint/types/types.proto",
+      "sha256": "af19b57a9321df8393054026d012b53fb997ed3c8c1f2dfeb7a1693c97d962b9",
+      "source": "node-vendored"
+    },
+    {
+      "path": "tendermint/types/validator.proto",
+      "sha256": "d88d5771a34657f21770cab5679317ec1e0742534e94cc3282e9c8b27649ef33",
+      "source": "node-vendored"
+    },
+    {
+      "path": "tendermint/version/types.proto",
+      "sha256": "53a3572a810389538a49bcd8c6cfcf499b4f65821cd7134fe73de828bf5c0546",
+      "source": "node-vendored"
+    }
+  ],
+  "node_commit": "9e6c6d718d662083c4a524376a66d2c50bd4bc77"
+}

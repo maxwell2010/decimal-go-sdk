@@ -1,0 +1,61 @@
+{
+  "evidence": "deployments/testnet-2026-10-29/metadata.json",
+  "profiles": [
+    {
+      "profile": "TestnetContractCenter20261029",
+      "chain_id": "202020",
+      "observed_block": 22474456,
+      "checked_utc": "2026-10-29T03:08:38Z",
+      "target_proxy": "0xbC96b61F137F28F0Da47Cc4Ef06e5f984B565A2E",
+      "proxy_code_hash": "0x9e20e6504b126e7a82319e3521ab1340a205b9f467edfc3324a0526075348a55",
+      "implementation": "0x9f200fbc5984809982aD217b972E87dBEbCAD014",
+      "implementation_code_hash": "0xf5be3ea5ea1a17e1a7d589d5338fdf67df37244ca92a7e384352cca494bd0ba3",
+      "api_url": "https://testnet-api.decimalchain.com/api/v1/contracts/compact/0x9f200fbc5984809982ad217b972e87dbebcad014",
+      "source_abi_sha256": "5762eb34da57e7ef561fe41f5ee1e4e244faffe86628b2b795152555b9316724",
+      "normalized_abi_sha256": "31803fcbd61d20a02d4e596d38d8457c9c83762b0eebc4f96ac4685074905f0f",
+      "status": "versioned public API artifact; not pinned node ABI; no write/role/settlement validation; do not substitute implementation as transaction target"
+    },
+    {
+      "profile": "TestnetTokenCenter20261029",
+      "chain_id": "202020",
+      "observed_block": 22474456,
+      "checked_utc": "2026-10-29T03:08:38Z",
+      "target_proxy": "0xb8F9c4A26b91a65Ac0D3F34e230a4C9ad09aEF4a",
+      "proxy_code_hash": "0x11661ddf372d5c42c5e018e0ef2d7eaa36de07de2c97f8a937360dbb8d3c7563",
+      "implementation": "0x5f0DE38983BE6151a68b07363A0fb61897b50109",
+      "implementation_code_hash": "0x72a5e90add7e2e4060a699aaebf45e54180bfe033a8ba3a27424a5003fba2fa5",
+      "api_url": "https://testnet-api.decimalchain.com/api/v1/contracts/compact/0x5f0de38983be6151a68b07363a0fb61897b50109",
+      "source_abi_sha256": "61ef392fdd16b182ec7825dd7dd3bc022312dce5867c2b5164a6b8aa4a37e76c",
+      "normalized_abi_sha256": "020dd4fab9bc48955e75a4dc9204dc3448280d6452954332de5bc0566f7ced66",
+      "status": "versioned public API artifact; not pinned node ABI; no write/role/settlement validation; do not substitute implementation as transaction target"
+    },
+    {
+      "profile": "TestnetNFTCenter20261029",
+      "chain_id": "202020",
+      "observed_block": 22474456,
+      "checked_utc": "2026-10-29T03:08:38Z",
+      "target_proxy": "0x11aE5297d0B5886914661938FcB8AEdc08622194",
+      "proxy_code_hash": "0x03d81a8215770b021c0232e7541427d7063eceec75ceb0e9c02784845e48a0f3",
+      "implementation": "0xa12ffD3f622E5399274E4Ad13032A5cacce02916",
+      "implementation_code_hash": "0x1ac3490d562780d0c91b6e0cc1fc88cd9da4e9360b328fd990999f2948a0a64d",
+      "api_url": "https://testnet-api.decimalchain.com/api/v1/contracts/compact/0xa12ffd3f622e5399274e4ad13032a5cacce02916",
+      "source_abi_sha256": "c70cd44c7138a91f47a38ab097061c3947bb08d7600092ed1643338d5322d5a0",
+      "normalized_abi_sha256": "485c7eee4e5fbbba2394acf6da42cf26a11c6a6548513329904805fe679c5ca8",
+      "status": "versioned public API artifact; not pinned node ABI; no write/role/settlement validation; do not substitute implementation as transaction target"
+    },
+    {
+      "profile": "TestnetMasterValidator20261029",
+      "chain_id": "202020",
+      "observed_block": 22474456,
+      "checked_utc": "2026-10-29T03:08:38Z",
+      "target_proxy": "0x5dBE5eb59D73f596E19A8f64f226C71BbC8Ea36F",
+      "proxy_code_hash": "0xceacc9a289d302e75b47354faf64c5b6b6d82fabfe85cd6207fe29faddce98a9",
+      "implementation": "0xd1892c59bC3b812b8c94e20b55441999F45dE962",
+      "implementation_code_hash": "0x88c72a26106a41dc6ef11b69af95746042a061b0bb33da76e075450e3e01ee75",
+      "api_url": "https://testnet-api.decimalchain.com/api/v1/contracts/compact/0xd1892c59bc3b812b8c94e20b55441999f45de962",
+      "source_abi_sha256": "8d527ef7a0c76bca30eae93eed49557a6640cb77a07eed20809cc5f225c67f85",
+      "normalized_abi_sha256": "bfa8ad9be6a6c08ea7d71b4037051ddee3fbb4018b34c19769b965fc7cf15fbb",
+      "status": "versioned public API artifact; not pinned node ABI; no write/role/settlement validation; do not substitute implementation as transaction target"
+    }
+  ]
+}

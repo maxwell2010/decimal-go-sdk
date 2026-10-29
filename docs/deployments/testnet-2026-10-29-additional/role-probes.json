@@ -1,0 +1,57 @@
+{
+  "block": "22474733",
+  "chain_id": "202020",
+  "observations": [
+    {
+      "Role": "checks",
+      "Address": "0xb6161CAA8Bd7167C2fa67b93b041FF9a94d6a735",
+      "Signature": "nonces()",
+      "result": [
+        0
+      ]
+    },
+    {
+      "Role": "checks",
+      "Address": "0xb6161CAA8Bd7167C2fa67b93b041FF9a94d6a735",
+      "Signature": "name()",
+      "error": "eth_call failed"
+    },
+    {
+      "Role": "checks",
+      "Address": "0xb6161CAA8Bd7167C2fa67b93b041FF9a94d6a735",
+      "Signature": "symbol()",
+      "error": "eth_call failed"
+    },
+    {
+      "Role": "checks",
+      "Address": "0xb6161CAA8Bd7167C2fa67b93b041FF9a94d6a735",
+      "Signature": "nonces(address)",
+      "error": "eth_call failed"
+    },
+    {
+      "Role": "gas-center",
+      "Address": "0xB32439bF0C3742D0a227BFEc78276F7bA15F8Aa1",
+      "Signature": "nonces()",
+      "error": "eth_call failed"
+    },
+    {
+      "Role": "gas-center",
+      "Address": "0xB32439bF0C3742D0a227BFEc78276F7bA15F8Aa1",
+      "Signature": "name()",
+      "error": "eth_call failed"
+    },
+    {
+      "Role": "gas-center",
+      "Address": "0xB32439bF0C3742D0a227BFEc78276F7bA15F8Aa1",
+      "Signature": "symbol()",
+      "error": "eth_call failed"
+    },
+    {
+      "Role": "gas-center",
+      "Address": "0xB32439bF0C3742D0a227BFEc78276F7bA15F8Aa1",
+      "Signature": "nonces(address)",
+      "error": "eth_call failed"
+    }
+  ],
+  "scope": "fixed read-only eth_call probes; not a proof of absent methods"
+}

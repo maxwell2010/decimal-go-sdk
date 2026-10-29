@@ -1,0 +1,43 @@
+{
+  "checked_utc": "2026-10-29T03:54:39Z",
+  "query": "{ bridges { id implementation } }",
+  "results": [
+    {
+      "endpoint": "https://mainnet-thegraph.decimalchain.com/subgraphs/name/bridge",
+      "status": 200,
+      "error": "invalid or error GraphQL response"
+    },
+    {
+      "endpoint": "https://mainnet-thegraph.decimalchain.com/subgraphs/name/bridgeBSC",
+      "status": 200,
+      "error": "invalid or error GraphQL response"
+    },
+    {
+      "endpoint": "https://mainnet-thegraph.decimalchain.com/subgraphs/name/bridgeETH",
+      "status": 200,
+      "error": "invalid or error GraphQL response"
+    },
+    {
+      "endpoint": "https://testnet-thegraph.decimalchain.com/subgraphs/name/bridgeETH",
+      "status": 200,
+      "error": "invalid or error GraphQL response"
+    },
+    {
+      "endpoint": "https://testnet-thegraph.decimalchain.com/subgraphs/name/bridgeBSC",
+      "status": 200,
+      "error": "invalid or error GraphQL response"
+    },
+    {
+      "endpoint": "https://testnet-thegraph.decimalchain.com/subgraphs/name/bridge",
+      "status": 200,
+      "bridges": [
+        {
+          "ID": "0x827ea5381adb912ed0befda26afe8cdc5a5e050a",
+          "Implementation": "0x06d7ac3874adc1f773c5165e91077c8037b789ff"
+        }
+      ]
+    }
+  ],
+  "scope": "read-only official subgraph discovery; not transactions",
+  "source": "https://bitbucket.org/decimalteam/dsc-js-sdk/src/6790d35e2decb0cbb06a9149a9c476c834f99223/src/subgraph/queries.ts#lines-556"
+}

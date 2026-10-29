@@ -1,0 +1,31 @@
+{
+  "block": "22474794",
+  "chain_id": "202020",
+  "entries": [
+    {
+      "cbor_hex": "a264697066735822122076f8eaad2ddd373bbeddacc7622f7f53275241720c888d50bbd71a796fd9f1c764736f6c6343000814",
+      "cid": "QmWM4xhHphrHDXEuPmPfauZkbZkRrHgzjuV8ZN42sYRTGA",
+      "code_hash": "0x768280a3b02be3b6e033d1b7333daa4c5c2cbc0cf7bcc12cc8bde4d465fcf57b",
+      "error": "CID metadata unavailable from bounded public gateways",
+      "implementation": "0x2f29724DCf9e3Fe2864dB03c5310cB368Aa96f09",
+      "role": "delegation"
+    },
+    {
+      "cbor_hex": "a2646970667358221220937336def7b65db9285513ef54bef9e19202033cc4e34dfcc147ade8f6487e4064736f6c6343000814",
+      "cid": "QmYGEY7aWncZaaVFnPeLvKmhQNSgzfKeM1xLQFct9rQLas",
+      "code_hash": "0x4c15cae0620203b10f515deceec99a5b94571bc9a82a4412e6c3aebbe2ae1afe",
+      "error": "CID metadata unavailable from bounded public gateways",
+      "implementation": "0xf9790e912a10B1cDDC8Aa3C8c2B6A8205446D4d4",
+      "role": "delegation-nft"
+    },
+    {
+      "cbor_hex": "a2646970667358221220ca45531f338c2f064eb197a35139b88c46573f9b8a4c201804748688e463748164736f6c6343000814",
+      "cid": "QmbxENjmADRrrpHeQS4NKKM3sModCiQKy472rnDupWTp8G",
+      "code_hash": "0xf4304c13b5611dafda19a48666c12e43a9a4333c83d978eacbd32785fd5e4383",
+      "error": "CID metadata unavailable from bounded public gateways",
+      "implementation": "0x06d7ac3874adc1f773c5165e91077c8037b789ff",
+      "role": "bridge"
+    }
+  ],
+  "scope": "read-only bytecode metadata content-hash evidence, not execution proof"
+}

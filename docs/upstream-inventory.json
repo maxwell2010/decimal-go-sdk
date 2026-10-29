@@ -1,0 +1,1763 @@
+{
+  "dsc-js-sdk": [
+    {
+      "name": "connect",
+      "line": 182,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "parseMemo",
+      "line": 342,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "multiCall",
+      "line": 363,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "multiSendToken",
+      "line": 405,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "sendDEL",
+      "line": 460,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "burnDEL",
+      "line": 473,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "createToken",
+      "line": 477,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "createTokenReserveless",
+      "line": 482,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "convertToken",
+      "line": 506,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "approveToken",
+      "line": 511,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "transferToken",
+      "line": 517,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "transferFromToken",
+      "line": 523,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "burnToken",
+      "line": 529,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "mintTokenReserveless",
+      "line": 535,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "convertToDEL",
+      "line": 541,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "buyTokenForExactDEL",
+      "line": 547,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "buyExactTokenForDEL",
+      "line": 553,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "sellTokensForExactDEL",
+      "line": 559,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "sellExactTokensForDEL",
+      "line": 565,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "updateTokenIdentity",
+      "line": 571,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "updateTokenMaxTotalSupply",
+      "line": 577,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "updateTokenMinTotalSupply",
+      "line": 583,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "permitToken",
+      "line": 589,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "createCollectionDRC721",
+      "line": 595,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "createCollectionDRC1155",
+      "line": 600,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "createCollectionDRC721Reserveless",
+      "line": 605,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "createCollectionDRC1155Reserveless",
+      "line": 610,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "approveNFT721",
+      "line": 615,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "approveForAllNFT",
+      "line": 623,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "mintReserveless",
+      "line": 647,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "mintNFTWithDELReserve",
+      "line": 661,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "mintNFTWithTokenReserve",
+      "line": 678,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "addDELReserveNFT",
+      "line": 695,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "addTokenReserveNFT",
+      "line": 711,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "transferNFT",
+      "line": 727,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "transferBatchNFT1155",
+      "line": 743,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "disableMintNFT",
+      "line": 751,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "burnNFT",
+      "line": 758,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "setTokenURINFT",
+      "line": 781,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "delegateDEL",
+      "line": 788,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "delegateDELHold",
+      "line": 793,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "delegateToken",
+      "line": 798,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "delegateTokenHold",
+      "line": 803,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "transferStakeToken",
+      "line": 808,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "transferStakeTokenHold",
+      "line": 813,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "withdrawStakeToken",
+      "line": 818,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "withdrawStakeTokenHold",
+      "line": 823,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "stakeTokenToHold",
+      "line": 828,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "stakeTokenResetHold",
+      "line": 833,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "stakeTokenResetHoldDEL",
+      "line": 838,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "withdrawTokenWithReset",
+      "line": 843,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "transferTokenWithReset",
+      "line": 848,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "holdTokenWithReset",
+      "line": 853,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "applyPenaltyToStakeToken",
+      "line": 859,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "applyPenaltiesToStakeToken",
+      "line": 864,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "completeStakeToken",
+      "line": 868,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "delegateNFT",
+      "line": 874,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "delegateNFTHold",
+      "line": 882,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "delegateNFTByPermit",
+      "line": 890,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "withdrawNFT",
+      "line": 898,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "withdrawNFTHold",
+      "line": 906,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "transferNFTStake",
+      "line": 914,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "transferNFTStakeHold",
+      "line": 922,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "delegateNFT1155",
+      "line": 931,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "delegateNFT1155Hold",
+      "line": 939,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "withdrawNFT1155",
+      "line": 947,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "withdrawNFT1155Hold",
+      "line": 955,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "transferNFT1155Stake",
+      "line": 963,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "transferNFT1155StakeHold",
+      "line": 971,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "delegateDRC721",
+      "line": 980,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "delegateDRC721Hold",
+      "line": 987,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "delegateDRC1155",
+      "line": 994,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "delegateDRC1155Hold",
+      "line": 1001,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "transferStakeNFT",
+      "line": 1008,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "transferStakeNFTHold",
+      "line": 1015,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "withdrawStakeNFT",
+      "line": 1022,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "withdrawStakeNFTHold",
+      "line": 1029,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "stakeNFTToHold",
+      "line": 1036,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "stakeNFTResetHold",
+      "line": 1043,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "withdrawNFTWithReset",
+      "line": 1050,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "transferNFTWithReset",
+      "line": 1057,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "holdNFTWithReset",
+      "line": 1064,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "completeStakeNFT",
+      "line": 1071,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "addValidatorWithToken",
+      "line": 1076,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "addValidatorWithETH",
+      "line": 1083,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "removeValidator",
+      "line": 1090,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "pauseValidator",
+      "line": 1095,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "unpauseValidator",
+      "line": 1100,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "updateValidatorMeta",
+      "line": 1105,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "bridgeTransferNative",
+      "line": 1812,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "bridgeTransferTokens",
+      "line": 1824,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "bridgeCompleteTransfer",
+      "line": 1836,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "createChecksDEL",
+      "line": 1869,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "createChecksToken",
+      "line": 1876,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "redeemChecks",
+      "line": 1883,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "redeemChecksTest",
+      "line": 1903,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getBalance",
+      "line": 1910,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getBalanceETH",
+      "line": 1914,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getBalanceBNB",
+      "line": 1919,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getNftType",
+      "line": 1924,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getNftTypeFromContract",
+      "line": 1931,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getAddressTokenBySymbol",
+      "line": 1936,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "checkTokenExists",
+      "line": 1941,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getCommissionSymbol",
+      "line": 1946,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "calculateBuyOutput",
+      "line": 1951,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "calculateBuyInput",
+      "line": 1956,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "calculateSellInput",
+      "line": 1961,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "calculateSellOutput",
+      "line": 1966,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getSignPermitToken",
+      "line": 1971,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "allowanceToken",
+      "line": 1976,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "balanceOfToken",
+      "line": 1981,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "supportsInterfaceToken",
+      "line": 1986,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getApprovedNFT721",
+      "line": 1992,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getAllowMintNFT",
+      "line": 2000,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "isApprovedForAllNFT",
+      "line": 2007,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "ownerOfNFT721",
+      "line": 2014,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getTokenURINFT",
+      "line": 2022,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "balanceOfNFT",
+      "line": 2038,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "supportsInterfaceNFT",
+      "line": 2055,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getRateNFT1155",
+      "line": 2062,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "calcReserveNFT1155",
+      "line": 2070,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getReserveNFT",
+      "line": 2075,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getRefundableNFT",
+      "line": 2083,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getSupplyNFT1155",
+      "line": 2091,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getTokenStakesByMember",
+      "line": 2099,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getTokenStakesPageByMember",
+      "line": 2104,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getFrozenStakesQueueToken",
+      "line": 2109,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getFreezeTimeToken",
+      "line": 2114,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getStakeToken",
+      "line": 2119,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getStakeIdToken",
+      "line": 2123,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getNFTStake",
+      "line": 2129,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getNFTStakeId",
+      "line": 2140,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getAvailableCoinAmount",
+      "line": 2151,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getNFTBackedAmount",
+      "line": 2161,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getNFTStakesByMember",
+      "line": 2172,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getNFTStakesPageByMember",
+      "line": 2177,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getFrozenStakesQueueNFT",
+      "line": 2182,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getFreezeTimeNFT",
+      "line": 2187,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getSignPermitDRC721",
+      "line": 2192,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getSignPermitDRC1155",
+      "line": 2200,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getValidatorStatus",
+      "line": 2208,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "validatorIsActive",
+      "line": 2213,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "validatorIsMember",
+      "line": 2218,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getBridgeServiceFees",
+      "line": 2223,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getDecimalContractAddress",
+      "line": 2264,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getDecimalContract",
+      "line": 2269,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getLatestBlock",
+      "line": 2274,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "connectToContract",
+      "line": 2284,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "verify\u0420\u040eontract",
+      "line": 2288,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getFeeData",
+      "line": 2306,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "uploadNFTBase64ToIPFS",
+      "line": 2317,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "uploadNFTBufferToIPFS",
+      "line": 2329,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "uploadTokenBufferToIPFS",
+      "line": 2333,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "getBlobMetadata",
+      "line": 2337,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "uploadNFTFormToIPFS",
+      "line": 2341,
+      "path": "src/decimalevm/index.ts"
+    },
+    {
+      "name": "uploadTokenFormToIPFS",
+      "line": 2345,
+      "path": "src/decimalevm/index.ts"
+    }
+  ],
+  "dsc-js-sdk-call": [
+    {
+      "name": "multicall",
+      "line": 168,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "createToken",
+      "line": 178,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "createTokenReserveless",
+      "line": 190,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "convertToken",
+      "line": 242,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "convertToDEL",
+      "line": 267,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "approveToken",
+      "line": 275,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "transferToken",
+      "line": 282,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "transferFromToken",
+      "line": 289,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "burnToken",
+      "line": 296,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "buyTokenForExactDEL",
+      "line": 303,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "buyExactTokenForDEL",
+      "line": 310,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "sellTokensForExactDEL",
+      "line": 317,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "sellExactTokensForDEL",
+      "line": 324,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "updateTokenIdentity",
+      "line": 331,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "updateTokenMaxTotalSupply",
+      "line": 338,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "updateTokenMinTotalSupply",
+      "line": 345,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "permitToken",
+      "line": 352,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "delegateDEL",
+      "line": 361,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "delegateDELHold",
+      "line": 368,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "delegateToken",
+      "line": 375,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "delegateTokenHold",
+      "line": 390,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "transferStakeToken",
+      "line": 405,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "transferStakeTokenHold",
+      "line": 412,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "withdrawStakeToken",
+      "line": 419,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "withdrawStakeTokenHold",
+      "line": 426,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "stakeTokenToHold",
+      "line": 433,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "stakeTokenResetHold",
+      "line": 440,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "stakeTokenResetHoldDEL",
+      "line": 447,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "withdrawTokenWithReset",
+      "line": 454,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "transferTokenWithReset",
+      "line": 461,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "holdTokenWithReset",
+      "line": 468,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "applyPenaltyToStakeToken",
+      "line": 475,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "applyPenaltiesToStakeToken",
+      "line": 492,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "completeStakeToken",
+      "line": 510,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "delegateNFT",
+      "line": 528,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "delegateNFTHold",
+      "line": 535,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "delegateNFTByPermit",
+      "line": 542,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "withdrawNFT",
+      "line": 550,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "withdrawNFTHold",
+      "line": 557,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "transferNFTStake",
+      "line": 564,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "transferNFTStakeHold",
+      "line": 571,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "delegateNFT1155",
+      "line": 579,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "delegateNFT1155Hold",
+      "line": 586,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "withdrawNFT1155",
+      "line": 593,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "withdrawNFT1155Hold",
+      "line": 600,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "transferNFT1155Stake",
+      "line": 607,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "transferNFT1155StakeHold",
+      "line": 614,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "createCollection",
+      "line": 622,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "setApprovalForAllNFT",
+      "line": 651,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "transferNFT",
+      "line": 658,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "disableMintNFT",
+      "line": 672,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "burnNFT",
+      "line": 679,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "setTokenURINFT",
+      "line": 696,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "mintNFT",
+      "line": 703,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "mintNFTWithDELReserve",
+      "line": 725,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "mintReserveless",
+      "line": 746,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "mintNFTWithTokenReserve",
+      "line": 768,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "addDELReserveNFT",
+      "line": 812,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "addTokenReserveNFT",
+      "line": 819,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "approveNFT721",
+      "line": 835,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "transferBatchNFT1155",
+      "line": 843,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "delegateDRC721",
+      "line": 854,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "delegateDRC721Hold",
+      "line": 869,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "delegateDRC1155",
+      "line": 884,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "delegateDRC1155Hold",
+      "line": 899,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "transferStakeNFT",
+      "line": 914,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "transferStakeNFTHold",
+      "line": 921,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "withdrawStakeNFT",
+      "line": 928,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "withdrawStakeNFTHold",
+      "line": 935,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "stakeNFTToHold",
+      "line": 942,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "stakeNFTResetHold",
+      "line": 949,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "withdrawNFTWithReset",
+      "line": 956,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "transferNFTWithReset",
+      "line": 963,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "holdNFTWithReset",
+      "line": 970,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "completeStakeNFT",
+      "line": 977,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "addValidatorWithToken",
+      "line": 995,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "addValidatorWithETH",
+      "line": 1007,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "removeValidator",
+      "line": 1018,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "pauseValidator",
+      "line": 1025,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "unpauseValidator",
+      "line": 1032,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "updateValidatorMeta",
+      "line": 1039,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "wrapAndTransferETH",
+      "line": 1047,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "transferTokens",
+      "line": 1060,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "completeTransfer",
+      "line": 1072,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "createChecksDEL",
+      "line": 1082,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "createChecksToken",
+      "line": 1094,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "redeemChecks",
+      "line": 1115,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "checkTokenExists",
+      "line": 1135,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getAddressTokenBySymbol",
+      "line": 1139,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getCommissionSymbol",
+      "line": 1143,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "calculateBuyOutput",
+      "line": 1148,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "calculateBuyInput",
+      "line": 1151,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "calculateSellInput",
+      "line": 1155,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "calculateSellOutput",
+      "line": 1159,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getSignPermitToken",
+      "line": 1163,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "allowanceToken",
+      "line": 1178,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "balanceOfToken",
+      "line": 1182,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "supportsInterfaceToken",
+      "line": 1186,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getNftType",
+      "line": 1191,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getAllowMintNFT",
+      "line": 1200,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "isApprovedForAllNFT",
+      "line": 1204,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "balanceOfNFT",
+      "line": 1208,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "supportsInterfaceNFT",
+      "line": 1216,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getReserveNFT",
+      "line": 1220,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getRefundableNFT",
+      "line": 1225,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getApprovedNFT721",
+      "line": 1230,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "ownerOfNFT721",
+      "line": 1234,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getTokenURINFT721",
+      "line": 1238,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getTokenURINFT1155",
+      "line": 1243,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getRateNFT1155",
+      "line": 1248,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getSupplyNFT1155",
+      "line": 1251,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getTokenStakesByMember",
+      "line": 1256,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getTokenStakesPageByMember",
+      "line": 1259,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getFrozenStakesQueueToken",
+      "line": 1262,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getFreezeTimeToken",
+      "line": 1265,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getStakeToken",
+      "line": 1279,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getStakeIdToken",
+      "line": 1283,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getNFTStakeFromDelegation",
+      "line": 1288,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getNFTStakeIdFromDelegation",
+      "line": 1298,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getAvailableCoinAmount",
+      "line": 1308,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getNFTBackedAmount",
+      "line": 1317,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getNFTStakesByMember",
+      "line": 1328,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getNFTStakesPageByMember",
+      "line": 1331,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getFrozenStakesQueueNFT",
+      "line": 1334,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getFreezeTimeNFT",
+      "line": 1337,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getValidatorStatus",
+      "line": 1353,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "validatorIsActive",
+      "line": 1361,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "validatorIsMember",
+      "line": 1365,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getSignPermitDRC721",
+      "line": 1397,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getSignPermitDRC1155",
+      "line": 1436,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getBridgeV2ServiceFees",
+      "line": 1473,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getChecksNonces",
+      "line": 1478,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "createMultiSig",
+      "line": 1483,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "buildMultiSigTx",
+      "line": 1506,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "signMultiSigTx",
+      "line": 1509,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "executeMultiSigTx",
+      "line": 1512,
+      "path": "src/decimalevm/call.ts"
+    },
+    {
+      "name": "getNonceMultiSig",
+      "line": 1516,
+      "path": "src/decimalevm/call.ts"
+    }
+  ],
+  "dsc-go-sdk": [
+    {
+      "name": "SendDEL",
+      "path": "decimalevm/methods/del.go",
+      "line": 27
+    },
+    {
+      "name": "BurnDEL",
+      "path": "decimalevm/methods/del.go",
+      "line": 115
+    },
+    {
+      "name": "DelegateDel",
+      "path": "decimalevm/methods/delegation.go",
+      "line": 15
+    },
+    {
+      "name": "DelegateDELHold",
+      "path": "decimalevm/methods/delegation.go",
+      "line": 79
+    },
+    {
+      "name": "DelegateToken",
+      "path": "decimalevm/methods/delegation.go",
+      "line": 144
+    },
+    {
+      "name": "DelegateTokenHold",
+      "path": "decimalevm/methods/delegation.go",
+      "line": 236
+    },
+    {
+      "name": "WithdrawStakeToken",
+      "path": "decimalevm/methods/delegation.go",
+      "line": 330
+    },
+    {
+      "name": "WithdrawStakeTokenHold",
+      "path": "decimalevm/methods/delegation.go",
+      "line": 392
+    },
+    {
+      "name": "DelegateDRC721",
+      "path": "decimalevm/methods/delegation.go",
+      "line": 455
+    },
+    {
+      "name": "DelegateDRC721Hold",
+      "path": "decimalevm/methods/delegation.go",
+      "line": 558
+    },
+    {
+      "name": "DelegateDRC1155",
+      "path": "decimalevm/methods/delegation.go",
+      "line": 664
+    },
+    {
+      "name": "DelegateDRC1155Hold",
+      "path": "decimalevm/methods/delegation.go",
+      "line": 769
+    },
+    {
+      "name": "WithdrawStakeNFT",
+      "path": "decimalevm/methods/delegation.go",
+      "line": 877
+    },
+    {
+      "name": "WithdrawStakeNFTHold",
+      "path": "decimalevm/methods/delegation.go",
+      "line": 954
+    },
+    {
+      "name": "CreateMultiSig",
+      "path": "decimalevm/methods/multisig.go",
+      "line": 18
+    },
+    {
+      "name": "BuildSafeTransaction",
+      "path": "decimalevm/methods/multisig.go",
+      "line": 150
+    },
+    {
+      "name": "BuildMultiSigTxSendDEL",
+      "path": "decimalevm/methods/multisig.go",
+      "line": 225
+    },
+    {
+      "name": "BuildMultiSigTxSendToken",
+      "path": "decimalevm/methods/multisig.go",
+      "line": 255
+    },
+    {
+      "name": "BuildMultiSigTxSendNFT",
+      "path": "decimalevm/methods/multisig.go",
+      "line": 292
+    },
+    {
+      "name": "SignSafeTransaction",
+      "path": "decimalevm/methods/multisig.go",
+      "line": 382
+    },
+    {
+      "name": "ExecuteSafeTransaction",
+      "path": "decimalevm/methods/multisig.go",
+      "line": 440
+    },
+    {
+      "name": "CreateNftCollection",
+      "path": "decimalevm/methods/nft.go",
+      "line": 22
+    },
+    {
+      "name": "SetApprovalForAllNFT",
+      "path": "decimalevm/methods/nft.go",
+      "line": 111
+    },
+    {
+      "name": "MintNFT",
+      "path": "decimalevm/methods/nft.go",
+      "line": 173
+    },
+    {
+      "name": "TransferNFT",
+      "path": "decimalevm/methods/nft.go",
+      "line": 247
+    },
+    {
+      "name": "DisableMintNFT",
+      "path": "decimalevm/methods/nft.go",
+      "line": 327
+    },
+    {
+      "name": "BurnNFT",
+      "path": "decimalevm/methods/nft.go",
+      "line": 389
+    },
+    {
+      "name": "SetTokenURINFT",
+      "path": "decimalevm/methods/nft.go",
+      "line": 465
+    },
+    {
+      "name": "MintNFTWithDELReserve",
+      "path": "decimalevm/methods/nft.go",
+      "line": 527
+    },
+    {
+      "name": "MintReserveless",
+      "path": "decimalevm/methods/nft.go",
+      "line": 624
+    },
+    {
+      "name": "AddDELReserveNFT",
+      "path": "decimalevm/methods/nft.go",
+      "line": 724
+    },
+    {
+      "name": "AddTokenReserveNFT",
+      "path": "decimalevm/methods/nft.go",
+      "line": 786
+    },
+    {
+      "name": "TransferBatchNFT1155",
+      "path": "decimalevm/methods/nft.go",
+      "line": 874
+    },
+    {
+      "name": "TransferStakeNFT",
+      "path": "decimalevm/methods/nft.go",
+      "line": 940
+    },
+    {
+      "name": "TransferStakeNFTHold",
+      "path": "decimalevm/methods/nft.go",
+      "line": 1019
+    },
+    {
+      "name": "StakeNFTToHold",
+      "path": "decimalevm/methods/nft.go",
+      "line": 1100
+    },
+    {
+      "name": "StakeNFTResetHold",
+      "path": "decimalevm/methods/nft.go",
+      "line": 1181
+    },
+    {
+      "name": "WithdrawNFTWithReset",
+      "path": "decimalevm/methods/nft.go",
+      "line": 1260
+    },
+    {
+      "name": "TransferNFTWithReset",
+      "path": "decimalevm/methods/nft.go",
+      "line": 1339
+    },
+    {
+      "name": "HoldNFTWithReset",
+      "path": "decimalevm/methods/nft.go",
+      "line": 1420
+    },
+    {
+      "name": "CompleteStakeNFT",
+      "path": "decimalevm/methods/nft.go",
+      "line": 1501
+    },
+    {
+      "name": "CreateToken",
+      "path": "decimalevm/methods/tokens.go",
+      "line": 31
+    },
+    {
+      "name": "ApproveToken",
+      "path": "decimalevm/methods/tokens.go",
+      "line": 157
+    },
+    {
+      "name": "TransferToken",
+      "path": "decimalevm/methods/tokens.go",
+      "line": 255
+    },
+    {
+      "name": "TransferFromToken",
+      "path": "decimalevm/methods/tokens.go",
+      "line": 354
+    },
+    {
+      "name": "BurnToken",
+      "path": "decimalevm/methods/tokens.go",
+      "line": 452
+    },
+    {
+      "name": "BuyTokenForExactDEL",
+      "path": "decimalevm/methods/tokens.go",
+      "line": 549
+    },
+    {
+      "name": "BuyExactTokenForDEL",
+      "path": "decimalevm/methods/tokens.go",
+      "line": 658
+    },
+    {
+      "name": "SellTokensForExactDEL",
+      "path": "decimalevm/methods/tokens.go",
+      "line": 769
+    },
+    {
+      "name": "SellExactTokensForDEL",
+      "path": "decimalevm/methods/tokens.go",
+      "line": 880
+    },
+    {
+      "name": "ConvertToken",
+      "path": "decimalevm/methods/tokens.go",
+      "line": 992
+    },
+    {
+      "name": "PermitToken",
+      "path": "decimalevm/methods/tokens.go",
+      "line": 1185
+    },
+    {
+      "name": "AddValidatorWithToken",
+      "path": "decimalevm/methods/validators.go",
+      "line": 17
+    },
+    {
+      "name": "AddValidatorWithETH",
+      "path": "decimalevm/methods/validators.go",
+      "line": 110
+    },
+    {
+      "name": "RemoveValidator",
+      "path": "decimalevm/methods/validators.go",
+      "line": 203
+    },
+    {
+      "name": "PauseValidator",
+      "path": "decimalevm/methods/validators.go",
+      "line": 288
+    },
+    {
+      "name": "UnpauseValidator",
+      "path": "decimalevm/methods/validators.go",
+      "line": 373
+    },
+    {
+      "name": "UpdateValidatorMeta",
+      "path": "decimalevm/methods/validators.go",
+      "line": 458
+    }
+  ]
+}

@@ -1,0 +1,1300 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "target",
+        "type": "address"
+      }
+    ],
+    "name": "AddressEmptyCode",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "AlreadyDeployed",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "AvailableOnlyDuringMigration",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "AvailableOnlyForDecimal",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "DisabledDuringMigration",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "implementation",
+        "type": "address"
+      }
+    ],
+    "name": "ERC1967InvalidImplementation",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ERC1967NonPayable",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "EnforcedPause",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ExpectedPause",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "FailedInnerCall",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidAddress",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidAllowMint",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidInitialMint",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidInitialization",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidNFTType",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidPayloadLength",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidToken",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "NotInitializing",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      }
+    ],
+    "name": "OwnableInvalidOwner",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "OwnableUnauthorizedAccount",
+    "type": "error"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "version",
+        "type": "uint64"
+      }
+    ],
+    "name": "Initialized",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "tokenAddress",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "enum NFTType",
+        "name": "nftType",
+        "type": "uint8"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "creator",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "symbol",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "contractURI",
+            "type": "string"
+          },
+          {
+            "internalType": "bool",
+            "name": "refundable",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "burnable",
+            "type": "bool"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct IDecimalNFTCenter.NFT",
+        "name": "nft",
+        "type": "tuple"
+      }
+    ],
+    "name": "NFTCreated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "nft",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "salt",
+        "type": "bytes"
+      }
+    ],
+    "name": "NFTMigrated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "previousOwner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "OwnershipTransferred",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "Paused",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "Unpaused",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "implementation",
+        "type": "address"
+      }
+    ],
+    "name": "Upgraded",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "oldContract",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "newContract",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "enum NFTType",
+        "name": "nftType",
+        "type": "uint8"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "withReserve",
+        "type": "bool"
+      }
+    ],
+    "name": "UpgradedNFT",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "enum NFTType",
+        "name": "nftType",
+        "type": "uint8"
+      },
+      {
+        "internalType": "bool",
+        "name": "withReserve",
+        "type": "bool"
+      }
+    ],
+    "name": "beacon",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      }
+    ],
+    "name": "checkToken",
+    "outputs": [],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "creator",
+                "type": "address"
+              },
+              {
+                "internalType": "string",
+                "name": "symbol",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "contractURI",
+                "type": "string"
+              },
+              {
+                "internalType": "bool",
+                "name": "refundable",
+                "type": "bool"
+              },
+              {
+                "internalType": "bool",
+                "name": "burnable",
+                "type": "bool"
+              }
+            ],
+            "internalType": "struct IDecimalNFTCenter.NFT",
+            "name": "meta",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "string",
+                "name": "reserveSymbol",
+                "type": "string"
+              },
+              {
+                "internalType": "uint256",
+                "name": "reserveAmount",
+                "type": "uint256"
+              },
+              {
+                "internalType": "string",
+                "name": "tokenURI",
+                "type": "string"
+              },
+              {
+                "internalType": "bool",
+                "name": "allowMint",
+                "type": "bool"
+              }
+            ],
+            "internalType": "struct IDecimalNFTCenterMigration.MigrationMeta",
+            "name": "migrationMeta",
+            "type": "tuple"
+          },
+          {
+            "internalType": "bytes",
+            "name": "salt",
+            "type": "bytes"
+          },
+          {
+            "internalType": "enum NFTType",
+            "name": "nftType",
+            "type": "uint8"
+          },
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "account",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "balance",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct IDecimalNFTCenterMigration.Balance[]",
+            "name": "balances",
+            "type": "tuple[]"
+          }
+        ],
+        "internalType": "struct IDecimalNFTCenterMigration.NFTMigration[]",
+        "name": "metaMigration",
+        "type": "tuple[]"
+      }
+    ],
+    "name": "createAndMigrateBatch",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "creator",
+                "type": "address"
+              },
+              {
+                "internalType": "string",
+                "name": "symbol",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "contractURI",
+                "type": "string"
+              },
+              {
+                "internalType": "bool",
+                "name": "refundable",
+                "type": "bool"
+              },
+              {
+                "internalType": "bool",
+                "name": "burnable",
+                "type": "bool"
+              }
+            ],
+            "internalType": "struct IDecimalNFTCenter.NFT",
+            "name": "meta",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "string",
+                "name": "reserveSymbol",
+                "type": "string"
+              },
+              {
+                "internalType": "uint256",
+                "name": "reserveAmount",
+                "type": "uint256"
+              },
+              {
+                "internalType": "string",
+                "name": "tokenURI",
+                "type": "string"
+              },
+              {
+                "internalType": "bool",
+                "name": "allowMint",
+                "type": "bool"
+              }
+            ],
+            "internalType": "struct IDecimalNFTCenterMigration.MigrationMeta",
+            "name": "migrationMeta",
+            "type": "tuple"
+          },
+          {
+            "internalType": "bytes",
+            "name": "salt",
+            "type": "bytes"
+          },
+          {
+            "internalType": "enum NFTType",
+            "name": "nftType",
+            "type": "uint8"
+          },
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "account",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "balance",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct IDecimalNFTCenterMigration.Balance[]",
+            "name": "balances",
+            "type": "tuple[]"
+          }
+        ],
+        "internalType": "struct IDecimalNFTCenterMigration.NFTMigration",
+        "name": "metaMigration",
+        "type": "tuple"
+      }
+    ],
+    "name": "createCollectionDRC1155Migration",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "creator",
+                "type": "address"
+              },
+              {
+                "internalType": "string",
+                "name": "symbol",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "contractURI",
+                "type": "string"
+              },
+              {
+                "internalType": "bool",
+                "name": "refundable",
+                "type": "bool"
+              },
+              {
+                "internalType": "bool",
+                "name": "burnable",
+                "type": "bool"
+              }
+            ],
+            "internalType": "struct IDecimalNFTCenter.NFT",
+            "name": "meta",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "string",
+                "name": "reserveSymbol",
+                "type": "string"
+              },
+              {
+                "internalType": "uint256",
+                "name": "reserveAmount",
+                "type": "uint256"
+              },
+              {
+                "internalType": "string",
+                "name": "tokenURI",
+                "type": "string"
+              },
+              {
+                "internalType": "bool",
+                "name": "allowMint",
+                "type": "bool"
+              }
+            ],
+            "internalType": "struct IDecimalNFTCenterMigration.MigrationMeta",
+            "name": "migrationMeta",
+            "type": "tuple"
+          },
+          {
+            "internalType": "bytes",
+            "name": "salt",
+            "type": "bytes"
+          },
+          {
+            "internalType": "enum NFTType",
+            "name": "nftType",
+            "type": "uint8"
+          },
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "account",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "balance",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct IDecimalNFTCenterMigration.Balance[]",
+            "name": "balances",
+            "type": "tuple[]"
+          }
+        ],
+        "internalType": "struct IDecimalNFTCenterMigration.NFTMigration",
+        "name": "metaMigration",
+        "type": "tuple"
+      }
+    ],
+    "name": "createCollectionDRC721Migration",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "creator",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "symbol",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "contractURI",
+            "type": "string"
+          },
+          {
+            "internalType": "bool",
+            "name": "refundable",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "burnable",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct IDecimalNFTCenter.NFT",
+        "name": "meta",
+        "type": "tuple"
+      }
+    ],
+    "name": "createDRC1155",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "creator",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "symbol",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "contractURI",
+            "type": "string"
+          },
+          {
+            "internalType": "bool",
+            "name": "refundable",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "burnable",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct IDecimalNFTCenter.NFT",
+        "name": "meta",
+        "type": "tuple"
+      }
+    ],
+    "name": "createDRC1155Reserveless",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "creator",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "symbol",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "contractURI",
+            "type": "string"
+          },
+          {
+            "internalType": "bool",
+            "name": "refundable",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "burnable",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct IDecimalNFTCenter.NFT",
+        "name": "meta",
+        "type": "tuple"
+      }
+    ],
+    "name": "createDRC721",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "creator",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "symbol",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "contractURI",
+            "type": "string"
+          },
+          {
+            "internalType": "bool",
+            "name": "refundable",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "burnable",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct IDecimalNFTCenter.NFT",
+        "name": "meta",
+        "type": "tuple"
+      }
+    ],
+    "name": "createDRC721Reserveless",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "components": [
+              {
+                "internalType": "string",
+                "name": "reserveSymbol",
+                "type": "string"
+              },
+              {
+                "internalType": "uint256",
+                "name": "reserveAmount",
+                "type": "uint256"
+              },
+              {
+                "internalType": "string",
+                "name": "tokenURI",
+                "type": "string"
+              },
+              {
+                "internalType": "bool",
+                "name": "allowMint",
+                "type": "bool"
+              }
+            ],
+            "internalType": "struct IDecimalNFTCenterMigration.MigrationMeta",
+            "name": "migrationMeta",
+            "type": "tuple"
+          },
+          {
+            "internalType": "bytes",
+            "name": "salt",
+            "type": "bytes"
+          },
+          {
+            "internalType": "enum NFTType",
+            "name": "nftType",
+            "type": "uint8"
+          },
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "account",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "balance",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct IDecimalNFTCenterMigration.Balance[]",
+            "name": "balances",
+            "type": "tuple[]"
+          }
+        ],
+        "internalType": "struct IDecimalNFTCenterMigration.BalancesMigration[]",
+        "name": "migrationNFTs",
+        "type": "tuple[]"
+      }
+    ],
+    "name": "filterMigratedBalances",
+    "outputs": [
+      {
+        "components": [
+          {
+            "components": [
+              {
+                "internalType": "string",
+                "name": "reserveSymbol",
+                "type": "string"
+              },
+              {
+                "internalType": "uint256",
+                "name": "reserveAmount",
+                "type": "uint256"
+              },
+              {
+                "internalType": "string",
+                "name": "tokenURI",
+                "type": "string"
+              },
+              {
+                "internalType": "bool",
+                "name": "allowMint",
+                "type": "bool"
+              }
+            ],
+            "internalType": "struct IDecimalNFTCenterMigration.MigrationMeta",
+            "name": "migrationMeta",
+            "type": "tuple"
+          },
+          {
+            "internalType": "bytes",
+            "name": "salt",
+            "type": "bytes"
+          },
+          {
+            "internalType": "enum NFTType",
+            "name": "nftType",
+            "type": "uint8"
+          },
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "account",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "balance",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct IDecimalNFTCenterMigration.Balance[]",
+            "name": "balances",
+            "type": "tuple[]"
+          }
+        ],
+        "internalType": "struct IDecimalNFTCenterMigration.BalancesMigration[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getContractCenter",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getImpl",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes",
+        "name": "salt",
+        "type": "bytes"
+      }
+    ],
+    "name": "getNFTBySalt",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "nft",
+        "type": "address"
+      }
+    ],
+    "name": "getNFTState",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "bool",
+            "name": "active",
+            "type": "bool"
+          },
+          {
+            "internalType": "enum NFTType",
+            "name": "nftType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bool",
+            "name": "withReserve",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct NFTState",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes",
+        "name": "salt",
+        "type": "bytes"
+      }
+    ],
+    "name": "getNftBySalt",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "symbol",
+        "type": "string"
+      }
+    ],
+    "name": "getTokenBySymbol",
+    "outputs": [
+      {
+        "internalType": "contract IDRC20Migration",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "enum NFTType",
+        "name": "nftType",
+        "type": "uint8"
+      },
+      {
+        "internalType": "bool",
+        "name": "withReserve",
+        "type": "bool"
+      }
+    ],
+    "name": "implementation",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "initialize",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "isDecimal",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "isMigrating",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "pause",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "paused",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "renounceOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "addressContractCenter",
+        "type": "address"
+      }
+    ],
+    "name": "setContractCenter",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "transferOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "unpause",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "newImpl",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes",
+        "name": "data",
+        "type": "bytes"
+      }
+    ],
+    "name": "upgrade",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "newNFTImpl",
+        "type": "address"
+      },
+      {
+        "internalType": "enum NFTType",
+        "name": "nftType",
+        "type": "uint8"
+      },
+      {
+        "internalType": "bool",
+        "name": "withReserve",
+        "type": "bool"
+      }
+    ],
+    "name": "upgradeNFT",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "stateMutability": "payable",
+    "type": "receive"
+  }
+]

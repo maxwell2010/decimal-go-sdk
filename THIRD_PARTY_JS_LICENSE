@@ -1,0 +1,3 @@
+Checks and Multicall ABI artifacts from dsc-js-sdk 6790d35e2decb0cbb06a9149a9c476c834f99223.
+The upstream package declares ISC (package.json); the repository snapshot contains no separate LICENSE file.
+ABI files are interfaces; no JS implementation is redistributed. Review attribution before publication.

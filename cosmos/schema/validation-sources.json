@@ -1,0 +1,412 @@
+{
+  "node_commit": "9e6c6d718d662083c4a524376a66d2c50bd4bc77",
+  "sdk_version": "v0.46.16",
+  "scope": "Valid-message stateless acceptance predicates; no authorization/state/ante success; malformed custom integers fail closed",
+  "policies": [
+    {
+      "type_url": "/cosmos.upgrade.v1beta1.MsgCancelUpgrade",
+      "path": "x/upgrade/types/msgs.go",
+      "line": 56,
+      "url": "https://github.com/cosmos/cosmos-sdk/blob/v0.46.16/x/upgrade/types/msgs.go#L56",
+      "sha256": "151f04c8aac7d147d2a74cd465f8c87e345b64e0284ad349de4aef8820ea7015"
+    },
+    {
+      "type_url": "/cosmos.upgrade.v1beta1.MsgSoftwareUpgrade",
+      "path": "x/upgrade/types/msgs.go",
+      "line": 26,
+      "url": "https://github.com/cosmos/cosmos-sdk/blob/v0.46.16/x/upgrade/types/msgs.go#L26",
+      "sha256": "151f04c8aac7d147d2a74cd465f8c87e345b64e0284ad349de4aef8820ea7015"
+    },
+    {
+      "type_url": "/decimal.coin.v1.MsgBurnCoin",
+      "path": "x/coin/types/msg.go",
+      "line": 555,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/coin/types/msg.go#lines-555",
+      "sha256": "ae71658d6f6a0b28c0167557d98434edaaa006f8c9815aa41f74ea0ec2f6de16"
+    },
+    {
+      "type_url": "/decimal.coin.v1.MsgBuyCoin",
+      "path": "x/coin/types/msg.go",
+      "line": 366,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/coin/types/msg.go#lines-366",
+      "sha256": "ae71658d6f6a0b28c0167557d98434edaaa006f8c9815aa41f74ea0ec2f6de16"
+    },
+    {
+      "type_url": "/decimal.coin.v1.MsgCreateCoin",
+      "path": "x/coin/types/msg.go",
+      "line": 85,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/coin/types/msg.go#lines-85",
+      "sha256": "ae71658d6f6a0b28c0167557d98434edaaa006f8c9815aa41f74ea0ec2f6de16"
+    },
+    {
+      "type_url": "/decimal.coin.v1.MsgMultiSendCoin",
+      "path": "x/coin/types/msg.go",
+      "line": 300,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/coin/types/msg.go#lines-300",
+      "sha256": "ae71658d6f6a0b28c0167557d98434edaaa006f8c9815aa41f74ea0ec2f6de16"
+    },
+    {
+      "type_url": "/decimal.coin.v1.MsgRedeemCheck",
+      "path": "x/coin/types/msg.go",
+      "line": 609,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/coin/types/msg.go#lines-609",
+      "sha256": "ae71658d6f6a0b28c0167557d98434edaaa006f8c9815aa41f74ea0ec2f6de16"
+    },
+    {
+      "type_url": "/decimal.coin.v1.MsgSellAllCoin",
+      "path": "x/coin/types/msg.go",
+      "line": 496,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/coin/types/msg.go#lines-496",
+      "sha256": "ae71658d6f6a0b28c0167557d98434edaaa006f8c9815aa41f74ea0ec2f6de16"
+    },
+    {
+      "type_url": "/decimal.coin.v1.MsgSellCoin",
+      "path": "x/coin/types/msg.go",
+      "line": 430,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/coin/types/msg.go#lines-430",
+      "sha256": "ae71658d6f6a0b28c0167557d98434edaaa006f8c9815aa41f74ea0ec2f6de16"
+    },
+    {
+      "type_url": "/decimal.coin.v1.MsgSendCoin",
+      "path": "x/coin/types/msg.go",
+      "line": 241,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/coin/types/msg.go#lines-241",
+      "sha256": "ae71658d6f6a0b28c0167557d98434edaaa006f8c9815aa41f74ea0ec2f6de16"
+    },
+    {
+      "type_url": "/decimal.coin.v1.MsgUpdateCoin",
+      "path": "x/coin/types/msg.go",
+      "line": 178,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/coin/types/msg.go#lines-178",
+      "sha256": "ae71658d6f6a0b28c0167557d98434edaaa006f8c9815aa41f74ea0ec2f6de16"
+    },
+    {
+      "type_url": "/decimal.fee.v1.MsgUpdateCoinPrices",
+      "path": "x/fee/types/tx.go",
+      "line": 30,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/fee/types/tx.go#lines-30",
+      "sha256": "b48053decbb48f1a455eed4e597671559f78fa48acfae7df876a1356a365997c"
+    },
+    {
+      "type_url": "/decimal.legacy.v1.MsgReturnLegacy",
+      "path": "x/legacy/types/msg.go",
+      "line": 57,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/legacy/types/msg.go#lines-57",
+      "sha256": "638a3804e6ea078303fe27c80f279a5a58ebb78a311d8648c865992f8a23e627"
+    },
+    {
+      "type_url": "/decimal.multisig.v1.MsgCreateTransaction",
+      "path": "x/multisig/types/msg.go",
+      "line": 141,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/multisig/types/msg.go#lines-141",
+      "sha256": "e7d584317e8f9ba2bc0c17e6f6b26c6d8d6604018830628c6cce13d385f10b82"
+    },
+    {
+      "type_url": "/decimal.multisig.v1.MsgCreateWallet",
+      "path": "x/multisig/types/msg.go",
+      "line": 61,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/multisig/types/msg.go#lines-61",
+      "sha256": "e7d584317e8f9ba2bc0c17e6f6b26c6d8d6604018830628c6cce13d385f10b82"
+    },
+    {
+      "type_url": "/decimal.multisig.v1.MsgSignTransaction",
+      "path": "x/multisig/types/msg.go",
+      "line": 187,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/multisig/types/msg.go#lines-187",
+      "sha256": "e7d584317e8f9ba2bc0c17e6f6b26c6d8d6604018830628c6cce13d385f10b82"
+    },
+    {
+      "type_url": "/decimal.nft.v1.MsgBurnToken",
+      "path": "x/nft/types/msg.go",
+      "line": 293,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/nft/types/msg.go#lines-293",
+      "sha256": "d3371b2247ab42c32407934e540b0f916396a95654e44ed5159c22386449f6ec"
+    },
+    {
+      "type_url": "/decimal.nft.v1.MsgMintToken",
+      "path": "x/nft/types/msg.go",
+      "line": 76,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/nft/types/msg.go#lines-76",
+      "sha256": "d3371b2247ab42c32407934e540b0f916396a95654e44ed5159c22386449f6ec"
+    },
+    {
+      "type_url": "/decimal.nft.v1.MsgSendToken",
+      "path": "x/nft/types/msg.go",
+      "line": 238,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/nft/types/msg.go#lines-238",
+      "sha256": "d3371b2247ab42c32407934e540b0f916396a95654e44ed5159c22386449f6ec"
+    },
+    {
+      "type_url": "/decimal.nft.v1.MsgUpdateReserve",
+      "path": "x/nft/types/msg.go",
+      "line": 186,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/nft/types/msg.go#lines-186",
+      "sha256": "d3371b2247ab42c32407934e540b0f916396a95654e44ed5159c22386449f6ec"
+    },
+    {
+      "type_url": "/decimal.nft.v1.MsgUpdateToken",
+      "path": "x/nft/types/msg.go",
+      "line": 140,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/nft/types/msg.go#lines-140",
+      "sha256": "d3371b2247ab42c32407934e540b0f916396a95654e44ed5159c22386449f6ec"
+    },
+    {
+      "type_url": "/decimal.swap.v1.MsgActivateChain",
+      "path": "x/swap/types/msg.go",
+      "line": 214,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/swap/types/msg.go#lines-214",
+      "sha256": "ed8b720b773ed5226fafba923fd376ff3bffd1a72c128b40452b0f4ae87b4b2b"
+    },
+    {
+      "type_url": "/decimal.swap.v1.MsgDeactivateChain",
+      "path": "x/swap/types/msg.go",
+      "line": 260,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/swap/types/msg.go#lines-260",
+      "sha256": "ed8b720b773ed5226fafba923fd376ff3bffd1a72c128b40452b0f4ae87b4b2b"
+    },
+    {
+      "type_url": "/decimal.swap.v1.MsgInitializeSwap",
+      "path": "x/swap/types/msg.go",
+      "line": 72,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/swap/types/msg.go#lines-72",
+      "sha256": "ed8b720b773ed5226fafba923fd376ff3bffd1a72c128b40452b0f4ae87b4b2b"
+    },
+    {
+      "type_url": "/decimal.swap.v1.MsgRedeemSwap",
+      "path": "x/swap/types/msg.go",
+      "line": 143,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/swap/types/msg.go#lines-143",
+      "sha256": "ed8b720b773ed5226fafba923fd376ff3bffd1a72c128b40452b0f4ae87b4b2b"
+    },
+    {
+      "type_url": "/decimal.validator.v1.MsgCancelRedelegation",
+      "path": "x/validator/types/msg.go",
+      "line": 647,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/validator/types/msg.go#lines-647",
+      "sha256": "fb09a87a5f2f51e77835df0da80ff6a0e83fca2e81229d0bde59d36df8180e5e"
+    },
+    {
+      "type_url": "/decimal.validator.v1.MsgCancelRedelegationNFT",
+      "path": "x/validator/types/msg.go",
+      "line": 710,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/validator/types/msg.go#lines-710",
+      "sha256": "fb09a87a5f2f51e77835df0da80ff6a0e83fca2e81229d0bde59d36df8180e5e"
+    },
+    {
+      "type_url": "/decimal.validator.v1.MsgCancelUndelegation",
+      "path": "x/validator/types/msg.go",
+      "line": 775,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/validator/types/msg.go#lines-775",
+      "sha256": "fb09a87a5f2f51e77835df0da80ff6a0e83fca2e81229d0bde59d36df8180e5e"
+    },
+    {
+      "type_url": "/decimal.validator.v1.MsgCancelUndelegationNFT",
+      "path": "x/validator/types/msg.go",
+      "line": 833,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/validator/types/msg.go#lines-833",
+      "sha256": "fb09a87a5f2f51e77835df0da80ff6a0e83fca2e81229d0bde59d36df8180e5e"
+    },
+    {
+      "type_url": "/decimal.validator.v1.MsgCreateValidator",
+      "path": "x/validator/types/msg.go",
+      "line": 98,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/validator/types/msg.go#lines-98",
+      "sha256": "fb09a87a5f2f51e77835df0da80ff6a0e83fca2e81229d0bde59d36df8180e5e"
+    },
+    {
+      "type_url": "/decimal.validator.v1.MsgDelegate",
+      "path": "x/validator/types/msg.go",
+      "line": 297,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/validator/types/msg.go#lines-297",
+      "sha256": "fb09a87a5f2f51e77835df0da80ff6a0e83fca2e81229d0bde59d36df8180e5e"
+    },
+    {
+      "type_url": "/decimal.validator.v1.MsgDelegateNFT",
+      "path": "x/validator/types/msg.go",
+      "line": 350,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/validator/types/msg.go#lines-350",
+      "sha256": "fb09a87a5f2f51e77835df0da80ff6a0e83fca2e81229d0bde59d36df8180e5e"
+    },
+    {
+      "type_url": "/decimal.validator.v1.MsgEditValidator",
+      "path": "x/validator/types/msg.go",
+      "line": 172,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/validator/types/msg.go#lines-172",
+      "sha256": "fb09a87a5f2f51e77835df0da80ff6a0e83fca2e81229d0bde59d36df8180e5e"
+    },
+    {
+      "type_url": "/decimal.validator.v1.MsgFreezeChain",
+      "path": "x/validator/types/msg_emergency.go",
+      "line": 138,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/validator/types/msg_emergency.go#lines-138",
+      "sha256": "b087678f0adb5def61de902fa3e5f82d27cc6f5d9bc0eccb5d80ce6239060b33"
+    },
+    {
+      "type_url": "/decimal.validator.v1.MsgHaltChain",
+      "path": "x/validator/types/msg_emergency.go",
+      "line": 56,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/validator/types/msg_emergency.go#lines-56",
+      "sha256": "b087678f0adb5def61de902fa3e5f82d27cc6f5d9bc0eccb5d80ce6239060b33"
+    },
+    {
+      "type_url": "/decimal.validator.v1.MsgRedelegate",
+      "path": "x/validator/types/msg.go",
+      "line": 409,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/validator/types/msg.go#lines-409",
+      "sha256": "fb09a87a5f2f51e77835df0da80ff6a0e83fca2e81229d0bde59d36df8180e5e"
+    },
+    {
+      "type_url": "/decimal.validator.v1.MsgRedelegateNFT",
+      "path": "x/validator/types/msg.go",
+      "line": 470,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/validator/types/msg.go#lines-470",
+      "sha256": "fb09a87a5f2f51e77835df0da80ff6a0e83fca2e81229d0bde59d36df8180e5e"
+    },
+    {
+      "type_url": "/decimal.validator.v1.MsgResumeChain",
+      "path": "x/validator/types/msg_emergency.go",
+      "line": 98,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/validator/types/msg_emergency.go#lines-98",
+      "sha256": "b087678f0adb5def61de902fa3e5f82d27cc6f5d9bc0eccb5d80ce6239060b33"
+    },
+    {
+      "type_url": "/decimal.validator.v1.MsgSetOffline",
+      "path": "x/validator/types/msg.go",
+      "line": 256,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/validator/types/msg.go#lines-256",
+      "sha256": "fb09a87a5f2f51e77835df0da80ff6a0e83fca2e81229d0bde59d36df8180e5e"
+    },
+    {
+      "type_url": "/decimal.validator.v1.MsgSetOnline",
+      "path": "x/validator/types/msg.go",
+      "line": 217,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/validator/types/msg.go#lines-217",
+      "sha256": "fb09a87a5f2f51e77835df0da80ff6a0e83fca2e81229d0bde59d36df8180e5e"
+    },
+    {
+      "type_url": "/decimal.validator.v1.MsgUndelegate",
+      "path": "x/validator/types/msg.go",
+      "line": 533,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/validator/types/msg.go#lines-533",
+      "sha256": "fb09a87a5f2f51e77835df0da80ff6a0e83fca2e81229d0bde59d36df8180e5e"
+    },
+    {
+      "type_url": "/decimal.validator.v1.MsgUndelegateNFT",
+      "path": "x/validator/types/msg.go",
+      "line": 586,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/validator/types/msg.go#lines-586",
+      "sha256": "fb09a87a5f2f51e77835df0da80ff6a0e83fca2e81229d0bde59d36df8180e5e"
+    },
+    {
+      "type_url": "/decimal.validator.v1.MsgUnfreezeChain",
+      "path": "x/validator/types/msg_emergency.go",
+      "line": 177,
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/validator/types/msg_emergency.go#lines-177",
+      "sha256": "b087678f0adb5def61de902fa3e5f82d27cc6f5d9bc0eccb5d80ce6239060b33"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "x/coin/types/msg.go",
+      "repository": "go-smart-node",
+      "sha256": "ae71658d6f6a0b28c0167557d98434edaaa006f8c9815aa41f74ea0ec2f6de16",
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/coin/types/msg.go"
+    },
+    {
+      "path": "x/fee/types/tx.go",
+      "repository": "go-smart-node",
+      "sha256": "b48053decbb48f1a455eed4e597671559f78fa48acfae7df876a1356a365997c",
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/fee/types/tx.go"
+    },
+    {
+      "path": "x/legacy/types/msg.go",
+      "repository": "go-smart-node",
+      "sha256": "638a3804e6ea078303fe27c80f279a5a58ebb78a311d8648c865992f8a23e627",
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/legacy/types/msg.go"
+    },
+    {
+      "path": "x/multisig/types/msg.go",
+      "repository": "go-smart-node",
+      "sha256": "e7d584317e8f9ba2bc0c17e6f6b26c6d8d6604018830628c6cce13d385f10b82",
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/multisig/types/msg.go"
+    },
+    {
+      "path": "x/nft/types/msg.go",
+      "repository": "go-smart-node",
+      "sha256": "d3371b2247ab42c32407934e540b0f916396a95654e44ed5159c22386449f6ec",
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/nft/types/msg.go"
+    },
+    {
+      "path": "x/swap/types/msg.go",
+      "repository": "go-smart-node",
+      "sha256": "ed8b720b773ed5226fafba923fd376ff3bffd1a72c128b40452b0f4ae87b4b2b",
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/swap/types/msg.go"
+    },
+    {
+      "path": "x/validator/types/msg.go",
+      "repository": "go-smart-node",
+      "sha256": "fb09a87a5f2f51e77835df0da80ff6a0e83fca2e81229d0bde59d36df8180e5e",
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/validator/types/msg.go"
+    },
+    {
+      "path": "x/validator/types/msg_emergency.go",
+      "repository": "go-smart-node",
+      "sha256": "b087678f0adb5def61de902fa3e5f82d27cc6f5d9bc0eccb5d80ce6239060b33",
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/validator/types/msg_emergency.go"
+    },
+    {
+      "path": "x/coin/config/config.go",
+      "repository": "go-smart-node",
+      "sha256": "e36da9c22af99f1a5be2ad2e50033382da66c45e7637481a9c0466579024c32b",
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/coin/config/config.go"
+    },
+    {
+      "path": "x/nft/config/config.go",
+      "repository": "go-smart-node",
+      "sha256": "230a3fc4d201b71b472b7ec04b1d6d9ddd536b515ad035e5d904feff20cfb6b7",
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/nft/config/config.go"
+    },
+    {
+      "path": "x/multisig/types/config.go",
+      "repository": "go-smart-node",
+      "sha256": "2be734d0e8fbf263c3d8d5adc4c8b49add9dbce9d61dfa3671b7047d8935ac9d",
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/x/multisig/types/config.go"
+    },
+    {
+      "path": "app/denom_whitelist.go",
+      "repository": "go-smart-node",
+      "sha256": "b7b282b02a4d8c3de4b3296edb8c4cfa744b052ff0eeb1d0d0ca9112dc699abf",
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/app/denom_whitelist.go"
+    },
+    {
+      "path": "types/utils.go",
+      "repository": "go-smart-node",
+      "sha256": "15ab40894fd9c14528bb6e348c3d03b65d71664db62fe03f377e529971af9f31",
+      "url": "https://bitbucket.org/decimalteam/go-smart-node/src/9e6c6d718d662083c4a524376a66d2c50bd4bc77/types/utils.go"
+    },
+    {
+      "path": "x/upgrade/types/msgs.go",
+      "repository": "cosmos-sdk-v0.46.16",
+      "sha256": "151f04c8aac7d147d2a74cd465f8c87e345b64e0284ad349de4aef8820ea7015",
+      "url": "https://github.com/cosmos/cosmos-sdk/blob/v0.46.16/x/upgrade/types/msgs.go"
+    },
+    {
+      "path": "x/upgrade/types/plan.go",
+      "repository": "cosmos-sdk-v0.46.16",
+      "sha256": "3fc86fe46b2175875223300cf9279327d98fe59b92d9cbf510267cd4f1a9a627",
+      "url": "https://github.com/cosmos/cosmos-sdk/blob/v0.46.16/x/upgrade/types/plan.go"
+    },
+    {
+      "path": "types/coin.go",
+      "repository": "cosmos-sdk-v0.46.16",
+      "sha256": "d1fbf0cca75121cfe87ad5a4a8e37ad6818351aac12b0b4021e4abdbfb4ed5b1",
+      "url": "https://github.com/cosmos/cosmos-sdk/blob/v0.46.16/types/coin.go"
+    },
+    {
+      "path": "types/decimal.go",
+      "repository": "cosmos-sdk-v0.46.16",
+      "sha256": "338474c7f55bfd773bd76f783cc6bb8dab69d3fcde81881fa1b91bceb24aad49",
+      "url": "https://github.com/cosmos/cosmos-sdk/blob/v0.46.16/types/decimal.go"
+    }
+  ]
+}

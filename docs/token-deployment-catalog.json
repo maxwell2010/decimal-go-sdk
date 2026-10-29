@@ -1,0 +1,686 @@
+[
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "DOMAIN_SEPARATOR()",
+    "method": "ReadDOMAIN_SEPARATOR",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "MAX_CRR()",
+    "method": "ReadMAX_CRR",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "MAX_TOTAL_SUPPLY()",
+    "method": "ReadMAX_TOTAL_SUPPLY",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "MIN_CRR()",
+    "method": "ReadMIN_CRR",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "MIN_INITIAL_MINT()",
+    "method": "ReadMIN_INITIAL_MINT",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "MIN_RESERVE()",
+    "method": "ReadMIN_RESERVE",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "MIN_TOTAL_SUPPLY()",
+    "method": "ReadMIN_TOTAL_SUPPLY",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "PERMIT_TYPEHASH()",
+    "method": "ReadPERMIT_TYPEHASH",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "allowance(address,address)",
+    "method": "ReadAllowance",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "approve(address,uint256)",
+    "method": "BuildApprove",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "balanceOf(address)",
+    "method": "ReadBalanceOf",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "burn(uint256)",
+    "method": "BuildBurn",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "buy(uint256,address)",
+    "method": "BuildBuy",
+    "mutability": "payable",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "buyExactTokenForDEL(uint256,address)",
+    "method": "BuildBuyExactTokenForDEL",
+    "mutability": "payable",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "buyTokenForExactDEL(uint256,address)",
+    "method": "BuildBuyTokenForExactDEL",
+    "mutability": "payable",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "calculateBuyInput(uint256)",
+    "method": "ReadCalculateBuyInput",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "calculateBuyInput(uint256,uint256,uint256,uint256)",
+    "method": "ReadCalculateBuyInput1",
+    "mutability": "pure",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "calculateBuyInputBefore(uint256,uint256)",
+    "method": "ReadCalculateBuyInputBefore",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "calculateBuyOutput(uint256)",
+    "method": "ReadCalculateBuyOutput",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "calculateBuyOutput(uint256,uint256,uint256,uint256)",
+    "method": "ReadCalculateBuyOutput1",
+    "mutability": "pure",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "calculateBuyOutputBefore(uint256)",
+    "method": "ReadCalculateBuyOutputBefore",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "calculateSellInput(uint256)",
+    "method": "ReadCalculateSellInput",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "calculateSellInput(uint256,uint256,uint256,uint256)",
+    "method": "ReadCalculateSellInput1",
+    "mutability": "pure",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "calculateSellOutput(uint256)",
+    "method": "ReadCalculateSellOutput",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "calculateSellOutput(uint256,uint256,uint256,uint256)",
+    "method": "ReadCalculateSellOutput1",
+    "mutability": "pure",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "creator()",
+    "method": "ReadCreator",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "crr()",
+    "method": "ReadCrr",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "decimals()",
+    "method": "ReadDecimals",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "eip712Domain()",
+    "method": "ReadEip712Domain",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "getCurrentPrice()",
+    "method": "ReadGetCurrentPrice",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "identity()",
+    "method": "ReadIdentity",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "initialize(string,string,address,uint8,uint256,uint256,uint256,string)",
+    "method": "BuildInitialize",
+    "mutability": "payable",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "maxTotalSupply()",
+    "method": "ReadMaxTotalSupply",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "minTotalSupply()",
+    "method": "ReadMinTotalSupply",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "name()",
+    "method": "ReadName",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "nonces(address)",
+    "method": "ReadNonces",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+    "method": "BuildPermit",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "permitHash(address,address,uint256,uint256,uint256)",
+    "method": "ReadPermitHash",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "reserve()",
+    "method": "ReadReserve",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "sell(uint256,uint256,address)",
+    "method": "BuildSell",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "sellExactTokensForDEL(uint256,uint256,address)",
+    "method": "BuildSellExactTokensForDEL",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "sellTokensForExactDEL(uint256,uint256,address)",
+    "method": "BuildSellTokensForExactDEL",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "symbol()",
+    "method": "ReadSymbol",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "totalSupply()",
+    "method": "ReadTotalSupply",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "transfer(address,uint256)",
+    "method": "BuildTransfer",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "transferFrom(address,address,uint256)",
+    "method": "BuildTransferFrom",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "updateIdentity(string)",
+    "method": "BuildUpdateIdentity",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "updateMaxTotalSupply(uint256)",
+    "method": "BuildUpdateMaxTotalSupply",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReserveToken20261029",
+    "signature": "updateMinTotalSupply(uint256)",
+    "method": "BuildUpdateMinTotalSupply",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "DOMAIN_SEPARATOR()",
+    "method": "ReadDOMAIN_SEPARATOR",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "PERMIT_TYPEHASH()",
+    "method": "ReadPERMIT_TYPEHASH",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "allowance(address,address)",
+    "method": "ReadAllowance",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "approve(address,uint256)",
+    "method": "BuildApprove",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "balanceOf(address)",
+    "method": "ReadBalanceOf",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "burn(uint256)",
+    "method": "BuildBurn",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "burnFrom(address,uint256)",
+    "method": "BuildBurnFrom",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "burnable()",
+    "method": "ReadBurnable",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "cap()",
+    "method": "ReadCap",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "decimals()",
+    "method": "ReadDecimals",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "eip712Domain()",
+    "method": "ReadEip712Domain",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "identity()",
+    "method": "ReadIdentity",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "initialize(string,string,address,bool,bool,uint256,uint256,string)",
+    "method": "BuildInitialize",
+    "mutability": "payable",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "mint(address,uint256)",
+    "method": "BuildMint",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "mintable()",
+    "method": "ReadMintable",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "name()",
+    "method": "ReadName",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "nonces(address)",
+    "method": "ReadNonces",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "owner()",
+    "method": "ReadOwner",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+    "method": "BuildPermit",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "permitHash(address,address,uint256,uint256,uint256)",
+    "method": "ReadPermitHash",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "renounceOwnership()",
+    "method": "BuildRenounceOwnership",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "symbol()",
+    "method": "ReadSymbol",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "totalSupply()",
+    "method": "ReadTotalSupply",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "transfer(address,uint256)",
+    "method": "BuildTransfer",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "transferFrom(address,address,uint256)",
+    "method": "BuildTransferFrom",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "transferOwnership(address)",
+    "method": "BuildTransferOwnership",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  },
+  {
+    "profile": "TestnetReservelessToken20261029",
+    "signature": "withCap()",
+    "method": "ReadWithCap",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-implementation-interface",
+    "chain_id": "202020",
+    "observed_block": 22474834
+  }
+]

@@ -1,0 +1,392 @@
+[
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "VERSION()",
+    "method": "ReadVERSION",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "addOwnerWithThreshold((address,uint256),uint256)",
+    "method": "BuildAddOwnerWithThreshold",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "approveHash((address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,uint256))",
+    "method": "BuildApproveHash",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "approvedHashes(address,bytes32)",
+    "method": "ReadApprovedHashes",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "changeWeightThreshold(uint256)",
+    "method": "BuildChangeWeightThreshold",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "checkNSignatures(address,bytes32,bytes,uint256)",
+    "method": "ReadCheckNSignatures",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "checkNSignatures(bytes32,bytes,bytes,uint256)",
+    "method": "ReadCheckNSignatures1",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "checkSignatures(bytes32,bytes)",
+    "method": "ReadCheckSignatures",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "checkSignatures(bytes32,bytes,bytes)",
+    "method": "ReadCheckSignatures1",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "disableModule(address,address)",
+    "method": "BuildDisableModule",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "domainSeparator()",
+    "method": "ReadDomainSeparator",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "enableModule(address)",
+    "method": "BuildEnableModule",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "execTransaction(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,bytes)",
+    "method": "BuildExecTransaction",
+    "mutability": "payable",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "execTransactionFromModule(address,uint256,bytes,uint8)",
+    "method": "BuildExecTransactionFromModule",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "execTransactionFromModuleReturnData(address,uint256,bytes,uint8)",
+    "method": "BuildExecTransactionFromModuleReturnData",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "getModulesPaginated(address,uint256)",
+    "method": "ReadGetModulesPaginated",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "getOwners()",
+    "method": "ReadGetOwners",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "getOwnersWithWeights()",
+    "method": "ReadGetOwnersWithWeights",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "getStorageAt(uint256,uint256)",
+    "method": "ReadGetStorageAt",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "getTotalWeight()",
+    "method": "ReadGetTotalWeight",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "getTransactionHash(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,uint256)",
+    "method": "ReadGetTransactionHash",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "getWeightThreshold()",
+    "method": "ReadGetWeightThreshold",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "isModuleEnabled(address)",
+    "method": "ReadIsModuleEnabled",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "isOwner(address)",
+    "method": "ReadIsOwner",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "nonce()",
+    "method": "ReadNonce",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "removeOwner(address,address,uint256)",
+    "method": "BuildRemoveOwner",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "setFallbackHandler(address)",
+    "method": "BuildSetFallbackHandler",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "setGuard(address)",
+    "method": "BuildSetGuard",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "setModuleGuard(address)",
+    "method": "BuildSetModuleGuard",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "setup((address,uint256)[],uint256,address,bytes,address,address,uint256,address)",
+    "method": "BuildSetup",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "signedMessages(bytes32)",
+    "method": "ReadSignedMessages",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "simulateAndRevert(address,bytes)",
+    "method": "BuildSimulateAndRevert",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafe20261029",
+    "signature": "swapOwner(address,address,address)",
+    "method": "BuildSwapOwner",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee"
+  },
+  {
+    "profile": "TestnetSafeFactory20261029",
+    "signature": "createChainSpecificProxyWithNonce(address,bytes,uint256)",
+    "method": "BuildCreateChainSpecificProxyWithNonce",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0x4cC406B1713d3dF67e739D6f5918B6C98F614a38"
+  },
+  {
+    "profile": "TestnetSafeFactory20261029",
+    "signature": "createProxyWithCallback(address,bytes,uint256,address)",
+    "method": "BuildCreateProxyWithCallback",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0x4cC406B1713d3dF67e739D6f5918B6C98F614a38"
+  },
+  {
+    "profile": "TestnetSafeFactory20261029",
+    "signature": "createProxyWithNonce(address,bytes,uint256)",
+    "method": "BuildCreateProxyWithNonce",
+    "mutability": "nonpayable",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0x4cC406B1713d3dF67e739D6f5918B6C98F614a38"
+  },
+  {
+    "profile": "TestnetSafeFactory20261029",
+    "signature": "getChainId()",
+    "method": "ReadGetChainId",
+    "mutability": "view",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0x4cC406B1713d3dF67e739D6f5918B6C98F614a38"
+  },
+  {
+    "profile": "TestnetSafeFactory20261029",
+    "signature": "proxyCreationCode()",
+    "method": "ReadProxyCreationCode",
+    "mutability": "pure",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0x4cC406B1713d3dF67e739D6f5918B6C98F614a38"
+  },
+  {
+    "profile": "TestnetSafeMultiSend20261029",
+    "signature": "multiSend(bytes)",
+    "method": "BuildMultiSend",
+    "mutability": "payable",
+    "source_status": "versioned-public-testnet-API-artifact",
+    "chain_id": "202020",
+    "observed_block": 22474733,
+    "target_proxy": "0xC0611a00CE349B9bCff3866351A2a5Aa9659c464"
+  }
+]

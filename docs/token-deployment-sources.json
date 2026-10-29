@@ -1,0 +1,42 @@
+{
+  "profiles": [
+    {
+      "profile": "TestnetReserveToken20261029",
+      "chain_id": "202020",
+      "observed_block": 22474834,
+      "abi_address": "0x8e215123f9cf7d2c7D99457C5096BeA82a868cbE",
+      "runtime_code_hash": "0x67ef16857177e434b860586efd9ff7cf2c57c1adf4ba50bd9310f42f9c8c2cf1",
+      "api_url": "https://testnet-api.decimalchain.com/api/v1/contracts/compact/0x8e215123f9cf7d2c7d99457c5096bea82a868cbe",
+      "source_abi_sha256": "a8742d86be3070ed321c41c2e01934a4ab8c23fe159294fe9f076e4be92eac7c",
+      "normalized_abi_sha256": "49d9b4f367c9cd1c518ceed6c8c1a57a720496e08c7be7d4189592b3a66e2239",
+      "registry_getter": "implementation()",
+      "registry_getter_block": "22474794",
+      "registry_getter_target": "0xb8F9c4A26b91a65Ac0D3F34e230a4C9ad09aEF4a",
+      "target_proxy": "0x37748f3e857A71E4334125A935052Ce1e603b7B5",
+      "beacon": "0xb8F9c4A26b91a65Ac0D3F34e230a4C9ad09aEF4a",
+      "beacon_code_hash": "0x11661ddf372d5c42c5e018e0ef2d7eaa36de07de2c97f8a937360dbb8d3c7563",
+      "binding_block": "22474794",
+      "binding_evidence": "deployments/testnet-2026-10-29-tokens/beacon-probes.json",
+      "status": "explicit implementation interface with standard beacon storage/getter binding; API ABI not cryptographic interface proof; no writes; never send transactions to implementation"
+    },
+    {
+      "profile": "TestnetReservelessToken20261029",
+      "chain_id": "202020",
+      "observed_block": 22474834,
+      "abi_address": "0x9D3e4E9953B031F2c89Da77c0F2abaD169eDd43F",
+      "runtime_code_hash": "0x67e10916520447faad79c557c719042ba1e12b95ca57e1c18b7a5ecfaca4c1fd",
+      "api_url": "https://testnet-api.decimalchain.com/api/v1/contracts/compact/0x9d3e4e9953b031f2c89da77c0f2abad169edd43f",
+      "source_abi_sha256": "b7259c42fbc96c2a9c76a46223cc92c754c12823f8726cde2801efa919b97a2c",
+      "normalized_abi_sha256": "4de5adff91fb94f9b26bca49da75bd5d87aad08792102d1d96989827213a7c5d",
+      "registry_getter": "implementationReserveless()",
+      "registry_getter_block": "22474794",
+      "registry_getter_target": "0xb8F9c4A26b91a65Ac0D3F34e230a4C9ad09aEF4a",
+      "target_proxy": "0xC310F25E3429eFc5EdE11A908682F0a31cfc92Ce",
+      "beacon": "0x0ee331065482B9DC995Fc2c13c80a90028C314f9",
+      "beacon_code_hash": "0xbc87240a529d4e4779dc70c72df022e6c4002db88b5033176c57080f2ae92b87",
+      "binding_block": "22474794",
+      "binding_evidence": "deployments/testnet-2026-10-29-tokens/beacon-probes.json",
+      "status": "explicit implementation interface with standard beacon storage/getter binding; API ABI not cryptographic interface proof; no writes; never send transactions to implementation"
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "block": "22474794",
+  "chain_id": "202020",
+  "observations": [
+    {
+      "Role": "reserveless-token",
+      "Address": "0xc310f25e3429efc5ede11a908682f0a31cfc92ce",
+      "Signature": "eth_getCode",
+      "result": "0x608060405261000c61000e565b005b61001e610019610020565b6100b6565b565b60007f0000000000000000000000000ee331065482b9dc995fc2c13c80a90028c314f973ffffffffffffffffffffffffffffffffffffffff16635c60da1b6040518163ffffffff1660e01b8152600401602060405180830381865afa15801561008d573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906100b191906100da565b905090565b3660008037600080366000845af43d6000803e8080156100d5573d6000f35b3d6000fd5b6000602082840312156100ec57600080fd5b815173ffffffffffffffffffffffffffffffffffffffff8116811461011057600080fd5b939250505056fea2646970667358221220bdd115063cf7338024058395feb001d8a3d1db2dfcd814165063134f44f466a564736f6c63430008140033"
+    },
+    {
+      "Role": "reserveless-token",
+      "Address": "0xc310f25e3429efc5ede11a908682f0a31cfc92ce",
+      "Signature": "nonces()",
+      "error": "eth_call failed"
+    },
+    {
+      "Role": "reserveless-token",
+      "Address": "0xc310f25e3429efc5ede11a908682f0a31cfc92ce",
+      "Signature": "name()",
+      "result": [
+        "CSharp SDK Test"
+      ]
+    },
+    {
+      "Role": "reserveless-token",
+      "Address": "0xc310f25e3429efc5ede11a908682f0a31cfc92ce",
+      "Signature": "symbol()",
+      "result": [
+        "sdkcsqa"
+      ]
+    },
+    {
+      "Role": "reserveless-token",
+      "Address": "0xc310f25e3429efc5ede11a908682f0a31cfc92ce",
+      "Signature": "nonces(address)",
+      "result": [
+        0
+      ]
+    },
+    {
+      "Role": "reserveless-token",
+      "Address": "0xc310f25e3429efc5ede11a908682f0a31cfc92ce",
+      "Signature": "cap()",
+      "result": [
+        1000000000000000000000
+      ]
+    },
+    {
+      "Role": "reserveless-token",
+      "Address": "0xc310f25e3429efc5ede11a908682f0a31cfc92ce",
+      "Signature": "getMintable()",
+      "error": "eth_call failed"
+    },
+    {
+      "Role": "reserveless-token",
+      "Address": "0xc310f25e3429efc5ede11a908682f0a31cfc92ce",
+      "Signature": "getBurnable()",
+      "error": "eth_call failed"
+    },
+    {
+      "Role": "reserveless-token",
+      "Address": "0xc310f25e3429efc5ede11a908682f0a31cfc92ce",
+      "Signature": "implementationReserveless()",
+      "error": "eth_call failed"
+    },
+    {
+      "Role": "reserveless-token",
+      "Address": "0xc310f25e3429efc5ede11a908682f0a31cfc92ce",
+      "Signature": "implementation()",
+      "error": "eth_call failed"
+    },
+    {
+      "Role": "reserve-token",
+      "Address": "0x37748f3e857a71e4334125a935052ce1e603b7b5",
+      "Signature": "eth_getCode",
+      "result": "0x608060405261000c61000e565b005b61001e610019610020565b6100b6565b565b60007f000000000000000000000000b8f9c4a26b91a65ac0d3f34e230a4c9ad09aef4a73ffffffffffffffffffffffffffffffffffffffff16635c60da1b6040518163ffffffff1660e01b8152600401602060405180830381865afa15801561008d573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906100b191906100da565b905090565b3660008037600080366000845af43d6000803e8080156100d5573d6000f35b3d6000fd5b6000602082840312156100ec57600080fd5b815173ffffffffffffffffffffffffffffffffffffffff8116811461011057600080fd5b939250505056fea2646970667358221220d475ccdcab8f42bd867688c7fa02ea27105861805ce597e4f351c8600bca34af64736f6c63430008140033"
+    },
+    {
+      "Role": "reserve-token",
+      "Address": "0x37748f3e857a71e4334125a935052ce1e603b7b5",
+      "Signature": "nonces()",
+      "error": "eth_call failed"
+    },
+    {
+      "Role": "reserve-token",
+      "Address": "0x37748f3e857a71e4334125a935052ce1e603b7b5",
+      "Signature": "name()",
+      "result": [
+        "yhhtestaha"
+      ]
+    },
+    {
+      "Role": "reserve-token",
+      "Address": "0x37748f3e857a71e4334125a935052ce1e603b7b5",
+      "Signature": "symbol()",
+      "result": [
+        "yhhtesttt"
+      ]
+    },
+    {
+      "Role": "reserve-token",
+      "Address": "0x37748f3e857a71e4334125a935052ce1e603b7b5",
+      "Signature": "nonces(address)",
+      "result": [
+        0
+      ]
+    },
+    {
+      "Role": "reserve-token",
+      "Address": "0x37748f3e857a71e4334125a935052ce1e603b7b5",
+      "Signature": "cap()",
+      "error": "eth_call failed"
+    },
+    {
+      "Role": "reserve-token",
+      "Address": "0x37748f3e857a71e4334125a935052ce1e603b7b5",
+      "Signature": "getMintable()",
+      "error": "eth_call failed"
+    },
+    {
+      "Role": "reserve-token",
+      "Address": "0x37748f3e857a71e4334125a935052ce1e603b7b5",
+      "Signature": "getBurnable()",
+      "error": "eth_call failed"
+    },
+    {
+      "Role": "reserve-token",
+      "Address": "0x37748f3e857a71e4334125a935052ce1e603b7b5",
+      "Signature": "implementationReserveless()",
+      "error": "eth_call failed"
+    },
+    {
+      "Role": "reserve-token",
+      "Address": "0x37748f3e857a71e4334125a935052ce1e603b7b5",
+      "Signature": "implementation()",
+      "error": "eth_call failed"
+    },
+    {
+      "Role": "token-center",
+      "Address": "0xb8F9c4A26b91a65Ac0D3F34e230a4C9ad09aEF4a",
+      "Signature": "eth_getCode",
+      "result": "0x6080604052600a600c565b005b60186014601a565b605e565b565b600060597f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc5473ffffffffffffffffffffffffffffffffffffffff1690565b905090565b3660008037600080366000845af43d6000803e808015607c573d6000f35b3d6000fdfea2646970667358221220d0fb10f5b994b548ea0b2c306028b74732b861a27372e55f415baf0eb18510b864736f6c63430008140033"
+    },
+    {
+      "Role": "token-center",
+      "Address": "0xb8F9c4A26b91a65Ac0D3F34e230a4C9ad09aEF4a",
+      "Signature": "nonces()",
+      "error": "eth_call failed"
+    },
+    {
+      "Role": "token-center",
+      "Address": "0xb8F9c4A26b91a65Ac0D3F34e230a4C9ad09aEF4a",
+      "Signature": "name()",
+      "error": "eth_call failed"
+    },
+    {
+      "Role": "token-center",
+      "Address": "0xb8F9c4A26b91a65Ac0D3F34e230a4C9ad09aEF4a",
+      "Signature": "symbol()",
+      "error": "eth_call failed"
+    },
+    {
+      "Role": "token-center",
+      "Address": "0xb8F9c4A26b91a65Ac0D3F34e230a4C9ad09aEF4a",
+      "Signature": "nonces(address)",
+      "error": "eth_call failed"
+    },
+    {
+      "Role": "token-center",
+      "Address": "0xb8F9c4A26b91a65Ac0D3F34e230a4C9ad09aEF4a",
+      "Signature": "cap()",
+      "error": "eth_call failed"
+    },
+    {
+      "Role": "token-center",
+      "Address": "0xb8F9c4A26b91a65Ac0D3F34e230a4C9ad09aEF4a",
+      "Signature": "getMintable()",
+      "error": "eth_call failed"
+    },
+    {
+      "Role": "token-center",
+      "Address": "0xb8F9c4A26b91a65Ac0D3F34e230a4C9ad09aEF4a",
+      "Signature": "getBurnable()",
+      "error": "eth_call failed"
+    },
+    {
+      "Role": "token-center",
+      "Address": "0xb8F9c4A26b91a65Ac0D3F34e230a4C9ad09aEF4a",
+      "Signature": "implementationReserveless()",
+      "result": [
+        "0x9d3e4e9953b031f2c89da77c0f2abad169edd43f"
+      ]
+    },
+    {
+      "Role": "token-center",
+      "Address": "0xb8F9c4A26b91a65Ac0D3F34e230a4C9ad09aEF4a",
+      "Signature": "implementation()",
+      "result": [
+        "0x8e215123f9cf7d2c7d99457c5096bea82a868cbe"
+      ]
+    }
+  ],
+  "scope": "fixed read-only eth_call probes; not a proof of absent methods"
+}

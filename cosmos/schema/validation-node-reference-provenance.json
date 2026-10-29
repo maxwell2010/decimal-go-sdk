@@ -1,0 +1,40 @@
+{
+  "node": {
+    "Path": "bitbucket.org/decimalteam/go-smart-node",
+    "Version": "v0.0.0-20260723114515-9e6c6d718d66",
+    "Sum": "h1:0nOWZPVhQTId1+pAWo5FoK0cT11531pahCCNtajYdrA=",
+    "GoModSum": "h1:wFysY3L2isNj3s5jr4ZLzBNzXUUaADyuluma1/wlrU8=",
+    "Origin": {
+      "VCS": "git",
+      "URL": "https://bitbucket.org/decimalteam/go-smart-node",
+      "Hash": "9e6c6d718d662083c4a524376a66d2c50bd4bc77"
+    }
+  },
+  "toolchain": "go1.26.10 windows/amd64",
+  "cosmos_sdk": "v0.46.16",
+  "ethermint": "v0.22.13",
+  "go_ethereum": "v1.13.12",
+  "dependency_verification": {
+    "cache": "isolated",
+    "result": "all modules verified",
+    "before_execution": true,
+    "seeded_zip_count": 227,
+    "seed_policy": "Independently computed Go dirhash.Hash1 equals pinned go.sum; mismatches rejected."
+  },
+  "execution": {
+    "cases": 129,
+    "message_types": 43,
+    "mismatches": 0,
+    "panics": 0,
+    "decode_errors": 0,
+    "live_chain_required": false
+  },
+  "sha256": {
+    "schema/validation-node-corpus.json": "6e9d487792daba1ce686843eca39ec2e61d22cdd9012ba8a19355d74170fcba8",
+    "schema/validation-node-reference.json": "c4c8a1ec6242d630bad05756355ad51bfd1d52ee666ee80af17776b826939157",
+    "schema/validation-denom-whitelist.json": "ae38ff302fd2898a1dbd174ce60a189521df498afc923f956805173fd4f06397",
+    "tools/node-validation-reference/main.go": "71ae26af42df7514d70e3cfd3f1882b6b5b76820f64ebe93afabb601c7befdbc",
+    "tools/node-validation-reference/go.mod": "c2e302a37e0a86edf19ede384a48c7258ed146a8c7a154a898c0159afcd66d91",
+    "tools/node-validation-reference/go.sum": "85793bb996e722a9763e48b1286ee7786d001d8983394bcee4d3702c54db6eed"
+  }
+}

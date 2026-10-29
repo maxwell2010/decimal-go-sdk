@@ -1,0 +1,116 @@
+{
+  "checked_utc": "2026-10-29T03:58:39Z",
+  "results": [
+    {
+      "error": "non-success status",
+      "source": "dsc-go-sdk constants.go TestnetGate and commented endpoints.go GetEvmContract",
+      "status": 404,
+      "url": "https://testnet-gate.decimalchain.com/api/evm-contracts/0xf9790e912a10b1cddc8aa3c8c2b6a8205446d4d4"
+    },
+    {
+      "error": "non-success status",
+      "source": "dsc-go-sdk constants.go TestnetGate and commented endpoints.go GetEvmContract",
+      "status": 404,
+      "url": "https://testnet-gate.decimalchain.com/api/evm-contracts/0x06d7ac3874adc1f773c5165e91077c8037b789ff"
+    },
+    {
+      "query": "{ __type(name:\"Query\") { fields { name type { kind name ofType { kind name ofType { kind name } } } } } }",
+      "root_keys": [
+        "data"
+      ],
+      "schema_data": {
+        "__type": {
+          "fields": [
+            {
+              "name": "bridge",
+              "type": {
+                "kind": "OBJECT",
+                "name": "Bridge",
+                "ofType": null
+              }
+            },
+            {
+              "name": "bridges",
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "NON_NULL",
+                    "name": null
+                  }
+                }
+              }
+            },
+            {
+              "name": "token",
+              "type": {
+                "kind": "OBJECT",
+                "name": "Token",
+                "ofType": null
+              }
+            },
+            {
+              "name": "tokens",
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "NON_NULL",
+                    "name": null
+                  }
+                }
+              }
+            },
+            {
+              "name": "transfer",
+              "type": {
+                "kind": "OBJECT",
+                "name": "Transfer",
+                "ofType": null
+              }
+            },
+            {
+              "name": "transfers",
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "NON_NULL",
+                    "name": null
+                  }
+                }
+              }
+            },
+            {
+              "name": "_meta",
+              "type": {
+                "kind": "OBJECT",
+                "name": "_Meta_",
+                "ofType": null
+              }
+            }
+          ]
+        }
+      },
+      "source": "official JS Bridge subgraph",
+      "status": 200,
+      "url": "https://testnet-thegraph.decimalchain.com/subgraphs/name/bridge"
+    },
+    {
+      "error": "non-success status",
+      "source": "dsc-go-sdk constants.go TestnetGate and commented endpoints.go GetEvmContract",
+      "status": 404,
+      "url": "https://testnet-gate.decimalchain.com/api/evm-contracts/0x2f29724dcf9e3fe2864db03c5310cb368aa96f09"
+    }
+  ],
+  "scope": "documented endpoints only; read-only; no verification endpoint mutation"
+}

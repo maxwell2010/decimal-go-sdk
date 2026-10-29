@@ -1,0 +1,2102 @@
+[
+  {
+    "profile": "ContractCenter",
+    "signature": "getAddress(string)",
+    "method": "ReadGetAddress",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ContractCenter",
+    "signature": "getContractAddress(string)",
+    "method": "ReadGetContractAddress",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ContractCenter",
+    "signature": "getImpl()",
+    "method": "ReadGetImpl",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ContractCenter",
+    "signature": "getMarkedReserve(address)",
+    "method": "ReadGetMarkedReserve",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ContractCenter",
+    "signature": "getTotalMarkedReserve()",
+    "method": "ReadGetTotalMarkedReserve",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ContractCenter",
+    "signature": "isMigrating()",
+    "method": "ReadIsMigrating",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ContractCenter",
+    "signature": "isReserveMigrated((address,uint256))",
+    "method": "ReadIsReserveMigrated",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ContractCenter",
+    "signature": "isReservesMigrated((address,uint256)[])",
+    "method": "ReadIsReservesMigrated",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ContractCenter",
+    "signature": "markReserve((address,uint256))",
+    "method": "BuildMarkReserve",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ContractCenter",
+    "signature": "markReserves((address,uint256)[])",
+    "method": "BuildMarkReserves",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ContractCenter",
+    "signature": "migrateReserves()",
+    "method": "BuildMigrateReserves",
+    "mutability": "payable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ContractCenter",
+    "signature": "migrateReservesPage(uint256,uint256)",
+    "method": "BuildMigrateReservesPage",
+    "mutability": "payable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ContractCenter",
+    "signature": "owner()",
+    "method": "ReadOwner",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ContractCenter",
+    "signature": "renounceOwnership()",
+    "method": "BuildRenounceOwnership",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ContractCenter",
+    "signature": "setAddress(string,address)",
+    "method": "BuildSetAddress",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ContractCenter",
+    "signature": "setContractAddress(string,address)",
+    "method": "BuildSetContractAddress",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ContractCenter",
+    "signature": "setMigrating(bool)",
+    "method": "BuildSetMigrating",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ContractCenter",
+    "signature": "transferOwnership(address)",
+    "method": "BuildTransferOwnership",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ContractCenter",
+    "signature": "upgrade(address,bytes)",
+    "method": "BuildUpgrade",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "WETH()",
+    "method": "ReadWETH",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "applyPenaltiesToStakes(bytes32[])",
+    "method": "BuildApplyPenaltiesToStakes",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "applyPenaltiesToValidator((address,address,uint256)[])",
+    "method": "BuildApplyPenaltiesToValidator",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "autoUnbondEnqueue(address,address,uint256,address,uint256)",
+    "method": "BuildAutoUnbondEnqueue",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "autoUnbondQueueLength()",
+    "method": "ReadAutoUnbondQueueLength",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "changeStake(address[],address[],uint256[],address[])",
+    "method": "BuildChangeStake",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "complete(uint256[])",
+    "method": "BuildComplete",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "delegate(address,address,uint256)",
+    "method": "BuildDelegate",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "delegateByPermit(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+    "method": "BuildDelegateByPermit",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "delegateDEL(address)",
+    "method": "BuildDelegateDEL",
+    "mutability": "payable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "delegateDELTo(address,address)",
+    "method": "BuildDelegateDELTo",
+    "mutability": "payable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "delegateHold(address,address,uint256,uint256)",
+    "method": "BuildDelegateHold",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "delegateHoldByPermit(address,address,uint256,uint256,uint256,uint8,bytes32,bytes32)",
+    "method": "BuildDelegateHoldByPermit",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "delegateHoldDEL(address,uint256)",
+    "method": "BuildDelegateHoldDEL",
+    "mutability": "payable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "delegateTo(address,address,address,uint256)",
+    "method": "BuildDelegateTo",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "forcedWithdrawal(address,address,uint256,address)",
+    "method": "BuildForcedWithdrawal",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "forcedWithdrawalBatch(address[],address[],uint256[],address[])",
+    "method": "BuildForcedWithdrawalBatch",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "getAutoUnbondEntry(uint256)",
+    "method": "ReadGetAutoUnbondEntry",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "getContractCenter()",
+    "method": "ReadGetContractCenter",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "getFreezeTime(uint8)",
+    "method": "ReadGetFreezeTime",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "getFrozenStake(uint256)",
+    "method": "ReadGetFrozenStake",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "getFrozenStakes(uint256[])",
+    "method": "ReadGetFrozenStakes",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "getHoldStake(address,address,address,uint256)",
+    "method": "ReadGetHoldStake",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "getHoldStakeDEL(address,address,uint256)",
+    "method": "ReadGetHoldStakeDEL",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "getHoldStakeId(address,address,address,uint256)",
+    "method": "ReadGetHoldStakeId",
+    "mutability": "pure",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "getImpl()",
+    "method": "ReadGetImpl",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "getStake(address,address,address)",
+    "method": "ReadGetStake",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "getStakeId(address,address,address)",
+    "method": "ReadGetStakeId",
+    "mutability": "pure",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "getStakePenaltyIndex(bytes32)",
+    "method": "ReadGetStakePenaltyIndex",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "getStakes(bytes32[])",
+    "method": "ReadGetStakes",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "getValidatorReserve(address,address)",
+    "method": "ReadGetValidatorReserve",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "hold(address,address,uint256,uint256,uint256)",
+    "method": "BuildHold",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "holdWithReset(address,address,uint256,uint256,uint256[])",
+    "method": "BuildHoldWithReset",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "migrateStakes(address[],address[],address[],address[])",
+    "method": "BuildMigrateStakes",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "owner()",
+    "method": "ReadOwner",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "pause()",
+    "method": "BuildPause",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "paused()",
+    "method": "ReadPaused",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "processAutoUnbond(uint256)",
+    "method": "BuildProcessAutoUnbond",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "renounceOwnership()",
+    "method": "BuildRenounceOwnership",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "resetHold(address,address,address,uint256)",
+    "method": "BuildResetHold",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "resetHolds(address,address,address,uint256[])",
+    "method": "BuildResetHolds",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "setContractCenter(address)",
+    "method": "BuildSetContractCenter",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "setFreezeTime(uint256,uint256)",
+    "method": "BuildSetFreezeTime",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "transfer(address,address,uint256,address)",
+    "method": "BuildTransfer",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "transferHold(address,address,uint256,uint256,address)",
+    "method": "BuildTransferHold",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "transferOwnership(address)",
+    "method": "BuildTransferOwnership",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "transferWithReset(address,address,uint256,address,uint256[])",
+    "method": "BuildTransferWithReset",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "unpause()",
+    "method": "BuildUnpause",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "upgrade(address,bytes)",
+    "method": "BuildUpgrade",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "withdraw(address,address,uint256)",
+    "method": "BuildWithdraw",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "withdrawHold(address,address,uint256,uint256)",
+    "method": "BuildWithdrawHold",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Delegation",
+    "signature": "withdrawWithReset(address,address,uint256,uint256[])",
+    "method": "BuildWithdrawWithReset",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "applyPenaltiesToValidator((address,address,uint256)[])",
+    "method": "BuildApplyPenaltiesToValidator",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "complete(uint256[])",
+    "method": "BuildComplete",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "delegateDRC1155(address,address,uint256,uint256)",
+    "method": "BuildDelegateDRC1155",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "delegateDRC1155ByPermit(address,address,uint256,uint256,uint256,uint8,bytes32,bytes32)",
+    "method": "BuildDelegateDRC1155ByPermit",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "delegateDRC721(address,address,uint256)",
+    "method": "BuildDelegateDRC721",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "delegateDRC721ByPermit(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+    "method": "BuildDelegateDRC721ByPermit",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "delegateHoldDRC1155(address,address,uint256,uint256,uint256)",
+    "method": "BuildDelegateHoldDRC1155",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "delegateHoldDRC1155ByPermit(address,address,uint256,uint256,uint256,uint256,uint8,bytes32,bytes32)",
+    "method": "BuildDelegateHoldDRC1155ByPermit",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "delegateHoldDRC721(address,address,uint256,uint256)",
+    "method": "BuildDelegateHoldDRC721",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "delegateHoldDRC721ByPermit(address,address,uint256,uint256,uint256,uint8,bytes32,bytes32)",
+    "method": "BuildDelegateHoldDRC721ByPermit",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "getContractCenter()",
+    "method": "ReadGetContractCenter",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "getFreezeTime(uint8)",
+    "method": "ReadGetFreezeTime",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "getFrozenStake(uint256)",
+    "method": "ReadGetFrozenStake",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "getFrozenStakes(uint256[])",
+    "method": "ReadGetFrozenStakes",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "getHoldStake(address,address,address,uint256,uint256)",
+    "method": "ReadGetHoldStake",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "getHoldStakeId(address,address,address,uint256,uint256)",
+    "method": "ReadGetHoldStakeId",
+    "mutability": "pure",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "getImpl()",
+    "method": "ReadGetImpl",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "getStake(address,address,address,uint256)",
+    "method": "ReadGetStake",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "getStakeId(address,address,address,uint256)",
+    "method": "ReadGetStakeId",
+    "mutability": "pure",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "getStakePenaltyIndex(bytes32)",
+    "method": "ReadGetStakePenaltyIndex",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "getStakes(bytes32[])",
+    "method": "ReadGetStakes",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "getValidatorReserve(address,address,uint256)",
+    "method": "ReadGetValidatorReserve",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "hold(address,address,uint256,uint256,uint256,uint256)",
+    "method": "BuildHold",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "onERC1155BatchReceived(address,address,uint256[],uint256[],bytes)",
+    "method": "BuildOnERC1155BatchReceived",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "onERC1155Received(address,address,uint256,uint256,bytes)",
+    "method": "BuildOnERC1155Received",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "onERC721Received(address,address,uint256,bytes)",
+    "method": "BuildOnERC721Received",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "owner()",
+    "method": "ReadOwner",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "renounceOwnership()",
+    "method": "BuildRenounceOwnership",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "setContractCenter(address)",
+    "method": "BuildSetContractCenter",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "setFreezeTime(uint256,uint256)",
+    "method": "BuildSetFreezeTime",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "supportsInterface(bytes4)",
+    "method": "ReadSupportsInterface",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "transfer(address,address,uint256,uint256,address)",
+    "method": "BuildTransfer",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "transferHold(address,address,uint256,uint256,uint256,address)",
+    "method": "BuildTransferHold",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "transferOwnership(address)",
+    "method": "BuildTransferOwnership",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "upgrade(address,bytes)",
+    "method": "BuildUpgrade",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "withdraw(address,address,uint256,uint256)",
+    "method": "BuildWithdraw",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "DelegationNFT",
+    "signature": "withdrawHold(address,address,uint256,uint256,uint256)",
+    "method": "BuildWithdrawHold",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "DOMAIN_SEPARATOR()",
+    "method": "ReadDOMAIN_SEPARATOR",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "MIN_RESERVE()",
+    "method": "ReadMIN_RESERVE",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "addReserve(uint256,uint256)",
+    "method": "BuildAddReserve",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "addReserveByETH(uint256)",
+    "method": "BuildAddReserveByETH",
+    "mutability": "payable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "addReserveByPermit(uint256,uint256,uint256,uint8,bytes32,bytes32)",
+    "method": "BuildAddReserveByPermit",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "balanceOf(address,uint256)",
+    "method": "ReadBalanceOf",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "balanceOfBatch(address[],uint256[])",
+    "method": "ReadBalanceOfBatch",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "burn(uint256,uint256)",
+    "method": "BuildBurn",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "contractURI()",
+    "method": "ReadContractURI",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "creator()",
+    "method": "ReadCreator",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "disableMint()",
+    "method": "BuildDisableMint",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "exists(uint256)",
+    "method": "ReadExists",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "getAllowMint()",
+    "method": "ReadGetAllowMint",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "getNftType()",
+    "method": "ReadGetNftType",
+    "mutability": "pure",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "getRefundable()",
+    "method": "ReadGetRefundable",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "getReserve(uint256)",
+    "method": "ReadGetReserve",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "initialize(string,string,string,address,bool)",
+    "method": "BuildInitialize",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "isApprovedForAll(address,address)",
+    "method": "ReadIsApprovedForAll",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "mint(address,uint256,uint256,string,uint256,address)",
+    "method": "BuildMint",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "mintByETH(address,uint256,uint256,string)",
+    "method": "BuildMintByETH",
+    "mutability": "payable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "mintByPermit(address,uint256,uint256,string,uint256,address,uint256,uint8,bytes32,bytes32)",
+    "method": "BuildMintByPermit",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "name()",
+    "method": "ReadName",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "nonces(address)",
+    "method": "ReadNonces",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "penalty(uint256,uint256,uint16)",
+    "method": "BuildPenalty",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "permit(address,address,uint256,uint8,bytes32,bytes32)",
+    "method": "BuildPermit",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "rate(uint256)",
+    "method": "ReadRate",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)",
+    "method": "BuildSafeBatchTransferFrom",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "safeTransferFrom(address,address,uint256,uint256,bytes)",
+    "method": "BuildSafeTransferFrom",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "setApprovalForAll(address,bool)",
+    "method": "BuildSetApprovalForAll",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "supportsInterface(bytes4)",
+    "method": "ReadSupportsInterface",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "symbol()",
+    "method": "ReadSymbol",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "totalSupply()",
+    "method": "ReadTotalSupply",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "totalSupply(uint256)",
+    "method": "ReadTotalSupply1",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC1155",
+    "signature": "uri(uint256)",
+    "method": "ReadUri",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "DOMAIN_SEPARATOR()",
+    "method": "ReadDOMAIN_SEPARATOR",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "MIN_RESERVE()",
+    "method": "ReadMIN_RESERVE",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "addReserve(uint256,uint256)",
+    "method": "BuildAddReserve",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "addReserveByETH(uint256)",
+    "method": "BuildAddReserveByETH",
+    "mutability": "payable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "addReserveByPermit(uint256,uint256,uint256,uint8,bytes32,bytes32)",
+    "method": "BuildAddReserveByPermit",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "approve(address,uint256)",
+    "method": "BuildApprove",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "balanceOf(address)",
+    "method": "ReadBalanceOf",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "burn(uint256)",
+    "method": "BuildBurn",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "contractURI()",
+    "method": "ReadContractURI",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "creator()",
+    "method": "ReadCreator",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "disableMint()",
+    "method": "BuildDisableMint",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "getAllowMint()",
+    "method": "ReadGetAllowMint",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "getApproved(uint256)",
+    "method": "ReadGetApproved",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "getNftType()",
+    "method": "ReadGetNftType",
+    "mutability": "pure",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "getRefundable()",
+    "method": "ReadGetRefundable",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "getReserve(uint256)",
+    "method": "ReadGetReserve",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "initialize(string,string,string,address,bool)",
+    "method": "BuildInitialize",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "isApprovedForAll(address,address)",
+    "method": "ReadIsApprovedForAll",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "mint(address,string,uint256,address)",
+    "method": "BuildMint",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "mintByETH(address,string)",
+    "method": "BuildMintByETH",
+    "mutability": "payable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "mintByPermit(address,string,uint256,address,uint256,uint8,bytes32,bytes32)",
+    "method": "BuildMintByPermit",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "name()",
+    "method": "ReadName",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "nonces(uint256)",
+    "method": "ReadNonces",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "ownerOf(uint256)",
+    "method": "ReadOwnerOf",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "penalty(uint256,uint16)",
+    "method": "BuildPenalty",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "permit(address,uint256,uint256,uint8,bytes32,bytes32)",
+    "method": "BuildPermit",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "safeTransferFrom(address,address,uint256)",
+    "method": "BuildSafeTransferFrom",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "safeTransferFrom(address,address,uint256,bytes)",
+    "method": "BuildSafeTransferFrom1",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "setApprovalForAll(address,bool)",
+    "method": "BuildSetApprovalForAll",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "supportsInterface(bytes4)",
+    "method": "ReadSupportsInterface",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "symbol()",
+    "method": "ReadSymbol",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "tokenURI(uint256)",
+    "method": "ReadTokenURI",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "ERC721",
+    "signature": "transferFrom(address,address,uint256)",
+    "method": "BuildTransferFrom",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "NFTCenter",
+    "signature": "MIN_RESERVE()",
+    "method": "ReadMIN_RESERVE",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "NFTCenter",
+    "signature": "beacon(uint8)",
+    "method": "ReadBeacon",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "NFTCenter",
+    "signature": "checkToken(address)",
+    "method": "ReadCheckToken",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "NFTCenter",
+    "signature": "createERC1155((address,string,string,string,bool))",
+    "method": "BuildCreateERC1155",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "NFTCenter",
+    "signature": "createERC721((address,string,string,string,bool))",
+    "method": "BuildCreateERC721",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "NFTCenter",
+    "signature": "getContractCenter()",
+    "method": "ReadGetContractCenter",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "NFTCenter",
+    "signature": "getImplementation()",
+    "method": "ReadGetImplementation",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "NFTCenter",
+    "signature": "getNftState(address)",
+    "method": "ReadGetNftState",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "NFTCenter",
+    "signature": "implementation(uint8)",
+    "method": "ReadImplementation",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "NFTCenter",
+    "signature": "initialize()",
+    "method": "BuildInitialize",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "NFTCenter",
+    "signature": "owner()",
+    "method": "ReadOwner",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "NFTCenter",
+    "signature": "renounceOwnership()",
+    "method": "BuildRenounceOwnership",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "NFTCenter",
+    "signature": "setContractCenter(address)",
+    "method": "BuildSetContractCenter",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "NFTCenter",
+    "signature": "transferOwnership(address)",
+    "method": "BuildTransferOwnership",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "NFTCenter",
+    "signature": "upgrade(address,bytes)",
+    "method": "BuildUpgrade",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "NFTCenter",
+    "signature": "upgradeNFT(address,uint8)",
+    "method": "BuildUpgradeNFT",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "CREATOR_ROLE()",
+    "method": "ReadCREATOR_ROLE",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "DOMAIN_SEPARATOR()",
+    "method": "ReadDOMAIN_SEPARATOR",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "MAX_CRR()",
+    "method": "ReadMAX_CRR",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "MAX_TOTAL_SUPPLY()",
+    "method": "ReadMAX_TOTAL_SUPPLY",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "MIN_CRR()",
+    "method": "ReadMIN_CRR",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "MIN_RESERVE()",
+    "method": "ReadMIN_RESERVE",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "MIN_TOTAL_SUPPLY()",
+    "method": "ReadMIN_TOTAL_SUPPLY",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "PERMIT_TYPEHASH()",
+    "method": "ReadPERMIT_TYPEHASH",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "allowance(address,address)",
+    "method": "ReadAllowance",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "approve(address,uint256)",
+    "method": "BuildApprove",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "balanceOf(address)",
+    "method": "ReadBalanceOf",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "burn(uint256)",
+    "method": "BuildBurn",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "buy(uint256,address)",
+    "method": "BuildBuy",
+    "mutability": "payable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "buyExactTokenForDEL(uint256,address)",
+    "method": "BuildBuyExactTokenForDEL",
+    "mutability": "payable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "buyTokenForExactDEL(uint256,address)",
+    "method": "BuildBuyTokenForExactDEL",
+    "mutability": "payable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "calculateBuyInput(uint256)",
+    "method": "ReadCalculateBuyInput",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "calculateBuyInput(uint256,uint256,uint256,uint256)",
+    "method": "ReadCalculateBuyInput1",
+    "mutability": "pure",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "calculateBuyOutput(uint256)",
+    "method": "ReadCalculateBuyOutput",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "calculateBuyOutput(uint256,uint256,uint256,uint256)",
+    "method": "ReadCalculateBuyOutput1",
+    "mutability": "pure",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "calculateSellInput(uint256)",
+    "method": "ReadCalculateSellInput",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "calculateSellInput(uint256,uint256,uint256,uint256)",
+    "method": "ReadCalculateSellInput1",
+    "mutability": "pure",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "calculateSellOutput(uint256)",
+    "method": "ReadCalculateSellOutput",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "calculateSellOutput(uint256,uint256,uint256,uint256)",
+    "method": "ReadCalculateSellOutput1",
+    "mutability": "pure",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "creator()",
+    "method": "ReadCreator",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "crr()",
+    "method": "ReadCrr",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "decimals()",
+    "method": "ReadDecimals",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "eip712Domain()",
+    "method": "ReadEip712Domain",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "getCurrentPrice()",
+    "method": "ReadGetCurrentPrice",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "identity()",
+    "method": "ReadIdentity",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "initialize(string,string,address,uint8,uint256,uint256,uint256,string)",
+    "method": "BuildInitialize",
+    "mutability": "payable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "maxTotalSupply()",
+    "method": "ReadMaxTotalSupply",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "minTotalSupply()",
+    "method": "ReadMinTotalSupply",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "name()",
+    "method": "ReadName",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "nonces(address)",
+    "method": "ReadNonces",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+    "method": "BuildPermit",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "permitHash(address,address,uint256,uint256,uint256)",
+    "method": "ReadPermitHash",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "reserve()",
+    "method": "ReadReserve",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "sell(uint256,uint256,address)",
+    "method": "BuildSell",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "sellExactTokensForDEL(uint256,uint256,address)",
+    "method": "BuildSellExactTokensForDEL",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "sellTokensForExactDEL(uint256,uint256,address)",
+    "method": "BuildSellTokensForExactDEL",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "symbol()",
+    "method": "ReadSymbol",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "totalSupply()",
+    "method": "ReadTotalSupply",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "transfer(address,uint256)",
+    "method": "BuildTransfer",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "transferFrom(address,address,uint256)",
+    "method": "BuildTransferFrom",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Token",
+    "signature": "updateDetails(string,uint256)",
+    "method": "BuildUpdateDetails",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "calculateBuyInput(uint256,uint256,uint256,uint256)",
+    "method": "ReadCalculateBuyInput",
+    "mutability": "pure",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "calculateBuyOutput(uint256,uint256,uint256,uint256)",
+    "method": "ReadCalculateBuyOutput",
+    "mutability": "pure",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "calculateSellInput(uint256,uint256,uint256,uint256)",
+    "method": "ReadCalculateSellInput",
+    "mutability": "pure",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "calculateSellOutput(uint256,uint256,uint256,uint256)",
+    "method": "ReadCalculateSellOutput",
+    "mutability": "pure",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "convert(address,address,uint256,uint256,address)",
+    "method": "BuildConvert",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "convert(address,address,uint256,uint256,address,uint256,uint8,bytes32,bytes32)",
+    "method": "BuildConvert1",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "createToken((uint256,uint256,uint256,address,uint8,string,string,string))",
+    "method": "BuildCreateToken",
+    "mutability": "payable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "createTokenReserveless(string,string,bool,bool,uint256,uint256,string)",
+    "method": "BuildCreateTokenReserveless",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "getCommissionSymbol(string)",
+    "method": "ReadGetCommissionSymbol",
+    "mutability": "pure",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "getContractCenter()",
+    "method": "ReadGetContractCenter",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "getImpl()",
+    "method": "ReadGetImpl",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "implementation()",
+    "method": "ReadImplementation",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "implementationReserveless()",
+    "method": "ReadImplementationReserveless",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "initialize()",
+    "method": "BuildInitialize",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "isTokenExists(address)",
+    "method": "ReadIsTokenExists",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "owner()",
+    "method": "ReadOwner",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "pause()",
+    "method": "BuildPause",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "paused()",
+    "method": "ReadPaused",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "predict(address,bytes32,bytes)",
+    "method": "ReadPredict",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "renounceOwnership()",
+    "method": "BuildRenounceOwnership",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "setContractCenter(address)",
+    "method": "BuildSetContractCenter",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "tokens(string)",
+    "method": "ReadTokens",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "transferOwnership(address)",
+    "method": "BuildTransferOwnership",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "unpause()",
+    "method": "BuildUnpause",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "upgrade(address,bytes)",
+    "method": "BuildUpgrade",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "upgradeToken(address)",
+    "method": "BuildUpgradeToken",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "TokenCenter",
+    "signature": "upgradeTokenReserveless(address)",
+    "method": "BuildUpgradeTokenReserveless",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "addCandidate(address,string,(address,uint256))",
+    "method": "BuildAddCandidate",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "addCandidateDEL(address,string)",
+    "method": "BuildAddCandidateDEL",
+    "mutability": "payable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "addPenalty(address,uint16)",
+    "method": "BuildAddPenalty",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "addValidator(address,string,(address,uint256))",
+    "method": "BuildAddValidator",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "addValidatorDEL(address,string)",
+    "method": "BuildAddValidatorDEL",
+    "mutability": "payable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "addValidators((address,string)[])",
+    "method": "BuildAddValidators",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "approveCandidates(address[])",
+    "method": "BuildApproveCandidates",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "clearRewardPerBlock()",
+    "method": "BuildClearRewardPerBlock",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "getImpl()",
+    "method": "ReadGetImpl",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "getRewardPerBlock()",
+    "method": "ReadGetRewardPerBlock",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "getValidator(address)",
+    "method": "ReadGetValidator",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "getValidatorPenalties(address)",
+    "method": "ReadGetValidatorPenalties",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "getValidatorStatus(address)",
+    "method": "ReadGetValidatorStatus",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "isActive(address)",
+    "method": "ReadIsActive",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "isMember(address)",
+    "method": "ReadIsMember",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "owner()",
+    "method": "ReadOwner",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "pauseSelf()",
+    "method": "BuildPauseSelf",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "pauseValidator(address)",
+    "method": "BuildPauseValidator",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "removeValidator(address)",
+    "method": "BuildRemoveValidator",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "renounceOwnership()",
+    "method": "BuildRenounceOwnership",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "setRewardPerBlock(uint256)",
+    "method": "BuildSetRewardPerBlock",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "transferOwnership(address)",
+    "method": "BuildTransferOwnership",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "unpauseSelf()",
+    "method": "BuildUnpauseSelf",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "unpauseValidator(address)",
+    "method": "BuildUnpauseValidator",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "updateValidatorMeta(address,string)",
+    "method": "BuildUpdateValidatorMeta",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "MasterValidator",
+    "signature": "upgrade(address,bytes)",
+    "method": "BuildUpgrade",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Checks",
+    "signature": "createChecksDEL(address[],uint256,uint256,uint256)",
+    "method": "BuildCreateChecksDEL",
+    "mutability": "payable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Checks",
+    "signature": "createChecksToken(address[],uint256,uint256,uint256,address)",
+    "method": "BuildCreateChecksToken",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Checks",
+    "signature": "createChecksTokenByPermit(address[],uint256,uint256,uint256,address,uint256,uint8,bytes32,bytes32)",
+    "method": "BuildCreateChecksTokenByPermit",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Checks",
+    "signature": "getImpl()",
+    "method": "ReadGetImpl",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Checks",
+    "signature": "nonces()",
+    "method": "ReadNonces",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Checks",
+    "signature": "owner()",
+    "method": "ReadOwner",
+    "mutability": "view",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Checks",
+    "signature": "redeemChecks(bytes[],bytes32[])",
+    "method": "BuildRedeemChecks",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Checks",
+    "signature": "renounceOwnership()",
+    "method": "BuildRenounceOwnership",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Checks",
+    "signature": "transferOwnership(address)",
+    "method": "BuildTransferOwnership",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Checks",
+    "signature": "upgrade(address,bytes)",
+    "method": "BuildUpgrade",
+    "mutability": "nonpayable",
+    "source_status": "pinned-abi"
+  },
+  {
+    "profile": "Multicall",
+    "signature": "aggregate((address,uint256,bytes)[])",
+    "method": "BuildAggregate",
+    "mutability": "payable",
+    "source_status": "pinned-abi"
+  }
+]
