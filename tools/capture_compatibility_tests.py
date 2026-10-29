@@ -8,7 +8,10 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED = ['TestAllGeneratedABIWrappers', 'TestEmbeddedABIProvenance', 'TestVersionedABIProvenance',
-            'TestChecksSavedOfficialReceipt', 'TestBlockIdentityUsesRPCProvidedHashAndStrictShape']
+            'TestChecksSavedOfficialReceipt', 'TestBlockIdentityUsesRPCProvidedHashAndStrictShape',
+            'TestLocalEVMFixtureProvenance', 'TestLocalEVMOfficialHistoricalTokenLifecycle',
+            'TestLocalEVMOfficialChecksCreationAndSigningProfileMismatch',
+            'TestLocalEVMHistoricalChecksArtifactRedemptionAndExpiry']
 
 
 def source_fingerprint(root=ROOT):
@@ -24,6 +27,7 @@ def source_fingerprint(root=ROOT):
               'deployment-sources.json', 'additional-deployment-sources.json', 'token-deployment-sources.json',
               'checks-js-vectors.json']]
     paths.append(root / 'docs/compatibility/checks-testnet-receipts.json')
+    paths += [p for p in (root / 'testdata/evm').glob('*') if p.is_file()]
     h = hashlib.sha256()
     for path in sorted(set(paths), key=lambda p: p.relative_to(root).as_posix()):
         h.update(path.relative_to(root).as_posix().encode() + b'\0' + path.read_bytes() + b'\0')
@@ -53,7 +57,7 @@ def main():
     data = {'checked_utc': datetime.now(timezone.utc).isoformat(),
             'go_version': subprocess.check_output(['go', 'version'], cwd=ROOT, text=True).strip(),
             'EVM_source_fingerprint_sha256': after, 'modules': modules,
-            'boundary': 'offline tests and in-process mocks; no public transaction submission or settlement proof'}
+            'boundary': 'offline tests, in-process EVM fixture execution and mocked transports; no public transaction submission or settlement proof'}
     target = ROOT / 'docs/compatibility/local-validation.json'
     target.write_text(json.dumps(data, indent=2) + '\n', encoding='utf-8', newline='\n')
     print(json.dumps({m: v['passing_test_events'] for m, v in modules.items()}))

@@ -1,0 +1,26 @@
+{
+  "scope": "Historical official token and pinned official Checks local execution fixtures; no deployed-network equivalence or initialized proxy claim",
+  "sources": [
+    {
+      "repository": "https://bitbucket.org/decimalteam/decimal-contracts",
+      "commit": "018a6c6d00616c3e24ae44a8fac429b2ccabbd12",
+      "path": "decimalToken.sol",
+      "fixture": "decimalToken.sol"
+    },
+    {
+      "repository": "https://bitbucket.org/decimalteam/dsc-js-sdk",
+      "commit": "6790d35e2decb0cbb06a9149a9c476c834f99223",
+      "path": "src/decimalevm/abi/Checks.json",
+      "fixture": "Checks.official.json"
+    }
+  ],
+  "files": {
+    "Checks.official.json": "9504852077e385f2163005fa18e4dc58b4a49005cf68f9b5d5582ad1415bc33b",
+    "CHECKS_LICENSE.txt": "2bbe7b46a840a5044aede99bd82d85803ae9ab31d0020e00f8a6878bd49f18e2",
+    "compiler-package-lock.json": "382512caa55d8d8ea381db0e272be05c830ab86f38a3ee6f84f8a64e997f9027",
+    "compiler-package.json": "be681c61bb560c69fa4b5de4e5d972d2d666cce5f99b409a9c2fb06fd21e5bf1",
+    "decimalToken.sol": "686b1b0fb9f45928f8ed5ebf416b77b6e1ea9ccfa27d106d5acdbb277230e3e3",
+    "LICENSE.txt": "c5953d9f30f685249f057c31aaf702ae0ed5467919b423013fb444f974d6b57e",
+    "NewToken.compiled.json": "961ba31d3acaab76a67154b2a25a87c8d633b487f1992c4e9302e5c99987ab00"
+  }
+}

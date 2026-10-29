@@ -40,16 +40,20 @@ foreach ($sdkModule in @($sdkCheckRoot, (Join-Path $sdkCheckRoot 'cosmos'))) {
 if ($Fuzz) {
     Push-Location -LiteralPath $sdkCheckRoot
     try {
-        go test -fuzz '^FuzzExactAmounts$' -fuzztime 10s .
+        go test -fuzz '^FuzzExactAmounts$' -fuzztime 10s -parallel 2 .
         if ($LASTEXITCODE -ne 0) { throw 'Amount fuzz test failed' }
-        go test -fuzz '^FuzzSignatureValidation$' -fuzztime 10s .
+        go test -fuzz '^FuzzSignatureValidation$' -fuzztime 10s -parallel 2 .
         if ($LASTEXITCODE -ne 0) { throw 'Signature fuzz test failed' }
+        foreach ($sdkDecoder in @('FuzzChecksEventDecoding', 'FuzzChecksReceiptDecoding', 'FuzzChecksSignatureRecovery')) {
+            go test -run '^$' -fuzz $sdkDecoder -fuzztime 7s -parallel 2 .
+            if ($LASTEXITCODE -ne 0) { throw "Decoder fuzz test failed: $sdkDecoder" }
+        }
     } finally { Pop-Location }
     Push-Location -LiteralPath (Join-Path $sdkCheckRoot 'cosmos')
     try {
-        go test -fuzz '^FuzzPinnedMessageDecode$' -fuzztime 10s .
+        go test -fuzz '^FuzzPinnedMessageDecode$' -fuzztime 10s -parallel 2 .
         if ($LASTEXITCODE -ne 0) { throw 'Cosmos protobuf fuzz test failed' }
-        go test -fuzz '^FuzzPinnedValidateBasic$' -fuzztime 10s .
+        go test -fuzz '^FuzzPinnedValidateBasic$' -fuzztime 10s -parallel 2 .
         if ($LASTEXITCODE -ne 0) { throw 'Cosmos validation fuzz test failed' }
     } finally { Pop-Location }
 }

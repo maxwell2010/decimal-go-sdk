@@ -39,6 +39,8 @@ func EVMCheckRedemptionHash(checkHash common.Hash, redeemer common.Address) comm
 // EVMCheckRedemptionDigest applies the EIP-191 personal-message prefix to the 32
 // hash bytes, matching ethers Wallet.signMessage(arrayify(messageHash)). It does
 // not prefix the hexadecimal text and does not include an EIP-712 domain.
+// This is the JS source profile; the bundled historical Checks bytecode uses a
+// different digest. Deployment compatibility must be established separately.
 func EVMCheckRedemptionDigest(checkHash common.Hash, redeemer common.Address) common.Hash {
 	hash := EVMCheckRedemptionHash(checkHash, redeemer)
 	return common.BytesToHash(accounts.TextHash(hash[:]))

@@ -17,7 +17,7 @@
     "docs/compatibility/checks-testnet.json": "4d6533dd26dc82def6b7d93b4703d5d1151590d25679c78f9099324cac7fe7b1",
     "docs/compatibility/checks-mainnet.json": "a098fc6fdd5195077363fdfd06f8b5b24bbbd077dd4cdb20c36383b62e12ba4d",
     "docs/compatibility/checks-testnet-receipts.json": "89d0698f46ea2ec8c36bc08684492b097c775dcc9de8bab3162a512aa20888ce",
-    "docs/compatibility/local-validation.json": "d7ca030ec71cf730f5bc02b197f859257a2cdd13b10ddc41e13d33def1c16b71"
+    "docs/compatibility/local-validation.json": "6871e0a9f7e1ac2da4f1850ce65342b0a905e5feb69c2da6e5f30c3c65519283"
   },
   "summary": {
     "ABI_methods": 524,
@@ -35,21 +35,25 @@
     "mainnet_checks_matches_testnet_implementation_with_zero_getters": true
   },
   "local_validation": {
-    "checked_utc": "2026-10-29T09:14:12.009371+00:00",
+    "checked_utc": "2026-10-29T09:41:36.722083+00:00",
     "go_version": "go version go1.26.10 windows/amd64",
-    "EVM_source_fingerprint_sha256": "5a43be037901160f3d2820daae67ae34a712f13066b01b471d710c1fb4424083",
+    "EVM_source_fingerprint_sha256": "dfe3a9e01048ebf6bcd19891cadfc034d8e36f91cbcd72dfe0bc71305116ac24",
     "modules": {
       ".": {
         "command": "go test -json ./...",
         "exit_code": 0,
-        "passing_test_events": 757,
-        "top_level_entries": 107,
+        "passing_test_events": 807,
+        "top_level_entries": 121,
         "required_suites": {
           "TestAllGeneratedABIWrappers": "pass",
           "TestEmbeddedABIProvenance": "pass",
           "TestVersionedABIProvenance": "pass",
           "TestChecksSavedOfficialReceipt": "pass",
-          "TestBlockIdentityUsesRPCProvidedHashAndStrictShape": "pass"
+          "TestBlockIdentityUsesRPCProvidedHashAndStrictShape": "pass",
+          "TestLocalEVMFixtureProvenance": "pass",
+          "TestLocalEVMOfficialHistoricalTokenLifecycle": "pass",
+          "TestLocalEVMOfficialChecksCreationAndSigningProfileMismatch": "pass",
+          "TestLocalEVMHistoricalChecksArtifactRedemptionAndExpiry": "pass"
         }
       },
       "cosmos": {
@@ -60,7 +64,7 @@
         "required_suites": {}
       }
     },
-    "boundary": "offline tests and in-process mocks; no public transaction submission or settlement proof"
+    "boundary": "offline tests, in-process EVM fixture execution and mocked transports; no public transaction submission or settlement proof"
   },
   "networks": {
     "testnet": {

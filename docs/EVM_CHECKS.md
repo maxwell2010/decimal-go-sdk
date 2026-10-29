@@ -2,6 +2,8 @@
 
 [Русский](EVM_CHECKS.ru.md) | [Official JS evidence](CHECKS_JS_EVIDENCE.md) | [Node evidence](CHECKS_NODE_EVIDENCE.md)
 
+**Deployment compatibility is unconfirmed.** Local execution found that the historical Checks bytecode bundled with the pinned JS SDK verifies a check-only personal signature, while this helper follows the JS source's recipient-bound format. That artifact rejects this helper's proof. The observed public runtime differs from the bundled artifact. Do not infer a public deployment signing scheme from either ABI or size; see [the execution evidence](LOCAL_EVM_TESTS.md).
+
 This helper implements the reviewed official JS redemption-signing format. It is separate from historical Cosmos/RLP checks, ERC20 permits and Safe signing. No helper invokes RPC, signs a blockchain transaction or submits anything.
 
 ## Confirmed format

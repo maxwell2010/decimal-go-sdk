@@ -34,6 +34,11 @@ jobs:
         run: go test -race ./...
       - if: runner.os == 'Linux'
         run: go run golang.org/x/vuln/cmd/govulncheck@v1.9.0 ./...
+      - if: runner.os == 'Linux'
+        run: |
+          go test -run '^$' -fuzz '^FuzzChecksEventDecoding$' -fuzztime 7s -parallel 2 .
+          go test -run '^$' -fuzz '^FuzzChecksReceiptDecoding$' -fuzztime 7s -parallel 2 .
+          go test -run '^$' -fuzz '^FuzzChecksSignatureRecovery$' -fuzztime 7s -parallel 2 .
       - run: python -B tools/release.py
   cosmos:
     strategy:
@@ -57,3 +62,19 @@ jobs:
         run: go test -race ./...
       - if: runner.os == 'Linux'
         run: go run golang.org/x/vuln/cmd/govulncheck@v1.9.0 ./...
+  fixture-rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          mkdir -p .tools/local-evm-compiler
+          cp testdata/evm/compiler-package.json .tools/local-evm-compiler/package.json
+          cp testdata/evm/compiler-package-lock.json .tools/local-evm-compiler/package-lock.json
+          npm ci --prefix .tools/local-evm-compiler --ignore-scripts --no-audit --no-fund
+          python -B tools/rebuild_local_evm_fixture.py .tools/local-evm-compiler/node_modules/solc --check

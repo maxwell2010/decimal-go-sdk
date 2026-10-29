@@ -1,6 +1,6 @@
 # Decimal Go SDK
 
-An independent EVM Go module, `github.com/maxwell2010/decimal-go-sdk`, based on pinned official Decimal node, JS SDK and Go SDK sources, with workflow requirements from our Python and C# implementations. Go 1.26.10+ is required. The current public version is `v0.1.0-preview.6`, a preview with no claim of complete deployment parity.
+An independent EVM Go module, `github.com/maxwell2010/decimal-go-sdk`, based on pinned official Decimal node, JS SDK and Go SDK sources, with workflow requirements from our Python and C# implementations. Go 1.26.10+ is required. The current public version is `v0.1.0-preview.7`, a preview with no claim of complete deployment parity.
 
 By [MintCandy](https://mintcandy.ru/) and [@Maxwell2019](https://t.me/Maxwell2019). MIT license.
 
@@ -53,16 +53,16 @@ This installs or updates **both EVM and Cosmos** to the reviewed published versi
 Requires Go 1.26.10 or later. In your application's Go module:
 
 ```sh
-go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.6
+go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.7
 ```
 
 The independent Cosmos module is optional:
 
 ```sh
-go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.6
+go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.7
 ```
 
-Go downloads runtime dependencies automatically. GitHub is the release source; the tag pins the preview. Downloadable source ZIP/TAR.GZ files and `SHA256SUMS` are attached to the [release](https://github.com/maxwell2010/decimal-go-sdk/releases/tag/v0.1.0-preview.6). No compiler-generated bindings or external ABI compiler are needed to use the library.
+Go downloads runtime dependencies automatically. GitHub is the release source; the tag pins the preview. Downloadable source ZIP/TAR.GZ files and `SHA256SUMS` are attached to the [release](https://github.com/maxwell2010/decimal-go-sdk/releases/tag/v0.1.0-preview.7). No compiler-generated bindings or external ABI compiler are needed to use the library.
 
 For local development, clone the repository and run:
 
@@ -180,3 +180,7 @@ For Safe, prefer `PackSafeSignatures`, which binds each signature to an expected
 No upstream Go or JS implementation is copied or executed by these tools. Node MIT attribution is preserved in `THIRD_PARTY_NODE_LICENSE`. The JS package declares ISC without a standalone LICENSE in the snapshot; its interface-artifact attribution is recorded separately for publication review.
 
 [Node RPC block identity and hash selector limits](docs/NODE_RPC_IDENTITY.md).
+
+[Local EVM execution, RPC resilience and signing-profile mismatch](docs/LOCAL_EVM_TESTS.md).
+
+[Stable release criteria](docs/STABLE_RELEASE.md).

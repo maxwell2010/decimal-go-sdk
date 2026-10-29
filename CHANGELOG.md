@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.1.0-preview.7 - 2026-10-29
+
+- Actual in-process CREATE/CALL execution of pinned official historical token and Checks artifacts, with persistent state, emitted events and revert assertions. No mined-chain or deployed-runtime parity claim.
+- Token transfer/approval/allowance, mint/burn/burnFrom and unauthorized/insufficient-value failure scenarios.
+- Checks creation/funding, historical-artifact redemption/replay/expiry and explicit ECRECOVER-traced signing-profile mismatch. The bundled artifact rejects recipient-bound JS helper proofs; the public helper was not silently changed.
+- HTTP RPC resilience tests cover 429/503, malformed replies, dropped connections, timeouts, receipt identity and changing block hashes. Uncertain broadcasts remain one attempt.
+- Three bounded event/receipt/signature fuzz targets and CI campaigns; exact solc/source/fixture provenance and reproducible compiler output verification.
+- Public network transactions remain unexecuted; missing Safe/permit deployment fixtures and official ABI are not replaced with mock acceptance claims.
+
 ## v0.1.0-preview.6 - 2026-10-29
 
 - Checks history/receipt readers and the chain guard preserve cancellation even when a backend returns successful data after canceling the request.

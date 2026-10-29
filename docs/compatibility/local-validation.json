@@ -1,19 +1,23 @@
 {
-  "checked_utc": "2026-10-29T09:14:12.009371+00:00",
+  "checked_utc": "2026-10-29T09:41:36.722083+00:00",
   "go_version": "go version go1.26.10 windows/amd64",
-  "EVM_source_fingerprint_sha256": "5a43be037901160f3d2820daae67ae34a712f13066b01b471d710c1fb4424083",
+  "EVM_source_fingerprint_sha256": "dfe3a9e01048ebf6bcd19891cadfc034d8e36f91cbcd72dfe0bc71305116ac24",
   "modules": {
     ".": {
       "command": "go test -json ./...",
       "exit_code": 0,
-      "passing_test_events": 757,
-      "top_level_entries": 107,
+      "passing_test_events": 807,
+      "top_level_entries": 121,
       "required_suites": {
         "TestAllGeneratedABIWrappers": "pass",
         "TestEmbeddedABIProvenance": "pass",
         "TestVersionedABIProvenance": "pass",
         "TestChecksSavedOfficialReceipt": "pass",
-        "TestBlockIdentityUsesRPCProvidedHashAndStrictShape": "pass"
+        "TestBlockIdentityUsesRPCProvidedHashAndStrictShape": "pass",
+        "TestLocalEVMFixtureProvenance": "pass",
+        "TestLocalEVMOfficialHistoricalTokenLifecycle": "pass",
+        "TestLocalEVMOfficialChecksCreationAndSigningProfileMismatch": "pass",
+        "TestLocalEVMHistoricalChecksArtifactRedemptionAndExpiry": "pass"
       }
     },
     "cosmos": {
@@ -24,5 +28,5 @@
       "required_suites": {}
     }
   },
-  "boundary": "offline tests and in-process mocks; no public transaction submission or settlement proof"
+  "boundary": "offline tests, in-process EVM fixture execution and mocked transports; no public transaction submission or settlement proof"
 }
