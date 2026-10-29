@@ -1,9 +1,9 @@
 name: Go SDK checks
 on:
   push:
-    paths: ['**']
+    paths-ignore: ['latest.json']
   pull_request:
-    paths: ['**']
+    paths-ignore: ['latest.json']
   workflow_dispatch:
 permissions:
   contents: read

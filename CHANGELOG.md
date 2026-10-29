@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.1.0-preview.2 - 2026-10-29
+
+- Executable offline examples and bilingual documentation for every one of the 260 ABI write builders across 20 profiles.
+- Unsigned transaction envelope examples for EVM types 0/1/2 using the real SDK Prepare and a local Backend.
+- All 43 Cosmos message constructors with source-valid public wire fixtures, concrete payloads and current-native versus historical routing labels.
+- A permanent latest.json install channel and cross-platform Go utility installing/updating both modules in one command, with print-only and per-module options.
+- Install, update, pinning and rollback guides; channel publication requires an already published release with complete assets.
+- No real transaction was submitted. ABI, permissions and deployed execution limitations remain unchanged.
+
 ## v0.1.0-preview.1 - 2026-10-29
 
 Initial independent MintCandy Decimal Go SDK preview.

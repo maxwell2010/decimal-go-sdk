@@ -8,15 +8,17 @@ It includes 43 named request descriptors: 41 Decimal custom request messages plu
 
 `EthermintSigningDigest` follows the actual implementation in [Decimal Ethermint v0.22.13](https://github.com/decimalteam/ethermint/blob/v0.22.13/crypto/ethsecp256k1/ethsecp256k1.go): non-32-byte input is Keccak256-hashed;32-byte input is passed through. The upstream signer returns a65-byte recoverable ECDSA signature. `TransactionHash` is SHA256 over signed TxRaw bytes.
 
+[All 43 transaction examples](TRANSACTIONS.md) | [Все примеры по-русски](TRANSACTIONS.ru.md) | [Install/update both modules](../docs/INSTALL.md)
+
 ## Installation
 
 Requires Go 1.26.10 or later:
 
 ```sh
-go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.1
+go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.2
 ```
 
-Import `github.com/maxwell2010/decimal-go-sdk/cosmos`. The nested module uses its own version tag, `cosmos/v0.1.0-preview.1`, at the same reviewed commit as the parent preview.
+Import `github.com/maxwell2010/decimal-go-sdk/cosmos`. The nested module uses its own version tag, `cosmos/v0.1.0-preview.2`, at the same reviewed commit as the parent preview.
 
 ## Direct signing and REST
 
@@ -64,7 +66,7 @@ Stateful role/coin/Msg business validation remains the target node's responsibil
 
 The embedded descriptors now include all custom Decimal query schemas, Cosmos account/bank queries and the Cosmos transaction service, compiled from the same checked node/SDK sources. In-process gRPC wire tests cover simulation encoding, query/write separation, explicit submission, unavailable-server ambiguity and cancellation. These tests do not connect to a real node or send real transactions.
 
-`ConvergeFee` implements bounded signed-size fee convergence with explicit quote/parameter snapshot callbacks, maximum fee, cycle and cancellation checks. See [COSMOS_FEES.md](../docs/COSMOS_FEES.md). `GetSigners` supports all 43 pinned message schemas; `TransactionSigners` preserves first occurrence and fee-payer ordering, and address helpers validate Decimal Bech32 HRPs. See [COSMOS_SIGNERS.md](../docs/COSMOS_SIGNERS.md). Applications still bind each required address to its authorized signing key and validate roles through the target chain.
+`ConvergeFee` implements bounded signed-size fee convergence with explicit quote/parameter snapshot callbacks, maximum fee, cycle and cancellation checks. See [COSMOS_FEES.md](../docs/COSMOS_FEES.md). `GetSigners` supports all 43 pinned message schemas; `TransactionSigners` preserves first occurrence and fee-payer ordering, and address helpers validate Decimal Bech32 HRPs. See [COSMOS_SIGNERS.md](COSMOS_SIGNERS.md). Applications still bind each required address to its authorized signing key and validate roles through the target chain.
 
 Historical `IssueCheck` and `CreateRedeemCheck` now implement the exact node RLP field order, Base58 encoding, lock and receiver-proof hashes with signer callbacks and declared issuer-key verification. Inputs use copied passphrase bytes and temporary private scalar/hash clearing; caller-owned inputs are not modified. Parsing rejects malformed/noncanonical RLP/Base58, invalid signatures and excessive sizes; redemption additionally checks expected chain, due-block and passphrase. These are historical helpers: current ante admission does not permit standalone MsgRedeemCheck, and no helper broadcasts.
 

@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "version": "v0.1.0-preview.1",
+  "go": "1.26.10",
+  "evm": "github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.1",
+  "cosmos": "github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.1",
+  "release_url": "https://github.com/maxwell2010/decimal-go-sdk/releases/tag/v0.1.0-preview.1",
+  "source_zip": "https://github.com/maxwell2010/decimal-go-sdk/releases/download/v0.1.0-preview.1/decimal-go-sdk-0.1.0-preview.1.zip",
+  "source_tar_gz": "https://github.com/maxwell2010/decimal-go-sdk/releases/download/v0.1.0-preview.1/decimal-go-sdk-0.1.0-preview.1.tar.gz",
+  "checksums": "https://github.com/maxwell2010/decimal-go-sdk/releases/download/v0.1.0-preview.1/SHA256SUMS"
+}

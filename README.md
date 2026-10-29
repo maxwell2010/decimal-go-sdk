@@ -1,6 +1,6 @@
 # Decimal Go SDK
 
-An independent EVM Go module, `github.com/maxwell2010/decimal-go-sdk`, based on pinned official Decimal node, JS SDK and Go SDK sources, with workflow requirements from our Python and C# implementations. Go 1.26.10+ is required. The first public version is `v0.1.0-preview.1`, a preview with no claim of complete deployment parity.
+An independent EVM Go module, `github.com/maxwell2010/decimal-go-sdk`, based on pinned official Decimal node, JS SDK and Go SDK sources, with workflow requirements from our Python and C# implementations. Go 1.26.10+ is required. The current public version is `v0.1.0-preview.2`, a preview with no claim of complete deployment parity.
 
 By [MintCandy](https://mintcandy.ru/) and [@Maxwell2019](https://t.me/Maxwell2019). MIT license.
 
@@ -30,21 +30,33 @@ Legacy Cosmos protobuf transactions from `go-smart-node/sdk/tx` use another prot
 
 The separate [Cosmos module](cosmos/README.md) provides 43 schema-backed message constructors and transaction envelopes. Run its checks separately, or use `pwsh -File tools/check.ps1 -Race -Vulnerabilities` to check both modules. Its own README distinguishes implemented codecs/pipeline from semantic and network acceptance.
 
-## Install
+## Install and update from one permanent command
+
+Inside an existing Go project:
+
+```sh
+go run github.com/maxwell2010/decimal-go-sdk/cmd/decimal-sdk-install@latest
+```
+
+This installs or updates **both EVM and Cosmos** to the reviewed published version in [latest.json](latest.json), including previews. The command never changes with the release number. No automatic background updates occur. Use `-print` to inspect the selected go get command without modifying a project, or `-evm-only` / `-cosmos-only` to select one module. New project? Run `go mod init example.com/myapp` first. [Full install/update/rollback guide](docs/INSTALL.md).
+
+[All 260 ABI write-builder examples](docs/TRANSACTIONS.md) | [EVM envelope types 0/1/2](docs/TRANSACTION_ENVELOPES.md) | [All 43 Cosmos message examples](cosmos/TRANSACTIONS.md). These are offline encoding examples, not deployed execution certificates.
+
+## Install a fixed version
 
 Requires Go 1.26.10 or later. In your application's Go module:
 
 ```sh
-go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.1
+go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.2
 ```
 
 The independent Cosmos module is optional:
 
 ```sh
-go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.1
+go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.2
 ```
 
-Go downloads runtime dependencies automatically. GitHub is the release source; the tag pins the preview. Downloadable source ZIP/TAR.GZ files and `SHA256SUMS` are attached to the [release](https://github.com/maxwell2010/decimal-go-sdk/releases/tag/v0.1.0-preview.1). No compiler-generated bindings or external ABI compiler are needed to use the library.
+Go downloads runtime dependencies automatically. GitHub is the release source; the tag pins the preview. Downloadable source ZIP/TAR.GZ files and `SHA256SUMS` are attached to the [release](https://github.com/maxwell2010/decimal-go-sdk/releases/tag/v0.1.0-preview.2). No compiler-generated bindings or external ABI compiler are needed to use the library.
 
 For local development, clone the repository and run:
 

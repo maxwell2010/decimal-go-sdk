@@ -13,6 +13,12 @@ $env:WALLET_ADDRESS = '0x1000000000000000000000000000000000000001'
 go run ./examples/read_balance
 ```
 
-The two offline programs require no RPC. The balance program uses the official testnet endpoint, checks its chain ID and has a 15-second timeout. These examples never load a signer, sign or send a transaction. Fixture token and recipient addresses do not establish any deployed contract or ownership.
+The offline programs require no RPC. The balance program uses the official testnet endpoint, checks its chain ID and has a 15-second timeout. These examples never load a signer, sign or send a transaction. Fixture token and recipient addresses do not establish any deployed contract or ownership.
 
 [Русский](README.ru.md)
+
+- `go run ./examples/envelopes` builds unsigned EVM types 0/1/2 using the SDK and an in-process Backend.
+- `go run ./examples/transactions` calls all 260 ABI write builders in 20 profiles, entirely offline.
+- `go -C cosmos run ./examples/messages` validates and encodes all 43 public schema fixtures (8 current native routes, 35 historical/schema routes).
+
+[Install/update](../docs/INSTALL.md), [per-builder code](../docs/TRANSACTIONS.md), [envelopes/workflows](../docs/TRANSACTION_ENVELOPES.md), [Cosmos payloads](../cosmos/TRANSACTIONS.md). Signature/proof/role placeholders are encoding fixtures; no business execution is certified.
