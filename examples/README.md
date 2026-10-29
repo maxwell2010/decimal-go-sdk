@@ -13,7 +13,7 @@ $env:WALLET_ADDRESS = '0x1000000000000000000000000000000000000001'
 go run ./examples/read_balance
 ```
 
-The offline programs require no RPC. The balance program uses the official testnet endpoint, checks its chain ID and has a 15-second timeout. These examples never load a signer, sign or send a transaction. Fixture token and recipient addresses do not establish any deployed contract or ownership.
+The offline programs require no RPC. The balance program uses the official testnet endpoint, checks its chain ID and has a 15-second timeout. Transfer and ABI-envelope examples do not sign transactions. The Checks example signs only a public fixture message; it never loads user credentials or submits a transaction. Fixture token and recipient addresses do not establish any deployed contract or ownership.
 
 [Русский](README.ru.md)
 
@@ -22,3 +22,5 @@ The offline programs require no RPC. The balance program uses the official testn
 - `go -C cosmos run ./examples/messages` validates and encodes all 43 public schema fixtures (8 current native routes, 35 historical/schema routes).
 
 [Install/update](../docs/INSTALL.md), [per-builder code](../docs/TRANSACTIONS.md), [envelopes/workflows](../docs/TRANSACTION_ENVELOPES.md), [Cosmos payloads](../cosmos/TRANSACTIONS.md). Signature/proof/role placeholders are encoding fixtures; no business execution is certified.
+
+- `go run ./examples/checks_signing` signs a public fixture proof and builds calldata without RPC or submission. [Signing format](../docs/EVM_CHECKS.md).

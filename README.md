@@ -1,6 +1,6 @@
 # Decimal Go SDK
 
-An independent EVM Go module, `github.com/maxwell2010/decimal-go-sdk`, based on pinned official Decimal node, JS SDK and Go SDK sources, with workflow requirements from our Python and C# implementations. Go 1.26.10+ is required. The current public version is `v0.1.0-preview.3`, a preview with no claim of complete deployment parity.
+An independent EVM Go module, `github.com/maxwell2010/decimal-go-sdk`, based on pinned official Decimal node, JS SDK and Go SDK sources, with workflow requirements from our Python and C# implementations. Go 1.26.10+ is required. The current public version is `v0.1.0-preview.4`, a preview with no claim of complete deployment parity.
 
 By [MintCandy](https://mintcandy.ru/) and [@Maxwell2019](https://t.me/Maxwell2019). MIT license.
 
@@ -21,7 +21,7 @@ The pinned JS index has 93 active write entry points. 55 have at least one relat
 - Delegation, holds, reset, transfer, withdrawal and completion; typed ordinary/held/frozen stake reads and block-pinned batch verification.
 - ERC721/1155 collections, minting/reserve/transfer/burn/approval, batch transfers and DelegationNFT.
 - Validator controls and contract administration from the pinned ABI.
-- Checks from the official JS ABI.
+- Checks from the official JS ABI, with recipient-bound EIP-191 proofs, signer recovery/verification and offline batch construction. [Signing format and example](docs/EVM_CHECKS.md).
 - EIP-712 permit and Safe signing, owner-bound/sorted signature packing, explicit deployment-ABI execution and proxy factory construction.
 - Bridge and GasCenter builders using a supplied deployment ABI; nonce widths are not inferred from JavaScript number types.
 - Context-aware RPC, fees, balances, code, logs, receipts, subscriptions through a WebSocket backend, bounded HTTP API reads and authoritative withdrawal indexing.
@@ -47,16 +47,16 @@ This installs or updates **both EVM and Cosmos** to the reviewed published versi
 Requires Go 1.26.10 or later. In your application's Go module:
 
 ```sh
-go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.3
+go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.4
 ```
 
 The independent Cosmos module is optional:
 
 ```sh
-go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.3
+go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.4
 ```
 
-Go downloads runtime dependencies automatically. GitHub is the release source; the tag pins the preview. Downloadable source ZIP/TAR.GZ files and `SHA256SUMS` are attached to the [release](https://github.com/maxwell2010/decimal-go-sdk/releases/tag/v0.1.0-preview.3). No compiler-generated bindings or external ABI compiler are needed to use the library.
+Go downloads runtime dependencies automatically. GitHub is the release source; the tag pins the preview. Downloadable source ZIP/TAR.GZ files and `SHA256SUMS` are attached to the [release](https://github.com/maxwell2010/decimal-go-sdk/releases/tag/v0.1.0-preview.4). No compiler-generated bindings or external ABI compiler are needed to use the library.
 
 For local development, clone the repository and run:
 

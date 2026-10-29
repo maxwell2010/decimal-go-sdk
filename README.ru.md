@@ -1,6 +1,6 @@
 # Decimal Go SDK
 
-Самостоятельный Go-модуль `github.com/maxwell2010/decimal-go-sdk`, созданный по исходникам официальной ноды, JS SDK и Go SDK с учетом сценариев наших Python и C# SDK. Требуется Go 1.26.10 или новее. Текущая публичная версия - `v0.1.0-preview.3`, предварительная версия без заявления о полном соответствии развернутым контрактам.
+Самостоятельный Go-модуль `github.com/maxwell2010/decimal-go-sdk`, созданный по исходникам официальной ноды, JS SDK и Go SDK с учетом сценариев наших Python и C# SDK. Требуется Go 1.26.10 или новее. Текущая публичная версия - `v0.1.0-preview.4`, предварительная версия без заявления о полном соответствии развернутым контрактам.
 
 Разработчики: [MintCandy](https://mintcandy.ru/) и [@Maxwell2019](https://t.me/Maxwell2019). Лицензия MIT.
 
@@ -19,7 +19,7 @@
 - Стейкинг: delegate/hold/withdraw/transfer/reset/complete, permit-варианты, обычные, held и frozen стейки. Подтвержденные индексы frozen можно читать пакетно одним RPC-вызовом на фиксированном блоке. Зрелая заявка не становится завершенной автоматически.
 - NFT: ERC721/1155, single/batch transfer, approvals, mint, reserve, burn, коллекции, чтение metadata и состояний, отдельный DelegationNFT. Методы старых и новых поколений не подменяются друг другом.
 - Валидаторы: кандидат, validator, pause/unpause, metadata, статусы, penalty/reward/owner и другие методы ABI.
-- Чеки: nonce, создание, permit и погашение по ABI официального JS SDK.
+- Чеки: nonce, создание, permit и погашение по ABI официального JS SDK; подпись EIP-191 для конкретного получателя, восстановление подписанта и проверенная офлайн-сборка proofs. [Формат и пример](docs/EVM_CHECKS.ru.md).
 - Safe: EIP-712 hash/sign, проверка ожидаемых подписантов, сортировка и отклонение повторов, сборка исполнения по deployment ABI, factory proxy с явным initializer. Весовые owners и threshold проверяет приложение по развернутому Safe.
 - Bridge/GasCenter: сборщики по явно переданному deployment ABI; целочисленные разрядности берутся из него. Передаются явные proof, nonce, fee и deadline.
 - RPC/HTTP: контексты, блоки, балансы, код, логи, receipt, подписки через WebSocket backend; ограниченные HTTP-ответы и пагинация, произвольные относительные REST-маршруты, проверка авторитетности withdrawal index.
@@ -49,16 +49,16 @@ go run github.com/maxwell2010/decimal-go-sdk/cmd/decimal-sdk-install@latest
 Требуется Go 1.26.10 или новее. В Go-модуле приложения выполните:
 
 ```sh
-go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.3
+go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.4
 ```
 
 Независимый Cosmos-модуль подключается отдельно при необходимости:
 
 ```sh
-go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.3
+go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.4
 ```
 
-Go установит зависимости автоматически. На [странице релиза](https://github.com/maxwell2010/decimal-go-sdk/releases/tag/v0.1.0-preview.3) доступны архивы ZIP/TAR.GZ и `SHA256SUMS`. Для использования SDK не нужно генерировать ABI-обертки. Полные примеры кода приведены в [руководстве](docs/GETTING_STARTED.ru.md) и [каталоге примеров](examples/README.ru.md).
+Go установит зависимости автоматически. На [странице релиза](https://github.com/maxwell2010/decimal-go-sdk/releases/tag/v0.1.0-preview.4) доступны архивы ZIP/TAR.GZ и `SHA256SUMS`. Для использования SDK не нужно генерировать ABI-обертки. Полные примеры кода приведены в [руководстве](docs/GETTING_STARTED.ru.md) и [каталоге примеров](examples/README.ru.md).
 
 Для разработки клонируйте репозиторий. Сам модуль проверяется командами:
 

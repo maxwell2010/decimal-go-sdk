@@ -185,9 +185,7 @@ def main():
         inventories['dsc-go-sdk'] += [{'name':m.group(1),'path':rel,'line':i} for i,line in enumerate(f.read_text().splitlines(),1) if (m:=re.search(r'^func ([A-Z]\w*)\(',line))]
     (ROOT/'docs/upstream-inventory.json').write_text(json.dumps(inventories,indent=2)+'\n')
     (ROOT/'THIRD_PARTY_NODE_LICENSE').write_bytes((args.node/'LICENSE').read_bytes())
-    (ROOT/'THIRD_PARTY_JS_LICENSE').write_text('Checks and Multicall ABI artifacts from dsc-js-sdk '+PINS['dsc-js-sdk']+'.\n'
-        'The upstream package declares ISC (package.json); the repository snapshot contains no separate LICENSE file.\n'
-        'ABI files are interfaces; no JS implementation is redistributed. Review attribution before publication.\n')
+    (ROOT/'THIRD_PARTY_JS_LICENSE').write_text('Checks/Multicall ABI artifacts and the EVM Checks interoperability format were studied from official dsc-js-sdk commit 6790d35e2decb0cbb06a9149a9c476c834f99223. Checks behavior was also compared with current c7a72278551c517d3c0a37e170f844e8176e385f.\nThe upstream package declares ISC in package.json; that snapshot contains no separate LICENSE file.\nThe full JS SDK is not bundled. docs/checks-js-reference.cjs is a small offline reference for the published signing algorithm. Its ethers dependency is installed separately from a pinned lock under its upstream license; it is not a Go runtime dependency.\nSource URLs, hashes and executed-vector provenance are in docs/CHECKS_JS_EVIDENCE.md.\n',encoding='utf-8')
     print(f'{len(inputs)} ABI profiles, {len(catalog)} generated methods')
 
 if __name__=='__main__': main()

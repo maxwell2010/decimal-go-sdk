@@ -45,7 +45,7 @@ The tool requires an existing go.mod and never initializes a project implicitly.
 For a reproducible installation of this release:
 
 ```sh
-go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.3 github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.3
+go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.4 github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.4
 ```
 
 To roll back, replace both versions with an earlier published version such as v0.1.0-preview.1. Published tags and assets are never overwritten. Verify your application afterward:
@@ -73,7 +73,8 @@ go run ./examples/offline_transfer
 go run ./examples/token_transfer
 go run ./examples/envelopes
 go run ./examples/transactions
+go run ./examples/checks_signing
 go -C cosmos run ./examples/messages
 ```
 
-These commands build/encode locally without keys or submission. The separate read_balance example performs RPC reads using a public address. See [all 260 ABI builders](TRANSACTIONS.md), [envelope types 0/1/2 and workflows](TRANSACTION_ENVELOPES.md), and [43 Cosmos message examples](../cosmos/TRANSACTIONS.md). Builders/codecs do not establish deployment acceptance or stateful authorization.
+These commands build/encode locally without submission. Checks additionally signs a public fixture message, never a blockchain transaction or user key. The separate read_balance example performs RPC reads using a public address. See [all 260 ABI builders](TRANSACTIONS.md), [envelope types 0/1/2 and workflows](TRANSACTION_ENVELOPES.md), and [43 Cosmos message examples](../cosmos/TRANSACTIONS.md). Builders/codecs do not establish deployment acceptance or stateful authorization.

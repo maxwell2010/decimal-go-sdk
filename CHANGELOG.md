@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.1.0-preview.4 - 2026-10-29
+
+- EVM Checks password-derived signers and recipient-bound redemption proofs for the reviewed official JS profile.
+- Exact 52-byte packed hashing and EIP-191 personal-sign, external digest-signing callbacks, owner recovery/verification and normalized low-S signatures.
+- Offline verified batch calldata with preserved proof/hash ordering and duplicate rejection.
+- Three independently executed ethers reference vectors, negative signature/cancellation/mutation tests and a runnable public-fixture example.
+- Official node source audit records check identity/storage/backing and distinguishes the migration nonce layout from the JS getter. No missing deployment ABI or checkDetailsHash derivation is invented.
+- No blockchain transaction was submitted. Check hashes remain opaque contract outputs; deployment acceptance is separate.
+
 ## v0.1.0-preview.3 - 2026-10-29
 
 - Installer requests the moving channel with no-cache headers and a fresh 128-bit random query key, avoiding stale CDN responses.

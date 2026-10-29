@@ -1,3 +1,4 @@
-Checks and Multicall ABI artifacts from dsc-js-sdk 6790d35e2decb0cbb06a9149a9c476c834f99223.
-The upstream package declares ISC (package.json); the repository snapshot contains no separate LICENSE file.
-ABI files are interfaces; no JS implementation is redistributed. Review attribution before publication.
+Checks/Multicall ABI artifacts and the EVM Checks interoperability format were studied from official dsc-js-sdk commit 6790d35e2decb0cbb06a9149a9c476c834f99223. Checks behavior was also compared with current c7a72278551c517d3c0a37e170f844e8176e385f.
+The upstream package declares ISC in package.json; that snapshot contains no separate LICENSE file.
+The full JS SDK is not bundled. docs/checks-js-reference.cjs is a small offline reference for the published signing algorithm. Its ethers dependency is installed separately from a pinned lock under its upstream license; it is not a Go runtime dependency.
+Source URLs, hashes and executed-vector provenance are in docs/CHECKS_JS_EVIDENCE.md.
