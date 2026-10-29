@@ -609,4 +609,3 @@ Type URL: `/decimal.validator.v1.MsgUnfreezeChain`. pinned native route.
 ```textproto
 sender: "d01qyqszqgpqyqszqgpqyqszqgpqyqszqgpsdwe5k"
 ```
-

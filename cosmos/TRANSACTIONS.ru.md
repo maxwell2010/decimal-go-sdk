@@ -594,4 +594,3 @@ Type URL: `/decimal.validator.v1.MsgUnfreezeChain`. native-маршрут по �
 ```textproto
 sender: "d01qyqszqgpqyqszqgpqyqszqgpqyqszqgpsdwe5k"
 ```
-
