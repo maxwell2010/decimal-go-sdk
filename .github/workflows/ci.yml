@@ -78,3 +78,4 @@ jobs:
           cp testdata/evm/compiler-package-lock.json .tools/local-evm-compiler/package-lock.json
           npm ci --prefix .tools/local-evm-compiler --ignore-scripts --no-audit --no-fund
           python -B tools/rebuild_local_evm_fixture.py .tools/local-evm-compiler/node_modules/solc --check
+          python -B tools/rebuild_permit_fixture.py .tools/local-evm-compiler/node_modules/solc --check

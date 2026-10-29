@@ -1,0 +1,25 @@
+{
+  "scope": "Official OpenZeppelin standard EIP2612 mock fixture only; not Decimal deployment acceptance",
+  "repository": "https://github.com/OpenZeppelin/openzeppelin-contracts",
+  "commit": "64e48203cecad94f02de9891ecdeed4d629c6dae",
+  "tag": "v4.7.2",
+  "contract": "contracts/mocks/ERC20PermitMock.sol:ERC20PermitMock",
+  "source_sha256": {
+    "contracts/mocks/ERC20PermitMock.sol": "30e0822b1353b0092ea9b784fca4b58ceec02b27299dbb7b4a551374cc057a6f",
+    "contracts/token/ERC20/extensions/draft-ERC20Permit.sol": "d070a08919d4a38aa08043c687d1fe1522098b212d2e185aedf2f37275b64087",
+    "contracts/token/ERC20/extensions/draft-IERC20Permit.sol": "3e7aa0e0f69eec8f097ad664d525e7b3f0a3fda8dcdd97de5433ddb131db86ef",
+    "contracts/token/ERC20/ERC20.sol": "5031430cc2613c32736d598037d3075985a2a09e61592a013dbd09a5bc2041b8",
+    "contracts/token/ERC20/IERC20.sol": "94f23e4af51a18c2269b355b8c7cf4db8003d075c9c541019eb8dcf4122864d5",
+    "contracts/token/ERC20/extensions/IERC20Metadata.sol": "af5c8a77965cc82c33b7ff844deb9826166689e55dc037a7f2f790d057811990",
+    "contracts/utils/Context.sol": "1458c260d010a08e4c20a4a517882259a23a4baa0b5bd9add9fb6d6a1549814a",
+    "contracts/utils/cryptography/draft-EIP712.sol": "fc0e6c5d7184bd03b8deae6ca9a48a1eaaecf9f5e4703611aabfb63401e6d43f",
+    "contracts/utils/cryptography/ECDSA.sol": "a1168b6c6836cd79990146bd2888e95db35c9d3161a522e3087806423894ba6c",
+    "contracts/utils/Strings.sol": "34127ad0054df5963b0fd694c1b313d17e9114a2f426b85526d6d976210298ab",
+    "contracts/utils/Counters.sol": "2fdcb1343e5621385b62e57b5c7775607c272122b6f2dc77da8f84828aa40cd0"
+  },
+  "files": {
+    "permit-input.json": "46591f61c9000a86c291a2019854657bb585f65ff74bb61db3f1e0f01c8a9081",
+    "permit-compiled.json": "5d3679733e1437c2eca00a05bfe9aa3d960ca1569f07f1e581dbbd80e2a79d0f",
+    "permit-LICENSE.txt": "8c21a3d62814a86c6e6db50768e5a885a1f586873628e9be79a93f4eb6c18820"
+  }
+}

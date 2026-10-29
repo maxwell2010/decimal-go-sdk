@@ -1,6 +1,6 @@
 # Decimal Go SDK
 
-Самостоятельный Go-модуль `github.com/maxwell2010/decimal-go-sdk`, созданный по исходникам официальной ноды, JS SDK и Go SDK с учетом сценариев наших Python и C# SDK. Требуется Go 1.26.10 или новее. Текущая публичная версия - `v0.1.0-preview.7`, предварительная версия без заявления о полном соответствии развернутым контрактам.
+Самостоятельный Go-модуль `github.com/maxwell2010/decimal-go-sdk`, созданный по исходникам официальной ноды, JS SDK и Go SDK с учетом сценариев наших Python и C# SDK. Требуется Go 1.26.10 или новее. Текущая публичная версия - `v0.1.0-preview.8`, предварительная версия без заявления о полном соответствии развернутым контрактам.
 
 Разработчики: [MintCandy](https://mintcandy.ru/) и [@Maxwell2019](https://t.me/Maxwell2019). Лицензия MIT.
 
@@ -55,16 +55,16 @@ go run github.com/maxwell2010/decimal-go-sdk/cmd/decimal-sdk-install@latest
 Требуется Go 1.26.10 или новее. В Go-модуле приложения выполните:
 
 ```sh
-go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.7
+go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.8
 ```
 
 Независимый Cosmos-модуль подключается отдельно при необходимости:
 
 ```sh
-go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.7
+go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.8
 ```
 
-Go установит зависимости автоматически. На [странице релиза](https://github.com/maxwell2010/decimal-go-sdk/releases/tag/v0.1.0-preview.7) доступны архивы ZIP/TAR.GZ и `SHA256SUMS`. Для использования SDK не нужно генерировать ABI-обертки. Полные примеры кода приведены в [руководстве](docs/GETTING_STARTED.ru.md) и [каталоге примеров](examples/README.ru.md).
+Go установит зависимости автоматически. На [странице релиза](https://github.com/maxwell2010/decimal-go-sdk/releases/tag/v0.1.0-preview.8) доступны архивы ZIP/TAR.GZ и `SHA256SUMS`. Для использования SDK не нужно генерировать ABI-обертки. Полные примеры кода приведены в [руководстве](docs/GETTING_STARTED.ru.md) и [каталоге примеров](examples/README.ru.md).
 
 Для разработки клонируйте репозиторий. Сам модуль проверяется командами:
 
@@ -162,3 +162,5 @@ if err != nil { return err }
 [Локальное исполнение EVM, отказы RPC и несовпадение профилей подписи Checks](docs/LOCAL_EVM_TESTS.ru.md).
 
 [Критерии стабильного релиза](docs/STABLE_RELEASE.ru.md).
+
+[Weighted Safe, стандартный permit, токеновые Checks и локальная цепочка](docs/LOCAL_EXECUTION_EXTENSIONS.ru.md).

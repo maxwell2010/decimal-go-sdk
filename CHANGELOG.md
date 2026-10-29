@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.1.0-preview.8 - 2026-10-29
+
+- Genuine weighted Safe/factory runtime captured read-only from official testnet at fixed block/hash. Local factory-created proxy tests cover owner weights, threshold, SDK/contract hash equality, signatures, transfer, nonce and replay. No copied live storage or Solidity-source claim.
+- Standard EIP2612 execution against pinned official OpenZeppelin v4.7.2 source, with exact compiler reproduction, CheckedPermit, nonce/allowance/Approval, replay/domain/expiry failures. This is not a Decimal token deployment fixture.
+- Historical token Checks custody/allowance, creation failures and atomic batch redemption with actual token/Checks bytecode. Historical check-only signatures remain test-only.
+- Signed/mined type 0/1/2 transactions in an isolated Ethereum chain 1337, with actual fees, balance deltas, nonces and reverted receipts. No Decimal consensus/typed-envelope admission inferred.
+- Both fixture compilers run in CI; fingerprints include all new artifacts. No public transaction was submitted.
+
 ## v0.1.0-preview.7 - 2026-10-29
 
 - Actual in-process CREATE/CALL execution of pinned official historical token and Checks artifacts, with persistent state, emitted events and revert assertions. No mined-chain or deployed-runtime parity claim.

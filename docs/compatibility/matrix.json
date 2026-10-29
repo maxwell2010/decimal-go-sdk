@@ -17,7 +17,7 @@
     "docs/compatibility/checks-testnet.json": "4d6533dd26dc82def6b7d93b4703d5d1151590d25679c78f9099324cac7fe7b1",
     "docs/compatibility/checks-mainnet.json": "a098fc6fdd5195077363fdfd06f8b5b24bbbd077dd4cdb20c36383b62e12ba4d",
     "docs/compatibility/checks-testnet-receipts.json": "89d0698f46ea2ec8c36bc08684492b097c775dcc9de8bab3162a512aa20888ce",
-    "docs/compatibility/local-validation.json": "6871e0a9f7e1ac2da4f1850ce65342b0a905e5feb69c2da6e5f30c3c65519283"
+    "docs/compatibility/local-validation.json": "a1f328f4bdc681d2a2c55089c7315f4fad24fe07eb53b0e326e836651c3cc03c"
   },
   "summary": {
     "ABI_methods": 524,
@@ -35,15 +35,15 @@
     "mainnet_checks_matches_testnet_implementation_with_zero_getters": true
   },
   "local_validation": {
-    "checked_utc": "2026-10-29T09:41:36.722083+00:00",
+    "checked_utc": "2026-10-29T10:16:04.745344+00:00",
     "go_version": "go version go1.26.10 windows/amd64",
-    "EVM_source_fingerprint_sha256": "dfe3a9e01048ebf6bcd19891cadfc034d8e36f91cbcd72dfe0bc71305116ac24",
+    "EVM_source_fingerprint_sha256": "6b73f39ae605b4469637e81588b1213cc424c833b8037600c65604b929c9bbca",
     "modules": {
       ".": {
         "command": "go test -json ./...",
         "exit_code": 0,
-        "passing_test_events": 807,
-        "top_level_entries": 121,
+        "passing_test_events": 826,
+        "top_level_entries": 128,
         "required_suites": {
           "TestAllGeneratedABIWrappers": "pass",
           "TestEmbeddedABIProvenance": "pass",
@@ -53,7 +53,13 @@
           "TestLocalEVMFixtureProvenance": "pass",
           "TestLocalEVMOfficialHistoricalTokenLifecycle": "pass",
           "TestLocalEVMOfficialChecksCreationAndSigningProfileMismatch": "pass",
-          "TestLocalEVMHistoricalChecksArtifactRedemptionAndExpiry": "pass"
+          "TestLocalEVMHistoricalChecksArtifactRedemptionAndExpiry": "pass",
+          "TestLocalEVMOfficialWeightedSafeFactoryAndExecution": "pass",
+          "TestLocalEVMStandardPermitProvenance": "pass",
+          "TestLocalEVMStandardPermitLifecycle": "pass",
+          "TestLocalEVMHistoricalChecksTokenBatchRedemptionAtomicity": "pass",
+          "TestLocalChainSignedTransactionEnvelopesAndFees": "pass",
+          "TestLocalChainRevertedReceiptConsumesNonceAndFee": "pass"
         }
       },
       "cosmos": {
@@ -64,7 +70,7 @@
         "required_suites": {}
       }
     },
-    "boundary": "offline tests, in-process EVM fixture execution and mocked transports; no public transaction submission or settlement proof"
+    "boundary": "offline tests, in-process EVM fixtures, isolated Ethereum dev-chain execution and mocked transports; no public transaction submission or settlement proof"
   },
   "networks": {
     "testnet": {

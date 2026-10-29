@@ -11,7 +11,10 @@ REQUIRED = ['TestAllGeneratedABIWrappers', 'TestEmbeddedABIProvenance', 'TestVer
             'TestChecksSavedOfficialReceipt', 'TestBlockIdentityUsesRPCProvidedHashAndStrictShape',
             'TestLocalEVMFixtureProvenance', 'TestLocalEVMOfficialHistoricalTokenLifecycle',
             'TestLocalEVMOfficialChecksCreationAndSigningProfileMismatch',
-            'TestLocalEVMHistoricalChecksArtifactRedemptionAndExpiry']
+            'TestLocalEVMHistoricalChecksArtifactRedemptionAndExpiry',
+            'TestLocalEVMOfficialWeightedSafeFactoryAndExecution', 'TestLocalEVMStandardPermitProvenance',
+            'TestLocalEVMStandardPermitLifecycle', 'TestLocalEVMHistoricalChecksTokenBatchRedemptionAtomicity',
+            'TestLocalChainSignedTransactionEnvelopesAndFees', 'TestLocalChainRevertedReceiptConsumesNonceAndFee']
 
 
 def source_fingerprint(root=ROOT):
@@ -57,7 +60,7 @@ def main():
     data = {'checked_utc': datetime.now(timezone.utc).isoformat(),
             'go_version': subprocess.check_output(['go', 'version'], cwd=ROOT, text=True).strip(),
             'EVM_source_fingerprint_sha256': after, 'modules': modules,
-            'boundary': 'offline tests, in-process EVM fixture execution and mocked transports; no public transaction submission or settlement proof'}
+            'boundary': 'offline tests, in-process EVM fixtures, isolated Ethereum dev-chain execution and mocked transports; no public transaction submission or settlement proof'}
     target = ROOT / 'docs/compatibility/local-validation.json'
     target.write_text(json.dumps(data, indent=2) + '\n', encoding='utf-8', newline='\n')
     print(json.dumps({m: v['passing_test_events'] for m, v in modules.items()}))

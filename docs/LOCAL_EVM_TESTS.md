@@ -29,7 +29,7 @@ The SDK signing helper remains unchanged. A separate positive path for this hist
 
 [Compiler package](../testdata/evm/compiler-package.json), [lockfile](../testdata/evm/compiler-package-lock.json) and [rebuild tool](../tools/rebuild_local_evm_fixture.py) support explicit maintainer reproduction with the exact solc package. Read the tool usage before invoking it; it requires the local compiler path. Normal tests use the reviewed checked-in bytecode. Preserve the included source license notices.
 
-Safe and permit execution are not certified by these fixtures. A missing official executable fixture remains an unexecuted case, not a hand-written contract presented as deployment proof. The suite also does not prove Decimal consensus, fee accounting, RPC mining, proxy initialization, cross-chain settlement or stateful compatibility for every SDK ABI profile.
+Additional local coverage now executes the actual official weighted Safe/factory runtime and an upstream OpenZeppelin STANDARD EIP2612 fixture. It also covers historical token Checks and a separate isolated signed Ethereum dev chain. See [execution extensions](LOCAL_EXECUTION_EXTENSIONS.md). These results do not establish public Safe ownership or Decimal permit/deployment acceptance. A missing official executable fixture remains an unexecuted case, not a hand-written contract presented as deployment proof. The suite also does not prove Decimal consensus, fee accounting, RPC mining, proxy initialization, cross-chain settlement or stateful compatibility for every SDK ABI profile.
 
 ## HTTP JSON-RPC failure tests
 

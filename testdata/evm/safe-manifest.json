@@ -1,0 +1,22 @@
+{
+  "scope": "Official fixed-block runtime-only local execution fixtures; code installed in empty local StateDB, actual factory creates and initializes proxy. No copied live storage, consensus, live roles or settlement claim.",
+  "rpc": "https://testnet-val.decimalchain.com/web3/",
+  "chain_id": 202020,
+  "block": 22477428,
+  "rpc_block_hash": "0xfb67691493eda26389cac1a122c8a6396192d97b153857d5ed3c87a10cf22d0c",
+  "snapshot_sha256": "f8212f2718fabc9b4931392ce388ab1d5c0d2a672d0699dfdded59837d322875",
+  "abi_sources": {
+    "safe": "docs/additional-deployment-sources.json TestnetSafe20261029",
+    "factory": "docs/additional-deployment-sources.json TestnetSafeFactory20261029"
+  },
+  "observed_runtime_hashes": {
+    "safe": "0xf551f56a1c8069a151b5a7e210afecc4febe2c3e2725960ae138adc10eb3e1cc",
+    "factory": "0xe813a7ddfe19f5bb04cc791f075d74945277b1f7e0c5340c038049b4d9cf6a4c"
+  },
+  "methods_used": [
+    "eth_chainId",
+    "eth_getBlockByNumber",
+    "eth_getCode"
+  ],
+  "boundary": "Read-only capture from official configured RPC; runtime identity is not Solidity source verification. No network transaction submitted."
+}
