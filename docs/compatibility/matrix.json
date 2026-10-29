@@ -17,7 +17,7 @@
     "docs/compatibility/checks-testnet.json": "4d6533dd26dc82def6b7d93b4703d5d1151590d25679c78f9099324cac7fe7b1",
     "docs/compatibility/checks-mainnet.json": "a098fc6fdd5195077363fdfd06f8b5b24bbbd077dd4cdb20c36383b62e12ba4d",
     "docs/compatibility/checks-testnet-receipts.json": "89d0698f46ea2ec8c36bc08684492b097c775dcc9de8bab3162a512aa20888ce",
-    "docs/compatibility/local-validation.json": "26d1c508122a33597a6760649eafb8422694766074bc98931b2eaa54685be453"
+    "docs/compatibility/local-validation.json": "115caaa3bf09207aa271cccea5064057e7fdc05e8f928de9774f79da1fe0f4a8"
   },
   "summary": {
     "ABI_methods": 524,
@@ -35,15 +35,15 @@
     "mainnet_checks_matches_testnet_implementation_with_zero_getters": true
   },
   "local_validation": {
-    "checked_utc": "2026-10-29T10:28:41.106234+00:00",
+    "checked_utc": "2026-10-29T10:54:22.085433+00:00",
     "go_version": "go version go1.26.10 windows/amd64",
-    "EVM_source_fingerprint_sha256": "59aa7de77e7b6117d97524a4fd723fd7a571724486b2260f17ce0e6a9eebf898",
+    "EVM_source_fingerprint_sha256": "eafa385aa9ea0e5ad635aba052e2422c0d62534f2ed3ea074583b70f3d36fcd6",
     "modules": {
       ".": {
         "command": "go test -json ./...",
         "exit_code": 0,
-        "passing_test_events": 827,
-        "top_level_entries": 129,
+        "passing_test_events": 868,
+        "top_level_entries": 141,
         "required_suites": {
           "TestAllGeneratedABIWrappers": "pass",
           "TestEmbeddedABIProvenance": "pass",
@@ -60,7 +60,16 @@
           "TestLocalEVMHistoricalChecksTokenBatchRedemptionAtomicity": "pass",
           "TestLocalChainSignedTransactionEnvelopesAndFees": "pass",
           "TestLocalChainRevertedReceiptConsumesNonceAndFee": "pass",
-          "TestLocalEVMObservedCurrentChecksRuntimeSigning": "pass"
+          "TestLocalEVMObservedCurrentChecksRuntimeSigning": "pass",
+          "TestLocalEVMObservedDecimalReservelessPermit": "pass",
+          "TestLocalEVMWeightedSafeOwnerAdministrationAndAuthorization": "pass",
+          "TestLocalEVMCurrentChecksTokenBatchRedemptionAtomicity": "pass",
+          "TestLocalEVMCurrentChecksTokenByStandardPermit": "pass",
+          "TestLocalEVMCurrentChecksExpiryRejectsRecipientProof": "pass",
+          "TestContractReadPreservesCancellationOnBackendResponse": "pass",
+          "TestContractReadDynamicBytesDoNotAliasBackendBuffer": "pass",
+          "TestSimulationReadCancellationAndOwnership": "pass",
+          "TestSimulationReadKeepsCustomError": "pass"
         }
       },
       "cosmos": {

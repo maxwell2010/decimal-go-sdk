@@ -4,7 +4,7 @@ Environment: Windows amd64, Go 1.26.10. No user wallet, mnemonic or private key 
 
 | Check | Result | Boundary |
 |---|---|---|
-| `go test ./...` in both modules | Passed | EVM/CLI: 827 passing test/example/subtest events, 129 top-level entries. Cosmos: 179 events, 31 top-level entries. These are test runner counts, not transaction types. |
+| `go test ./...` in both modules | Passed | EVM/CLI: 868 passing test/example/subtest events, 141 top-level entries. Cosmos: 179 events, 31 top-level entries. These are test runner counts, not transaction types. |
 | `go vet ./...` | Passed | Static Go checks. |
 | `go build ./...` | Passed | SDK and read-only inspection command compile. |
 | `go mod verify` | All modules verified | Final dependency graph uses btcd's split v2 modules, not the locally modified cached v0.24.2 tree encountered during development. |
@@ -16,7 +16,7 @@ The scan found and resolved a reachable Gorilla WebSocket masking-key advisory b
 
 The prior final-audit combined command was `pwsh -NoProfile -File tools/check.ps1 -Race -Vulnerabilities -Fuzz`, exit code 0. Portable compiler release: [LLVM-MinGW 20261020](https://github.com/mstorsjo/llvm-mingw/releases/tag/20261020); archive SHA-256 `fd5462b7f5d93b2ff981fcd3f9c7e427e47f3203c64ea91c27bcc444eebd74cd` was verified before extraction. Its files are ignored under `.tools/`. Concurrent nonce/cancellation/external-signer cases also passed 100 stress iterations and 20 race-enabled iterations.
 
-All 300 pinned and 224 versioned deployment ABI wrappers are exercised against ABI wire encoding/decoding, with provenance checks for every artifact. Final statement coverage is 82.8% for the EVM package and 76.2% for Cosmos; this does not prove contract business rules. Bounded fuzz campaigns passed: amounts 667144 executions, signatures 1176475, protobuf decoding 549891, and stateless validation with valid-signer deep paths 483950. No crash was found in those runs. Thirty Python generation/release/channel/documentation tests also pass, including real generated Go compilation, pinned Git blob identity checks and reproducible archive verification.
+All 300 pinned and 224 versioned deployment ABI wrappers are exercised against ABI wire encoding/decoding, with provenance checks for every artifact. Final statement coverage is 83.1% for the EVM package and 76.2% for Cosmos; this does not prove contract business rules. Bounded fuzz campaigns passed: amounts 667144 executions, signatures 1176475, protobuf decoding 549891, and stateless validation with valid-signer deep paths 483950. No crash was found in those runs. Thirty Python generation/release/channel/documentation tests also pass, including real generated Go compilation, pinned Git blob identity checks and reproducible archive verification.
 
 Cosmos covers all 43 pinned message descriptors, source-backed GetSigners and ValidateBasic, address conversions, direct signing callbacks, REST/gRPC query and simulation, explicit submission interfaces, bounded fee convergence and historical RLP checks. In-process gRPC wire tests check read/write separation, transport errors and cancellation; they do not connect to a real node. A separately executed Cosmos SDK v0.46.16/Ethermint v0.22.13 reference produced `cosmos/schema/reference-tx.json`; body/auth bytes, SignDoc, signature, public key and full TxRaw match exactly. Its payload is a serialization fixture, not a submitted business transaction.
 
@@ -92,3 +92,12 @@ The preview.8 combined command `pwsh -NoProfile -File tools/check.ps1 -Race -Vul
 
 
 The follow-up observed-code test reads no public state during normal runs. It installs the exact official 6318-byte Checks implementation runtime (keccak256 0x78da094992fb84bf17517277dcfc9c67ab36ba535f8879b5fd5b5614ac397bf4) captured at the fixed testnet snapshot into empty local StateDB. Issuance returns an actual opaque check hash, SDK recipient-bound signing succeeds for that recipient, a stranger reverts without effects and replay fails. ECRECOVER digests match the SDK helper for each caller. This positively identifies the sampled code's tested signing profile and explains the distinct historical 6258-byte bundled artifact; public proxy initialization, network funding/roles and settlement remain separate.
+
+
+Preview.9 adds [contract route tests](LOCAL_CONTRACT_ROUTES.md): actual observed Decimal reserveless initialization/permit/Approval/allowance consumption, reinitialization/replay/domain/expiry rollback; current Checks token custody, atomic receiver-bound batches, standard-token permit issuance and DEL expiry; weighted Safe signed self-call owner/threshold administration and approveHash authorization. Reserve token code was captured and hash-checked only, not executed. All states are local fixtures; no public state, user rights or settlement is inferred.
+
+Contract read regressions reproduce lost cancellation, mutation of caller-owned destination/block parameters and borrowed dynamic ABI result buffers against preview.8 via an ignored Go source overlay. The fixed implementation preserves context errors and owns request/result data; no production package was replaced during that comparison. Nil receiver/context cases return errors. Independent review preserved proxy identity and legacy nonproxy block-tag behavior.
+
+Both simulation entry points received the same cancellation and ownership corrections. Independent regressions verify pre-backend value/calldata/block snapshots, returned-buffer ownership, nil/latest and negative unbound tags, and preserved custom errors. The regressions fail against preview.8 through a source overlay and pass with the corrected code. Existing proxy/simulation guards remain exercised.
+
+The preview.9 combined command `pwsh -NoProfile -File tools/check.ps1 -Race -Vulnerabilities` completed with exit code 0 after all read/simulation and route changes. Thirty Python tests passed. The dated scan reports zero reachable findings and zero affected imported packages, with the existing one unused module advisory.

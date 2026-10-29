@@ -184,11 +184,23 @@ func (c *Contract) ReadAt(ctx context.Context, block *big.Int, signature string,
 // ReadFromAt supplies an explicit eth_call sender for caller-dependent views.
 // It does not sign, transfer value or prove nested STATICCALL behavior.
 func (c *Contract) ReadFromAt(ctx context.Context, from common.Address, block *big.Int, signature string, args ...any) ([]any, error) {
-	if c.client == nil {
+	if ctx == nil {
+		return nil, errors.New("context required")
+	}
+	if e := ctx.Err(); e != nil {
+		return nil, e
+	}
+	if c == nil || c.client == nil {
 		return nil, errors.New("client required for contract reads")
 	}
+	// Preserve caller-owned identity even when a custom backend borrows and
+	// mutates its request parameters during chain checking or eth_call.
+	target := c.Address
+	if block != nil {
+		block = new(big.Int).Set(block)
+	}
 	if c.deployment != nil {
-		if c.Address != c.deployment.Proxy {
+		if target != c.deployment.Proxy {
 			return nil, errors.New("proxy read target changed")
 		}
 		var height uint64
@@ -231,11 +243,20 @@ func (c *Contract) ReadFromAt(ctx context.Context, from common.Address, block *b
 	if e = c.client.checkChain(ctx); e != nil {
 		return nil, e
 	}
-	b, e := c.client.rpc.CallContract(ctx, ethereum.CallMsg{From: from, To: &c.Address, Data: data}, block)
+	b, e := c.client.rpc.CallContract(ctx, ethereum.CallMsg{From: from, To: &target, Data: data}, block)
+	if cancelled := ctx.Err(); cancelled != nil {
+		return nil, cancelled
+	}
 	if e != nil {
 		return nil, decodeRPCError(e, a)
 	}
-	return m.Outputs.Unpack(b)
+	// ABI dynamic bytes may refer into the encoded response. Own that response
+	// so a backend cannot change an already returned result by reusing buffers.
+	values, e := m.Outputs.Unpack(append([]byte(nil), b...))
+	if cancelled := ctx.Err(); cancelled != nil {
+		return nil, cancelled
+	}
+	return values, e
 }
 
 type Event struct {

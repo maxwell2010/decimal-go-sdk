@@ -15,7 +15,12 @@ REQUIRED = ['TestAllGeneratedABIWrappers', 'TestEmbeddedABIProvenance', 'TestVer
             'TestLocalEVMOfficialWeightedSafeFactoryAndExecution', 'TestLocalEVMStandardPermitProvenance',
             'TestLocalEVMStandardPermitLifecycle', 'TestLocalEVMHistoricalChecksTokenBatchRedemptionAtomicity',
             'TestLocalChainSignedTransactionEnvelopesAndFees', 'TestLocalChainRevertedReceiptConsumesNonceAndFee',
-            'TestLocalEVMObservedCurrentChecksRuntimeSigning']
+            'TestLocalEVMObservedCurrentChecksRuntimeSigning',
+            'TestLocalEVMObservedDecimalReservelessPermit', 'TestLocalEVMWeightedSafeOwnerAdministrationAndAuthorization',
+            'TestLocalEVMCurrentChecksTokenBatchRedemptionAtomicity', 'TestLocalEVMCurrentChecksTokenByStandardPermit',
+            'TestLocalEVMCurrentChecksExpiryRejectsRecipientProof', 'TestContractReadPreservesCancellationOnBackendResponse',
+            'TestContractReadDynamicBytesDoNotAliasBackendBuffer',
+            'TestSimulationReadCancellationAndOwnership', 'TestSimulationReadKeepsCustomError']
 
 
 def source_fingerprint(root=ROOT):

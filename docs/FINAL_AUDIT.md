@@ -23,3 +23,12 @@ Detailed final commands, counts and limitations are in VALIDATION.md. Unavailabl
 A second agent audit found cancellation arriving together with successful backend responses could be lost. Checks history/receipt readers and the central chain guard now return context cancellation; a canceled chain lookup cannot start the next read. WaitReceipt now rejects missing/invalid mined coordinates, unknown receipt status, negative reported gas prices and a zero requested transaction hash. It checks cancellation before each receipt poll and after its backend response. Existing successful/reverted fee behavior remains covered. These are local response-validation guarantees, not current canonical membership or confirmation-depth proofs.
 
 Checks inspector tests also distinguish explicit genesis height zero from a missing or null block-number field. The pinned-source [node RPC identity review](NODE_RPC_IDENTITY.md) records why Ethereum Header.Hash and requireCanonical must not be used to claim stronger Decimal state identity guarantees. No real wallet or transaction submission is part of this audit.
+
+
+## Preview.9 contract read regression fixes
+
+ReadFromAt now returns context cancellation even if a custom backend returns data or a different error after canceling the request. It captures the destination and a copy of the block argument before invoking the backend, preventing mutations of the Contract or caller-owned big.Int. It also owns encoded return data before ABI decoding so dynamic byte results cannot be changed by backend buffer reuse. Nil context/receiver misuse returns an error. Existing nonproxy negative block tags and strict proxy snapshot/binding rules remain unchanged.
+
+The new regression suites were executed through a Go source overlay against preview.8: cancellation, parameter mutation and borrowed byte results failed as expected. The same tests pass with the fix; the published source was never modified during comparison. Independent contract/proxy/simulation review found no blocker.
+
+The same cancellation and ownership fixes apply to Client.Simulate and Contract.Simulate. They snapshot value/calldata/block before backend callbacks, return owned bytes and preserve custom errors when the context is active. Matching regressions also fail against preview.8 via a source overlay. Deployment identity guards, latest/nil and negative unbound tags remain covered.

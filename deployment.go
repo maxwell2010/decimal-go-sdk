@@ -87,6 +87,12 @@ func (c *Client) Simulate(ctx context.Context, from common.Address, call Call, b
 	if !uint256(call.Value) {
 		return nil, errors.New("invalid value")
 	}
+	// Capture intent before invoking any backend callback.
+	call.Value = copyInt(call.Value)
+	call.Data = append([]byte(nil), call.Data...)
+	if block != nil {
+		block = new(big.Int).Set(block)
+	}
 	if e := c.checkChain(ctx); e != nil {
 		return nil, e
 	}
@@ -95,10 +101,21 @@ func (c *Client) Simulate(ctx context.Context, from common.Address, call Call, b
 	if e != nil {
 		return nil, e
 	}
+	if e := ctx.Err(); e != nil {
+		return nil, e
+	}
 	result, e := c.rpc.CallContract(ctx, callMessage(from, call), block)
+	if canceled := ctx.Err(); canceled != nil {
+		return nil, canceled
+	}
 	if e != nil {
 		a, _ := loadABI(call.Profile)
 		return nil, decodeRPCError(e, a)
+	}
+	if result != nil {
+		owned := make([]byte, len(result))
+		copy(owned, result)
+		result = owned
 	}
 	return result, nil
 }
@@ -115,6 +132,12 @@ func (c *Contract) Simulate(ctx context.Context, from common.Address, call Call,
 	if call.To != c.Address || !uint256(call.Value) {
 		return nil, errors.New("simulation target or value mismatch")
 	}
+	// Capture intent before invoking any backend callback.
+	call.Value = copyInt(call.Value)
+	call.Data = append([]byte(nil), call.Data...)
+	if block != nil {
+		block = new(big.Int).Set(block)
+	}
 	if e := c.client.checkChain(ctx); e != nil {
 		return nil, e
 	}
@@ -128,13 +151,24 @@ func (c *Contract) Simulate(ctx context.Context, from common.Address, call Call,
 	if e != nil {
 		return nil, e
 	}
+	if e := ctx.Err(); e != nil {
+		return nil, e
+	}
 	returnData, e := c.client.rpc.CallContract(ctx, callMessage(from, call), block)
+	if canceled := ctx.Err(); canceled != nil {
+		return nil, canceled
+	}
 	if e != nil {
 		a, ae := c.contractABI()
 		if ae != nil {
 			return nil, ae
 		}
 		return nil, decodeRPCError(e, a)
+	}
+	if returnData != nil {
+		owned := make([]byte, len(returnData))
+		copy(owned, returnData)
+		returnData = owned
 	}
 	return returnData, nil
 }

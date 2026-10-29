@@ -1,0 +1,12 @@
+{
+  "scope": "Official observed implementation runtime installed into fresh local state; no live proxy state/constructor/settlement claim",
+  "snapshot_sha256": "c6044304dda45cf909243139836bd5eca06985c2419673e7ab1477e1e500f9bb",
+  "chain_id": 202020,
+  "block": 22477428,
+  "rpc_block_hash": "0xfb67691493eda26389cac1a122c8a6396192d97b153857d5ed3c87a10cf22d0c",
+  "expected_runtime_keccak256": {
+    "reserve": "0x67ef16857177e434b860586efd9ff7cf2c57c1adf4ba50bd9310f42f9c8c2cf1",
+    "reserveless": "0x67e10916520447faad79c557c719042ba1e12b95ca57e1c18b7a5ecfaca4c1fd"
+  },
+  "abi_sources": "docs/token-deployment-sources.json"
+}

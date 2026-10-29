@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.1.0-preview.9 - 2026-10-29
+
+- Contract reads and simulations preserve cancellation, snapshot caller-owned target/block/value/calldata parameters and own response buffers, while preserving custom errors and proxy guards. Regression tests reproduce failures against preview.8.
+- Exact observed Decimal reserveless implementation initializes in fresh local state and executes CheckedPermit/permit, Approval, allowance spending, replay/domain/expiry rollback and reinitialization rejection. Reserve code is captured only, not executed.
+- Observed current Checks token custody/allowance, atomic receiver-bound batch redemption, standard-token permit issuance and expiry, with actual rollback assertions.
+- Weighted Safe owner/threshold self-call administration, owner addition/removal, wrong-domain/outsider rejection and approveHash authorization on actual factory-created local proxies.
+- No missing ABI, state layout, public wallet ownership or settlement was invented. Public transactions remain unexecuted.
+
 ## v0.1.0-preview.8 - 2026-10-29
 
 - Observed official 6318-byte Checks implementation runtime accepts the recipient-bound SDK helper in local execution, with caller-specific ECRECOVER traces and replay rejection. This resolves the sampled code profile while preserving the historical 6258-byte artifact mismatch and public-state limitations.

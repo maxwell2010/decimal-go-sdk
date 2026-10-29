@@ -1,6 +1,6 @@
 # Decimal Go SDK
 
-An independent EVM Go module, `github.com/maxwell2010/decimal-go-sdk`, based on pinned official Decimal node, JS SDK and Go SDK sources, with workflow requirements from our Python and C# implementations. Go 1.26.10+ is required. The current public version is `v0.1.0-preview.8`, a preview with no claim of complete deployment parity.
+An independent EVM Go module, `github.com/maxwell2010/decimal-go-sdk`, based on pinned official Decimal node, JS SDK and Go SDK sources, with workflow requirements from our Python and C# implementations. Go 1.26.10+ is required. The current public version is `v0.1.0-preview.9`, a preview with no claim of complete deployment parity.
 
 By [MintCandy](https://mintcandy.ru/) and [@Maxwell2019](https://t.me/Maxwell2019). MIT license.
 
@@ -53,16 +53,16 @@ This installs or updates **both EVM and Cosmos** to the reviewed published versi
 Requires Go 1.26.10 or later. In your application's Go module:
 
 ```sh
-go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.8
+go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.9
 ```
 
 The independent Cosmos module is optional:
 
 ```sh
-go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.8
+go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.9
 ```
 
-Go downloads runtime dependencies automatically. GitHub is the release source; the tag pins the preview. Downloadable source ZIP/TAR.GZ files and `SHA256SUMS` are attached to the [release](https://github.com/maxwell2010/decimal-go-sdk/releases/tag/v0.1.0-preview.8). No compiler-generated bindings or external ABI compiler are needed to use the library.
+Go downloads runtime dependencies automatically. GitHub is the release source; the tag pins the preview. Downloadable source ZIP/TAR.GZ files and `SHA256SUMS` are attached to the [release](https://github.com/maxwell2010/decimal-go-sdk/releases/tag/v0.1.0-preview.9). No compiler-generated bindings or external ABI compiler are needed to use the library.
 
 For local development, clone the repository and run:
 
@@ -186,3 +186,5 @@ No upstream Go or JS implementation is copied or executed by these tools. Node M
 [Stable release criteria](docs/STABLE_RELEASE.md).
 
 [Weighted Safe, standard permit, token Checks and local signed-chain tests](docs/LOCAL_EXECUTION_EXTENSIONS.md).
+
+[Observed Decimal permit, Checks routes and Safe administration](docs/LOCAL_CONTRACT_ROUTES.md).
