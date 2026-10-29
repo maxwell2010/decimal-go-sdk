@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "version": "v0.1.0-preview.6",
+  "version": "v0.1.0-preview.7",
   "go": "1.26.10",
-  "evm": "github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.6",
-  "cosmos": "github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.6",
-  "release_url": "https://github.com/maxwell2010/decimal-go-sdk/releases/tag/v0.1.0-preview.6",
-  "source_zip": "https://github.com/maxwell2010/decimal-go-sdk/releases/download/v0.1.0-preview.6/decimal-go-sdk-0.1.0-preview.6.zip",
-  "source_tar_gz": "https://github.com/maxwell2010/decimal-go-sdk/releases/download/v0.1.0-preview.6/decimal-go-sdk-0.1.0-preview.6.tar.gz",
-  "checksums": "https://github.com/maxwell2010/decimal-go-sdk/releases/download/v0.1.0-preview.6/SHA256SUMS"
+  "evm": "github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.7",
+  "cosmos": "github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.7",
+  "release_url": "https://github.com/maxwell2010/decimal-go-sdk/releases/tag/v0.1.0-preview.7",
+  "source_zip": "https://github.com/maxwell2010/decimal-go-sdk/releases/download/v0.1.0-preview.7/decimal-go-sdk-0.1.0-preview.7.zip",
+  "source_tar_gz": "https://github.com/maxwell2010/decimal-go-sdk/releases/download/v0.1.0-preview.7/decimal-go-sdk-0.1.0-preview.7.tar.gz",
+  "checksums": "https://github.com/maxwell2010/decimal-go-sdk/releases/download/v0.1.0-preview.7/SHA256SUMS"
 }
