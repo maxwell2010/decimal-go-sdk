@@ -2,6 +2,8 @@
 
 ## v0.1.0-preview.8 - 2026-10-29
 
+- Observed official 6318-byte Checks implementation runtime accepts the recipient-bound SDK helper in local execution, with caller-specific ECRECOVER traces and replay rejection. This resolves the sampled code profile while preserving the historical 6258-byte artifact mismatch and public-state limitations.
+
 - Genuine weighted Safe/factory runtime captured read-only from official testnet at fixed block/hash. Local factory-created proxy tests cover owner weights, threshold, SDK/contract hash equality, signatures, transfer, nonce and replay. No copied live storage or Solidity-source claim.
 - Standard EIP2612 execution against pinned official OpenZeppelin v4.7.2 source, with exact compiler reproduction, CheckedPermit, nonce/allowance/Approval, replay/domain/expiry failures. This is not a Decimal token deployment fixture.
 - Historical token Checks custody/allowance, creation failures and atomic batch redemption with actual token/Checks bytecode. Historical check-only signatures remain test-only.

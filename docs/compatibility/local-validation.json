@@ -1,13 +1,13 @@
 {
-  "checked_utc": "2026-10-29T10:16:04.745344+00:00",
+  "checked_utc": "2026-10-29T10:28:41.106234+00:00",
   "go_version": "go version go1.26.10 windows/amd64",
-  "EVM_source_fingerprint_sha256": "6b73f39ae605b4469637e81588b1213cc424c833b8037600c65604b929c9bbca",
+  "EVM_source_fingerprint_sha256": "59aa7de77e7b6117d97524a4fd723fd7a571724486b2260f17ce0e6a9eebf898",
   "modules": {
     ".": {
       "command": "go test -json ./...",
       "exit_code": 0,
-      "passing_test_events": 826,
-      "top_level_entries": 128,
+      "passing_test_events": 827,
+      "top_level_entries": 129,
       "required_suites": {
         "TestAllGeneratedABIWrappers": "pass",
         "TestEmbeddedABIProvenance": "pass",
@@ -23,7 +23,8 @@
         "TestLocalEVMStandardPermitLifecycle": "pass",
         "TestLocalEVMHistoricalChecksTokenBatchRedemptionAtomicity": "pass",
         "TestLocalChainSignedTransactionEnvelopesAndFees": "pass",
-        "TestLocalChainRevertedReceiptConsumesNonceAndFee": "pass"
+        "TestLocalChainRevertedReceiptConsumesNonceAndFee": "pass",
+        "TestLocalEVMObservedCurrentChecksRuntimeSigning": "pass"
       }
     },
     "cosmos": {

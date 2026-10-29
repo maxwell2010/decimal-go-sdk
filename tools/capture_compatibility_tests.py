@@ -14,7 +14,8 @@ REQUIRED = ['TestAllGeneratedABIWrappers', 'TestEmbeddedABIProvenance', 'TestVer
             'TestLocalEVMHistoricalChecksArtifactRedemptionAndExpiry',
             'TestLocalEVMOfficialWeightedSafeFactoryAndExecution', 'TestLocalEVMStandardPermitProvenance',
             'TestLocalEVMStandardPermitLifecycle', 'TestLocalEVMHistoricalChecksTokenBatchRedemptionAtomicity',
-            'TestLocalChainSignedTransactionEnvelopesAndFees', 'TestLocalChainRevertedReceiptConsumesNonceAndFee']
+            'TestLocalChainSignedTransactionEnvelopesAndFees', 'TestLocalChainRevertedReceiptConsumesNonceAndFee',
+            'TestLocalEVMObservedCurrentChecksRuntimeSigning']
 
 
 def source_fingerprint(root=ROOT):

@@ -52,3 +52,5 @@ go test -run '^$' -fuzz '^FuzzChecksSignatureRecovery$' -fuzztime 7s -parallel 2
 ```
 
 Seeds come from the saved official Checks receipt/events and independently executed official-JS signature vectors. Invariants check deterministic decoding/recovery, input preservation, output-buffer ownership and independent ECDSA verification. Input lengths are capped. The initial 2026-10-29 campaigns passed with 214141 event, 327 receipt and 65124 signature executions; counts depend on the machine and fuzz corpus and are not coverage or acceptance percentages. No crash was found in these bounded runs. Future runs may differ and do not prove absence of all defects.
+
+The separately captured official 6318-byte implementation has now been executed directly: it accepts the SDK recipient-bound proof, rejects another caller and replay, and its ECRECOVER digests match the helper. This resolves the sampled code profile without promoting the historical artifact or proving public proxy initialization/funding/settlement. See [observed-code execution](LOCAL_EXECUTION_EXTENSIONS.md).

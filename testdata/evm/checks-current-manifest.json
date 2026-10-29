@@ -1,0 +1,10 @@
+{
+  "rpc": "https://testnet-val.decimalchain.com/web3/",
+  "chain_id": 202020,
+  "block": 22477428,
+  "rpc_block_hash": "0xfb67691493eda26389cac1a122c8a6396192d97b153857d5ed3c87a10cf22d0c",
+  "snapshot_sha256": "3d85c7841e7cbfd96a7470115d2c8f79ed148a0f5df7d8cb4a1f3a032ff8fbce",
+  "runtime_keccak256": "0x78da094992fb84bf17517277dcfc9c67ab36ba535f8879b5fd5b5614ac397bf4",
+  "runtime_bytes": 6318,
+  "scope": "Sampled implementation code local execution; no live proxy/settlement claim"
+}

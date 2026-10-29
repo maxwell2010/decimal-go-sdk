@@ -8,6 +8,14 @@ These suites add executable evidence with distinct scopes. They do not certify p
 go test -run '^(TestLocalEVM|TestLocalChain)' .
 ```
 
+## Sampled 6318-byte Checks runtime accepts the SDK signing profile
+
+The [current Checks runtime manifest](../testdata/evm/checks-current-manifest.json) records a read-only code sample from official testnet implementation `0xBACA5A733002F5323aBE4c83C91B87212E7A3ca3`, chain 202020, block 22477428, original RPC block hash `0xfb67691493eda26389cac1a122c8a6396192d97b153857d5ed3c87a10cf22d0c`. Its 6318 runtime bytes have keccak256 `0x78da094992fb84bf17517277dcfc9c67ab36ba535f8879b5fd5b5614ac397bf4`. The snapshot SHA-256 and these identities are checked before installing code into empty local state.
+
+`TestLocalEVMObservedCurrentChecksRuntimeSigning` creates a funded local check using the sampled code, obtains its actual returned/emitted hash and signs with the public SDK `SignEVMCheckRedemption` helper. The wrong caller is rejected without effects; the intended recipient redeems 100 raw DEL units with the expected event and balances. ECRECOVER tracing matches the SDK digest for each caller, and replay is rejected without retained effects.
+
+This positively establishes the SDK recipient-bound signing profile for the tested paths of this exact sampled code. It resolves the earlier code-profile uncertainty for that sample while preserving the incompatible 6258-byte historical artifact as a separate regression. Runtime size alone is not the evidence: exact code identity, traced digests and successful execution are. The test does not copy live storage, establish public proxy initialization or ownership, certify every Checks route, or demonstrate public transaction acceptance/settlement. The initial nonce and balances belong to the fresh local fixture.
+
 ## Weighted Safe and factory runtime
 
 The [Safe manifest](../testdata/evm/safe-manifest.json) pins runtime code captured from official testnet RPC at chain 202020, block 22477428, original RPC block hash `0xfb67691493eda26389cac1a122c8a6396192d97b153857d5ed3c87a10cf22d0c`. Snapshot SHA-256 and separate implementation/factory keccak256 hashes are checked before execution. The artifact is runtime-only, not verified Solidity source or original creation bytecode.

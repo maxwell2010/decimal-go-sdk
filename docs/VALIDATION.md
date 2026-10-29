@@ -4,7 +4,7 @@ Environment: Windows amd64, Go 1.26.10. No user wallet, mnemonic or private key 
 
 | Check | Result | Boundary |
 |---|---|---|
-| `go test ./...` in both modules | Passed | EVM/CLI: 826 passing test/example/subtest events, 128 top-level entries. Cosmos: 179 events, 31 top-level entries. These are test runner counts, not transaction types. |
+| `go test ./...` in both modules | Passed | EVM/CLI: 827 passing test/example/subtest events, 129 top-level entries. Cosmos: 179 events, 31 top-level entries. These are test runner counts, not transaction types. |
 | `go vet ./...` | Passed | Static Go checks. |
 | `go build ./...` | Passed | SDK and read-only inspection command compile. |
 | `go mod verify` | All modules verified | Final dependency graph uses btcd's split v2 modules, not the locally modified cached v0.24.2 tree encountered during development. |
@@ -89,3 +89,6 @@ A separate official OpenZeppelin v4.7.2 standard ERC20PermitMock is compiled rep
 An isolated Ethereum dev chain 1337 signs, accepts and mines type 0/1/2 transactions through SDK Send/Broadcast/WaitReceipt. Assertions cover actual mined intent, receipt, balances, actual fee versus reservation, nonce consumption and failed receipts with fees but without value transfer. Discovery/external dialing and ordinary RPC listeners are disabled; any required authenticated service is restricted to ephemeral loopback. The tests do not connect to Decimal public RPC and do not certify Decimal consensus or typed-envelope admission. Both compiler reproductions are now in CI. Public network transactions remain unexecuted.
 
 The preview.8 combined command `pwsh -NoProfile -File tools/check.ps1 -Race -Vulnerabilities` completed with exit code 0, including all newly added local signed-chain, Safe, permit and token Checks tests. Thirty Python tests passed. The dated scan reports zero reachable vulnerabilities and zero affected imported packages, with the same one unused module advisory.
+
+
+The follow-up observed-code test reads no public state during normal runs. It installs the exact official 6318-byte Checks implementation runtime (keccak256 0x78da094992fb84bf17517277dcfc9c67ab36ba535f8879b5fd5b5614ac397bf4) captured at the fixed testnet snapshot into empty local StateDB. Issuance returns an actual opaque check hash, SDK recipient-bound signing succeeds for that recipient, a stranger reverts without effects and replay fails. ECRECOVER digests match the SDK helper for each caller. This positively identifies the sampled code's tested signing profile and explains the distinct historical 6258-byte bundled artifact; public proxy initialization, network funding/roles and settlement remain separate.
