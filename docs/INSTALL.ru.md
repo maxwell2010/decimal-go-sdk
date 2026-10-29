@@ -45,7 +45,7 @@ go run github.com/maxwell2010/decimal-go-sdk/cmd/decimal-sdk-install@latest -cos
 Для воспроизводимой установки текущего релиза:
 
 ```sh
-go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.4 github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.4
+go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.5 github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.5
 ```
 
 Для отката укажите прежнюю опубликованную версию обоих модулей, например `v0.1.0-preview.1`, вместо текущей. Публичные теги и архивы не перезаписываются. После изменения версии проверьте сборку своего приложения:
@@ -74,6 +74,7 @@ go run ./examples/token_transfer
 go run ./examples/envelopes
 go run ./examples/transactions
 go run ./examples/checks_signing
+go run ./examples/checks_history
 go -C cosmos run ./examples/messages
 ```
 

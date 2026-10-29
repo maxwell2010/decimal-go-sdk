@@ -1,6 +1,6 @@
 # Decimal Go SDK
 
-Самостоятельный Go-модуль `github.com/maxwell2010/decimal-go-sdk`, созданный по исходникам официальной ноды, JS SDK и Go SDK с учетом сценариев наших Python и C# SDK. Требуется Go 1.26.10 или новее. Текущая публичная версия - `v0.1.0-preview.4`, предварительная версия без заявления о полном соответствии развернутым контрактам.
+Самостоятельный Go-модуль `github.com/maxwell2010/decimal-go-sdk`, созданный по исходникам официальной ноды, JS SDK и Go SDK с учетом сценариев наших Python и C# SDK. Требуется Go 1.26.10 или новее. Текущая публичная версия - `v0.1.0-preview.5`, предварительная версия без заявления о полном соответствии развернутым контрактам.
 
 Разработчики: [MintCandy](https://mintcandy.ru/) и [@Maxwell2019](https://t.me/Maxwell2019). Лицензия MIT.
 
@@ -11,6 +11,12 @@
 Полный сетевой parity пока не подтвержден. В текущих официальных исходниках есть несовместимые поколения ABI. Из 93 активных write-методов JS для 55 найден хотя бы один соответствующий сборщик по зафиксированному ABI; 35 требуют явно переданного ABI развернутого контракта, два являются нативными переводами, один - смешанной рассылкой с отключенным небезопасным ERC20-маршрутом. Это классификация покрытия, не обещание одинакового поведения всех вариантов.
 
 Дополнительно доступны девять явно выбираемых versioned testnet-профилей: 224 метода системных контрактов, Safe/factory/MultiSend и резервных/безрезервных токенов. Адреса, блоки, codehash и хеши ABI записаны в [системном manifest](docs/deployment-sources.json), [Safe manifest](docs/additional-deployment-sources.json) и [token manifest](docs/token-deployment-sources.json). ABI-интеграция охватывает все 524 метода; это не проверка исполнения в сети.
+
+## Совместимость с сетью без отправки транзакций
+
+[Матрица совместимости](docs/COMPATIBILITY.ru.md) отдельно показывает локальные тесты ABI, ответы getters, исторические события Checks и ограниченные eth_call-симуляции. Для обеих сетей сохранены блоки и исходные RPC-хеши. Настроенный mainnet-адрес Checks требует проверки deployment: наличие initialized proxy не подтверждено. Адреса по умолчанию не менялись.
+
+Для RPC-хеша блока используйте `Client.BlockIdentity`: `types.Header.Hash()` на Decimal может отличаться. `ChecksCreationHistory` и `ChecksCreationReceipt` читают настоящие хеши создания без кошелька. [API и пример](docs/CHECKS_HISTORY.ru.md).
 
 ## Что реализовано
 
@@ -49,16 +55,16 @@ go run github.com/maxwell2010/decimal-go-sdk/cmd/decimal-sdk-install@latest
 Требуется Go 1.26.10 или новее. В Go-модуле приложения выполните:
 
 ```sh
-go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.4
+go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.5
 ```
 
 Независимый Cosmos-модуль подключается отдельно при необходимости:
 
 ```sh
-go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.4
+go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.5
 ```
 
-Go установит зависимости автоматически. На [странице релиза](https://github.com/maxwell2010/decimal-go-sdk/releases/tag/v0.1.0-preview.4) доступны архивы ZIP/TAR.GZ и `SHA256SUMS`. Для использования SDK не нужно генерировать ABI-обертки. Полные примеры кода приведены в [руководстве](docs/GETTING_STARTED.ru.md) и [каталоге примеров](examples/README.ru.md).
+Go установит зависимости автоматически. На [странице релиза](https://github.com/maxwell2010/decimal-go-sdk/releases/tag/v0.1.0-preview.5) доступны архивы ZIP/TAR.GZ и `SHA256SUMS`. Для использования SDK не нужно генерировать ABI-обертки. Полные примеры кода приведены в [руководстве](docs/GETTING_STARTED.ru.md) и [каталоге примеров](examples/README.ru.md).
 
 Для разработки клонируйте репозиторий. Сам модуль проверяется командами:
 

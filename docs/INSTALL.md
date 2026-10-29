@@ -45,7 +45,7 @@ The tool requires an existing go.mod and never initializes a project implicitly.
 For a reproducible installation of this release:
 
 ```sh
-go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.4 github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.4
+go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.5 github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.5
 ```
 
 To roll back, replace both versions with an earlier published version such as v0.1.0-preview.1. Published tags and assets are never overwritten. Verify your application afterward:
@@ -74,6 +74,7 @@ go run ./examples/token_transfer
 go run ./examples/envelopes
 go run ./examples/transactions
 go run ./examples/checks_signing
+go run ./examples/checks_history
 go -C cosmos run ./examples/messages
 ```
 

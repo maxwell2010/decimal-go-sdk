@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.1.0-preview.5 - 2026-10-29
+
+- Read-only deployment/getter snapshots on official testnet and mainnet at explicit block numbers and raw RPC hashes.
+- Strict CreatedCheck/CreatedCheckDetails decoders, bounded history and receipt APIs, with six real testnet creation events and one independently verified public receipt.
+- Client.BlockIdentity preserves the RPC block hash instead of recomputing Ethereum header identity on Decimal.
+- Narrow positive self-transfer eth_call observations: two sampled testnet token implementations and mainnet native DEL. No account-control or settlement claim.
+- Reproducible compatibility matrix for all 524 ABI methods per network and 93 reference operations, with independent codec/view/simulation/write-acceptance statuses.
+- Mainnet configured Checks has implementation-like runtime and zero getters; initialization/usable-proxy readiness remains unconfirmed. Defaults were not silently replaced.
+- No public-network signing, broadcasting, private key loading, initialization or state override occurred in the live inspectors.
+
 ## v0.1.0-preview.4 - 2026-10-29
 
 - EVM Checks password-derived signers and recipient-bound redemption proofs for the reviewed official JS profile.

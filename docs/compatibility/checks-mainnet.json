@@ -1,0 +1,12 @@
+{
+  "address": "0x9c3326594b49AFa24db9b988Cda1258d0dcb4e40",
+  "chain_id": "75",
+  "event_count": 0,
+  "events": [],
+  "from_block": 34334454,
+  "network": "mainnet",
+  "rpc": "https://node.decimalchain.com/web3/",
+  "scope": "historical event evidence only; no current state or finality certification",
+  "to_block": 34336453,
+  "to_block_hash": "0xb0d311a4721d1654acb0b7ef2e4ddfcae16c643e145162a5dd8ed7b000ab2f21"
+}

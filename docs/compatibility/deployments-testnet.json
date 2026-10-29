@@ -1,0 +1,509 @@
+{
+  "block": "0x156fa74",
+  "block_hash": "0xfb67691493eda26389cac1a122c8a6396192d97b153857d5ed3c87a10cf22d0c",
+  "boundary": "read-only code/storage/calls; no ABI inference, stateful authorization, simulation or write acceptance; failed getters do not prove absence",
+  "chain_id": "202020",
+  "checked_utc": "2026-10-29T07:35:48Z",
+  "entries": [
+    {
+      "role": "gas-center",
+      "source": "ContractCenter getContractAddress(string)",
+      "code_bytes": 0,
+      "error": "registry returned zero or invalid address"
+    },
+    {
+      "role": "bridge",
+      "source": "ContractCenter getContractAddress(string)",
+      "code_bytes": 0,
+      "error": "registry returned zero or invalid address"
+    },
+    {
+      "role": "bridge-v2",
+      "source": "ContractCenter getContractAddress(string)",
+      "code_bytes": 0,
+      "error": "registry returned zero or invalid address"
+    },
+    {
+      "role": "contract-center",
+      "address": "0xbC96b61F137F28F0Da47Cc4Ef06e5f984B565A2E",
+      "source": "official SDK Config",
+      "code_hash": "0x9e20e6504b126e7a82319e3521ab1340a205b9f467edfc3324a0526075348a55",
+      "code_bytes": 170,
+      "historical_expected_hashes": [
+        "0x9e20e6504b126e7a82319e3521ab1340a205b9f467edfc3324a0526075348a55"
+      ],
+      "matches_historical_hash": true,
+      "implementation_slot": "0x0000000000000000000000009f200fbc5984809982ad217b972e87dbebcad014",
+      "beacon_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        {
+          "historical_expected_hashes": [
+            "0xf5be3ea5ea1a17e1a7d589d5338fdf67df37244ca92a7e384352cca494bd0ba3"
+          ],
+          "matches_historical_hash": true,
+          "kind": "eip1967-implementation",
+          "address": "0x9f200fbc5984809982aD217b972E87dBEbCAD014",
+          "code_hash": "0xf5be3ea5ea1a17e1a7d589d5338fdf67df37244ca92a7e384352cca494bd0ba3"
+        },
+        {
+          "historical_expected_hashes": [
+            "0xf5be3ea5ea1a17e1a7d589d5338fdf67df37244ca92a7e384352cca494bd0ba3"
+          ],
+          "matches_historical_hash": true,
+          "kind": "getImpl()",
+          "address": "0x9f200fbc5984809982aD217b972E87dBEbCAD014",
+          "code_hash": "0xf5be3ea5ea1a17e1a7d589d5338fdf67df37244ca92a7e384352cca494bd0ba3"
+        }
+      ],
+      "probes": [
+        {
+          "signature": "getImpl()",
+          "result": "0x0000000000000000000000009f200fbc5984809982ad217b972e87dbebcad014"
+        },
+        {
+          "signature": "owner()",
+          "result": "0x00000000000000000000000035119df12afdf848b7ef2536af2411ab0a611c45"
+        }
+      ]
+    },
+    {
+      "role": "checks",
+      "address": "0xb6161CAA8Bd7167C2fa67b93b041FF9a94d6a735",
+      "source": "official SDK Config",
+      "code_hash": "0x9b6a62ebc025b20bff4f10679f7c514e7c4d34effb785a31452e18d652fbb627",
+      "code_bytes": 170,
+      "implementation_slot": "0x000000000000000000000000baca5a733002f5323abe4c83c91b87212e7a3ca3",
+      "beacon_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        {
+          "kind": "eip1967-implementation",
+          "address": "0xBACA5A733002F5323aBE4c83C91B87212E7A3ca3",
+          "code_hash": "0x78da094992fb84bf17517277dcfc9c67ab36ba535f8879b5fd5b5614ac397bf4"
+        },
+        {
+          "kind": "getImpl()",
+          "address": "0xBACA5A733002F5323aBE4c83C91B87212E7A3ca3",
+          "code_hash": "0x78da094992fb84bf17517277dcfc9c67ab36ba535f8879b5fd5b5614ac397bf4"
+        }
+      ],
+      "probes": [
+        {
+          "signature": "nonces()",
+          "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "signature": "getImpl()",
+          "result": "0x000000000000000000000000baca5a733002f5323abe4c83c91b87212e7a3ca3"
+        },
+        {
+          "signature": "owner()",
+          "result": "0x00000000000000000000000035119df12afdf848b7ef2536af2411ab0a611c45"
+        }
+      ]
+    },
+    {
+      "role": "safe",
+      "address": "0xE0f30FcCAe2f9f9C7efee9af044C436841D466ee",
+      "source": "official SDK Config",
+      "code_hash": "0xf551f56a1c8069a151b5a7e210afecc4febe2c3e2725960ae138adc10eb3e1cc",
+      "code_bytes": 14325,
+      "historical_expected_hashes": [
+        "0xf551f56a1c8069a151b5a7e210afecc4febe2c3e2725960ae138adc10eb3e1cc"
+      ],
+      "matches_historical_hash": true,
+      "implementation_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "beacon_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "probes": [
+        {
+          "signature": "nonce()",
+          "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "signature": "getWeightThreshold()",
+          "result": "0x0000000000000000000000000000000000000000000000000000000000000001"
+        },
+        {
+          "signature": "getOwnersWithWeights()",
+          "error": "eth_call failed (revert or RPC error)"
+        }
+      ]
+    },
+    {
+      "role": "safe-factory",
+      "address": "0x4cC406B1713d3dF67e739D6f5918B6C98F614a38",
+      "source": "official SDK Config",
+      "code_hash": "0xe813a7ddfe19f5bb04cc791f075d74945277b1f7e0c5340c038049b4d9cf6a4c",
+      "code_bytes": 1984,
+      "historical_expected_hashes": [
+        "0xe813a7ddfe19f5bb04cc791f075d74945277b1f7e0c5340c038049b4d9cf6a4c"
+      ],
+      "matches_historical_hash": true,
+      "implementation_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "beacon_slot": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "role": "multisend",
+      "address": "0xC0611a00CE349B9bCff3866351A2a5Aa9659c464",
+      "source": "official SDK Config",
+      "code_hash": "0x362f096e3f60bdf21f9ea34a277e6504c16fe7027394c15e7c1971325a9a3531",
+      "code_bytes": 604,
+      "historical_expected_hashes": [
+        "0x362f096e3f60bdf21f9ea34a277e6504c16fe7027394c15e7c1971325a9a3531"
+      ],
+      "matches_historical_hash": true,
+      "implementation_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "beacon_slot": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "role": "multicall",
+      "address": "0x81FD5FAe106dFD0343B0435a1bc0ef89BB14C317",
+      "source": "official SDK Config",
+      "code_hash": "0xea26a0eff1ab84a1cab349f451ae0673384d17ef8688c576f75f59d59a692ae9",
+      "code_bytes": 1226,
+      "implementation_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "beacon_slot": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "role": "reserve-token",
+      "address": "0x37748f3e857A71E4334125A935052Ce1e603b7B5",
+      "source": "token-deployment-sources.json explicit testnet token binding",
+      "code_hash": "0xf772463a5d4611357774db16a2ddeaf62ca1e27c5033927c77763048026c1819",
+      "code_bytes": 333,
+      "implementation_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "beacon_slot": "0x000000000000000000000000b8f9c4a26b91a65ac0d3f34e230a4c9ad09aef4a",
+      "references": [
+        {
+          "historical_expected_hashes": [
+            "0x11661ddf372d5c42c5e018e0ef2d7eaa36de07de2c97f8a937360dbb8d3c7563"
+          ],
+          "matches_historical_hash": true,
+          "kind": "eip1967-beacon",
+          "address": "0xb8F9c4A26b91a65Ac0D3F34e230a4C9ad09aEF4a",
+          "code_hash": "0x11661ddf372d5c42c5e018e0ef2d7eaa36de07de2c97f8a937360dbb8d3c7563"
+        },
+        {
+          "historical_expected_hashes": [
+            "0x67ef16857177e434b860586efd9ff7cf2c57c1adf4ba50bd9310f42f9c8c2cf1"
+          ],
+          "matches_historical_hash": true,
+          "kind": "beacon-implementation-getter",
+          "address": "0x8e215123f9cf7d2c7D99457C5096BeA82a868cbE",
+          "code_hash": "0x67ef16857177e434b860586efd9ff7cf2c57c1adf4ba50bd9310f42f9c8c2cf1"
+        }
+      ],
+      "probes": [
+        {
+          "signature": "name()",
+          "result": "0x0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000a7968687465737461686100000000000000000000000000000000000000000000"
+        },
+        {
+          "signature": "symbol()",
+          "result": "0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000097968687465737474740000000000000000000000000000000000000000000000"
+        },
+        {
+          "signature": "decimals()",
+          "result": "0x0000000000000000000000000000000000000000000000000000000000000012"
+        },
+        {
+          "signature": "totalSupply()",
+          "result": "0x0000000000000000000000000000000000000000000004dc714235bfbd3a45d1"
+        },
+        {
+          "signature": "owner()",
+          "error": "eth_call failed (revert or RPC error)"
+        }
+      ]
+    },
+    {
+      "role": "reserveless-token",
+      "address": "0xC310F25E3429eFc5EdE11A908682F0a31cfc92Ce",
+      "source": "token-deployment-sources.json explicit testnet token binding",
+      "code_hash": "0x2ce9d6cacfa01a93a618736a617ff704437256f4e2fcb9b769ec3e4604d618d1",
+      "code_bytes": 333,
+      "implementation_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "beacon_slot": "0x0000000000000000000000000ee331065482b9dc995fc2c13c80a90028c314f9",
+      "references": [
+        {
+          "historical_expected_hashes": [
+            "0xbc87240a529d4e4779dc70c72df022e6c4002db88b5033176c57080f2ae92b87"
+          ],
+          "matches_historical_hash": true,
+          "kind": "eip1967-beacon",
+          "address": "0x0ee331065482B9DC995Fc2c13c80a90028C314f9",
+          "code_hash": "0xbc87240a529d4e4779dc70c72df022e6c4002db88b5033176c57080f2ae92b87"
+        },
+        {
+          "historical_expected_hashes": [
+            "0x67e10916520447faad79c557c719042ba1e12b95ca57e1c18b7a5ecfaca4c1fd"
+          ],
+          "matches_historical_hash": true,
+          "kind": "beacon-implementation-getter",
+          "address": "0x9D3e4E9953B031F2c89Da77c0F2abaD169eDd43F",
+          "code_hash": "0x67e10916520447faad79c557c719042ba1e12b95ca57e1c18b7a5ecfaca4c1fd"
+        }
+      ],
+      "probes": [
+        {
+          "signature": "name()",
+          "result": "0x0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000f4353686172702053444b20546573740000000000000000000000000000000000"
+        },
+        {
+          "signature": "symbol()",
+          "result": "0x0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000773646b6373716100000000000000000000000000000000000000000000000000"
+        },
+        {
+          "signature": "decimals()",
+          "result": "0x0000000000000000000000000000000000000000000000000000000000000012"
+        },
+        {
+          "signature": "totalSupply()",
+          "result": "0x0000000000000000000000000000000000000000000000056bc75e2d63100000"
+        },
+        {
+          "signature": "owner()",
+          "result": "0x000000000000000000000000b92bd490c8e9e5d9c46d71666418d4e7ae4534e9"
+        }
+      ]
+    },
+    {
+      "role": "bridge",
+      "address": "0x827eA5381aDB912Ed0befDA26AfE8CDc5A5e050a",
+      "source": "prior official TheGraph discovery docs/deployments/testnet-2026-10-29-bridge",
+      "code_hash": "0xb199d4e593e9c2c68b5500d4a59173e0f583d6223ae9b968998fd5e1faac4b78",
+      "code_bytes": 183,
+      "implementation_slot": "0x00000000000000000000000006d7ac3874adc1f773c5165e91077c8037b789ff",
+      "beacon_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        {
+          "kind": "eip1967-implementation",
+          "address": "0x06D7AC3874adC1f773c5165E91077c8037B789ff",
+          "code_hash": "0xf4304c13b5611dafda19a48666c12e43a9a4333c83d978eacbd32785fd5e4383"
+        }
+      ],
+      "probes": [
+        {
+          "signature": "getImpl()",
+          "error": "eth_call failed (revert or RPC error)"
+        },
+        {
+          "signature": "owner()",
+          "error": "eth_call failed (revert or RPC error)"
+        }
+      ]
+    },
+    {
+      "role": "token-center",
+      "address": "0xb8F9c4A26b91a65Ac0D3F34e230a4C9ad09aEF4a",
+      "source": "ContractCenter getContractAddress(string)",
+      "code_hash": "0x11661ddf372d5c42c5e018e0ef2d7eaa36de07de2c97f8a937360dbb8d3c7563",
+      "code_bytes": 183,
+      "historical_expected_hashes": [
+        "0x11661ddf372d5c42c5e018e0ef2d7eaa36de07de2c97f8a937360dbb8d3c7563"
+      ],
+      "matches_historical_hash": true,
+      "implementation_slot": "0x0000000000000000000000005f0de38983be6151a68b07363a0fb61897b50109",
+      "beacon_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        {
+          "historical_expected_hashes": [
+            "0x72a5e90add7e2e4060a699aaebf45e54180bfe033a8ba3a27424a5003fba2fa5"
+          ],
+          "matches_historical_hash": true,
+          "kind": "eip1967-implementation",
+          "address": "0x5f0DE38983BE6151a68b07363A0fb61897b50109",
+          "code_hash": "0x72a5e90add7e2e4060a699aaebf45e54180bfe033a8ba3a27424a5003fba2fa5"
+        },
+        {
+          "historical_expected_hashes": [
+            "0x72a5e90add7e2e4060a699aaebf45e54180bfe033a8ba3a27424a5003fba2fa5"
+          ],
+          "matches_historical_hash": true,
+          "kind": "getImpl()",
+          "address": "0x5f0DE38983BE6151a68b07363A0fb61897b50109",
+          "code_hash": "0x72a5e90add7e2e4060a699aaebf45e54180bfe033a8ba3a27424a5003fba2fa5"
+        },
+        {
+          "historical_expected_hashes": [
+            "0x67ef16857177e434b860586efd9ff7cf2c57c1adf4ba50bd9310f42f9c8c2cf1"
+          ],
+          "matches_historical_hash": true,
+          "kind": "implementation()",
+          "address": "0x8e215123f9cf7d2c7D99457C5096BeA82a868cbE",
+          "code_hash": "0x67ef16857177e434b860586efd9ff7cf2c57c1adf4ba50bd9310f42f9c8c2cf1"
+        },
+        {
+          "historical_expected_hashes": [
+            "0x67e10916520447faad79c557c719042ba1e12b95ca57e1c18b7a5ecfaca4c1fd"
+          ],
+          "matches_historical_hash": true,
+          "kind": "implementationReserveless()",
+          "address": "0x9D3e4E9953B031F2c89Da77c0F2abaD169eDd43F",
+          "code_hash": "0x67e10916520447faad79c557c719042ba1e12b95ca57e1c18b7a5ecfaca4c1fd"
+        }
+      ],
+      "probes": [
+        {
+          "signature": "owner()",
+          "result": "0x00000000000000000000000035119df12afdf848b7ef2536af2411ab0a611c45"
+        },
+        {
+          "signature": "getImpl()",
+          "result": "0x0000000000000000000000005f0de38983be6151a68b07363a0fb61897b50109"
+        },
+        {
+          "signature": "implementation()",
+          "result": "0x0000000000000000000000008e215123f9cf7d2c7d99457c5096bea82a868cbe"
+        },
+        {
+          "signature": "implementationReserveless()",
+          "result": "0x0000000000000000000000009d3e4e9953b031f2c89da77c0f2abad169edd43f"
+        }
+      ]
+    },
+    {
+      "role": "nft-center",
+      "address": "0x11aE5297d0B5886914661938FcB8AEdc08622194",
+      "source": "ContractCenter getContractAddress(string)",
+      "code_hash": "0x03d81a8215770b021c0232e7541427d7063eceec75ceb0e9c02784845e48a0f3",
+      "code_bytes": 170,
+      "historical_expected_hashes": [
+        "0x03d81a8215770b021c0232e7541427d7063eceec75ceb0e9c02784845e48a0f3"
+      ],
+      "matches_historical_hash": true,
+      "implementation_slot": "0x000000000000000000000000a12ffd3f622e5399274e4ad13032a5cacce02916",
+      "beacon_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        {
+          "historical_expected_hashes": [
+            "0x1ac3490d562780d0c91b6e0cc1fc88cd9da4e9360b328fd990999f2948a0a64d"
+          ],
+          "matches_historical_hash": true,
+          "kind": "eip1967-implementation",
+          "address": "0xa12ffD3f622E5399274E4Ad13032A5cacce02916",
+          "code_hash": "0x1ac3490d562780d0c91b6e0cc1fc88cd9da4e9360b328fd990999f2948a0a64d"
+        },
+        {
+          "historical_expected_hashes": [
+            "0x1ac3490d562780d0c91b6e0cc1fc88cd9da4e9360b328fd990999f2948a0a64d"
+          ],
+          "matches_historical_hash": true,
+          "kind": "getImpl()",
+          "address": "0xa12ffD3f622E5399274E4Ad13032A5cacce02916",
+          "code_hash": "0x1ac3490d562780d0c91b6e0cc1fc88cd9da4e9360b328fd990999f2948a0a64d"
+        }
+      ],
+      "probes": [
+        {
+          "signature": "getImpl()",
+          "result": "0x000000000000000000000000a12ffd3f622e5399274e4ad13032a5cacce02916"
+        },
+        {
+          "signature": "owner()",
+          "result": "0x00000000000000000000000035119df12afdf848b7ef2536af2411ab0a611c45"
+        }
+      ]
+    },
+    {
+      "role": "master-validator",
+      "address": "0x5dBE5eb59D73f596E19A8f64f226C71BbC8Ea36F",
+      "source": "ContractCenter getContractAddress(string)",
+      "code_hash": "0xceacc9a289d302e75b47354faf64c5b6b6d82fabfe85cd6207fe29faddce98a9",
+      "code_bytes": 170,
+      "historical_expected_hashes": [
+        "0xceacc9a289d302e75b47354faf64c5b6b6d82fabfe85cd6207fe29faddce98a9"
+      ],
+      "matches_historical_hash": true,
+      "implementation_slot": "0x000000000000000000000000d1892c59bc3b812b8c94e20b55441999f45de962",
+      "beacon_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        {
+          "historical_expected_hashes": [
+            "0x88c72a26106a41dc6ef11b69af95746042a061b0bb33da76e075450e3e01ee75"
+          ],
+          "matches_historical_hash": true,
+          "kind": "eip1967-implementation",
+          "address": "0xd1892c59bC3b812b8c94e20b55441999F45dE962",
+          "code_hash": "0x88c72a26106a41dc6ef11b69af95746042a061b0bb33da76e075450e3e01ee75"
+        },
+        {
+          "historical_expected_hashes": [
+            "0x88c72a26106a41dc6ef11b69af95746042a061b0bb33da76e075450e3e01ee75"
+          ],
+          "matches_historical_hash": true,
+          "kind": "getImpl()",
+          "address": "0xd1892c59bC3b812b8c94e20b55441999F45dE962",
+          "code_hash": "0x88c72a26106a41dc6ef11b69af95746042a061b0bb33da76e075450e3e01ee75"
+        }
+      ],
+      "probes": [
+        {
+          "signature": "getImpl()",
+          "result": "0x000000000000000000000000d1892c59bc3b812b8c94e20b55441999f45de962"
+        },
+        {
+          "signature": "owner()",
+          "result": "0x00000000000000000000000035119df12afdf848b7ef2536af2411ab0a611c45"
+        }
+      ]
+    },
+    {
+      "role": "delegation",
+      "address": "0x0d8E8CE36DADe42682dd8cC6288D6A8D324bac2c",
+      "source": "ContractCenter getContractAddress(string)",
+      "code_hash": "0x47c827859b09ad5488ec21a128f98d1d5a7a786be4fde7f08c962d7aa7756b77",
+      "code_bytes": 170,
+      "implementation_slot": "0x0000000000000000000000002f29724dcf9e3fe2864db03c5310cb368aa96f09",
+      "beacon_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        {
+          "kind": "eip1967-implementation",
+          "address": "0x2f29724DCf9e3Fe2864dB03c5310cB368Aa96f09",
+          "code_hash": "0x768280a3b02be3b6e033d1b7333daa4c5c2cbc0cf7bcc12cc8bde4d465fcf57b"
+        },
+        {
+          "kind": "getImpl()",
+          "address": "0x2f29724DCf9e3Fe2864dB03c5310cB368Aa96f09",
+          "code_hash": "0x768280a3b02be3b6e033d1b7333daa4c5c2cbc0cf7bcc12cc8bde4d465fcf57b"
+        }
+      ],
+      "probes": [
+        {
+          "signature": "getImpl()",
+          "result": "0x0000000000000000000000002f29724dcf9e3fe2864db03c5310cb368aa96f09"
+        },
+        {
+          "signature": "owner()",
+          "result": "0x00000000000000000000000035119df12afdf848b7ef2536af2411ab0a611c45"
+        }
+      ]
+    },
+    {
+      "role": "delegation-nft",
+      "address": "0x07E2ad4DFC91412DE09e33e4650254948B21a20C",
+      "source": "ContractCenter getContractAddress(string)",
+      "code_hash": "0x2d7fb27e9d61d1ba63bd6cfa4be37d8a496178fae40f1e9929e5482229ffac1d",
+      "code_bytes": 170,
+      "implementation_slot": "0x000000000000000000000000f9790e912a10b1cddc8aa3c8c2b6a8205446d4d4",
+      "beacon_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        {
+          "kind": "eip1967-implementation",
+          "address": "0xf9790e912a10B1cDDC8Aa3C8c2B6A8205446D4d4",
+          "code_hash": "0x4c15cae0620203b10f515deceec99a5b94571bc9a82a4412e6c3aebbe2ae1afe"
+        }
+      ],
+      "probes": [
+        {
+          "signature": "getImpl()",
+          "error": "eth_call failed (revert or RPC error)"
+        },
+        {
+          "signature": "owner()",
+          "error": "eth_call failed (revert or RPC error)"
+        }
+      ]
+    }
+  ],
+  "network": "testnet",
+  "rpc": "https://testnet-val.decimalchain.com/web3/"
+}

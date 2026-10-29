@@ -1,0 +1,28 @@
+{
+  "checked_utc": "2026-10-29T08:18:12.046281+00:00",
+  "go_version": "go version go1.26.10 windows/amd64",
+  "EVM_source_fingerprint_sha256": "8ebfad0330cb51e15b322e146de35ed6795eb401c1d6ff4bdb9b65cd9bc95409",
+  "modules": {
+    ".": {
+      "command": "go test -json ./...",
+      "exit_code": 0,
+      "passing_test_events": 724,
+      "top_level_entries": 101,
+      "required_suites": {
+        "TestAllGeneratedABIWrappers": "pass",
+        "TestEmbeddedABIProvenance": "pass",
+        "TestVersionedABIProvenance": "pass",
+        "TestChecksSavedOfficialReceipt": "pass",
+        "TestBlockIdentityUsesRPCProvidedHashAndStrictShape": "pass"
+      }
+    },
+    "cosmos": {
+      "command": "go test -json ./...",
+      "exit_code": 0,
+      "passing_test_events": 179,
+      "top_level_entries": 31,
+      "required_suites": {}
+    }
+  },
+  "boundary": "offline tests and in-process mocks; no public transaction submission or settlement proof"
+}

@@ -26,6 +26,9 @@ func (c *Client) BlockNumber(ctx context.Context) (uint64, error) {
 	}
 	return n, nil
 }
+
+// Header returns Ethereum-shaped fields. Header.Hash() recomputes an Ethereum
+// hash and may differ from Decimal canonical RPC identity; use BlockIdentity.
 func (c *Client) Header(ctx context.Context, number *big.Int) (*types.Header, error) {
 	if e := c.checkChain(ctx); e != nil {
 		return nil, e

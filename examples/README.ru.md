@@ -24,3 +24,5 @@ go run ./examples/read_balance
 [Установка и обновление](../docs/INSTALL.ru.md), [код каждого builder](../docs/TRANSACTIONS.ru.md), [конверты и сценарии](../docs/TRANSACTION_ENVELOPES.ru.md), [Cosmos payload](../cosmos/TRANSACTIONS.ru.md). Подписи, proofs и права в фикстурах не подтверждают исполнение бизнес-транзакций.
 
 - `go run ./examples/checks_signing` выводит proof для публичной фикстуры и собирает calldata без RPC и отправки. [Формат подписи](../docs/EVM_CHECKS.ru.md).
+
+- `go run ./examples/checks_history` читает сохранённый публичный receipt офлайн, без ключа и RPC. [Руководство](../docs/CHECKS_HISTORY.ru.md). CLI `go run ./cmd/checks-inspect -network testnet -blocks 2000` выполняет ограниченное чтение сети; отсутствие событий относится только к выбранному окну.
