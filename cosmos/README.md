@@ -15,10 +15,10 @@ It includes 43 named request descriptors: 41 Decimal custom request messages plu
 Requires Go 1.26.10 or later:
 
 ```sh
-go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.11
+go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.12
 ```
 
-Import `github.com/maxwell2010/decimal-go-sdk/cosmos`. The nested module uses its own version tag, `cosmos/v0.1.0-preview.11`, at the same reviewed commit as the parent preview.
+Import `github.com/maxwell2010/decimal-go-sdk/cosmos`. The nested module uses its own version tag, `cosmos/v0.1.0-preview.12`, at the same reviewed commit as the parent preview.
 
 ## Direct signing and REST
 

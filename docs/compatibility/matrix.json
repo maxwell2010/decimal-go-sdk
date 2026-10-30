@@ -17,7 +17,7 @@
     "docs/compatibility/checks-testnet.json": "4d6533dd26dc82def6b7d93b4703d5d1151590d25679c78f9099324cac7fe7b1",
     "docs/compatibility/checks-mainnet.json": "a098fc6fdd5195077363fdfd06f8b5b24bbbd077dd4cdb20c36383b62e12ba4d",
     "docs/compatibility/checks-testnet-receipts.json": "89d0698f46ea2ec8c36bc08684492b097c775dcc9de8bab3162a512aa20888ce",
-    "docs/compatibility/local-validation.json": "17e0724e164b7b0662d79ddbc4efff756bb3ea890ae04dc8733476d0f8213860"
+    "docs/compatibility/local-validation.json": "73d30cc70bb3469e3e426cc7893cb363e5f64f99fe56844ac0f158e8ecabe886"
   },
   "summary": {
     "ABI_methods": 524,
@@ -35,15 +35,15 @@
     "mainnet_checks_matches_testnet_implementation_with_zero_getters": true
   },
   "local_validation": {
-    "checked_utc": "2026-10-30T05:31:04.832492+00:00",
+    "checked_utc": "2026-10-30T05:56:19.971969+00:00",
     "go_version": "go version go1.26.10 windows/amd64",
-    "EVM_source_fingerprint_sha256": "1488596701fcd6eccfc2778f0078c873a1d2d4fb8ce8f76eaad1fb11c1a851c8",
+    "EVM_source_fingerprint_sha256": "104794665d3e4fc5b2d1219d8f9f3ea67eba12b55e6aac771f4c13cb348853f1",
     "modules": {
       ".": {
         "command": "go test -json ./...",
         "exit_code": 0,
-        "passing_test_events": 1022,
-        "top_level_entries": 168,
+        "passing_test_events": 1075,
+        "top_level_entries": 172,
         "required_suites": {
           "TestAllGeneratedABIWrappers": "pass",
           "TestEmbeddedABIProvenance": "pass",
@@ -94,15 +94,21 @@
           "TestUnifiedNFTDelegationOfflineBuildersAndOperator": "pass",
           "TestUnifiedNFTDelegationSavedViews": "pass",
           "TestRetiredMainnetNFTDepositsFailOffline": "pass",
-          "TestDelegationReceiptPreservesRepeatedExitPairing": "pass"
+          "TestDelegationReceiptPreservesRepeatedExitPairing": "pass",
+          "TestUnifiedNFTDelegationRejectsMissingTargetWithoutPanic": "pass",
+          "TestDelegationDecodedLogsOwnReceiptBuffers": "pass"
         }
       },
       "cosmos": {
         "command": "go test -json ./...",
         "exit_code": 0,
-        "passing_test_events": 179,
-        "top_level_entries": 31,
-        "required_suites": {}
+        "passing_test_events": 188,
+        "top_level_entries": 34,
+        "required_suites": {
+          "TestGRPCCancellationDominatesSuccessfulTransport": "pass",
+          "TestRESTCancellationDominatesResponseBoundaries": "pass",
+          "TestRESTTransportAndBodyErrorsRemainRedacted": "pass"
+        }
       }
     },
     "boundary": "offline tests, in-process EVM fixtures, isolated Ethereum dev-chain execution and mocked transports; no public transaction submission or settlement proof"

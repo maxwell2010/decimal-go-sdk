@@ -90,6 +90,9 @@ func (g *GRPC) Query(ctx context.Context, service, method string, request proto.
 	return g.invoke(ctx, service, method, request)
 }
 func (g *GRPC) invoke(ctx context.Context, service, method string, request proto.Message) (*dynamicpb.Message, error) {
+	if ctx == nil {
+		return nil, errors.New("context required")
+	}
 	if g == nil || g.conn == nil {
 		return nil, errors.New("gRPC connection required")
 	}
@@ -113,6 +116,9 @@ func (g *GRPC) invoke(ctx context.Context, service, method string, request proto
 			return nil, ctx.Err()
 		}
 		return nil, errors.New("Cosmos gRPC request failed")
+	}
+	if e := ctx.Err(); e != nil {
+		return nil, e
 	}
 	return response, nil
 }

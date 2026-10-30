@@ -78,7 +78,7 @@ class CompatibilityMatrixTests(unittest.TestCase):
             matrix.simulation_matches(source['profile'], 'transfer(address,uint256)', sim, source, changed)
 
     def test_concurrent_source_change_cannot_record_a_test_pass(self):
-        stdout = '\n'.join(json.dumps({'Action': 'pass', 'Test': name}) for name in capture.REQUIRED)
+        stdout = '\n'.join(json.dumps({'Action': 'pass', 'Test': name}) for name in capture.REQUIRED + capture.COSMOS_REQUIRED)
         result = SimpleNamespace(returncode=0, stdout=stdout, stderr='')
         with patch.object(capture, 'source_fingerprint', side_effect=['before', 'after']), \
                 patch.object(capture.subprocess, 'run', return_value=result):

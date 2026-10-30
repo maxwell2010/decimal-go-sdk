@@ -33,7 +33,12 @@ REQUIRED = ['TestAllGeneratedABIWrappers', 'TestEmbeddedABIProvenance', 'TestVer
             'TestDelegationUpgradeEventsKeepOriginalLayouts',
             'TestDelegationUpgradeEventsRejectBadPaddingAndWrongProfile', 'TestDelegationSavedMainnetObservations',
             'TestUnifiedNFTDelegationOfflineBuildersAndOperator', 'TestUnifiedNFTDelegationSavedViews',
-            'TestRetiredMainnetNFTDepositsFailOffline', 'TestDelegationReceiptPreservesRepeatedExitPairing']
+            'TestRetiredMainnetNFTDepositsFailOffline', 'TestDelegationReceiptPreservesRepeatedExitPairing',
+            'TestUnifiedNFTDelegationRejectsMissingTargetWithoutPanic', 'TestDelegationDecodedLogsOwnReceiptBuffers']
+
+COSMOS_REQUIRED = ['TestGRPCCancellationDominatesSuccessfulTransport',
+                   'TestRESTCancellationDominatesResponseBoundaries',
+                   'TestRESTTransportAndBodyErrorsRemainRedacted']
 
 
 def source_fingerprint(root=ROOT):
@@ -71,11 +76,12 @@ def main():
         events = [json.loads(line) for line in result.stdout.splitlines()]
         passed = [e for e in events if e.get('Action') == 'pass' and 'Test' in e]
         suites = {e['Test'] for e in passed if '/' not in e['Test']}
-        if module == '.' and not set(REQUIRED).issubset(suites):
+        required = REQUIRED if module == '.' else COSMOS_REQUIRED
+        if not set(required).issubset(suites):
             raise SystemExit('Required compatibility suites did not execute')
         modules[module] = {'command': 'go test -json ./...', 'exit_code': 0,
                            'passing_test_events': len(passed), 'top_level_entries': len(suites),
-                           'required_suites': {name: 'pass' for name in REQUIRED} if module == '.' else {}}
+                           'required_suites': {name: 'pass' for name in required}}
     after = source_fingerprint()
     if before != after:
         raise SystemExit('Source changed while tests ran; validation artifact not updated')

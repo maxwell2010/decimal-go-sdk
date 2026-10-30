@@ -39,6 +39,8 @@ jobs:
           go test -run '^$' -fuzz '^FuzzChecksEventDecoding$' -fuzztime 7s -parallel 2 .
           go test -run '^$' -fuzz '^FuzzChecksReceiptDecoding$' -fuzztime 7s -parallel 2 .
           go test -run '^$' -fuzz '^FuzzChecksSignatureRecovery$' -fuzztime 7s -parallel 2 .
+          go test -run '^$' -fuzz '^FuzzDelegationStakeDecoding$' -fuzztime 7s -parallel 2 .
+          go test -run '^$' -fuzz '^FuzzDelegationEventsAndReceipts$' -fuzztime 7s -parallel 2 .
       - run: python -B tools/release.py
   cosmos:
     strategy:
@@ -79,3 +81,5 @@ jobs:
           npm ci --prefix .tools/local-evm-compiler --ignore-scripts --no-audit --no-fund
           python -B tools/rebuild_local_evm_fixture.py .tools/local-evm-compiler/node_modules/solc --check
           python -B tools/rebuild_permit_fixture.py .tools/local-evm-compiler/node_modules/solc --check
+          curl --fail --location --retry 3 --max-time 30 --output .tools/DecimalDelegation.go https://raw.githubusercontent.com/decimalteam/go-smart-node/a46cb48d7965c1a64a495cebb22e735dfe4b9da3/contracts/delegation/DecimalDelegation.go
+          python -B tools/rebuild_delegation_compat.py .tools/DecimalDelegation.go --check

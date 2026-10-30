@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.1.0-preview.12 - 2026-10-30
+
+- Reject nil/empty/zero-target unified NFT wrappers, including approval helper misuse that could otherwise encode ERC721 revoke calldata.
+- Decoded delegation events own receipt buffers; caller edits cannot mutate the source receipt or sibling results. Added bounded getter/event/receipt fuzz properties.
+- Cosmos gRPC/REST preserve cancellation after successful transports and REST body/decode phases, close bodies and redact transport/body diagnostics.
+- Reproducible recovery ABI extraction from exact pinned official Go-binding bytes, stricter capture requirements and CI fuzz/reproduction steps. Verified published module rollback preview.11 -> preview.10 -> preview.11.
+
 ## v0.1.0-preview.11 - 2026-10-30
 
 - Decode official October 2026 Delegation Stake getter responses with seven or eight fields, including frozen tuples and arrays. Preserve missing hold start as unknown, separate from a reported zero and from amount.

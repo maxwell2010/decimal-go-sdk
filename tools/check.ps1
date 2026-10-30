@@ -44,7 +44,7 @@ if ($Fuzz) {
         if ($LASTEXITCODE -ne 0) { throw 'Amount fuzz test failed' }
         go test -fuzz '^FuzzSignatureValidation$' -fuzztime 10s -parallel 2 .
         if ($LASTEXITCODE -ne 0) { throw 'Signature fuzz test failed' }
-        foreach ($sdkDecoder in @('FuzzChecksEventDecoding', 'FuzzChecksReceiptDecoding', 'FuzzChecksSignatureRecovery')) {
+        foreach ($sdkDecoder in @('FuzzChecksEventDecoding', 'FuzzChecksReceiptDecoding', 'FuzzChecksSignatureRecovery', 'FuzzDelegationStakeDecoding', 'FuzzDelegationEventsAndReceipts')) {
             go test -run '^$' -fuzz $sdkDecoder -fuzztime 7s -parallel 2 .
             if ($LASTEXITCODE -ne 0) { throw "Decoder fuzz test failed: $sdkDecoder" }
         }

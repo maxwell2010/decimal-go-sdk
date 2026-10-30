@@ -1,13 +1,13 @@
 {
-  "checked_utc": "2026-10-30T05:31:04.832492+00:00",
+  "checked_utc": "2026-10-30T05:56:19.971969+00:00",
   "go_version": "go version go1.26.10 windows/amd64",
-  "EVM_source_fingerprint_sha256": "1488596701fcd6eccfc2778f0078c873a1d2d4fb8ce8f76eaad1fb11c1a851c8",
+  "EVM_source_fingerprint_sha256": "104794665d3e4fc5b2d1219d8f9f3ea67eba12b55e6aac771f4c13cb348853f1",
   "modules": {
     ".": {
       "command": "go test -json ./...",
       "exit_code": 0,
-      "passing_test_events": 1022,
-      "top_level_entries": 168,
+      "passing_test_events": 1075,
+      "top_level_entries": 172,
       "required_suites": {
         "TestAllGeneratedABIWrappers": "pass",
         "TestEmbeddedABIProvenance": "pass",
@@ -58,15 +58,21 @@
         "TestUnifiedNFTDelegationOfflineBuildersAndOperator": "pass",
         "TestUnifiedNFTDelegationSavedViews": "pass",
         "TestRetiredMainnetNFTDepositsFailOffline": "pass",
-        "TestDelegationReceiptPreservesRepeatedExitPairing": "pass"
+        "TestDelegationReceiptPreservesRepeatedExitPairing": "pass",
+        "TestUnifiedNFTDelegationRejectsMissingTargetWithoutPanic": "pass",
+        "TestDelegationDecodedLogsOwnReceiptBuffers": "pass"
       }
     },
     "cosmos": {
       "command": "go test -json ./...",
       "exit_code": 0,
-      "passing_test_events": 179,
-      "top_level_entries": 31,
-      "required_suites": {}
+      "passing_test_events": 188,
+      "top_level_entries": 34,
+      "required_suites": {
+        "TestGRPCCancellationDominatesSuccessfulTransport": "pass",
+        "TestRESTCancellationDominatesResponseBoundaries": "pass",
+        "TestRESTTransportAndBodyErrorsRemainRedacted": "pass"
+      }
     }
   },
   "boundary": "offline tests, in-process EVM fixtures, isolated Ethereum dev-chain execution and mocked transports; no public transaction submission or settlement proof"

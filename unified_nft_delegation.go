@@ -25,7 +25,27 @@ func (c *Client) UnifiedNFTDelegation(address common.Address) (*UnifiedNFTDelega
 }
 
 // ApprovalOperator is the actual action destination, never a legacy NFT address.
-func (d *UnifiedNFTDelegation) ApprovalOperator() common.Address { return d.Address }
+func (d *UnifiedNFTDelegation) ApprovalOperator() common.Address {
+	if d == nil || d.Contract == nil {
+		return common.Address{}
+	}
+	return d.Address
+}
+
+func (d *UnifiedNFTDelegation) validateTarget() error {
+	if d == nil || d.Contract == nil || d.Address == (common.Address{}) {
+		return errors.New("unified delegation target required")
+	}
+	return nil
+}
+
+// Build validates the selected destination before building an offline intent.
+func (d *UnifiedNFTDelegation) Build(signature string, value *big.Int, args ...any) (Call, error) {
+	if err := d.validateTarget(); err != nil {
+		return Call{}, err
+	}
+	return d.Contract.Build(signature, value, args...)
+}
 
 // NFTStake is the separate official ten-field NFT tuple, not a Stake7/8.
 type NFTStake struct {
@@ -43,6 +63,9 @@ type NFTStake struct {
 
 func (d *UnifiedNFTDelegation) ReadNFTStakeAt(ctx context.Context, block *big.Int, nft common.Address, tokenID *big.Int, delegator, validator common.Address, holdTimestamp *big.Int) (NFTStake, error) {
 	var result NFTStake
+	if err := d.validateTarget(); err != nil {
+		return result, err
+	}
 	if block == nil || block.Sign() < 0 {
 		return result, errors.New("explicit snapshot block required")
 	}
@@ -54,6 +77,9 @@ func (d *UnifiedNFTDelegation) ReadNFTStakeAt(ctx context.Context, block *big.In
 }
 
 func (d *UnifiedNFTDelegation) ReadNFTStakeIDAt(ctx context.Context, block *big.Int, nft common.Address, tokenID *big.Int, delegator, validator common.Address, holdTimestamp *big.Int) ([32]byte, error) {
+	if err := d.validateTarget(); err != nil {
+		return [32]byte{}, err
+	}
 	if block == nil || block.Sign() < 0 {
 		return [32]byte{}, errors.New("explicit snapshot block required")
 	}
@@ -131,6 +157,9 @@ func (d *UnifiedNFTDelegation) BuildTransferNFT1155Hold(arg0 common.Address, arg
 
 // BuildERC721Approval builds a token-specific approval for this unified operator.
 func (d *UnifiedNFTDelegation) BuildERC721Approval(collection common.Address, tokenID *big.Int) (Call, error) {
+	if err := d.validateTarget(); err != nil {
+		return Call{}, err
+	}
 	token, e := d.client.ERC721(collection)
 	if e != nil {
 		return Call{}, e
@@ -141,6 +170,9 @@ func (d *UnifiedNFTDelegation) BuildERC721Approval(collection common.Address, to
 // BuildERC1155ApprovalForAll builds a collection-wide grant to this unified operator.
 // Review this broader approval separately from the action. Nothing is submitted.
 func (d *UnifiedNFTDelegation) BuildERC1155ApprovalForAll(collection common.Address) (Call, error) {
+	if err := d.validateTarget(); err != nil {
+		return Call{}, err
+	}
 	token, e := d.client.ERC1155(collection)
 	if e != nil {
 		return Call{}, e

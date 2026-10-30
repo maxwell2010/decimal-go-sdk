@@ -11,6 +11,13 @@ import (
 // Receipt logs retain their original topic and tuple layout. Node hook
 // normalization does not change the receipt returned by eth_getTransactionReceipt.
 func decodeDelegationUpgradeLog(legacy abi.ABI, log types.Log, allowUpgrade bool) (Event, error) {
+	if len(log.Topics) == 0 {
+		return Event{}, errors.New("delegation event topic required")
+	}
+	// Keep returned raw logs and any decoded dynamic values independent of the
+	// caller's receipt buffers, including when results are edited after decoding.
+	log.Topics = append(log.Topics[:0:0], log.Topics...)
+	log.Data = append(log.Data[:0:0], log.Data...)
 	ev, err := legacy.EventByID(log.Topics[0])
 	if err != nil {
 		if !allowUpgrade {

@@ -34,6 +34,12 @@ func NewREST(base string, h *http.Client) (*REST, error) {
 	return &REST{u, &client}, nil
 }
 func (r *REST) request(ctx context.Context, method, path string, q url.Values, body, out any) error {
+	if ctx == nil {
+		return errors.New("context required")
+	}
+	if e := ctx.Err(); e != nil {
+		return e
+	}
 	u := *r.base
 	u.Path += path
 	u.RawQuery = q.Encode()
@@ -58,15 +64,25 @@ func (r *REST) request(ctx context.Context, method, path string, q url.Values, b
 		return errors.New("Cosmos REST request failed")
 	}
 	defer res.Body.Close()
+	if e := ctx.Err(); e != nil {
+		return e
+	}
 	if res.StatusCode < 200 || res.StatusCode >= 300 {
 		return errors.New("Cosmos REST non-success HTTP status")
 	}
 	const limit = 4 << 20
 	raw, e := io.ReadAll(io.LimitReader(res.Body, limit+1))
+	if cancelled := ctx.Err(); cancelled != nil {
+		return cancelled
+	}
 	if e != nil || len(raw) > limit {
 		return errors.New("Cosmos REST response exceeds limit")
 	}
-	if e = json.Unmarshal(raw, out); e != nil {
+	e = json.Unmarshal(raw, out)
+	if cancelled := ctx.Err(); cancelled != nil {
+		return cancelled
+	}
+	if e != nil {
 		return errors.New("invalid Cosmos REST JSON")
 	}
 	return nil

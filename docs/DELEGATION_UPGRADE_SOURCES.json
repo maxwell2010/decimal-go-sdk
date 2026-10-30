@@ -31,7 +31,7 @@
   "compatibility_abi": {
     "path": "delegation_compat/Delegation20261030.json",
     "sha256": "600ea8ed2c542b284e7eadf222e738c13663f029becf22b056b56678c5948fa0",
-    "extraction": "JSON string literal ABI from DelegationMetaData in the pinned contracts/delegation/DecimalDelegation.go; parsed then serialized as JSON with indent=2 and final LF"
+    "extraction": "JSON string literal ABI from DelegationMetaData in the pinned contracts/delegation/DecimalDelegation.go; parsed then serialized as JSON with compact separators (comma, colon) and final LF"
   },
   "saved_rpc_fixtures": [
     {

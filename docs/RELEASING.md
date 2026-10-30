@@ -36,7 +36,7 @@ The tool reads a clean committed Git HEAD and emits versioned ZIP/TAR.GZ plus SH
 
 ## Publish
 
-Create immutable tags `v0.1.0-preview.11` and `cosmos/v0.1.0-preview.11` at the same reviewed commit; the nested module needs its own tag. Create a GitHub prerelease on the root tag, attaching only the two reviewed archives and SHA256SUMS. Use a new version for every correction; do not overwrite published tags/assets. GitHub's prerelease flag does not change Go version ordering, so the version also carries a SemVer preview suffix.
+Create immutable tags `v0.1.0-preview.12` and `cosmos/v0.1.0-preview.12` at the same reviewed commit; the nested module needs its own tag. Create a GitHub prerelease on the root tag, attaching only the two reviewed archives and SHA256SUMS. Use a new version for every correction; do not overwrite published tags/assets. GitHub's prerelease flag does not change Go version ordering, so the version also carries a SemVer preview suffix.
 
 After publication, verify unauthenticated repository/asset downloads, compare SHA256SUMS and test `go get` for each module in fresh consumer modules without local replace directives. Check the public GitHub Actions results for the published commit. The root release is a library source release, not a Python wheel or a claim of funded-wallet acceptance. No network transaction campaign is part of publication.
 
@@ -49,5 +49,7 @@ The manifest includes previews and is independent of GitHub releases/latest and 
 Documentation coverage is executable: tools/generate_transaction_examples.py --check and Go tests enforce all 260 ABI builders; cosmos/examples/messages tests cover 43 named schemas. Keep the generated artifacts reproducible when changing interfaces.
 
 ## Refresh read-only compatibility evidence
+
+Recovery Delegation ABI reproduction uses the exact official Go-binding at the pinned commit, not its adjacent stale JSON artifact. With the source file available locally, run `python -B tools/rebuild_delegation_compat.py path/to/DecimalDelegation.go --check`. The tool verifies fixed source and ABI hashes before comparing/writing; it executes no official code. The fixture CI job retrieves that immutable source and performs the same check. Delegation getter/event fuzz campaigns are included in `tools/check.ps1 -Fuzz` and Linux CI.
 
 Use the bounded inspectors with new output paths, review the snapshots and their raw RPC number/hash identity, then update the canonical evidence files. Run `python -B tools/capture_compatibility_tests.py` and `python -B tools/build_compatibility_matrix.py`. The first records actual Go test outcomes and rejects concurrent source changes; the second rejects mismatched snapshots, stale source fingerprints and unrelated simulation payloads. `python -B tools/build_compatibility_matrix.py --check` is offline. Never promote a getter response, historical event or successful self-transfer eth_call to signed-transaction acceptance. A snapshot refresh is an explicit maintainer action, not background polling or a funded-wallet campaign.
