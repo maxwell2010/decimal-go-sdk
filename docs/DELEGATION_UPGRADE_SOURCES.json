@@ -1,0 +1,53 @@
+{
+  "repository": "https://github.com/decimalteam/go-smart-node",
+  "commit": "a46cb48d7965c1a64a495cebb22e735dfe4b9da3",
+  "files": [
+    {
+      "path": "contracts/delegation/DecimalDelegation.go",
+      "url": "https://github.com/decimalteam/go-smart-node/blob/a46cb48d7965c1a64a495cebb22e735dfe4b9da3/contracts/delegation/DecimalDelegation.go",
+      "source_sha256": "248199aadf86bb4bd6836b70f13f0784b976e7edf65e7908f2c34e6bebd714bb"
+    },
+    {
+      "path": "contracts/delegationNft/DecimalDelegationNFT.go",
+      "url": "https://github.com/decimalteam/go-smart-node/blob/a46cb48d7965c1a64a495cebb22e735dfe4b9da3/contracts/delegationNft/DecimalDelegationNFT.go",
+      "source_sha256": "496b7e40ced1805d3630a148b4219188d16a90ff94e4e64d4d445413cce8aac3"
+    },
+    {
+      "path": "app/hold_start_backfill.go",
+      "url": "https://github.com/decimalteam/go-smart-node/blob/a46cb48d7965c1a64a495cebb22e735dfe4b9da3/app/hold_start_backfill.go",
+      "source_sha256": "ac8f191efbca421c6348a2f7d228f41d6c8bca691545152d137244f59e749910"
+    },
+    {
+      "path": "x/validator/keeper/evm_hooks_legacy.go",
+      "url": "https://github.com/decimalteam/go-smart-node/blob/a46cb48d7965c1a64a495cebb22e735dfe4b9da3/x/validator/keeper/evm_hooks_legacy.go",
+      "source_sha256": "af280ce421f9a3b34c8221838d446e91f4f99be2b7eece72eb74c8ee4d3cd221"
+    },
+    {
+      "path": "contracts/delegationv7/DecimalDelegation.go",
+      "url": "https://github.com/decimalteam/go-smart-node/blob/a46cb48d7965c1a64a495cebb22e735dfe4b9da3/contracts/delegationv7/DecimalDelegation.go",
+      "source_sha256": "220c4eea784084ffd1bdc2d8772ffda9bac31574476400a87c77e2c1e385c81a"
+    }
+  ],
+  "compatibility_abi": {
+    "path": "delegation_compat/Delegation20261030.json",
+    "sha256": "600ea8ed2c542b284e7eadf222e738c13663f029becf22b056b56678c5948fa0",
+    "extraction": "JSON string literal ABI from DelegationMetaData in the pinned contracts/delegation/DecimalDelegation.go; parsed then serialized as JSON with indent=2 and final LF"
+  },
+  "saved_rpc_fixtures": [
+    {
+      "path": "testdata/delegation/mainnet_stakes_post_recovery.json",
+      "sha256": "b4f96a43bb61e00069a8d9ee803e1ceb7f3bee3816719b840a4412a0ae39c2a5",
+      "provenance": "Existing read-only mainnet RPC fixture supplied by coordinating project; copied byte-for-byte, not independently refetched during this patch"
+    },
+    {
+      "path": "testdata/delegation/mainnet_delegation_post_recovery.json",
+      "sha256": "a3fbc272c869de52ecb2e95db94b08938db8005eba48e67e7ddab823079ae17f",
+      "provenance": "Existing read-only mainnet RPC fixture supplied by coordinating project; copied byte-for-byte, not independently refetched during this patch"
+    },
+    {
+      "path": "testdata/delegation/mainnet_nft_views_post_recovery.json",
+      "sha256": "bffb688fd859422f562260f8c55a090330c014c520f2db561d7e4ae6fe5a98d7",
+      "provenance": "Existing read-only empty-position mainnet RPC fixture supplied by coordinating project; copied byte-for-byte, not independently refetched during this patch"
+    }
+  ]
+}

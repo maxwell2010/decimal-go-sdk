@@ -81,6 +81,8 @@ def go_type(x, prefix, structs):
         i = t.rindex('[')
         return t[i:] + go_type({**x, 'type': t[:i]}, prefix, structs)
     if t == 'tuple':
+        if prefix.startswith(('DelegationGetStakeOutput', 'DelegationGetStakesOutput', 'DelegationGetHoldStakeOutput', 'DelegationGetHoldStakeDELOutput', 'DelegationGetFrozenStakeOutput', 'DelegationGetFrozenStakesOutput')) and [c.get('name') for c in x['components']] == ['validator','delegator','token','amount','tokenId','tokenType','holdTimestamp']:
+            x = {**x, 'components': [*x['components'], {'name':'holdStartTime','type':'uint256'}]}
         fields=[]
         used=set()
         for i,c in enumerate(x['components']):

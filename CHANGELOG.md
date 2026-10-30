@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.1.0-preview.11 - 2026-10-30
+
+- Decode official October 2026 Delegation Stake getter responses with seven or eight fields, including frozen tuples and arrays. Preserve missing hold start as unknown, separate from a reported zero and from amount.
+- Decode original legacy/current Delegation event topics with strict canonical data and topic validation. Preserve legacy NFT profiles, transaction routes and caller-supplied ABIs.
+- Explicit unified NFT delegation API with separate ten-field NFTStake views, thirteen offline user-action builders and destination-bound ERC721/ERC1155 approval calldata. Retired mainnet legacy deposit calls fail offline while historical reads/exits remain available.
+- Receipt decoding filters contract addresses and retains repeated exit stake IDs paired with their original indexes and order. Saved mainnet NFT empty-position views are tested without claiming a funded lifecycle.
+- Pinned official source provenance and offline upgrade regressions; no public transactions or deployment.
+
 ## v0.1.0-preview.10 - 2026-10-29
 
 - Actual pinned reserve runtime initialization, buy/sell aliases, exact-output refunds, burn, balance/supply/reserve/event accounting and rollback on selected limits.

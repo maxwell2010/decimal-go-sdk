@@ -159,7 +159,7 @@ func TestFrozenTupleReadAndOwnerMismatch(t *testing.T) {
 	a, _ := loadABI("Delegation")
 	tuple := DelegationGetFrozenStakeOutput0{Stake: DelegationGetFrozenStakeOutput0Stake{Validator: testAddress, Delegator: testAddress, Token: testAddress, Amount: big.NewInt(3), TokenId: new(big.Int), HoldTimestamp: new(big.Int)}, FreezeStatus: 1, FreezeType: 1, UnfreezeTimestamp: big.NewInt(123)}
 	f.call = func(_ ethereum.CallMsg, _ *big.Int) ([]byte, error) {
-		return a.Methods["getFrozenStake"].Outputs.Pack(tuple)
+		return packLegacyStakeFixture(a.Methods["getFrozenStake"].Outputs, tuple)
 	}
 	r, e := d.ReadGetFrozenStake(context.Background(), big.NewInt(1))
 	if e != nil || r.Value0.Stake.Amount.Int64() != 3 {
@@ -274,7 +274,7 @@ func TestFrozenBatchUsesOneCallAndPinnedBlock(t *testing.T) {
 		if string(m.Data[:4]) != string(a.Methods["getFrozenStakes"].ID) {
 			t.Error("single getter used")
 		}
-		return a.Methods["getFrozenStakes"].Outputs.Pack([]DelegationGetFrozenStakesOutput0{state, state})
+		return packLegacyStakeFixture(a.Methods["getFrozenStakes"].Outputs, []DelegationGetFrozenStakesOutput0{state, state})
 	}
 	rows, e := d.FrozenWithdrawalsBatch(context.Background(), testAddress, []*big.Int{big.NewInt(7), big.NewInt(8)}, big.NewInt(42))
 	if e != nil || len(rows) != 2 || calls != 1 {

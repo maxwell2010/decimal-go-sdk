@@ -147,6 +147,12 @@ func (c *Contract) Build(signature string, value *big.Int, args ...any) (Call, e
 	if e != nil {
 		return Call{}, e
 	}
+	if c.override == nil && c.Profile == "DelegationNFT" && c.client != nil &&
+		c.client.cfg.ChainID != nil && c.client.cfg.ChainID.Cmp(big.NewInt(75)) == 0 &&
+		c.Address == common.HexToAddress("0xe45adfcc739a0d10ce9462b58866c9a1a06035e2") &&
+		(strings.HasPrefix(m.RawName, "delegate") || m.RawName == "hold") {
+		return Call{}, errors.New("retired mainnet NFT delegation accepts historical reads and exits only; use UnifiedNFTDelegation for new deposits")
+	}
 	if m.IsConstant() {
 		return Call{}, errors.New("read method cannot build a transaction")
 	}
@@ -252,7 +258,15 @@ func (c *Contract) ReadFromAt(ctx context.Context, from common.Address, block *b
 	}
 	// ABI dynamic bytes may refer into the encoded response. Own that response
 	// so a backend cannot change an already returned result by reusing buffers.
-	values, e := m.Outputs.Unpack(append([]byte(nil), b...))
+	owned := append([]byte(nil), b...)
+	var values []any
+	if c.Profile == "UnifiedNFTDelegation20261030" {
+		values, e = canonicalDelegationUnpack(m.Outputs, owned)
+	} else if c.override == nil && c.Profile == "Delegation" {
+		values, e = unpackDelegationRead(c.Profile, m, owned)
+	} else {
+		values, e = m.Outputs.Unpack(owned)
+	}
 	if cancelled := ctx.Err(); cancelled != nil {
 		return nil, cancelled
 	}
@@ -273,6 +287,9 @@ func (c *Contract) DecodeLog(log types.Log) (Event, error) {
 	a, e := c.contractABI()
 	if e != nil {
 		return Event{}, e
+	}
+	if (c.override == nil && (c.Profile == "Delegation" || c.Profile == "DelegationNFT")) || c.Profile == "UnifiedNFTDelegation20261030" {
+		return decodeDelegationUpgradeLog(a, log, c.Profile == "Delegation")
 	}
 	ev, e := a.EventByID(log.Topics[0])
 	if e != nil {

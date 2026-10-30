@@ -1,13 +1,13 @@
 {
-  "checked_utc": "2026-10-29T11:25:24.115046+00:00",
+  "checked_utc": "2026-10-30T05:31:04.832492+00:00",
   "go_version": "go version go1.26.10 windows/amd64",
-  "EVM_source_fingerprint_sha256": "9bdb96f3c9aee3bb837d4d6c5a11751b355ef9c902d9e52ce35a1b21513ea0ae",
+  "EVM_source_fingerprint_sha256": "1488596701fcd6eccfc2778f0078c873a1d2d4fb8ce8f76eaad1fb11c1a851c8",
   "modules": {
     ".": {
       "command": "go test -json ./...",
       "exit_code": 0,
-      "passing_test_events": 947,
-      "top_level_entries": 155,
+      "passing_test_events": 1022,
+      "top_level_entries": 168,
       "required_suites": {
         "TestAllGeneratedABIWrappers": "pass",
         "TestEmbeddedABIProvenance": "pass",
@@ -47,7 +47,18 @@
         "TestLocalEVMReserveCurrentPriceRationalVectors": "pass",
         "TestLocalEVMReserveQuoteOverloadsMatchState": "pass",
         "TestLocalEVMReserveBeforeQuotesCreditedBalanceContext": "pass",
-        "TestLocalReserveSignedChainEconomyAndActualFees": "pass"
+        "TestLocalReserveSignedChainEconomyAndActualFees": "pass",
+        "TestDelegationStakeCompatibilityLayouts": "pass",
+        "TestDelegationStakeCompatibilityArraysAndMalformed": "pass",
+        "TestDelegationStakeCompatibilityTypedReaders": "pass",
+        "TestDelegationUpgradeABIProvenance": "pass",
+        "TestDelegationUpgradeEventsKeepOriginalLayouts": "pass",
+        "TestDelegationUpgradeEventsRejectBadPaddingAndWrongProfile": "pass",
+        "TestDelegationSavedMainnetObservations": "pass",
+        "TestUnifiedNFTDelegationOfflineBuildersAndOperator": "pass",
+        "TestUnifiedNFTDelegationSavedViews": "pass",
+        "TestRetiredMainnetNFTDepositsFailOffline": "pass",
+        "TestDelegationReceiptPreservesRepeatedExitPairing": "pass"
       }
     },
     "cosmos": {

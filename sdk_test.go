@@ -372,7 +372,7 @@ func TestRegistryUsesNetworkAndTupleRead(t *testing.T) {
 		if block == nil || block.Int64() != 42 {
 			t.Error("snapshot block not passed")
 		}
-		return abi.Methods["getFrozenStake"].Outputs.Pack(tuple)
+		return packLegacyStakeFixture(abi.Methods["getFrozenStake"].Outputs, tuple)
 	}
 	rows, e := d.FrozenWithdrawals(context.Background(), testAddress, []*big.Int{big.NewInt(7), big.NewInt(7)}, big.NewInt(42))
 	if e != nil || len(rows) != 1 || rows[0].State.Stake.Amount.Int64() != 3 {

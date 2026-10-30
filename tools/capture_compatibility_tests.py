@@ -27,7 +27,13 @@ REQUIRED = ['TestAllGeneratedABIWrappers', 'TestEmbeddedABIProvenance', 'TestVer
             'TestLocalEVMReserveNonlinearQuoteExecutionConcordance', 'TestLocalEVMReserveExactOutputNonlinearConcordance',
             'TestLocalEVMReserveInitializationBoundaries', 'TestLocalEVMReserveAdministrationBoundaries',
             'TestLocalEVMReserveCurrentPriceRationalVectors', 'TestLocalEVMReserveQuoteOverloadsMatchState',
-            'TestLocalEVMReserveBeforeQuotesCreditedBalanceContext', 'TestLocalReserveSignedChainEconomyAndActualFees']
+            'TestLocalEVMReserveBeforeQuotesCreditedBalanceContext', 'TestLocalReserveSignedChainEconomyAndActualFees',
+            'TestDelegationStakeCompatibilityLayouts', 'TestDelegationStakeCompatibilityArraysAndMalformed',
+            'TestDelegationStakeCompatibilityTypedReaders', 'TestDelegationUpgradeABIProvenance',
+            'TestDelegationUpgradeEventsKeepOriginalLayouts',
+            'TestDelegationUpgradeEventsRejectBadPaddingAndWrongProfile', 'TestDelegationSavedMainnetObservations',
+            'TestUnifiedNFTDelegationOfflineBuildersAndOperator', 'TestUnifiedNFTDelegationSavedViews',
+            'TestRetiredMainnetNFTDepositsFailOffline', 'TestDelegationReceiptPreservesRepeatedExitPairing']
 
 
 def source_fingerprint(root=ROOT):
@@ -37,6 +43,7 @@ def source_fingerprint(root=ROOT):
                           and not d.startswith('.generator-audit-')]
         paths += [Path(parent) / n for n in files if n.endswith('.go')]
     paths += list((root / 'abi').glob('*.json'))
+    paths += list((root / 'delegation_compat').glob('*.json'))
     paths += [root / 'go.mod', root / 'go.sum']
     paths += [root / 'docs' / n for n in ['contract-catalog.json', 'deployment-catalog.json',
               'additional-deployment-catalog.json', 'token-deployment-catalog.json',
@@ -44,6 +51,8 @@ def source_fingerprint(root=ROOT):
               'checks-js-vectors.json']]
     paths.append(root / 'docs/compatibility/checks-testnet-receipts.json')
     paths += [p for p in (root / 'testdata/evm').glob('*') if p.is_file()]
+    paths += [p for p in (root / 'testdata/delegation').glob('*.json')]
+    paths.append(root / 'docs/DELEGATION_UPGRADE_SOURCES.json')
     h = hashlib.sha256()
     for path in sorted(set(paths), key=lambda p: p.relative_to(root).as_posix()):
         h.update(path.relative_to(root).as_posix().encode() + b'\0' + path.read_bytes() + b'\0')

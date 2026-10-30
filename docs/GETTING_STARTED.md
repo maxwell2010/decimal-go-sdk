@@ -2,17 +2,17 @@
 
 [Install and update with one permanent command](INSTALL.md) | [All ABI write examples](TRANSACTIONS.md) | [Types 0/1/2](TRANSACTION_ENVELOPES.md) | [Cosmos messages](../cosmos/TRANSACTIONS.md)
 
-Requires Go 1.26.10 or newer. This is preview version `v0.1.0-preview.10`.
+Requires Go 1.26.10 or newer. This is preview version `v0.1.0-preview.11`.
 
 ## Install
 
-Run in a new directory. The nested module has its own release tag `cosmos/v0.1.0-preview.10`; Go selects it using the module path and ordinary version below.
+Run in a new directory. The nested module has its own release tag `cosmos/v0.1.0-preview.11`; Go selects it using the module path and ordinary version below.
 
 ```sh
 go mod init example.com/decimal-demo
-go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.10
+go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.11
 # Optional independent Cosmos module:
-go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.10
+go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.11
 ```
 ## Build calls offline
 

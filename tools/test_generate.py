@@ -9,6 +9,21 @@ import generate
 from generate import normalize, exported, verify_source_file
 
 class ArtifactValidation(unittest.TestCase):
+    @unittest.skipUnless(shutil.which('gofmt'), 'gofmt unavailable')
+    def test_delegation_compatibility_models_are_reproducible(self):
+        for profile in ('Delegation', 'DelegationNFT'):
+            entries = json.loads((generate.ROOT / 'abi' / (profile + '.json')).read_text())
+            original = json.dumps(entries)
+            with tempfile.TemporaryDirectory() as tmp, patch.object(generate, 'ROOT', Path(tmp)):
+                generate.generate(profile, entries)
+                output = Path(tmp) / (profile.lower() + '_generated.go')
+                subprocess.run(['gofmt', '-w', str(output)], check=True)
+                rendered = output.read_text()
+            expected = (generate.ROOT / (profile.lower() + '_generated.go')).read_text()
+            self.assertEqual(rendered, expected)
+            self.assertEqual(json.dumps(entries), original)
+            self.assertEqual(rendered.count('`abi:"holdStartTime"`'), 6 if profile == 'Delegation' else 0)
+
     def test_wrapped_and_double_encoded(self):
         abi=[{'type':'function','name':'transfer','inputs':[{'name':'to','type':'address'}],'outputs':[]}]
         self.assertEqual(normalize(json.dumps({'abi':abi})),abi)

@@ -432,6 +432,7 @@ type DelegationGetFrozenStakeOutput0Stake struct {
 	TokenId       *big.Int       `abi:"tokenId"`
 	TokenType     uint8          `abi:"tokenType"`
 	HoldTimestamp *big.Int       `abi:"holdTimestamp"`
+	HoldStartTime *big.Int       `abi:"holdStartTime"`
 }
 type DelegationGetFrozenStakeOutput0 struct {
 	Stake             DelegationGetFrozenStakeOutput0Stake `abi:"stake"`
@@ -450,6 +451,7 @@ type DelegationGetFrozenStakesOutput0Stake struct {
 	TokenId       *big.Int       `abi:"tokenId"`
 	TokenType     uint8          `abi:"tokenType"`
 	HoldTimestamp *big.Int       `abi:"holdTimestamp"`
+	HoldStartTime *big.Int       `abi:"holdStartTime"`
 }
 type DelegationGetFrozenStakesOutput0 struct {
 	Stake             DelegationGetFrozenStakesOutput0Stake `abi:"stake"`
@@ -468,6 +470,7 @@ type DelegationGetHoldStakeOutput0 struct {
 	TokenId       *big.Int       `abi:"tokenId"`
 	TokenType     uint8          `abi:"tokenType"`
 	HoldTimestamp *big.Int       `abi:"holdTimestamp"`
+	HoldStartTime *big.Int       `abi:"holdStartTime"`
 }
 type DelegationGetHoldStakeResult struct{ Value0 DelegationGetHoldStakeOutput0 }
 type DelegationGetHoldStakeDELOutput0 struct {
@@ -478,6 +481,7 @@ type DelegationGetHoldStakeDELOutput0 struct {
 	TokenId       *big.Int       `abi:"tokenId"`
 	TokenType     uint8          `abi:"tokenType"`
 	HoldTimestamp *big.Int       `abi:"holdTimestamp"`
+	HoldStartTime *big.Int       `abi:"holdStartTime"`
 }
 type DelegationGetHoldStakeDELResult struct {
 	Value0 DelegationGetHoldStakeDELOutput0
@@ -492,6 +496,7 @@ type DelegationGetStakeOutput0 struct {
 	TokenId       *big.Int       `abi:"tokenId"`
 	TokenType     uint8          `abi:"tokenType"`
 	HoldTimestamp *big.Int       `abi:"holdTimestamp"`
+	HoldStartTime *big.Int       `abi:"holdStartTime"`
 }
 type DelegationGetStakeResult struct{ Value0 DelegationGetStakeOutput0 }
 type DelegationGetStakeIdResult struct{ Value0 [32]byte }
@@ -504,6 +509,7 @@ type DelegationGetStakesOutput0 struct {
 	TokenId       *big.Int       `abi:"tokenId"`
 	TokenType     uint8          `abi:"tokenType"`
 	HoldTimestamp *big.Int       `abi:"holdTimestamp"`
+	HoldStartTime *big.Int       `abi:"holdStartTime"`
 }
 type DelegationGetStakesResult struct{ Value0 []DelegationGetStakesOutput0 }
 type DelegationGetValidatorReserveOutput0 struct {
