@@ -120,7 +120,13 @@ func (g *GRPC) invoke(ctx context.Context, service, method string, request proto
 	if e := ctx.Err(); e != nil {
 		return nil, e
 	}
-	return response, nil
+	// A caller-supplied connection may retain its reply buffer. Return our own
+	// snapshot so later backend reuse cannot mutate an already returned query.
+	owned := proto.Clone(response).(*dynamicpb.Message)
+	if e := ctx.Err(); e != nil {
+		return nil, e
+	}
+	return owned, nil
 }
 func (g *GRPC) Simulate(ctx context.Context, raw []byte) (GasInfo, error) {
 	if _, e := Decode("cosmos.tx.v1beta1.TxRaw", raw); e != nil {

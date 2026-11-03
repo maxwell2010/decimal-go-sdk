@@ -4,7 +4,7 @@ This is an observation matrix, not a readiness percentage. Runtime code, getter 
 
 [JSON matrix](compatibility/matrix.json) | [Deployments](DEPLOYMENT_COMPATIBILITY.md) | [Simulations](SIMULATION_COMPATIBILITY.md) | [Checks history](CHECKS_HISTORY.md)
 
-524 ABI methods / 260 builders / 264 readers / 20 profiles. 93 reference JS operations. Local wire tests: `TestAllGeneratedABIWrappers`, recorded pass with a source fingerprint in [local-validation.json](compatibility/local-validation.json). [Validation](VALIDATION.md).
+602 ABI methods / 290 builders / 312 readers / 22 profiles. 93 reference JS operations. Local wire tests: `TestAllGeneratedABIWrappers`, recorded pass with a source fingerprint in [local-validation.json](compatibility/local-validation.json). [Validation](VALIDATION.md).
 
 | Network | Block | Code addresses | Getter responses / failures | Successful limited eth_call | Checks events in bounded window |
 |---|---|---|---|---|---|
@@ -25,6 +25,8 @@ Six testnet CreatedCheck events and one separately verified receipt were observe
 | DelegationNFT | 23 / 14 | 1 / 0 / 0 | 1 / 2 / 0 |
 | ERC1155 | 14 / 20 | 0 / 0 / 0 | 0 / 0 / 0 |
 | ERC721 | 16 / 17 | 0 / 0 / 0 | 0 / 0 / 0 |
+| MainnetNFTCenter20261103 | 15 / 14 | 0 / 0 / 0 | 1 / 2 / 0 |
+| MainnetReserveToken20261103 | 15 / 34 | 0 / 0 / 0 | 0 / 0 / 0 |
 | MasterValidator | 18 / 8 | 1 / 2 / 0 | 1 / 2 / 0 |
 | Multicall | 1 / 0 | 1 / 0 / 0 | 1 / 0 / 0 |
 | NFTCenter | 8 / 8 | 1 / 1 / 0 | 1 / 1 / 0 |

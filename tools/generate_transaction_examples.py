@@ -10,8 +10,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from generate import exported, unique_name, go_type, signature
 
 ROOT = Path(__file__).resolve().parents[1]
-CATALOGS = ('contract-catalog.json', 'deployment-catalog.json',
-            'additional-deployment-catalog.json', 'token-deployment-catalog.json')
+def catalog_names():
+    return ['contract-catalog.json'] + sorted(p.name for p in (ROOT/'docs').glob('*deployment-catalog.json'))
 
 
 def fixture(arg, prefix):
@@ -40,10 +40,9 @@ def fixture(arg, prefix):
 
 
 def render():
-    records = []
-    for filename in CATALOGS:
-        records.extend(row for row in json.loads((ROOT/'docs'/filename).read_text())
-                       if row['method'].startswith('Build'))
+    all_records = [row for filename in catalog_names()
+                   for row in json.loads((ROOT/'docs'/filename).read_text(encoding='utf-8'))]
+    records = [row for row in all_records if row['method'].startswith('Build')]
     records.sort(key=lambda x: (x['profile'], x['signature']))
     keys = [(r['profile'], r['signature']) for r in records]
     if len(keys) != len(set(keys)): raise ValueError('duplicate builder catalog entry')
@@ -142,6 +141,8 @@ if err != nil { panic(err) }
 _, _ = transfer, burn
 ```
 '''
+    intro_en = intro_en.replace('524 ABI methods', f'{len(all_records)} ABI methods')
+    intro_ru = intro_ru.replace('524 ABI-метода', f'{len(all_records)} ABI-метода')
     en, ru = [intro_en], [intro_ru]
     for profile in profiles:
         abi = json.loads((ROOT/'abi'/f'{profile}.json').read_text())

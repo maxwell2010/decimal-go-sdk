@@ -41,6 +41,8 @@ jobs:
           go test -run '^$' -fuzz '^FuzzChecksSignatureRecovery$' -fuzztime 7s -parallel 2 .
           go test -run '^$' -fuzz '^FuzzDelegationStakeDecoding$' -fuzztime 7s -parallel 2 .
           go test -run '^$' -fuzz '^FuzzDelegationEventsAndReceipts$' -fuzztime 7s -parallel 2 .
+          go test -run '^$' -fuzz '^FuzzExactAmounts$' -fuzztime 10s -parallel 2 .
+          go test -run '^$' -fuzz '^FuzzSignatureValidation$' -fuzztime 10s -parallel 2 .
       - run: python -B tools/release.py
   cosmos:
     strategy:
@@ -64,6 +66,10 @@ jobs:
         run: go test -race ./...
       - if: runner.os == 'Linux'
         run: go run golang.org/x/vuln/cmd/govulncheck@v1.9.0 ./...
+      - if: runner.os == 'Linux'
+        run: |
+          go test -run '^$' -fuzz '^FuzzPinnedMessageDecode$' -fuzztime 10s -parallel 2 .
+          go test -run '^$' -fuzz '^FuzzPinnedValidateBasic$' -fuzztime 10s -parallel 2 .
   fixture-rebuild:
     runs-on: ubuntu-latest
     steps:

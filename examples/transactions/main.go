@@ -47,76 +47,86 @@ func allCalls() ([]decimal.Call, error) {
 		return nil, err
 	}
 	calls = append(calls, part5...)
-	part6, err := examplesMasterValidator()
+	part6, err := examplesMainnetNFTCenter20261103()
 	if err != nil {
 		return nil, err
 	}
 	calls = append(calls, part6...)
-	part7, err := examplesMulticall()
+	part7, err := examplesMainnetReserveToken20261103()
 	if err != nil {
 		return nil, err
 	}
 	calls = append(calls, part7...)
-	part8, err := examplesNFTCenter()
+	part8, err := examplesMasterValidator()
 	if err != nil {
 		return nil, err
 	}
 	calls = append(calls, part8...)
-	part9, err := examplesTestnetContractCenter20261029()
+	part9, err := examplesMulticall()
 	if err != nil {
 		return nil, err
 	}
 	calls = append(calls, part9...)
-	part10, err := examplesTestnetMasterValidator20261029()
+	part10, err := examplesNFTCenter()
 	if err != nil {
 		return nil, err
 	}
 	calls = append(calls, part10...)
-	part11, err := examplesTestnetNFTCenter20261029()
+	part11, err := examplesTestnetContractCenter20261029()
 	if err != nil {
 		return nil, err
 	}
 	calls = append(calls, part11...)
-	part12, err := examplesTestnetReserveToken20261029()
+	part12, err := examplesTestnetMasterValidator20261029()
 	if err != nil {
 		return nil, err
 	}
 	calls = append(calls, part12...)
-	part13, err := examplesTestnetReservelessToken20261029()
+	part13, err := examplesTestnetNFTCenter20261029()
 	if err != nil {
 		return nil, err
 	}
 	calls = append(calls, part13...)
-	part14, err := examplesTestnetSafe20261029()
+	part14, err := examplesTestnetReserveToken20261029()
 	if err != nil {
 		return nil, err
 	}
 	calls = append(calls, part14...)
-	part15, err := examplesTestnetSafeFactory20261029()
+	part15, err := examplesTestnetReservelessToken20261029()
 	if err != nil {
 		return nil, err
 	}
 	calls = append(calls, part15...)
-	part16, err := examplesTestnetSafeMultiSend20261029()
+	part16, err := examplesTestnetSafe20261029()
 	if err != nil {
 		return nil, err
 	}
 	calls = append(calls, part16...)
-	part17, err := examplesTestnetTokenCenter20261029()
+	part17, err := examplesTestnetSafeFactory20261029()
 	if err != nil {
 		return nil, err
 	}
 	calls = append(calls, part17...)
-	part18, err := examplesToken()
+	part18, err := examplesTestnetSafeMultiSend20261029()
 	if err != nil {
 		return nil, err
 	}
 	calls = append(calls, part18...)
-	part19, err := examplesTokenCenter()
+	part19, err := examplesTestnetTokenCenter20261029()
 	if err != nil {
 		return nil, err
 	}
 	calls = append(calls, part19...)
+	part20, err := examplesToken()
+	if err != nil {
+		return nil, err
+	}
+	calls = append(calls, part20...)
+	part21, err := examplesTokenCenter()
+	if err != nil {
+		return nil, err
+	}
+	calls = append(calls, part21...)
 	return calls, nil
 }
 func main() {

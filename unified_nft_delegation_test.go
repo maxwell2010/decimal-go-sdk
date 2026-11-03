@@ -37,13 +37,15 @@ func TestUnifiedNFTDelegationOfflineBuildersAndOperator(t *testing.T) {
 			typ := m.Type().In(j)
 			switch typ {
 			case reflect.TypeOf(common.Address{}):
-				args[j] = reflect.ValueOf(common.HexToAddress("0x1234"))
+				args[j] = reflect.ValueOf(common.BigToAddress(big.NewInt(int64(100 + j))))
 			case reflect.TypeOf((*big.Int)(nil)):
-				args[j] = reflect.ValueOf(big.NewInt(17))
+				args[j] = reflect.ValueOf(big.NewInt(int64(1000 + j)))
 			case reflect.TypeOf(uint8(0)):
 				args[j] = reflect.ValueOf(uint8(27))
 			default:
-				args[j] = reflect.Zero(typ)
+				proof := [32]byte{}
+				proof[31] = byte(j + 1)
+				args[j] = reflect.ValueOf(proof)
 			}
 		}
 		result := m.Call(args)
@@ -58,8 +60,14 @@ func TestUnifiedNFTDelegationOfflineBuildersAndOperator(t *testing.T) {
 		if call.To != testAddress || !bytes.Equal(call.Data[:4], method.ID) || call.Value.Sign() != 0 {
 			t.Fatal("wrong route", name)
 		}
-		if _, err := method.Inputs.Unpack(call.Data[4:]); err != nil {
+		decoded, err := method.Inputs.Unpack(call.Data[4:])
+		if err != nil {
 			t.Fatal(err)
+		}
+		for j, got := range decoded {
+			if !reflect.DeepEqual(got, args[j].Interface()) {
+				t.Fatalf("%s argument %d changed: got %v want %v", name, j, got, args[j].Interface())
+			}
 		}
 		count++
 	}
@@ -75,7 +83,7 @@ func TestUnifiedNFTDelegationOfflineBuildersAndOperator(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	for _, call := range []Call{c721, c1155} {
+	for i, call := range []Call{c721, c1155} {
 		aa, _ := loadABI(call.Profile)
 		_, m, err := method(aa, call.Signature)
 		if err != nil {
@@ -84,6 +92,9 @@ func TestUnifiedNFTDelegationOfflineBuildersAndOperator(t *testing.T) {
 		args, err := m.Inputs.Unpack(call.Data[4:])
 		if err != nil {
 			t.Fatal(err)
+		}
+		if (i == 0 && args[1].(*big.Int).Cmp(big.NewInt(42)) != 0) || (i == 1 && args[1] != true) {
+			t.Fatal("approval scope changed")
 		}
 		if call.To != collection || args[0].(common.Address) != d.Address {
 			t.Fatal("wrong approval operator")

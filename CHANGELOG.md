@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.1.0-preview.13 - 2026-11-03
+
+- Added explicit chain75 MainnetReserveToken20261103 and MainnetNFTCenter20261103 interfaces from official API ABI artifacts with pinned read-only registry/proxy/implementation proofs. No default replacement or write acceptance claim.
+- Added 78 ABI methods and 30 offline builder examples; catalog discovery and network checks use manifests rather than profile name conventions. Reserveless implementation ABI remains unbound evidence, not an invented deployment profile.
+- Prepare snapshots Call and TxOptions before backend callbacks, isolates the estimation destination and preserves cancellation after successful RPC responses.
+- Cosmos signing callbacks preserve cancellation over callback errors; gRPC query results own their protobuf response instead of borrowing backend buffers.
+- All thirteen unified NFT builders now have distinct-value, exact-position calldata assertions; added a compiled offline example for all actions and approval builders.
+- Linux CI includes all nine existing bounded fuzz campaigns across EVM and Cosmos.
+
 ## v0.1.0-preview.12 - 2026-10-30
 
 - Reject nil/empty/zero-target unified NFT wrappers, including approval helper misuse that could otherwise encode ERC721 revoke calldata.

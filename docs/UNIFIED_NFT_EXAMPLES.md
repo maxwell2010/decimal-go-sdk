@@ -22,6 +22,14 @@ Addresses `validator`, `newValidator` and `collection` are deployment inputs. `t
 
 The official ABI has no corresponding ERC1155 permit or held-permit variants. Withdrawals/transfers have exactly the arguments shown; no unsupported partial-amount argument is invented.
 
+Run all thirteen builders and both separate approval examples without a transport or signer:
+
+```sh
+go run ./examples/unified_nft
+```
+
+[Compilable source](../examples/unified_nft/main.go). The permit bytes are encoding placeholders only. Tests exercise these examples as part of `go test ./...`.
+
 For separate approval review:
 
 ```go

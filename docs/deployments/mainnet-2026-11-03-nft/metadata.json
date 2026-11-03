@@ -1,0 +1,93 @@
+{
+  "chain_id": "75",
+  "block": 34412429,
+  "block_hex": "0x20d178d",
+  "rpc_block_hash": "0x72d5d1b90b8d7be3f77a23b2e42a3327e885699e75c1fc2c1ad4feb4c255505e",
+  "rpc_url": "https://node.decimalchain.com/web3/",
+  "registry_getter": "getContractAddress(string):nft-center",
+  "implementation_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+  "implementation_word": "0x000000000000000000000000ced55da70f42ab101b4ce10aa9e767607cef5146",
+  "records": [
+    {
+      "role": "registry",
+      "address": "0xc108715a06f76caa96fa2c943ebf05159c29a87d",
+      "code_hash": "0x9e20e6504b126e7a82319e3521ab1340a205b9f467edfc3324a0526075348a55",
+      "api_url": "https://api.decimalchain.com/api/v1/contracts/compact/0xc108715a06f76caa96fa2c943ebf05159c29a87d",
+      "abi_sha256": "4e3de738ec7667bacf7f125cace99491c65babf36f677bebf0eb2fdf9d172737",
+      "methods": []
+    },
+    {
+      "role": "proxy",
+      "address": "0x443cc8ac24630be9257483a09c34ffa81608eace",
+      "code_hash": "0x03d81a8215770b021c0232e7541427d7063eceec75ceb0e9c02784845e48a0f3",
+      "api_url": "https://api.decimalchain.com/api/v1/contracts/compact/0x443cc8ac24630be9257483a09c34ffa81608eace",
+      "abi_sha256": "cd00d1289a6f4045d2aaeaf9181e330caf3b6a4e9cc39910486aa0414bc2f035",
+      "methods": []
+    },
+    {
+      "role": "implementation",
+      "address": "0xced55da70f42ab101b4ce10aa9e767607cef5146",
+      "code_hash": "0x29b10f77334ebfd88df6c6cf4effca96556c94215756e07fe83eb16bfa6f3b0d",
+      "api_url": "https://api.decimalchain.com/api/v1/contracts/compact/0xced55da70f42ab101b4ce10aa9e767607cef5146",
+      "abi_sha256": "72702a5e3f6cd81db7ef521f71439c9666dfdcca1ed33c9668466f4d12462d82",
+      "methods": [
+        "beacon",
+        "checkToken",
+        "createAndMigrateBatch",
+        "createCollectionDRC1155Migration",
+        "createCollectionDRC721Migration",
+        "createDRC1155",
+        "createDRC1155Reserveless",
+        "createDRC721",
+        "createDRC721Reserveless",
+        "filterMigratedBalances",
+        "getContractCenter",
+        "getImpl",
+        "getNFTBySalt",
+        "getNFTState",
+        "getNftBySalt",
+        "getTokenBySymbol",
+        "implementation",
+        "initialize",
+        "isDecimal",
+        "isMigrating",
+        "owner",
+        "pause",
+        "paused",
+        "renounceOwnership",
+        "setContractCenter",
+        "transferOwnership",
+        "unpause",
+        "upgrade",
+        "upgradeNFT"
+      ]
+    }
+  ],
+  "scope": "read-only RPC and official API interface evidence; not cryptographic proof of all ABI methods or write acceptance",
+  "view_probes": [
+    {
+      "signature": "getImpl()",
+      "result": "0x000000000000000000000000ced55da70f42ab101b4ce10aa9e767607cef5146"
+    },
+    {
+      "signature": "getContractCenter()",
+      "result": "0x000000000000000000000000c108715a06f76caa96fa2c943ebf05159c29a87d"
+    },
+    {
+      "signature": "paused()",
+      "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "block_hash": "0x72d5d1b90b8d7be3f77a23b2e42a3327e885699e75c1fc2c1ad4feb4c255505e",
+  "registry": "0xc108715a06f76caa96fa2c943ebf05159c29a87d",
+  "proxy": "0x443cc8ac24630be9257483a09c34ffa81608eace",
+  "proxy_code_hash": "0x03d81a8215770b021c0232e7541427d7063eceec75ceb0e9c02784845e48a0f3",
+  "implementation": "0xced55da70f42ab101b4ce10aa9e767607cef5146",
+  "implementation_code_hash": "0x29b10f77334ebfd88df6c6cf4effca96556c94215756e07fe83eb16bfa6f3b0d",
+  "api_url": "https://api.decimalchain.com/api/v1/contracts/compact/0xced55da70f42ab101b4ce10aa9e767607cef5146",
+  "abi_file": "implementation.abi.json",
+  "abi_sha256": "72702a5e3f6cd81db7ef521f71439c9666dfdcca1ed33c9668466f4d12462d82",
+  "binding": "eip1967-implementation",
+  "source_api_response_file": "implementation-api.json",
+  "source_api_response_sha256": "75926873306afa8c03e6e6ba6eea5672afa17c2d73b0763280b55d77d9dfa344"
+}

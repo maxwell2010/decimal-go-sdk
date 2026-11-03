@@ -4,7 +4,7 @@
 
 Fixtures демонстрируют только кодирование ABI. Адреса, подписи, permits, proofs, суммы и поля tuple - заглушки, а не готовые бизнес-транзакции или доказательство полномочий. Суммы задаются целыми числами в базовых единицах. Первый аргумент payable builder - нативная сумма, а не дополнительный аргумент ABI. Массивы содержат один элемент, если фиксированная длина не требует другого. Не отправляйте эти fixtures.
 
-524 ABI-метода включают чтение и административные операции. Здесь перечислены только write builders; это не количество самостоятельных бизнес-типов транзакций. Versioned-профили выбираются явно и не заменяют pinned-профили. Недоступные достоверные ABI описаны в [ADDITIONAL_ABI_EVIDENCE.md](ADDITIONAL_ABI_EVIDENCE.md).
+602 ABI-метода включают чтение и административные операции. Здесь перечислены только write builders; это не количество самостоятельных бизнес-типов транзакций. Versioned-профили выбираются явно и не заменяют pinned-профили. Недоступные достоверные ABI описаны в [ADDITIONAL_ABI_EVIDENCE.md](ADDITIONAL_ABI_EVIDENCE.md).
 
 ## Общие переменные
 
@@ -1122,6 +1122,324 @@ _ = call
 
 ```go
 call, err := contract.BuildTransferFrom(fixtureAddress, fixtureAddress, big.NewInt(1))
+if err != nil { panic(err) }
+_ = call
+```
+
+## MainnetNFTCenter20261103
+
+[Исходник Go](../mainnetnftcenter20261103_generated.go), [ABI](../abi/MainnetNFTCenter20261103.json).
+
+```go
+contract, err := offline.MainnetNFTCenter20261103(fixtureAddress)
+if err != nil { panic(err) }
+```
+
+### `BuildCreateAndMigrateBatch`
+
+`createAndMigrateBatch(((address,string,string,string,bool,bool),(string,uint256,string,bool),bytes,uint8,(address,uint256)[])[])`
+
+```go
+call, err := contract.BuildCreateAndMigrateBatch([]decimal.MainnetNFTCenter20261103CreateAndMigrateBatchArg0{decimal.MainnetNFTCenter20261103CreateAndMigrateBatchArg0{Meta: decimal.MainnetNFTCenter20261103CreateAndMigrateBatchArg0Meta{Creator: fixtureAddress, Symbol: "fixture", Name: "fixture", ContractURI: "fixture", Refundable: true, Burnable: true}, MigrationMeta: decimal.MainnetNFTCenter20261103CreateAndMigrateBatchArg0MigrationMeta{ReserveSymbol: "fixture", ReserveAmount: big.NewInt(1), TokenURI: "fixture", AllowMint: true}, Salt: []byte{1}, NftType: uint8(1), Balances: []decimal.MainnetNFTCenter20261103CreateAndMigrateBatchArg0Balances{decimal.MainnetNFTCenter20261103CreateAndMigrateBatchArg0Balances{Account: fixtureAddress, Balance: big.NewInt(1)}}}})
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildCreateCollectionDRC1155Migration`
+
+`createCollectionDRC1155Migration(((address,string,string,string,bool,bool),(string,uint256,string,bool),bytes,uint8,(address,uint256)[]))`
+
+```go
+call, err := contract.BuildCreateCollectionDRC1155Migration(decimal.MainnetNFTCenter20261103CreateCollectionDRC1155MigrationArg0{Meta: decimal.MainnetNFTCenter20261103CreateCollectionDRC1155MigrationArg0Meta{Creator: fixtureAddress, Symbol: "fixture", Name: "fixture", ContractURI: "fixture", Refundable: true, Burnable: true}, MigrationMeta: decimal.MainnetNFTCenter20261103CreateCollectionDRC1155MigrationArg0MigrationMeta{ReserveSymbol: "fixture", ReserveAmount: big.NewInt(1), TokenURI: "fixture", AllowMint: true}, Salt: []byte{1}, NftType: uint8(1), Balances: []decimal.MainnetNFTCenter20261103CreateCollectionDRC1155MigrationArg0Balances{decimal.MainnetNFTCenter20261103CreateCollectionDRC1155MigrationArg0Balances{Account: fixtureAddress, Balance: big.NewInt(1)}}})
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildCreateCollectionDRC721Migration`
+
+`createCollectionDRC721Migration(((address,string,string,string,bool,bool),(string,uint256,string,bool),bytes,uint8,(address,uint256)[]))`
+
+```go
+call, err := contract.BuildCreateCollectionDRC721Migration(decimal.MainnetNFTCenter20261103CreateCollectionDRC721MigrationArg0{Meta: decimal.MainnetNFTCenter20261103CreateCollectionDRC721MigrationArg0Meta{Creator: fixtureAddress, Symbol: "fixture", Name: "fixture", ContractURI: "fixture", Refundable: true, Burnable: true}, MigrationMeta: decimal.MainnetNFTCenter20261103CreateCollectionDRC721MigrationArg0MigrationMeta{ReserveSymbol: "fixture", ReserveAmount: big.NewInt(1), TokenURI: "fixture", AllowMint: true}, Salt: []byte{1}, NftType: uint8(1), Balances: []decimal.MainnetNFTCenter20261103CreateCollectionDRC721MigrationArg0Balances{decimal.MainnetNFTCenter20261103CreateCollectionDRC721MigrationArg0Balances{Account: fixtureAddress, Balance: big.NewInt(1)}}})
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildCreateDRC1155`
+
+`createDRC1155((address,string,string,string,bool,bool))`
+
+```go
+call, err := contract.BuildCreateDRC1155(decimal.MainnetNFTCenter20261103CreateDRC1155Arg0{Creator: fixtureAddress, Symbol: "fixture", Name: "fixture", ContractURI: "fixture", Refundable: true, Burnable: true})
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildCreateDRC1155Reserveless`
+
+`createDRC1155Reserveless((address,string,string,string,bool,bool))`
+
+```go
+call, err := contract.BuildCreateDRC1155Reserveless(decimal.MainnetNFTCenter20261103CreateDRC1155ReservelessArg0{Creator: fixtureAddress, Symbol: "fixture", Name: "fixture", ContractURI: "fixture", Refundable: true, Burnable: true})
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildCreateDRC721`
+
+`createDRC721((address,string,string,string,bool,bool))`
+
+```go
+call, err := contract.BuildCreateDRC721(decimal.MainnetNFTCenter20261103CreateDRC721Arg0{Creator: fixtureAddress, Symbol: "fixture", Name: "fixture", ContractURI: "fixture", Refundable: true, Burnable: true})
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildCreateDRC721Reserveless`
+
+`createDRC721Reserveless((address,string,string,string,bool,bool))`
+
+```go
+call, err := contract.BuildCreateDRC721Reserveless(decimal.MainnetNFTCenter20261103CreateDRC721ReservelessArg0{Creator: fixtureAddress, Symbol: "fixture", Name: "fixture", ContractURI: "fixture", Refundable: true, Burnable: true})
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildInitialize`
+
+`initialize()`
+
+```go
+call, err := contract.BuildInitialize()
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildPause`
+
+`pause()`
+
+```go
+call, err := contract.BuildPause()
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildRenounceOwnership`
+
+`renounceOwnership()`
+
+```go
+call, err := contract.BuildRenounceOwnership()
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildSetContractCenter`
+
+`setContractCenter(address)`
+
+```go
+call, err := contract.BuildSetContractCenter(fixtureAddress)
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildTransferOwnership`
+
+`transferOwnership(address)`
+
+```go
+call, err := contract.BuildTransferOwnership(fixtureAddress)
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildUnpause`
+
+`unpause()`
+
+```go
+call, err := contract.BuildUnpause()
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildUpgrade`
+
+`upgrade(address,bytes)`
+
+```go
+call, err := contract.BuildUpgrade(fixtureAddress, []byte{1})
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildUpgradeNFT`
+
+`upgradeNFT(address,uint8,bool)`
+
+```go
+call, err := contract.BuildUpgradeNFT(fixtureAddress, uint8(1), true)
+if err != nil { panic(err) }
+_ = call
+```
+
+## MainnetReserveToken20261103
+
+[Исходник Go](../mainnetreservetoken20261103_generated.go), [ABI](../abi/MainnetReserveToken20261103.json).
+
+```go
+contract, err := offline.MainnetReserveToken20261103(fixtureAddress)
+if err != nil { panic(err) }
+```
+
+### `BuildApprove`
+
+`approve(address,uint256)`
+
+```go
+call, err := contract.BuildApprove(fixtureAddress, big.NewInt(1))
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildBurn`
+
+`burn(uint256)`
+
+```go
+call, err := contract.BuildBurn(big.NewInt(1))
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildBuy`
+
+`buy(uint256,address)`
+
+```go
+call, err := contract.BuildBuy(big.NewInt(1), big.NewInt(1), fixtureAddress)
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildBuyExactTokenForDEL`
+
+`buyExactTokenForDEL(uint256,address)`
+
+```go
+call, err := contract.BuildBuyExactTokenForDEL(big.NewInt(1), big.NewInt(1), fixtureAddress)
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildBuyTokenForExactDEL`
+
+`buyTokenForExactDEL(uint256,address)`
+
+```go
+call, err := contract.BuildBuyTokenForExactDEL(big.NewInt(1), big.NewInt(1), fixtureAddress)
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildInitialize`
+
+`initialize(string,string,address,uint8,uint256,uint256,uint256,string)`
+
+```go
+call, err := contract.BuildInitialize(big.NewInt(1), "fixture", "fixture", fixtureAddress, uint8(1), big.NewInt(1), big.NewInt(1), big.NewInt(1), "fixture")
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildPermit`
+
+`permit(address,address,uint256,uint256,uint8,bytes32,bytes32)`
+
+```go
+call, err := contract.BuildPermit(fixtureAddress, fixtureAddress, big.NewInt(1), big.NewInt(1), uint8(1), [32]byte{1}, [32]byte{1})
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildSell`
+
+`sell(uint256,uint256,address)`
+
+```go
+call, err := contract.BuildSell(big.NewInt(1), big.NewInt(1), fixtureAddress)
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildSellExactTokensForDEL`
+
+`sellExactTokensForDEL(uint256,uint256,address)`
+
+```go
+call, err := contract.BuildSellExactTokensForDEL(big.NewInt(1), big.NewInt(1), fixtureAddress)
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildSellTokensForExactDEL`
+
+`sellTokensForExactDEL(uint256,uint256,address)`
+
+```go
+call, err := contract.BuildSellTokensForExactDEL(big.NewInt(1), big.NewInt(1), fixtureAddress)
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildTransfer`
+
+`transfer(address,uint256)`
+
+```go
+call, err := contract.BuildTransfer(fixtureAddress, big.NewInt(1))
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildTransferFrom`
+
+`transferFrom(address,address,uint256)`
+
+```go
+call, err := contract.BuildTransferFrom(fixtureAddress, fixtureAddress, big.NewInt(1))
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildUpdateIdentity`
+
+`updateIdentity(string)`
+
+```go
+call, err := contract.BuildUpdateIdentity("fixture")
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildUpdateMaxTotalSupply`
+
+`updateMaxTotalSupply(uint256)`
+
+```go
+call, err := contract.BuildUpdateMaxTotalSupply(big.NewInt(1))
+if err != nil { panic(err) }
+_ = call
+```
+
+### `BuildUpdateMinTotalSupply`
+
+`updateMinTotalSupply(uint256)`
+
+```go
+call, err := contract.BuildUpdateMinTotalSupply(big.NewInt(1))
 if err != nil { panic(err) }
 _ = call
 ```

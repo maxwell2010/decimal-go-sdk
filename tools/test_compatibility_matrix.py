@@ -2,6 +2,8 @@
 import copy
 import json
 import unittest
+import tempfile
+from pathlib import Path
 from unittest.mock import patch
 from types import SimpleNamespace
 import build_compatibility_matrix as matrix
@@ -9,11 +11,30 @@ import capture_compatibility_tests as capture
 
 
 class CompatibilityMatrixTests(unittest.TestCase):
+    def test_new_versioned_catalog_is_discovered_and_chain_is_authoritative(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root/'docs').mkdir()
+            (root/'docs/mainnet-deployment-catalog.json').write_text('[]')
+            (root/'docs/mainnet-deployment-sources.json').write_text('{}')
+            with patch.object(matrix, 'ROOT', root):
+                self.assertIn('mainnet-deployment-catalog.json', matrix.catalog_names())
+                self.assertEqual(matrix.manifest_names(), ['mainnet-deployment-sources.json'])
+        source = {'profile':'NeutralName', 'chain_id':'75', 'target_proxy':'0x'+'11'*20}
+        entries = [{'address':source['target_proxy']}]
+        association, selected = matrix.targets('NeutralName', 'testnet', entries, {'NeutralName':source})
+        self.assertEqual((association,selected), ('not-applicable-network-profile', []))
+        association, selected = matrix.targets('NeutralName', 'mainnet', entries, {'NeutralName':source})
+        self.assertEqual(association, 'explicit-versioned-address-only')
+        self.assertEqual(selected, entries)
+
     def test_all_methods_and_operations_retain_independent_acceptance_status(self):
         data = matrix.build()
-        self.assertEqual(data['summary']['ABI_methods'], 524)
-        self.assertEqual(data['summary']['ABI_builders'], 260)
-        self.assertEqual(len(data['methods']), 1048)
+        catalog = [r for n in matrix.catalog_names() for r in matrix.read('docs/'+n)]
+        self.assertGreaterEqual(len(catalog), 524)
+        self.assertEqual(data['summary']['ABI_methods'], len(catalog))
+        self.assertEqual(data['summary']['ABI_builders'], sum(r['method'].startswith('Build') for r in catalog))
+        self.assertEqual(len(data['methods']), len(catalog)*len(matrix.CHAINS))
         self.assertEqual(len(data['reference_operations']), 93)
         self.assertEqual(data['summary']['network_transactions_sent'], 0)
         for row in data['methods']:
@@ -25,7 +46,9 @@ class CompatibilityMatrixTests(unittest.TestCase):
 
     def test_versioned_profiles_and_simulation_scope_do_not_cross_networks(self):
         data = matrix.build()
-        versioned = [r for r in data['methods'] if r['profile'].startswith('Testnet') and r['network'] == 'mainnet']
+        manifests = {p['profile']:p for n in matrix.manifest_names() for p in matrix.read('docs/'+n)['profiles']}
+        versioned = [r for r in data['methods'] if r['profile'] in manifests
+                     and manifests[r['profile']]['chain_id'] != matrix.CHAINS[r['network']]]
         self.assertTrue(versioned)
         self.assertTrue(all(r['address_association'] == 'not-applicable-network-profile'
                             and not r['observed_targets'] and not r['simulation_cases'] for r in versioned))

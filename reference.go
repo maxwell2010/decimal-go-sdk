@@ -30,11 +30,11 @@ func referenceProfileFamily(profile string) string {
 		return "ContractCenter"
 	case "TestnetTokenCenter20261029":
 		return "TokenCenter"
-	case "TestnetNFTCenter20261029":
+	case "TestnetNFTCenter20261029", "MainnetNFTCenter20261103":
 		return "NFTCenter"
 	case "TestnetMasterValidator20261029":
 		return "MasterValidator"
-	case "TestnetReserveToken20261029", "TestnetReservelessToken20261029":
+	case "TestnetReserveToken20261029", "TestnetReservelessToken20261029", "MainnetReserveToken20261103":
 		return "Token"
 	}
 	return profile
@@ -60,7 +60,7 @@ func referenceProfileAllows(spec ReferenceOperation, profile string) bool {
 func referenceMethodNames(spec ReferenceOperation, profile string) []string {
 	// JS wrapper name differs from the observed reserve implementation selector.
 	// This adapter applies only to the explicitly selected, versioned interface.
-	if profile == "TestnetReserveToken20261029" && spec.Operation == "updateTokenIdentity" {
+	if (profile == "TestnetReserveToken20261029" || profile == "MainnetReserveToken20261103") && spec.Operation == "updateTokenIdentity" {
 		return []string{"updateIdentity"}
 	}
 	return spec.Methods

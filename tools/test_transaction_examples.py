@@ -14,7 +14,7 @@ class TransactionExamplesTest(unittest.TestCase):
     def test_generated_artifacts_match_every_catalogued_builder(self):
         outputs, count, profile_count = examples.render()
         expected = []
-        for catalog in examples.CATALOGS:
+        for catalog in examples.catalog_names():
             expected.extend(row for row in json.loads((examples.ROOT/'docs'/catalog).read_text(encoding='utf-8'))
                             if row['method'].startswith('Build'))
         self.assertEqual(count, len(expected))

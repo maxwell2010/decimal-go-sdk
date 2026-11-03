@@ -7,9 +7,11 @@ import re
 from capture_compatibility_tests import REQUIRED, source_fingerprint
 
 ROOT = Path(__file__).resolve().parents[1]
-CATALOGS = ['contract-catalog.json', 'deployment-catalog.json',
-            'additional-deployment-catalog.json', 'token-deployment-catalog.json']
-MANIFESTS = ['deployment-sources.json', 'additional-deployment-sources.json', 'token-deployment-sources.json']
+def catalog_names():
+    return ['contract-catalog.json'] + sorted(p.name for p in (ROOT/'docs').glob('*deployment-catalog.json'))
+
+def manifest_names():
+    return sorted(p.name for p in (ROOT/'docs').glob('*deployment-sources.json'))
 CHAINS = {'testnet': '202020', 'mainnet': '75'}
 ROLES = {'ContractCenter': ['contract-center'], 'TokenCenter': ['token-center'],
          'NFTCenter': ['nft-center'], 'MasterValidator': ['master-validator'],
@@ -115,10 +117,10 @@ def build():
         raise ValueError('source changed after recorded tests; rerun capture_compatibility_tests.py')
     if validation['modules']['.']['exit_code'] != 0 or any(validation['modules']['.']['required_suites'].get(n) != 'pass' for n in REQUIRED):
         raise ValueError('required local compatibility suites did not pass')
-    catalog = [row for name in CATALOGS for row in read('docs/' + name)]
+    catalog = [row for name in catalog_names() for row in read('docs/' + name)]
     if len({(r['profile'], r['signature']) for r in catalog}) != len(catalog):
         raise ValueError('duplicate ABI catalog records')
-    manifest = {p['profile']: p for name in MANIFESTS for p in read('docs/' + name)['profiles']}
+    manifest = {p['profile']: p for name in manifest_names() for p in read('docs/' + name)['profiles']}
     methods, networks, deployments = [], {}, {}
     for network, chain in CHAINS.items():
         deployment = read('docs/compatibility/deployments-' + network + '.json')
@@ -178,7 +180,7 @@ def build():
                              'limited_simulated_signatures': sum(bool(r['simulation_cases']) for r in methods
                                                                 if r['profile'] == profile and r['network'] == network),
                          } for network in CHAINS}})
-    paths = ['docs/' + p for p in CATALOGS + MANIFESTS] + ['docs/operation-matrix.json']
+    paths = ['docs/' + p for p in catalog_names() + manifest_names()] + ['docs/operation-matrix.json']
     paths += ['docs/compatibility/' + p for p in ['deployments-testnet.json', 'deployments-mainnet.json',
               'simulations-testnet-2026-10-29.json', 'simulations-mainnet-2026-10-29.json',
               'checks-testnet.json', 'checks-mainnet.json', 'checks-testnet-receipts.json']]
@@ -202,7 +204,7 @@ def markdown(data, russian=False):
              'This is an observation matrix, not a readiness percentage. Runtime code, getter data and successful eth_call do not certify a whole ABI, user authorization, signed-transaction admission or settlement. Live inspectors did not load keys, sign or submit public-network transactions. Separate offline tests use synthetic signing vectors.')
     out = [title, '', intro, '', '[JSON matrix](compatibility/matrix.json) | [Deployments](DEPLOYMENT_COMPATIBILITY.md) | '
            '[Simulations](SIMULATION_COMPATIBILITY.md) | [Checks history](CHECKS_HISTORY.md)', '',
-           '524 ABI methods / 260 builders / 264 readers / 20 profiles. 93 reference JS operations. ' +
+           f"{data['summary']['ABI_methods']} ABI methods / {data['summary']['ABI_builders']} builders / {data['summary']['ABI_readers']} readers / {data['summary']['profiles']} profiles. {data['summary']['reference_operations']} reference JS operations. " +
            ('Локальный тест ABI: `TestAllGeneratedABIWrappers`, результат и fingerprint исходников: ' if russian else 'Local wire tests: `TestAllGeneratedABIWrappers`, recorded pass with a source fingerprint in ')
            + '[local-validation.json](compatibility/local-validation.json). [Validation](VALIDATION.md).', '',
            '| Network | Block | Code addresses | Getter responses / failures | Successful limited eth_call | Checks events in bounded window |',
@@ -250,7 +252,8 @@ def main():
                 raise SystemExit('Compatibility matrix is stale: ' + name)
         else:
             target.write_text(content, encoding='utf-8', newline='\n')
-    print('Compatibility matrix: 524 method records per network; no network write acceptance claimed')
+    count = sum(len(read('docs/' + name)) for name in catalog_names())
+    print(f"Compatibility matrix: {count} method records per network; no network write acceptance claimed")
 
 
 if __name__ == '__main__': main()

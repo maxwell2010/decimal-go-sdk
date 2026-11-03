@@ -1,6 +1,6 @@
 # Decimal Go SDK
 
-An independent EVM Go module, `github.com/maxwell2010/decimal-go-sdk`, based on pinned official Decimal node, JS SDK and Go SDK sources, with workflow requirements from our Python and C# implementations. Go 1.26.10+ is required. The current public version is `v0.1.0-preview.12`, a preview with no claim of complete deployment parity.
+An independent EVM Go module, `github.com/maxwell2010/decimal-go-sdk`, based on pinned official Decimal node, JS SDK and Go SDK sources, with workflow requirements from our Python and C# implementations. Go 1.26.10+ is required. The current public version is `v0.1.0-preview.13`, a preview with no claim of complete deployment parity.
 
 By [MintCandy](https://mintcandy.ru/) and [@Maxwell2019](https://t.me/Maxwell2019). MIT license.
 
@@ -10,9 +10,11 @@ By [MintCandy](https://mintcandy.ru/) and [@Maxwell2019](https://t.me/Maxwell201
 
 The package contains 11 pinned ABI profiles and 300 generated methods: 157 offline transaction builders and 143 typed readers. Administrative functions are included. This is a contract-method count, not a count of user workflows or unique protocol transaction types.
 
-Nine explicitly selected, versioned testnet profiles provide 224 more typed methods: system contracts, Safe/factory/MultiSend and reserve/reserveless token interfaces. Their addresses, observed blocks, code hashes and ABI hashes are recorded in [system deployment sources](docs/deployment-sources.json), [Safe sources](docs/additional-deployment-sources.json) and [token sources](docs/token-deployment-sources.json). These artifacts remain separate from the pinned node ABI and never silently replace defaults. All 524 wrappers are exercised by the ABI integration suite.
+Nine explicitly selected, versioned testnet profiles provide 224 more typed methods: system contracts, Safe/factory/MultiSend and reserve/reserveless token interfaces. Their addresses, observed blocks, code hashes and ABI hashes are recorded in [system deployment sources](docs/deployment-sources.json), [Safe sources](docs/additional-deployment-sources.json) and [token sources](docs/token-deployment-sources.json). These artifacts remain separate from the pinned node ABI and never silently replace defaults. All 602 wrappers are exercised by the ABI integration suite.
 
 The pinned JS index has 93 active write entry points. 55 have at least one related pinned-ABI builder, 35 require an explicit deployment ABI, two use native transfers, and mixed multisend supports DEL while the unsafe generic-Multicall ERC20 spender route is disabled. Related selectors do not establish complete workflow or deployment equivalence.
+
+Two explicit chain75 profiles add 78 methods for mainnet reserve Token and NFTCenter: [sources](docs/mainnet-deployment-sources.json), [binding and limits](docs/MAINNET_PROFILES_20261103.ru.md).
 
 ## Read-only network compatibility
 
@@ -48,23 +50,23 @@ go run github.com/maxwell2010/decimal-go-sdk/cmd/decimal-sdk-install@latest
 
 This installs or updates **both EVM and Cosmos** to the reviewed published version in [latest.json](latest.json), including previews. The command never changes with the release number. No automatic background updates occur. Use `-print` to inspect the selected go get command without modifying a project, or `-evm-only` / `-cosmos-only` to select one module. New project? Run `go mod init example.com/myapp` first. [Full install/update/rollback guide](docs/INSTALL.md).
 
-[All 260 ABI write-builder examples](docs/TRANSACTIONS.md) | [EVM envelope types 0/1/2](docs/TRANSACTION_ENVELOPES.md) | [All 43 Cosmos message examples](cosmos/TRANSACTIONS.md). These are offline encoding examples, not deployed execution certificates.
+[All 290 ABI write-builder examples](docs/TRANSACTIONS.md) | [EVM envelope types 0/1/2](docs/TRANSACTION_ENVELOPES.md) | [All 43 Cosmos message examples](cosmos/TRANSACTIONS.md). These are offline encoding examples, not deployed execution certificates.
 
 ## Install a fixed version
 
 Requires Go 1.26.10 or later. In your application's Go module:
 
 ```sh
-go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.12
+go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.13
 ```
 
 The independent Cosmos module is optional:
 
 ```sh
-go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.12
+go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.13
 ```
 
-Go downloads runtime dependencies automatically. GitHub is the release source; the tag pins the preview. Downloadable source ZIP/TAR.GZ files and `SHA256SUMS` are attached to the [release](https://github.com/maxwell2010/decimal-go-sdk/releases/tag/v0.1.0-preview.12). No compiler-generated bindings or external ABI compiler are needed to use the library.
+Go downloads runtime dependencies automatically. GitHub is the release source; the tag pins the preview. Downloadable source ZIP/TAR.GZ files and `SHA256SUMS` are attached to the [release](https://github.com/maxwell2010/decimal-go-sdk/releases/tag/v0.1.0-preview.13). No compiler-generated bindings or external ABI compiler are needed to use the library.
 
 For local development, clone the repository and run:
 

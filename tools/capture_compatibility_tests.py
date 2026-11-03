@@ -34,11 +34,17 @@ REQUIRED = ['TestAllGeneratedABIWrappers', 'TestEmbeddedABIProvenance', 'TestVer
             'TestDelegationUpgradeEventsRejectBadPaddingAndWrongProfile', 'TestDelegationSavedMainnetObservations',
             'TestUnifiedNFTDelegationOfflineBuildersAndOperator', 'TestUnifiedNFTDelegationSavedViews',
             'TestRetiredMainnetNFTDepositsFailOffline', 'TestDelegationReceiptPreservesRepeatedExitPairing',
-            'TestUnifiedNFTDelegationRejectsMissingTargetWithoutPanic', 'TestDelegationDecodedLogsOwnReceiptBuffers']
+            'TestUnifiedNFTDelegationRejectsMissingTargetWithoutPanic', 'TestDelegationDecodedLogsOwnReceiptBuffers',
+            'TestPrepareOwnsEstimateTarget', 'TestPrepareCancellationAfterNonceResponse',
+            'TestPrepareSnapshotsExplicitNonceBeforeBackend',
+            'TestMainnetProfilesKeepNetworkGuards', 'TestMainnetNFTCreationExactArguments',
+            'TestMainnetTokenCapabilitiesAreNotInvented', 'TestMainnetEvidenceArtifactsAndRuntime',
+            'TestMainnetReferenceDoesNotInventMint']
 
 COSMOS_REQUIRED = ['TestGRPCCancellationDominatesSuccessfulTransport',
                    'TestRESTCancellationDominatesResponseBoundaries',
-                   'TestRESTTransportAndBodyErrorsRemainRedacted']
+                   'TestRESTTransportAndBodyErrorsRemainRedacted',
+                   'TestSigningCallbackCancellationDominatesFailure', 'TestGRPCQueryOwnsBackendReply']
 
 
 def source_fingerprint(root=ROOT):
@@ -50,10 +56,10 @@ def source_fingerprint(root=ROOT):
     paths += list((root / 'abi').glob('*.json'))
     paths += list((root / 'delegation_compat').glob('*.json'))
     paths += [root / 'go.mod', root / 'go.sum']
-    paths += [root / 'docs' / n for n in ['contract-catalog.json', 'deployment-catalog.json',
-              'additional-deployment-catalog.json', 'token-deployment-catalog.json',
-              'deployment-sources.json', 'additional-deployment-sources.json', 'token-deployment-sources.json',
-              'checks-js-vectors.json']]
+    paths += [root/'docs/contract-catalog.json', root/'docs/checks-js-vectors.json']
+    paths += list((root/'docs').glob('*deployment-catalog.json'))
+    paths += list((root/'docs').glob('*deployment-sources.json'))
+    paths += list((root/'docs/deployments').rglob('*.json'))
     paths.append(root / 'docs/compatibility/checks-testnet-receipts.json')
     paths += [p for p in (root / 'testdata/evm').glob('*') if p.is_file()]
     paths += [p for p in (root / 'testdata/delegation').glob('*.json')]

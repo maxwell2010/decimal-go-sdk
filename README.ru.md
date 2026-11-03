@@ -1,6 +1,6 @@
 # Decimal Go SDK
 
-Самостоятельный Go-модуль `github.com/maxwell2010/decimal-go-sdk`, созданный по исходникам официальной ноды, JS SDK и Go SDK с учетом сценариев наших Python и C# SDK. Требуется Go 1.26.10 или новее. Текущая публичная версия - `v0.1.0-preview.12`, предварительная версия без заявления о полном соответствии развернутым контрактам.
+Самостоятельный Go-модуль `github.com/maxwell2010/decimal-go-sdk`, созданный по исходникам официальной ноды, JS SDK и Go SDK с учетом сценариев наших Python и C# SDK. Требуется Go 1.26.10 или новее. Текущая публичная версия - `v0.1.0-preview.13`, предварительная версия без заявления о полном соответствии развернутым контрактам.
 
 Разработчики: [MintCandy](https://mintcandy.ru/) и [@Maxwell2019](https://t.me/Maxwell2019). Лицензия MIT.
 
@@ -10,7 +10,9 @@
 
 Полный сетевой parity пока не подтвержден. В текущих официальных исходниках есть несовместимые поколения ABI. Из 93 активных write-методов JS для 55 найден хотя бы один соответствующий сборщик по зафиксированному ABI; 35 требуют явно переданного ABI развернутого контракта, два являются нативными переводами, один - смешанной рассылкой с отключенным небезопасным ERC20-маршрутом. Это классификация покрытия, не обещание одинакового поведения всех вариантов.
 
-Дополнительно доступны девять явно выбираемых versioned testnet-профилей: 224 метода системных контрактов, Safe/factory/MultiSend и резервных/безрезервных токенов. Адреса, блоки, codehash и хеши ABI записаны в [системном manifest](docs/deployment-sources.json), [Safe manifest](docs/additional-deployment-sources.json) и [token manifest](docs/token-deployment-sources.json). ABI-интеграция охватывает все 524 метода; это не проверка исполнения в сети.
+Дополнительно доступны девять явно выбираемых versioned testnet-профилей: 224 метода системных контрактов, Safe/factory/MultiSend и резервных/безрезервных токенов. Адреса, блоки, codehash и хеши ABI записаны в [системном manifest](docs/deployment-sources.json), [Safe manifest](docs/additional-deployment-sources.json) и [token manifest](docs/token-deployment-sources.json). ABI-интеграция охватывает все 602 метода; это не проверка исполнения в сети.
+
+Two explicit chain75 profiles add 78 methods for mainnet reserve Token and NFTCenter: [sources](docs/mainnet-deployment-sources.json), [binding and limits](docs/MAINNET_PROFILES_20261103.ru.md).
 
 ## Совместимость с сетью без отправки транзакций
 
@@ -50,23 +52,23 @@ go run github.com/maxwell2010/decimal-go-sdk/cmd/decimal-sdk-install@latest
 
 Команда устанавливает либо обновляет **сразу EVM и Cosmos** до опубликованной версии из [latest.json](latest.json), включая preview. Номер релиза в команде менять не нужно. Обновление происходит только при вашем запуске. Флаг `-print` показывает выбранную команду без изменения проекта, `-evm-only` / `-cosmos-only` выбирают один модуль. В новом проекте сначала выполните `go mod init example.com/myapp`. [Полная инструкция по установке, обновлению и откату](docs/INSTALL.ru.md).
 
-[Все 260 ABI write builders](docs/TRANSACTIONS.ru.md) | [EVM-форматы 0/1/2](docs/TRANSACTION_ENVELOPES.ru.md) | [Все 43 Cosmos-сообщения](cosmos/TRANSACTIONS.ru.md). Примеры выполняются офлайн и не подтверждают исполнение в сети.
+[Все 290 ABI write builders](docs/TRANSACTIONS.ru.md) | [EVM-форматы 0/1/2](docs/TRANSACTION_ENVELOPES.ru.md) | [Все 43 Cosmos-сообщения](cosmos/TRANSACTIONS.ru.md). Примеры выполняются офлайн и не подтверждают исполнение в сети.
 
 ## Установка фиксированной версии
 
 Требуется Go 1.26.10 или новее. В Go-модуле приложения выполните:
 
 ```sh
-go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.12
+go get github.com/maxwell2010/decimal-go-sdk@v0.1.0-preview.13
 ```
 
 Независимый Cosmos-модуль подключается отдельно при необходимости:
 
 ```sh
-go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.12
+go get github.com/maxwell2010/decimal-go-sdk/cosmos@v0.1.0-preview.13
 ```
 
-Go установит зависимости автоматически. На [странице релиза](https://github.com/maxwell2010/decimal-go-sdk/releases/tag/v0.1.0-preview.12) доступны архивы ZIP/TAR.GZ и `SHA256SUMS`. Для использования SDK не нужно генерировать ABI-обертки. Полные примеры кода приведены в [руководстве](docs/GETTING_STARTED.ru.md) и [каталоге примеров](examples/README.ru.md).
+Go установит зависимости автоматически. На [странице релиза](https://github.com/maxwell2010/decimal-go-sdk/releases/tag/v0.1.0-preview.13) доступны архивы ZIP/TAR.GZ и `SHA256SUMS`. Для использования SDK не нужно генерировать ABI-обертки. Полные примеры кода приведены в [руководстве](docs/GETTING_STARTED.ru.md) и [каталоге примеров](examples/README.ru.md).
 
 Для разработки клонируйте репозиторий. Сам модуль проверяется командами:
 

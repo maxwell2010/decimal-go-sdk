@@ -47,7 +47,12 @@ func TestAllGeneratedABIWrappers(t *testing.T) {
 	if len(deployment) == 0 {
 		t.Fatal("missing deployment catalog")
 	}
-	var manifest struct{ Profiles []struct{ Profile string } }
+	type profileSource struct {
+		Profile string
+		ChainID string `json:"chain_id"`
+	}
+	var manifest struct{ Profiles []profileSource }
+	profileChains := map[string]*big.Int{}
 	manifests, e := filepath.Glob("docs/*deployment-sources.json")
 	if e != nil {
 		t.Fatal(e)
@@ -57,7 +62,7 @@ func TestAllGeneratedABIWrappers(t *testing.T) {
 		if e != nil {
 			t.Fatal(e)
 		}
-		var rows struct{ Profiles []struct{ Profile string } }
+		var rows struct{ Profiles []profileSource }
 		if e = json.Unmarshal(raw, &rows); e != nil {
 			t.Fatal(e)
 		}
@@ -74,6 +79,14 @@ func TestAllGeneratedABIWrappers(t *testing.T) {
 		counts[row.Profile]++
 	}
 	for _, profile := range manifest.Profiles {
+		chain, valid := new(big.Int).SetString(profile.ChainID, 10)
+		if !valid || chain.Sign() <= 0 {
+			t.Fatal("invalid profile chain provenance", profile.Profile)
+		}
+		if prior := profileChains[profile.Profile]; prior != nil && prior.Cmp(chain) != 0 {
+			t.Fatal("conflicting profile chain provenance")
+		}
+		profileChains[profile.Profile] = chain
 		a, e := loadABI(profile.Profile)
 		if e != nil {
 			t.Fatal(e)
@@ -103,8 +116,19 @@ func TestAllGeneratedABIWrappers(t *testing.T) {
 	wrappers["Multicall"], _ = client.Multicall(testAddress)
 	for _, entry := range catalog {
 		t.Run(entry.Profile+"/"+entry.Method, func(t *testing.T) {
+			chain := profileChains[entry.Profile]
+			if chain == nil {
+				chain = Testnet().ChainID
+			}
+			f.chain = new(big.Int).Set(chain)
 			if wrappers[entry.Profile] == nil {
-				factory := reflect.ValueOf(client).MethodByName(entry.Profile)
+				cfg := Testnet()
+				cfg.ChainID = new(big.Int).Set(chain)
+				profileClient, err := NewClient(cfg, f)
+				if err != nil {
+					t.Fatal(err)
+				}
+				factory := reflect.ValueOf(profileClient).MethodByName(entry.Profile)
 				if !factory.IsValid() {
 					t.Fatal("missing profile constructor")
 				}

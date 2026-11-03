@@ -14,8 +14,13 @@ import (
 
 func TestEveryCataloguedWriteBuilderHasExecutableExample(t *testing.T) {
 	expected := map[string]bool{}
-	for _, file := range []string{"contract-catalog.json", "deployment-catalog.json", "additional-deployment-catalog.json", "token-deployment-catalog.json"} {
-		data, err := os.ReadFile(filepath.Join("..", "..", "docs", file))
+	files, err := filepath.Glob(filepath.Join("..", "..", "docs", "*deployment-catalog.json"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	files = append(files, filepath.Join("..", "..", "docs", "contract-catalog.json"))
+	for _, file := range files {
+		data, err := os.ReadFile(file)
 		if err != nil {
 			t.Fatal(err)
 		}

@@ -82,11 +82,11 @@ func SignDirectTx(ctx context.Context, tx DirectTx) (SignedDirectTx, error) {
 		}
 		digest := EthermintSigningDigest(doc)
 		sig, e := s.Sign(ctx, digest)
+		if cancelled := ctx.Err(); cancelled != nil {
+			return SignedDirectTx{}, cancelled
+		}
 		if e != nil {
 			return SignedDirectTx{}, errors.New("Cosmos signing callback failed")
-		}
-		if e = ctx.Err(); e != nil {
-			return SignedDirectTx{}, e
 		}
 		if len(sig) != 65 || sig[64] > 1 {
 			return SignedDirectTx{}, errors.New("invalid Ethermint recovery signature")

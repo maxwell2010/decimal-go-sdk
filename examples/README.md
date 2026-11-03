@@ -26,3 +26,5 @@ The offline programs require no RPC. The balance program uses the official testn
 - `go run ./examples/checks_signing` signs a public fixture proof and builds calldata without RPC or submission. [Signing format](../docs/EVM_CHECKS.md).
 
 - `go run ./examples/checks_history` decodes a saved public creation receipt offline, with no key or RPC. [History guide](../docs/CHECKS_HISTORY.md). The live CLI `go run ./cmd/checks-inspect -network testnet -blocks 2000` performs a bounded read only; empty output is window-specific.
+
+- `go run ./examples/unified_nft` builds all thirteen unified NFT actions and both approval call examples offline; permit bytes are encoding placeholders only.

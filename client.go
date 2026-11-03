@@ -176,6 +176,31 @@ func (c *Client) Prepare(ctx context.Context, from common.Address, call Call, op
 	return c.prepare(ctx, from, call, opts)
 }
 func (c *Client) prepare(ctx context.Context, from common.Address, call Call, opts TxOptions) (*Prepared, error) {
+	if ctx == nil {
+		return nil, errors.New("context required")
+	}
+	if e := ctx.Err(); e != nil {
+		return nil, e
+	}
+	// Snapshot caller-owned input before any backend callback, including proxy checks.
+	if call.Value != nil {
+		call.Value = copyInt(call.Value)
+	}
+	call.Data = append([]byte(nil), call.Data...)
+	if call.deployment != nil {
+		snapshot := *call.deployment
+		call.deployment = &snapshot
+	}
+	if opts.Nonce != nil {
+		nonce := *opts.Nonce
+		opts.Nonce = &nonce
+	}
+	opts.AccessList = cloneAccessList(opts.AccessList)
+	for _, p := range []**big.Int{&opts.GasPrice, &opts.MaxGasPrice, &opts.MaxFee, &opts.FeeCap, &opts.TipCap, &opts.BaseFeeEstimate} {
+		if *p != nil {
+			*p = copyInt(*p)
+		}
+	}
 	if call.deployment != nil {
 		if call.To != call.deployment.Proxy {
 			return nil, errors.New("proxy transaction target changed")
@@ -186,11 +211,6 @@ func (c *Client) prepare(ctx context.Context, from common.Address, call Call, op
 		}
 		if e = c.verifyDeployment(ctx, *call.deployment, block); e != nil {
 			return nil, e
-		}
-	}
-	for _, p := range []**big.Int{&opts.GasPrice, &opts.MaxGasPrice, &opts.MaxFee, &opts.FeeCap, &opts.TipCap, &opts.BaseFeeEstimate} {
-		if *p != nil {
-			*p = copyInt(*p)
 		}
 	}
 	if opts.TxType > types.DynamicFeeTxType {
@@ -216,13 +236,14 @@ func (c *Client) prepare(ctx context.Context, from common.Address, call Call, op
 	if !uint256(call.Value) {
 		return nil, errors.New("invalid transaction value")
 	}
-	call.Value = copyInt(call.Value)
-	call.Data = append([]byte(nil), call.Data...)
 	if e := c.checkChain(ctx); e != nil {
 		return nil, e
 	}
 	if call.Contract {
 		code, e := c.rpc.CodeAt(ctx, call.To, nil)
+		if canceled := ctx.Err(); canceled != nil {
+			return nil, canceled
+		}
 		if e != nil || len(code) == 0 {
 			return nil, rpcFailure(ctx, "target contract has no code")
 		}
@@ -232,6 +253,9 @@ func (c *Client) prepare(ctx context.Context, from common.Address, call Call, op
 		price = copyInt(opts.FeeCap)
 	} else if opts.GasPrice == nil {
 		p, e := c.rpc.SuggestGasPrice(ctx)
+		if canceled := ctx.Err(); canceled != nil {
+			return nil, canceled
+		}
 		if e != nil {
 			return nil, rpcFailure(ctx, "gas price unavailable")
 		}
@@ -248,7 +272,8 @@ func (c *Client) prepare(ctx context.Context, from common.Address, call Call, op
 			return nil, errors.New("invalid fee limit")
 		}
 	}
-	msg := ethereum.CallMsg{From: from, To: &call.To, Value: copyInt(call.Value), Data: append([]byte(nil), call.Data...), GasPrice: copyInt(price), AccessList: cloneAccessList(accessList)}
+	target := call.To
+	msg := ethereum.CallMsg{From: from, To: &target, Value: copyInt(call.Value), Data: append([]byte(nil), call.Data...), GasPrice: copyInt(price), AccessList: cloneAccessList(accessList)}
 	quote := FeeQuote{GasPrice: copyInt(price), EstimatedEffectiveGasPrice: copyInt(price)}
 	if opts.TxType == types.DynamicFeeTxType {
 		msg.GasPrice = nil
@@ -268,6 +293,9 @@ func (c *Client) prepare(ctx context.Context, from common.Address, call Call, op
 		}
 	}
 	estimated, e := c.rpc.EstimateGas(ctx, msg)
+	if canceled := ctx.Err(); canceled != nil {
+		return nil, canceled
+	}
 	if e != nil {
 		return nil, rpcFailure(ctx, "gas estimation failed; transaction not signed")
 	}
@@ -299,6 +327,9 @@ func (c *Client) prepare(ctx context.Context, from common.Address, call Call, op
 	}
 	required := new(big.Int).Add(reserved, call.Value)
 	balance, e := c.rpc.BalanceAt(ctx, from, nil)
+	if canceled := ctx.Err(); canceled != nil {
+		return nil, canceled
+	}
 	if e != nil || balance == nil {
 		return nil, rpcFailure(ctx, "balance unavailable")
 	}
@@ -310,6 +341,9 @@ func (c *Client) prepare(ctx context.Context, from common.Address, call Call, op
 		nonce = *opts.Nonce
 	} else {
 		nonce, e = c.rpc.PendingNonceAt(ctx, from)
+		if canceled := ctx.Err(); canceled != nil {
+			return nil, canceled
+		}
 		if e != nil {
 			return nil, rpcFailure(ctx, "pending nonce unavailable")
 		}
